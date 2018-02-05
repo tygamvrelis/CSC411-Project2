@@ -16,11 +16,13 @@ import os
 from scipy.io import loadmat
 
 #Load the MNIST digit data
-M = loadmat("mnist_all.mat")
+M = loadmat("../Data/mnist_all.mat")
 
-#Display the 150-th "5" digit from the training set
+ #Display the 150-th "5" digit from the training set
 imshow(M["train5"][150].reshape((28,28)), cmap=cm.gray)
 show()
+#imsave("../Report/images/number" + str(k) + "_"+ str(i) + ".jpg", M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
+
 
 
 def softmax(y):
@@ -52,7 +54,7 @@ def deriv_multilayer(W0, b0, W1, b1, x, L0, L1, y, y_):
     
 
 #Load sample weights for the multilayer neural network
-snapshot = cPickle.load(open("snapshot50.pkl"))
+snapshot = cPickle.load(open("../Data/snapshot50.pkl"))
 W0 = snapshot["W0"]
 b0 = snapshot["b0"].reshape((300,1))
 W1 = snapshot["W1"]
