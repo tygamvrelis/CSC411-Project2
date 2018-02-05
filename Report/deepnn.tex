@@ -37,6 +37,12 @@
 \usepackage{enumerate}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{array}
+\usepackage{forloop}
+\usepackage{alphalph}
+\renewcommand*{\thesubfigure}{%
+\alphalph{\value{subfigure}}%
+}%
 % !TeX spellcheck = en_GB
 
 % Margins
@@ -186,10 +192,65 @@ In this project,...
 \end{itemize}
 
 \clearpage
+
 \begin{homeworkProblem}
 \noindent \textit{Dataset description}
 
-\noindent The dataset is made of thousands of 28 by 28 pixel images of the digits 0 to 9. 
+\noindent The dataset is made of thousands of 28 by 28 pixel images of the handwritten digits: 0 to 9. The images are split into training set and test set images labelled `train0' to `train9' and `test0' to `test9'. The number of images with each label is as follows:
+
+
+\begin{center}
+\begin{tabular}{ | m{3em} | m{3cm}| m{3em} | m{3cm}| } 
+\hline
+Label & Number of Images  &Label & Number of Images\\ 
+\hline
+train0 & 5923  &test0 & 980\\ 
+\hline
+train1 & 6742  &test0 & 1135\\ 
+\hline
+train2 & 5958  &test0 & 1032\\ 
+\hline
+train3 & 6131  &test0 & 1010\\ 
+\hline
+train4 & 5842  &test0 & 982\\ 
+\hline
+train5 & 5421  &test0 & 892\\ 
+\hline
+train6 & 5918  &test0 & 958\\ 
+\hline
+train7 & 6265  &test0 & 1028\\ 
+\hline
+train8 & 5851  &test0 & 974\\ 
+\hline
+train9 & 5949  &test0 & 1009\\ 
+\hline
+\end{tabular}
+\end{center}
+
+Ten images of each number were taken from the training sets and displayed in Figure~\ref{fig:numberExamples}. The correct labels of most of the pictures can be descerned at a glance by humans However, since the digits are handwritten, some of them may not be completely obvious. For example, Figure~\ref{fig:example99} is categorized as a 9 but looks like an 8.
+
+\newcounter{ith}
+\newcounter{num}
+\begin{figure*}[ht!]
+\centering
+
+
+\forloop{num}{0}{\value{num} < 10}{
+	\forloop{ith}{0}{\value{ith} < 10}{
+	\begin{subfigure}{0.08\textwidth}
+    	\centering
+    	\includegraphics[scale=1, width=1\linewidth]{images/number\arabic{num}_\arabic{ith}.jpg}
+    	\caption{}
+    	\label{fig:example\arabic{num}\arabic{ith}}
+	\end{subfigure}
+	}
+}
+
+
+\caption{}
+\label{fig:numberExamples}
+\end{figure*}
+\clearpage
 
 \end{homeworkProblem}
 

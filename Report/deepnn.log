@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.23)  4 FEB 2018 22:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.23)  4 FEB 2018 23:05
 entering extended mode
 **./deepnn.tex
 (deepnn.tex
@@ -203,6 +203,29 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen125
+\extrarowheight=\dimen126
+\NC@list=\toks24
+\extratabsurround=\skip55
+\backup@length=\skip56
+)
+(C:\Users\Hao\AppData\Roaming\MiKTeX\2.9\tex\latex\forloop\forloop.sty
+Package: forloop 2006/09/18 v3.0 For Loops for LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\alphalph.sty"
+Package: alphalph 2016/05/16 v2.5 Convert numbers to letters (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\intcalc.sty"
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -210,41 +233,38 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
  (deepnn.aux)
 \openout1 = `deepnn.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 165.
+(lastpage)             ! on input line 171.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
-\scratchdimen=\dimen125
+\scratchdimen=\dimen127
 \scratchbox=\box30
 \nofMPsegments=\count113
 \nofMParguments=\count114
-\everyMPshowfont=\toks24
+\everyMPshowfont=\toks25
 \MPscratchCnt=\count115
-\MPscratchDim=\dimen126
+\MPscratchDim=\dimen128
 \MPnumerator=\count116
 \makeMPintoPDFobject=\count117
-\everyMPtoPDFconversion=\toks25
+\everyMPtoPDFconversion=\toks26
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
@@ -295,57 +315,790 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count118
-LaTeX Font Info:    Try loading font information for U+msa on input line 167.
+LaTeX Font Info:    Try loading font information for U+msa on input line 173.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 167.
+LaTeX Font Info:    Try loading font information for U+msb on input line 173.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Hao/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 174--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--184
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 179.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 185.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 179.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 185.
  [2
 
 
 ]
+\c@ith=\count119
+\c@num=\count120
+<images/number0_0.jpg, id=15, 28.105pt x 28.105pt>
+File: images/number0_0.jpg Graphic file (type jpg)
+<use images/number0_0.jpg>
+Package pdftex.def Info: images/number0_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number0_1.jpg, id=17, 28.105pt x 28.105pt>
+File: images/number0_1.jpg Graphic file (type jpg)
+<use images/number0_1.jpg>
+Package pdftex.def Info: images/number0_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number0_2.jpg, id=18, 28.105pt x 28.105pt>
+File: images/number0_2.jpg Graphic file (type jpg)
+<use images/number0_2.jpg>
+Package pdftex.def Info: images/number0_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number0_3.jpg, id=19, 28.105pt x 28.105pt>
+File: images/number0_3.jpg Graphic file (type jpg)
+<use images/number0_3.jpg>
+Package pdftex.def Info: images/number0_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number0_4.jpg, id=20, 28.105pt x 28.105pt>
+File: images/number0_4.jpg Graphic file (type jpg)
+<use images/number0_4.jpg>
+Package pdftex.def Info: images/number0_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number0_5.jpg, id=21, 28.105pt x 28.105pt>
+File: images/number0_5.jpg Graphic file (type jpg)
+<use images/number0_5.jpg>
+Package pdftex.def Info: images/number0_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number0_6.jpg, id=22, 28.105pt x 28.105pt>
+File: images/number0_6.jpg Graphic file (type jpg)
+<use images/number0_6.jpg>
+Package pdftex.def Info: images/number0_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number0_7.jpg, id=23, 28.105pt x 28.105pt>
+File: images/number0_7.jpg Graphic file (type jpg)
+<use images/number0_7.jpg>
+Package pdftex.def Info: images/number0_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number0_8.jpg, id=24, 28.105pt x 28.105pt>
+File: images/number0_8.jpg Graphic file (type jpg)
+<use images/number0_8.jpg>
+Package pdftex.def Info: images/number0_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number0_9.jpg, id=25, 28.105pt x 28.105pt>
+File: images/number0_9.jpg Graphic file (type jpg)
+<use images/number0_9.jpg>
+Package pdftex.def Info: images/number0_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_0.jpg, id=26, 28.105pt x 28.105pt>
+File: images/number1_0.jpg Graphic file (type jpg)
+<use images/number1_0.jpg>
+Package pdftex.def Info: images/number1_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_1.jpg, id=27, 28.105pt x 28.105pt>
+File: images/number1_1.jpg Graphic file (type jpg)
+<use images/number1_1.jpg>
+Package pdftex.def Info: images/number1_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_2.jpg, id=28, 28.105pt x 28.105pt>
+File: images/number1_2.jpg Graphic file (type jpg)
+<use images/number1_2.jpg>
+Package pdftex.def Info: images/number1_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_3.jpg, id=29, 28.105pt x 28.105pt>
+File: images/number1_3.jpg Graphic file (type jpg)
+<use images/number1_3.jpg>
+Package pdftex.def Info: images/number1_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_4.jpg, id=30, 28.105pt x 28.105pt>
+File: images/number1_4.jpg Graphic file (type jpg)
+<use images/number1_4.jpg>
+Package pdftex.def Info: images/number1_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_5.jpg, id=31, 28.105pt x 28.105pt>
+File: images/number1_5.jpg Graphic file (type jpg)
+<use images/number1_5.jpg>
+Package pdftex.def Info: images/number1_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_6.jpg, id=32, 28.105pt x 28.105pt>
+File: images/number1_6.jpg Graphic file (type jpg)
+<use images/number1_6.jpg>
+Package pdftex.def Info: images/number1_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_7.jpg, id=33, 28.105pt x 28.105pt>
+File: images/number1_7.jpg Graphic file (type jpg)
+<use images/number1_7.jpg>
+Package pdftex.def Info: images/number1_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_8.jpg, id=34, 28.105pt x 28.105pt>
+File: images/number1_8.jpg Graphic file (type jpg)
+<use images/number1_8.jpg>
+Package pdftex.def Info: images/number1_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number1_9.jpg, id=35, 28.105pt x 28.105pt>
+File: images/number1_9.jpg Graphic file (type jpg)
+<use images/number1_9.jpg>
+Package pdftex.def Info: images/number1_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_0.jpg, id=36, 28.105pt x 28.105pt>
+File: images/number2_0.jpg Graphic file (type jpg)
+<use images/number2_0.jpg>
+Package pdftex.def Info: images/number2_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_1.jpg, id=37, 28.105pt x 28.105pt>
+File: images/number2_1.jpg Graphic file (type jpg)
+<use images/number2_1.jpg>
+Package pdftex.def Info: images/number2_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_2.jpg, id=38, 28.105pt x 28.105pt>
+File: images/number2_2.jpg Graphic file (type jpg)
+<use images/number2_2.jpg>
+Package pdftex.def Info: images/number2_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_3.jpg, id=39, 28.105pt x 28.105pt>
+File: images/number2_3.jpg Graphic file (type jpg)
+<use images/number2_3.jpg>
+Package pdftex.def Info: images/number2_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_4.jpg, id=40, 28.105pt x 28.105pt>
+File: images/number2_4.jpg Graphic file (type jpg)
+<use images/number2_4.jpg>
+Package pdftex.def Info: images/number2_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_5.jpg, id=41, 28.105pt x 28.105pt>
+File: images/number2_5.jpg Graphic file (type jpg)
+<use images/number2_5.jpg>
+Package pdftex.def Info: images/number2_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_6.jpg, id=42, 28.105pt x 28.105pt>
+File: images/number2_6.jpg Graphic file (type jpg)
+<use images/number2_6.jpg>
+Package pdftex.def Info: images/number2_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_7.jpg, id=43, 28.105pt x 28.105pt>
+File: images/number2_7.jpg Graphic file (type jpg)
+<use images/number2_7.jpg>
+Package pdftex.def Info: images/number2_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_8.jpg, id=44, 28.105pt x 28.105pt>
+File: images/number2_8.jpg Graphic file (type jpg)
+<use images/number2_8.jpg>
+Package pdftex.def Info: images/number2_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number2_9.jpg, id=45, 28.105pt x 28.105pt>
+File: images/number2_9.jpg Graphic file (type jpg)
+<use images/number2_9.jpg>
+Package pdftex.def Info: images/number2_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_0.jpg, id=46, 28.105pt x 28.105pt>
+File: images/number3_0.jpg Graphic file (type jpg)
+<use images/number3_0.jpg>
+Package pdftex.def Info: images/number3_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_1.jpg, id=47, 28.105pt x 28.105pt>
+File: images/number3_1.jpg Graphic file (type jpg)
+<use images/number3_1.jpg>
+Package pdftex.def Info: images/number3_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_2.jpg, id=48, 28.105pt x 28.105pt>
+File: images/number3_2.jpg Graphic file (type jpg)
+<use images/number3_2.jpg>
+Package pdftex.def Info: images/number3_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_3.jpg, id=49, 28.105pt x 28.105pt>
+File: images/number3_3.jpg Graphic file (type jpg)
+<use images/number3_3.jpg>
+Package pdftex.def Info: images/number3_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_4.jpg, id=50, 28.105pt x 28.105pt>
+File: images/number3_4.jpg Graphic file (type jpg)
+<use images/number3_4.jpg>
+Package pdftex.def Info: images/number3_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_5.jpg, id=51, 28.105pt x 28.105pt>
+File: images/number3_5.jpg Graphic file (type jpg)
+<use images/number3_5.jpg>
+Package pdftex.def Info: images/number3_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_6.jpg, id=52, 28.105pt x 28.105pt>
+File: images/number3_6.jpg Graphic file (type jpg)
+<use images/number3_6.jpg>
+Package pdftex.def Info: images/number3_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_7.jpg, id=53, 28.105pt x 28.105pt>
+File: images/number3_7.jpg Graphic file (type jpg)
+<use images/number3_7.jpg>
+Package pdftex.def Info: images/number3_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_8.jpg, id=54, 28.105pt x 28.105pt>
+File: images/number3_8.jpg Graphic file (type jpg)
+<use images/number3_8.jpg>
+Package pdftex.def Info: images/number3_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number3_9.jpg, id=55, 28.105pt x 28.105pt>
+File: images/number3_9.jpg Graphic file (type jpg)
+<use images/number3_9.jpg>
+Package pdftex.def Info: images/number3_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_0.jpg, id=56, 28.105pt x 28.105pt>
+File: images/number4_0.jpg Graphic file (type jpg)
+<use images/number4_0.jpg>
+Package pdftex.def Info: images/number4_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_1.jpg, id=57, 28.105pt x 28.105pt>
+File: images/number4_1.jpg Graphic file (type jpg)
+<use images/number4_1.jpg>
+Package pdftex.def Info: images/number4_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_2.jpg, id=58, 28.105pt x 28.105pt>
+File: images/number4_2.jpg Graphic file (type jpg)
+<use images/number4_2.jpg>
+Package pdftex.def Info: images/number4_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_3.jpg, id=59, 28.105pt x 28.105pt>
+File: images/number4_3.jpg Graphic file (type jpg)
+<use images/number4_3.jpg>
+Package pdftex.def Info: images/number4_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_4.jpg, id=60, 28.105pt x 28.105pt>
+File: images/number4_4.jpg Graphic file (type jpg)
+<use images/number4_4.jpg>
+Package pdftex.def Info: images/number4_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_5.jpg, id=61, 28.105pt x 28.105pt>
+File: images/number4_5.jpg Graphic file (type jpg)
+<use images/number4_5.jpg>
+Package pdftex.def Info: images/number4_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_6.jpg, id=62, 28.105pt x 28.105pt>
+File: images/number4_6.jpg Graphic file (type jpg)
+<use images/number4_6.jpg>
+Package pdftex.def Info: images/number4_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_7.jpg, id=63, 28.105pt x 28.105pt>
+File: images/number4_7.jpg Graphic file (type jpg)
+<use images/number4_7.jpg>
+Package pdftex.def Info: images/number4_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_8.jpg, id=64, 28.105pt x 28.105pt>
+File: images/number4_8.jpg Graphic file (type jpg)
+<use images/number4_8.jpg>
+Package pdftex.def Info: images/number4_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number4_9.jpg, id=65, 28.105pt x 28.105pt>
+File: images/number4_9.jpg Graphic file (type jpg)
+<use images/number4_9.jpg>
+Package pdftex.def Info: images/number4_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_0.jpg, id=66, 28.105pt x 28.105pt>
+File: images/number5_0.jpg Graphic file (type jpg)
+<use images/number5_0.jpg>
+Package pdftex.def Info: images/number5_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_1.jpg, id=67, 28.105pt x 28.105pt>
+File: images/number5_1.jpg Graphic file (type jpg)
+<use images/number5_1.jpg>
+Package pdftex.def Info: images/number5_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_2.jpg, id=68, 28.105pt x 28.105pt>
+File: images/number5_2.jpg Graphic file (type jpg)
+<use images/number5_2.jpg>
+Package pdftex.def Info: images/number5_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_3.jpg, id=69, 28.105pt x 28.105pt>
+File: images/number5_3.jpg Graphic file (type jpg)
+<use images/number5_3.jpg>
+Package pdftex.def Info: images/number5_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_4.jpg, id=70, 28.105pt x 28.105pt>
+File: images/number5_4.jpg Graphic file (type jpg)
+<use images/number5_4.jpg>
+Package pdftex.def Info: images/number5_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_5.jpg, id=71, 28.105pt x 28.105pt>
+File: images/number5_5.jpg Graphic file (type jpg)
+<use images/number5_5.jpg>
+Package pdftex.def Info: images/number5_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_6.jpg, id=72, 28.105pt x 28.105pt>
+File: images/number5_6.jpg Graphic file (type jpg)
+<use images/number5_6.jpg>
+Package pdftex.def Info: images/number5_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_7.jpg, id=73, 28.105pt x 28.105pt>
+File: images/number5_7.jpg Graphic file (type jpg)
+<use images/number5_7.jpg>
+Package pdftex.def Info: images/number5_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_8.jpg, id=74, 28.105pt x 28.105pt>
+File: images/number5_8.jpg Graphic file (type jpg)
+<use images/number5_8.jpg>
+Package pdftex.def Info: images/number5_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number5_9.jpg, id=75, 28.105pt x 28.105pt>
+File: images/number5_9.jpg Graphic file (type jpg)
+<use images/number5_9.jpg>
+Package pdftex.def Info: images/number5_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_0.jpg, id=76, 28.105pt x 28.105pt>
+File: images/number6_0.jpg Graphic file (type jpg)
+<use images/number6_0.jpg>
+Package pdftex.def Info: images/number6_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_1.jpg, id=77, 28.105pt x 28.105pt>
+File: images/number6_1.jpg Graphic file (type jpg)
+<use images/number6_1.jpg>
+Package pdftex.def Info: images/number6_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_2.jpg, id=78, 28.105pt x 28.105pt>
+File: images/number6_2.jpg Graphic file (type jpg)
+<use images/number6_2.jpg>
+Package pdftex.def Info: images/number6_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_3.jpg, id=79, 28.105pt x 28.105pt>
+File: images/number6_3.jpg Graphic file (type jpg)
+<use images/number6_3.jpg>
+Package pdftex.def Info: images/number6_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_4.jpg, id=80, 28.105pt x 28.105pt>
+File: images/number6_4.jpg Graphic file (type jpg)
+<use images/number6_4.jpg>
+Package pdftex.def Info: images/number6_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_5.jpg, id=81, 28.105pt x 28.105pt>
+File: images/number6_5.jpg Graphic file (type jpg)
+<use images/number6_5.jpg>
+Package pdftex.def Info: images/number6_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_6.jpg, id=82, 28.105pt x 28.105pt>
+File: images/number6_6.jpg Graphic file (type jpg)
+<use images/number6_6.jpg>
+Package pdftex.def Info: images/number6_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_7.jpg, id=83, 28.105pt x 28.105pt>
+File: images/number6_7.jpg Graphic file (type jpg)
+<use images/number6_7.jpg>
+Package pdftex.def Info: images/number6_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_8.jpg, id=84, 28.105pt x 28.105pt>
+File: images/number6_8.jpg Graphic file (type jpg)
+<use images/number6_8.jpg>
+Package pdftex.def Info: images/number6_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number6_9.jpg, id=85, 28.105pt x 28.105pt>
+File: images/number6_9.jpg Graphic file (type jpg)
+<use images/number6_9.jpg>
+Package pdftex.def Info: images/number6_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_0.jpg, id=86, 28.105pt x 28.105pt>
+File: images/number7_0.jpg Graphic file (type jpg)
+<use images/number7_0.jpg>
+Package pdftex.def Info: images/number7_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_1.jpg, id=87, 28.105pt x 28.105pt>
+File: images/number7_1.jpg Graphic file (type jpg)
+<use images/number7_1.jpg>
+Package pdftex.def Info: images/number7_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_2.jpg, id=88, 28.105pt x 28.105pt>
+File: images/number7_2.jpg Graphic file (type jpg)
+<use images/number7_2.jpg>
+Package pdftex.def Info: images/number7_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_3.jpg, id=89, 28.105pt x 28.105pt>
+File: images/number7_3.jpg Graphic file (type jpg)
+<use images/number7_3.jpg>
+Package pdftex.def Info: images/number7_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_4.jpg, id=90, 28.105pt x 28.105pt>
+File: images/number7_4.jpg Graphic file (type jpg)
+<use images/number7_4.jpg>
+Package pdftex.def Info: images/number7_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_5.jpg, id=91, 28.105pt x 28.105pt>
+File: images/number7_5.jpg Graphic file (type jpg)
+<use images/number7_5.jpg>
+Package pdftex.def Info: images/number7_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_6.jpg, id=92, 28.105pt x 28.105pt>
+File: images/number7_6.jpg Graphic file (type jpg)
+<use images/number7_6.jpg>
+Package pdftex.def Info: images/number7_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_7.jpg, id=93, 28.105pt x 28.105pt>
+File: images/number7_7.jpg Graphic file (type jpg)
+<use images/number7_7.jpg>
+Package pdftex.def Info: images/number7_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_8.jpg, id=94, 28.105pt x 28.105pt>
+File: images/number7_8.jpg Graphic file (type jpg)
+<use images/number7_8.jpg>
+Package pdftex.def Info: images/number7_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number7_9.jpg, id=95, 28.105pt x 28.105pt>
+File: images/number7_9.jpg Graphic file (type jpg)
+<use images/number7_9.jpg>
+Package pdftex.def Info: images/number7_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_0.jpg, id=96, 28.105pt x 28.105pt>
+File: images/number8_0.jpg Graphic file (type jpg)
+<use images/number8_0.jpg>
+Package pdftex.def Info: images/number8_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_1.jpg, id=97, 28.105pt x 28.105pt>
+File: images/number8_1.jpg Graphic file (type jpg)
+<use images/number8_1.jpg>
+Package pdftex.def Info: images/number8_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_2.jpg, id=98, 28.105pt x 28.105pt>
+File: images/number8_2.jpg Graphic file (type jpg)
+<use images/number8_2.jpg>
+Package pdftex.def Info: images/number8_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_3.jpg, id=99, 28.105pt x 28.105pt>
+File: images/number8_3.jpg Graphic file (type jpg)
+<use images/number8_3.jpg>
+Package pdftex.def Info: images/number8_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_4.jpg, id=100, 28.105pt x 28.105pt>
+File: images/number8_4.jpg Graphic file (type jpg)
+<use images/number8_4.jpg>
+Package pdftex.def Info: images/number8_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_5.jpg, id=101, 28.105pt x 28.105pt>
+File: images/number8_5.jpg Graphic file (type jpg)
+<use images/number8_5.jpg>
+Package pdftex.def Info: images/number8_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_6.jpg, id=102, 28.105pt x 28.105pt>
+File: images/number8_6.jpg Graphic file (type jpg)
+<use images/number8_6.jpg>
+Package pdftex.def Info: images/number8_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_7.jpg, id=103, 28.105pt x 28.105pt>
+File: images/number8_7.jpg Graphic file (type jpg)
+<use images/number8_7.jpg>
+Package pdftex.def Info: images/number8_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_8.jpg, id=104, 28.105pt x 28.105pt>
+File: images/number8_8.jpg Graphic file (type jpg)
+<use images/number8_8.jpg>
+Package pdftex.def Info: images/number8_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number8_9.jpg, id=105, 28.105pt x 28.105pt>
+File: images/number8_9.jpg Graphic file (type jpg)
+<use images/number8_9.jpg>
+Package pdftex.def Info: images/number8_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_0.jpg, id=106, 28.105pt x 28.105pt>
+File: images/number9_0.jpg Graphic file (type jpg)
+<use images/number9_0.jpg>
+Package pdftex.def Info: images/number9_0.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_1.jpg, id=107, 28.105pt x 28.105pt>
+File: images/number9_1.jpg Graphic file (type jpg)
+<use images/number9_1.jpg>
+Package pdftex.def Info: images/number9_1.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_2.jpg, id=108, 28.105pt x 28.105pt>
+File: images/number9_2.jpg Graphic file (type jpg)
+<use images/number9_2.jpg>
+Package pdftex.def Info: images/number9_2.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_3.jpg, id=109, 28.105pt x 28.105pt>
+File: images/number9_3.jpg Graphic file (type jpg)
+<use images/number9_3.jpg>
+Package pdftex.def Info: images/number9_3.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_4.jpg, id=110, 28.105pt x 28.105pt>
+File: images/number9_4.jpg Graphic file (type jpg)
+<use images/number9_4.jpg>
+Package pdftex.def Info: images/number9_4.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_5.jpg, id=111, 28.105pt x 28.105pt>
+File: images/number9_5.jpg Graphic file (type jpg)
+<use images/number9_5.jpg>
+Package pdftex.def Info: images/number9_5.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_6.jpg, id=112, 28.105pt x 28.105pt>
+File: images/number9_6.jpg Graphic file (type jpg)
+<use images/number9_6.jpg>
+Package pdftex.def Info: images/number9_6.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_7.jpg, id=113, 28.105pt x 28.105pt>
+File: images/number9_7.jpg Graphic file (type jpg)
+<use images/number9_7.jpg>
+Package pdftex.def Info: images/number9_7.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_8.jpg, id=114, 28.105pt x 28.105pt>
+File: images/number9_8.jpg Graphic file (type jpg)
+<use images/number9_8.jpg>
+Package pdftex.def Info: images/number9_8.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+<images/number9_9.jpg, id=115, 28.105pt x 28.105pt>
+File: images/number9_9.jpg Graphic file (type jpg)
+<use images/number9_9.jpg>
+Package pdftex.def Info: images/number9_9.jpg  used on input line 247. on input
+ line 247.
+Package pdftex.def Info: Requested size: 28.10492pt x 28.10492pt on input line 
+247.
+ [3
 
+] [4 <./images/number0_0.jpg> <./images/number0_1.jpg> <./images/number0_2.jpg>
+ <./images/number0_3.jpg> <./images/number0_4.jpg> <./images/number0_5.jpg> <./
+images/number0_6.jpg> <./images/number0_7.jpg> <./images/number0_8.jpg> <./imag
+es/number0_9.jpg> <./images/number1_0.jpg> <./images/number1_1.jpg> <./images/n
+umber1_2.jpg> <./images/number1_3.jpg> <./images/number1_4.jpg> <./images/numbe
+r1_5.jpg> <./images/number1_6.jpg> <./images/number1_7.jpg> <./images/number1_8
+.jpg> <./images/number1_9.jpg> <./images/number2_0.jpg> <./images/number2_1.jpg
+> <./images/number2_2.jpg> <./images/number2_3.jpg> <./images/number2_4.jpg> <.
+/images/number2_5.jpg> <./images/number2_6.jpg> <./images/number2_7.jpg> <./ima
+ges/number2_8.jpg> <./images/number2_9.jpg> <./images/number3_0.jpg> <./images/
+number3_1.jpg> <./images/number3_2.jpg> <./images/number3_3.jpg> <./images/numb
+er3_4.jpg> <./images/number3_5.jpg> <./images/number3_6.jpg> <./images/number3_
+7.jpg> <./images/number3_8.jpg> <./images/number3_9.jpg> <./images/number4_0.jp
+g> <./images/number4_1.jpg> <./images/number4_2.jpg> <./images/number4_3.jpg> <
+./images/number4_4.jpg> <./images/number4_5.jpg> <./images/number4_6.jpg> <./im
+ages/number4_7.jpg> <./images/number4_8.jpg> <./images/number4_9.jpg> <./images
+/number5_0.jpg> <./images/number5_1.jpg> <./images/number5_2.jpg> <./images/num
+ber5_3.jpg> <./images/number5_4.jpg> <./images/number5_5.jpg> <./images/number5
+_6.jpg> <./images/number5_7.jpg> <./images/number5_8.jpg> <./images/number5_9.j
+pg> <./images/number6_0.jpg> <./images/number6_1.jpg> <./images/number6_2.jpg> 
+<./images/number6_3.jpg> <./images/number6_4.jpg> <./images/number6_5.jpg> <./i
+mages/number6_6.jpg> <./images/number6_7.jpg> <./images/number6_8.jpg> <./image
+s/number6_9.jpg> <./images/number7_0.jpg> <./images/number7_1.jpg> <./images/nu
+mber7_2.jpg> <./images/number7_3.jpg> <./images/number7_4.jpg> <./images/number
+7_5.jpg> <./images/number7_6.jpg> <./images/number7_7.jpg> <./images/number7_8.
+jpg> <./images/number7_9.jpg> <./images/number8_0.jpg> <./images/number8_1.jpg>
+ <./images/number8_2.jpg> <./images/number8_3.jpg> <./images/number8_4.jpg> <./
+images/number8_5.jpg> <./images/number8_6.jpg> <./images/number8_7.jpg> <./imag
+es/number8_8.jpg> <./images/number8_9.jpg> <./images/number9_0.jpg> <./images/n
+umber9_1.jpg> <./images/number9_2.jpg> <./images/number9_3.jpg> <./images/numbe
+r9_4.jpg> <./images/number9_5.jpg> <./images/number9_6.jpg> <./images/number9_7
+.jpg> <./images/number9_8.jpg> <./images/number9_9.jpg>] 
 AED: lastpage setting LastPage
-[3
-
-] (deepnn.aux) ) 
+(deepnn.aux) ) 
 Here is how much of TeX's memory you used:
- 5371 strings out of 493312
- 78670 string characters out of 3138905
- 256366 words of memory out of 3000000
- 8835 multiletter control sequences out of 15000+200000
- 11109 words of font info for 41 fonts, out of 3000000 for 9000
+ 6296 strings out of 493312
+ 96270 string characters out of 3138905
+ 302742 words of memory out of 3000000
+ 9641 multiletter control sequences out of 15000+200000
+ 12808 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,43p,306b,238s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb>
-Output written on deepnn.pdf (3 pages, 98672 bytes).
+ 42i,11n,44p,397b,512s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb>
+Output written on deepnn.pdf (4 pages, 187517 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 248 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 501 words of extra memory for PDF output out of 10000 (max. 10000000)
 
