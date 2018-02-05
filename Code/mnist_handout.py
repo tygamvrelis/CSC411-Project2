@@ -1,3 +1,4 @@
+
 from pylab import *
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,6 +16,8 @@ import cPickle
 import os
 from scipy.io import loadmat
 
+
+## Part 1: Describing the dataset
 #Load the MNIST digit data
 M = loadmat("../Data/mnist_all.mat")
 
@@ -31,7 +34,11 @@ for i in range(10):
 print train
 
 print test
-
+## Part 2: Computing a simple network
+for k in M.keys():
+    if("train" in k or "test" in k):
+        temp = [a / 255.0 for a in M[k]]
+        M[k] = temp
 
 def softmax(y):
     '''Return the output of the softmax function for the matrix of output y. y
@@ -39,6 +46,20 @@ def softmax(y):
     is the number of cases'''
     return exp(y)/tile(sum(exp(y),0), (len(y),1))
     
+def Part2(theta, X):
+    '''
+    Part2 returns the vectorized multiplication of the (n x 10) parameter matrix 
+    theta with the data X.
+    
+    Arguments:
+        theta -- (n x 10) matrix of parameters (weights and biases)
+        x -- (n x 1) matrix whose rows correspond to pixels in images
+    '''
+    
+    return softmax(np.dot(theta.T, X))
+
+
+## Others
 def tanh_layer(y, W, b):    
     '''Return the output of a tanh layer for the input matrix y. y
     is an NxM matrix where N is the number of inputs for a single case, and M
