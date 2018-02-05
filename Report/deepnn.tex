@@ -110,10 +110,10 @@
 
 \setcounter{secnumdepth}{0} % Removes default section numbers
 \newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
-\setcounter{homeworkProblemCounter}{-1}
+\setcounter{homeworkProblemCounter}{0}
 
 \newcommand{\homeworkProblemName}{}
-\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\newenvironment{homeworkProblem}[1][Part \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
 \stepcounter{homeworkProblemCounter} % Increase counter for number of problems
 \renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
 \section{\homeworkProblemName} % Make a section in the document with the custom problem count
@@ -134,7 +134,7 @@
 }{
 \enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
 }
-
+\setlength\parindent{24pt}
 %----------------------------------------------------------------------------------------
 %	NAME AND CLASS SECTION
 %----------------------------------------------------------------------------------------
@@ -186,7 +186,12 @@ In this project,...
 \end{itemize}
 
 \clearpage
-\section{Part 1}
+\begin{homeworkProblem}
+\noindent \textit{Dataset description}
+
+\noindent The dataset is made of thousands of 28 by 28 pixel images of the digits 0 to 9. 
+
+\end{homeworkProblem}
 
 %----------------------------------------------------------------------------------------
 

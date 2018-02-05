@@ -18,11 +18,19 @@ from scipy.io import loadmat
 #Load the MNIST digit data
 M = loadmat("../Data/mnist_all.mat")
 
- #Display the 150-th "5" digit from the training set
-imshow(M["train5"][150].reshape((28,28)), cmap=cm.gray)
-show()
-#imsave("../Report/images/number" + str(k) + "_"+ str(i) + ".jpg", M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
+# for k in range(10):
+#     for i in range(10): #Display the 150-th "5" digit from the training set
+#         imshow(M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
+#         imsave("../Report/images/number" + str(k) + "_"+ str(i) + ".jpg", M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
 
+train = zeros(10)
+test = zeros(10)
+for i in range(10):
+    train[i] = len(M["train" + str(i)])
+    test[i] = len(M["test" + str(i)])
+print train
+
+print test
 
 
 def softmax(y):
