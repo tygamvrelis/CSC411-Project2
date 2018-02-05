@@ -1,3 +1,4 @@
+
 from pylab import *
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,6 +16,8 @@ import cPickle
 import os
 from scipy.io import loadmat
 
+
+## Part 1: Describing the dataset
 #Load the MNIST digit data
 M = loadmat("../Data/mnist_all.mat")
 
@@ -23,7 +26,6 @@ M = loadmat("../Data/mnist_all.mat")
 #         imshow(M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
 #         imsave("../Report/images/number" + str(k) + "_"+ str(i) + ".jpg", M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
 
-## Part 1: Describing the dataset
 train = zeros(10)
 test = zeros(10)
 for i in range(10):
@@ -32,8 +34,12 @@ for i in range(10):
 print train
 
 print test
-
 ## Part 2: Computing a simple network
+for k in M.keys():
+    if("train" in k or "test" in k):
+        temp = [a / 255.0 for a in M[k]]
+        M[k] = temp
+
 def softmax(y):
     '''Return the output of the softmax function for the matrix of output y. y
     is an NxM matrix where N is the number of outputs for a single case, and M
