@@ -35,6 +35,7 @@ print train
 
 print test
 ## Part 2: Computing a simple network
+# Normalize images (map to [0, 1])
 for k in M.keys():
     if("train" in k or "test" in k):
         temp = [a / 255.0 for a in M[k]]
