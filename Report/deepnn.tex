@@ -177,26 +177,36 @@
 %-------------------------------------------------------------------------------------
 \clearpage
 \section{Foreword}
-In this project,...
+In this project, neural networks of various depth were used to recognize handwritten digits and faces.
+\newline
+\newline
+Part 1 provides a description of the MNIST dataset from which the images of handwritten digits were taken. Part 2 implements the computation of a simple network. Part 3 presents the \textit{sum of the negative log-probabilities} as a cost function, and derives the expression for its gradient with respect to one of its weights. Part 4 details the training and optimization procedures for a digit-recognition neural network, and part 5 improves upon the results by modifying gradient descent to use momentum. Learning curves are presents in parts 4 and 5. Part 6 presents an analysis of network behaviour with respect to two of its weights. Part 7 provides an analysis of the performance of two different backpropagation computation techniques. Part 8 presents a face recognition network architecture for classifying actors, and uses PyTorch for implementation. Part 9 presents visualizations of hidden unit weights relevant to two of the actors. Part 10 uses activations of AlexNet to train a neural network to perform classification of the actors.
 \newline
 \newline
 \textbf{System Details for Reproducibility:}
 \begin{itemize}
-	\item Python 2.7.8
+	\item Python 2.7.14
 	\item Libraries:
 	\begin{itemize}
 		\item numpy
 		\item matplotlib
-		\item ...
+		\item pylab
+		\item time
+		\item os
+		\item scipy
+		\item urllib
+		\item cPickle
+		\item PyTorch
 	\end{itemize}
 \end{itemize}
-
 \clearpage
 
+
+% Part 1
 \begin{homeworkProblem}
 \noindent \textit{Dataset description}
 
-\noindent The dataset is made of thousands of 28 by 28 pixel images of the handwritten digits: 0 to 9. The images are split into training set and test set images labelled `train0' to `train9' and `test0' to `test9'. The number of images with each label is as follows:
+\noindent The MNIST dataset is made of thousands of 28 by 28 pixel images of the handwritten digits: 0 to 9. The images are split into training set and test set images labelled `train0' to `train9' and `test0' to `test9'. The number of images with each label is as follows:
 
 
 \begin{center}
@@ -227,7 +237,7 @@ train9 & 5949  &test0 & 1009\\
 \end{tabular}
 \end{center}
 
-Ten images of each number were taken from the training sets and displayed in Figure~\ref{fig:numberExamples}. The correct labels of most of the pictures can be descerned at a glance by humans However, since the digits are handwritten, some of them may not be completely obvious. For example, Figure~\ref{fig:example99} is categorized as a 9 but looks like an 8.
+Ten images of each number were taken from the training sets and displayed in Figure~\ref{fig:numberExamples}. The correct labels of most of the pictures can be discerned at a glance by humans However, since the digits are handwritten, some of them may not be completely obvious. For example, Figure~\ref{fig:example99} is categorized as a 9 but looks like an 8.
 
 \newcounter{ith}
 \newcounter{num}
@@ -247,12 +257,110 @@ Ten images of each number were taken from the training sets and displayed in Fig
 }
 
 
-\caption{}
+\caption{Subset of the MNIST dataset.}
 \label{fig:numberExamples}
 \end{figure*}
 \clearpage
-
 \end{homeworkProblem}
+
+
+% Part 2
+\begin{homeworkProblem}
+\noindent \textit{Computing a simple network}
+
+\noindent In this part, the simple network depicted in Figure~\ref{fig:part2_simple_network} was implemented as a function in Python using NumPy, the code listing for which is presented is Figure~\ref{fig:part2_code}.
+
+\begin{figure}[!ht]
+	\includegraphics[scale=1, width=1\linewidth]{images/part2_simple_network}
+	\caption{Simple network diagram from project handout.}
+	\label{fig:part2_simple_network}
+\end{figure}
+
+\begin{figure}[!ht]
+	\begin{lstlisting}
+def softmax(y):
+'''
+Return the output of the softmax function for the matrix of output y. y
+is an NxM matrix where N is the number of outputs for a single case, and M
+is the number of cases
+'''
+return exp(y)/tile(sum(exp(y),0), (len(y),1))
+
+def Part2(theta, X):
+'''
+Part2 returns the vectorized multiplication of the (n x 10) parameter matrix 
+theta with the data X.
+
+Arguments:
+theta -- (n x 10) matrix of parameters (weights and biases)
+x -- (n x 1) matrix whose rows correspond to pixels in images
+'''
+
+return softmax(np.dot(theta.T, X))
+	\end{lstlisting}
+	\caption{Python implementation of network using NumPy.}
+	\label{fig:part2_code}
+\end{figure}
+
+\clearpage
+\end{homeworkProblem}
+
+
+% Part 3
+\begin{homeworkProblem}
+	
+\clearpage
+\end{homeworkProblem}
+
+
+% Part 4
+\begin{homeworkProblem}
+	
+\clearpage
+\end{homeworkProblem}
+
+
+% Part 5
+\begin{homeworkProblem}
+	
+\clearpage
+\end{homeworkProblem}
+
+
+% Part 6
+\begin{homeworkProblem}
+	
+\clearpage
+\end{homeworkProblem}
+
+
+% Part 7
+\begin{homeworkProblem}
+	
+\clearpage
+\end{homeworkProblem}
+
+
+% Part 8
+\begin{homeworkProblem}
+	
+\clearpage
+\end{homeworkProblem}
+
+
+% Part 9
+\begin{homeworkProblem}
+	
+\clearpage
+\end{homeworkProblem}
+
+
+% Part 10
+\begin{homeworkProblem}
+	
+\clearpage
+\end{homeworkProblem}
+
 
 %----------------------------------------------------------------------------------------
 
