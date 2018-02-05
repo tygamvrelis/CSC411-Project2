@@ -23,6 +23,7 @@ M = loadmat("../Data/mnist_all.mat")
 #         imshow(M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
 #         imsave("../Report/images/number" + str(k) + "_"+ str(i) + ".jpg", M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
 
+## Part 1: Describing the dataset
 train = zeros(10)
 test = zeros(10)
 for i in range(10):
@@ -32,13 +33,27 @@ print train
 
 print test
 
-
+## Part 2: Computing a simple network
 def softmax(y):
     '''Return the output of the softmax function for the matrix of output y. y
     is an NxM matrix where N is the number of outputs for a single case, and M
     is the number of cases'''
     return exp(y)/tile(sum(exp(y),0), (len(y),1))
     
+def Part2(theta, X):
+    '''
+    Part2 returns the vectorized multiplication of the (n x 10) parameter matrix 
+    theta with the data X.
+    
+    Arguments:
+        theta -- (n x 10) matrix of parameters (weights and biases)
+        x -- (n x 1) matrix whose rows correspond to pixels in images
+    '''
+    
+    return softmax(np.dot(theta.T, X))
+
+
+## Others
 def tanh_layer(y, W, b):    
     '''Return the output of a tanh layer for the input matrix y. y
     is an NxM matrix where N is the number of inputs for a single case, and M
