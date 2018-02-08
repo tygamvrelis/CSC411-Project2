@@ -38,8 +38,7 @@ print test
 # Normalize images (map to [0, 1])
 for k in M.keys():
     if("train" in k or "test" in k):
-        temp = [a / 255.0 for a in M[k]]
-        M[k] = temp
+        M[k] = np.true_divide(M[k], 255.0)
 
 def softmax(y):
     '''
@@ -61,6 +60,17 @@ def Part2(theta, X):
     '''
     
     return softmax(np.dot(theta.T, X))
+    
+# Part 2 test code
+np.random.seed(3)
+theta = np.random.rand(28*28,10) # Randomly initialize some theta matrix
+x = M["train5"][148:149].T # Image of "5"
+plt.imshow(x.reshape((28,28)))
+plt.show()
+y = Part2(theta, x)
+print("y: ", y) # Should be a 10x1 vector with random values
+print("sum(y): ", sum(y)) # Should be 1
+
 
 ####PART 3#############
 def negLogLossGrad(X, Y, W):
