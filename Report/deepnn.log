@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  8 FEB 2018 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  8 FEB 2018 17:05
 entering extended mode
 **./deepnn.tex
 (deepnn.tex
@@ -1047,7 +1047,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 393--431
 
 [8
 
-] [9
+]
+Underfull \hbox (badness 10000) in paragraph at lines 437--454
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--454
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--454
+
+ []
+
+[9
 
 ] [10
 
@@ -1090,7 +1105,7 @@ amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 0.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><D:/Progr
 am Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on deepnn.pdf (15 pages, 356928 bytes).
+Output written on deepnn.pdf (15 pages, 358789 bytes).
 PDF statistics:
  330 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

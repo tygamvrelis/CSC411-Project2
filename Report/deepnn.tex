@@ -269,7 +269,7 @@ Ten images of each number were taken from the training sets and displayed in Fig
 
 % Part 2
 \begin{homeworkProblem}
-\noindent \textit{Computing a simple network}
+\noindent \textit{Computing a Simple Network}
 
 \noindent In this part, the simple network depicted in Figure~\ref{fig:part2_simple_network} was implemented as a function in Python using NumPy, the code listing for which is presented is Figure~\ref{fig:part2_code}.
 
@@ -317,7 +317,7 @@ def SimpleNetwork(W, X):
 	
 	The Cost function that will be used for the network described in part 2 is:
 	$$C = - \sum_{q = 1}^{m} (\sum_{l = 1}^{k} y_llog(p_l))_q$$
-	Where $k$ is the number of output nodes, $m$ is the number of training samples, $p_l = \frac{e^{o_l}}{\sum_{c = 1}^{k} e^{o_c}}$ and $y_l$ is equal to $1$ if the training sample is labeled as $l$ and 0 otherwise.\newline
+	Where $k$ is the number of output nodes, $m$ is the number of training samples, $p_l = \frac{e^{o_l}}{\sum_{c = 1}^{k} e^{o_c}}$ and $y_l$ is equal to $1$ if the training sample is labelled as $l$ and 0 otherwise.\newline
 	\break
 	
 	\noindent \textit{Partial Derivative of the Cost Function (3a)}
@@ -333,7 +333,7 @@ $x = \begin{bmatrix}
     x_{2} \\
     \hdotsfor{1} \\
     x_{n} 
-\end{bmatrix}$ and $n$ is equal to the number of pixels with an extra $1$ to multiply into the bias.\newline
+\end{bmatrix}$ and $n$ is equal to the number of pixels with an extra $1$ to multiply into the bias. That is, $x_1 ^q$ is always taken to be $1$ while $x_2 ^q,...,x_n ^q$ are the inputs to the network corresponding to the $q^{th}$ training example. \newline
 
 	To calculate the partial derivative of C, we will consider only \textbf{a single training sample}: 
 	$C = - \sum_{l = 1}^{k} y_llog(p_l)$
@@ -434,7 +434,23 @@ To check that the gradient was computed correctly, the gradient with respect to 
 
 % Part 4
 \begin{homeworkProblem}
-
+In this section, the neural network from part 2 was trained using vanilla gradient descent. The optimization procedure is described below, and learning curves and visualizations of the weights going into each of the output units are presented.
+\newline
+\newline
+\noindent \textit{Optimization Procedure}
+\newline
+%State how we initialized weights and what learning rate we used
+Words
+\newline
+\newline
+\noindent \textit{Learning Curves}
+\newline
+Words
+\newline
+\newline
+\noindent \textit{Weights Going Into Output Units}
+\newline
+Words
 \clearpage
 \end{homeworkProblem}
 
