@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  8 FEB 2018 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  8 FEB 2018 16:09
 entering extended mode
 **./deepnn.tex
 (deepnn.tex
@@ -1005,23 +1005,23 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 285.
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [5
 
- <./images/part2_simple_network.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 317--320
+ <./images/part2_simple_network.png>] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 319--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--320
+Underfull \hbox (badness 10000) in paragraph at lines 319--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--335
+Underfull \hbox (badness 10000) in paragraph at lines 325--337
 
  []
 
 
-Overfull \hbox (4.735pt too wide) in paragraph at lines 336--339
+Overfull \hbox (4.735pt too wide) in paragraph at lines 338--341
 []\OT1/cmr/m/n/10 To cal-cu-late the par-tial deriva-tive of C, we will con-sid
 er only \OT1/cmr/bx/n/10 a sin-gle train-ing sam-ple\OT1/cmr/m/n/10 : $\OML/cmm
 /m/it/10 C \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10   [][] \OML/cmm/m/it/10 y[]log\OT
@@ -1029,25 +1029,23 @@ er only \OT1/cmr/bx/n/10 a sin-gle train-ing sam-ple\OT1/cmr/m/n/10 : $\OML/cmm
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--341
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--349
-
- []
-
-[6
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 391--429
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 [7
 
-] [8
+]
+Underfull \hbox (badness 10000) in paragraph at lines 393--431
+
+ []
+
+[8
 
 ] [9
 
@@ -1061,17 +1059,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--429
 
 ] [14
 
+] [15
+
 ] 
 AED: lastpage setting LastPage
 (deepnn.aux) ) 
 Here is how much of TeX's memory you used:
  6574 strings out of 493323
- 99829 string characters out of 3139066
+ 99837 string characters out of 3139066
  308855 words of memory out of 3000000
  9897 multiletter control sequences out of 15000+200000
  14368 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,44p,1080b,1470s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,12n,44p,1080b,1475s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<D:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MiKTeX
@@ -1090,9 +1090,9 @@ amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 0.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><D:/Progr
 am Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on deepnn.pdf (14 pages, 355876 bytes).
+Output written on deepnn.pdf (15 pages, 356928 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
+ 330 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  506 words of extra memory for PDF output out of 10000 (max. 10000000)
 

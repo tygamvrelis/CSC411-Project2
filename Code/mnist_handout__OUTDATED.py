@@ -10,9 +10,7 @@ import matplotlib.image as mpimg
 from scipy.ndimage import filters
 import urllib
 from numpy import random
-
 import cPickle
-
 import os
 from scipy.io import loadmat
 
@@ -48,15 +46,16 @@ def softmax(y):
     '''
     
     return exp(y)/tile(sum(exp(y),0), (len(y),1))
-######
-def Part2(theta, X):
+    
+def SimpleNetwork(theta, X):
     '''
-    Part2 returns the vectorized multiplication of the (n x 10) parameter matrix 
-    W with the data X.
+    SimpleNetwork returns the vectorized multiplication of the (n x 10) 
+    parameter matrix W with the data X.
     
     Arguments:
-    theta -- (n x 10) matrix of parameters (weights and biases)
-    x -- (n x m) matrix whose i-th columns correspond to the i-th training image
+        W -- (n x 10) matrix of parameters (weights and biases)
+        x -- (n x m) matrix whose i-th column corresponds to the i-th training 
+             image
     '''
     
     return softmax(np.dot(theta.T, X))
@@ -67,7 +66,7 @@ W = np.random.rand(28*28,10) # Randomly initialize some theta matrix
 X = M["train5"][148:149].T # Image of "5"
 plt.imshow(x.reshape((28,28)))
 plt.show()
-y = Part2(W, X)
+y = SimpleNetwork(W, X)
 print("y: ", y) # Should be a 10x1 vector with random values
 print("sum(y): ", sum(y)) # Should be 1
 
@@ -75,32 +74,40 @@ print("sum(y): ", sum(y)) # Should be 1
 ##  Part 3: Negative log loss of gradient
 def negLogLossGrad(X, Y, W):
     '''
+    negLogLossGrad returns the gradient of the cost function of negative log
+    probabilities.
+    
+    Arguments:
+        X -- Input image(s) from which predictions will be made (n x m)
+        Y -- Target output(s) (actual labels) (10 x m)
+        W -- Weight matrix (n x 10)
     '''
-    P = Part2(W, X)
+    
+    P = SimpleNetwork(W, X) # Get the prediction for X using the weights W
 
     return np.dot(X, (P - Y).transpose())
 
 def negLogLossGrad_FiniteDifference(X, Y, W, h):
-   '''
-   negLogLossGrad_FiniteDifference returns the finite difference approximation
-   for the gradient of the negative log loss with respect to weight w_(i, j),
-   for all w_(i,j) in W.
+    '''
+    negLogLossGrad_FiniteDifference returns the finite difference approximation
+    for the gradient of the negative log loss with respect to weight w_(i, j),
+    for all w_(i,j) in W.
    
-   Arguments:
-    X -- Input image(s)
-    Y -- Output label(s)
-    W -- Weight matrix
-    h -- differential quantity
-   '''
+    Arguments:
+        X -- Input image(s) from which predictions will be made
+        Y -- Target output(s) (actual labels)
+        W -- Weight matrix
+        h -- differential quantity
+    '''
    
-   W_old = W.copy()
-   Gradient = np.zeros((len(W), len(W[0])))
-   for row in range(len(W)):
-       for col in range(len(W[0])):
+    W_old = W.copy()
+    Gradient = np.zeros((len(W), len(W[0])))
+    for row in range(len(W)):
+        for col in range(len(W[0])):
             W = W_old.copy()
             W[row, col] += h
-            Gradient[row, col] = (NLL(Part2(W, X), Y) - NLL(Part2(W_old, X), Y)) / h
-   return Gradient
+            Gradient[row, col] = (NLL(SimpleNetwork(W, X), Y) - NLL(SimpleNetwork(W_old, X), Y)) / h
+    return Gradient
    
 # Test part 3
 X = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3 ,4],[1, 2, 3, 4]]
@@ -116,8 +123,9 @@ for i in range(10):
     print "Total error: ", sum(abs(G1 - G2)), "h: ", h
     h /= 10
 
+##  Part 4: Training using vanilla gradient descent
 
-#######################3
+
 ## Others
 def tanh_layer(y, W, b):    
     '''
