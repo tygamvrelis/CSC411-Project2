@@ -206,13 +206,13 @@ Part 1 provides a description of the MNIST dataset from which the images of hand
 \begin{homeworkProblem}
 \noindent \textit{Dataset description}
 
-\noindent The MNIST dataset is made of thousands of 28 by 28 pixel images of the handwritten digits: 0 to 9. The images are split into training set and test set images labelled `train0' to `train9' and `test0' to `test9'. The number of images with each label is as follows:
+\noindent The MNIST dataset is made of thousands of 28 by 28 pixel images of the handwritten digits: 0 to 9. The images are split into training set and test set images labelled `train0' to `train9' and `test0' to `test9'. The number of images with each label is presented in Table~\ref{tab:part1_MNIST}, below.
 
-
+\begin{table}[!ht]
 \begin{center}
-\begin{tabular}{ | m{3em} | m{3cm}| m{3em} | m{3cm}| } 
+\begin{tabular}{ | m{3em} | m{4cm}| m{3em} | m{4cm}| } 
 \hline
-Label & Number of Images  &Label & Number of Images\\ 
+\textbf{Label} & \textbf{Number of Images}  &\textbf{Label} & \textbf{Number of Images}\\ 
 \hline
 train0 & 5923  &test0 & 980\\ 
 \hline
@@ -236,6 +236,9 @@ train9 & 5949  &test9 & 1009\\
 \hline
 \end{tabular}
 \end{center}
+\caption{Quantity of each type of image in the MNIST dataset.}
+\label{tab:part1_MNIST}
+\end{table}
 
 Ten images of each number were taken from the training sets and displayed in Figure~\ref{fig:numberExamples}. The correct labels of most of the pictures can be discerned at a glance by humans However, since the digits are handwritten, some of them may not be completely obvious. For example, Figure~\ref{fig:example99} is categorized as a 9 but looks like an 8.
 
@@ -286,17 +289,17 @@ is the number of cases
 '''
 return exp(y)/tile(sum(exp(y),0), (len(y),1))
 
-def Part2(theta, X):
+def Part2(W, X):
 '''
 Part2 returns the vectorized multiplication of the (n x 10) parameter matrix 
-theta with the data X.
+W with the data X.
 
 Arguments:
 theta -- (n x 10) matrix of parameters (weights and biases)
-x -- (n x 1) matrix whose rows correspond to pixels in images
+x -- (n x m) matrix whose i-th columns correspond to the i-th training image
 '''
 
-return softmax(np.dot(theta.T, X))
+return softmax(np.dot(W.T, X))
 	\end{lstlisting}
 	\caption{Python implementation of network using NumPy.}
 	\label{fig:part2_code}
@@ -387,13 +390,49 @@ P =  \begin{bmatrix}
     p_{k}^{(1)}       & p_{k}^{(2)} & p_{k}^{(3)} & \dots & p_{k}^{(m)}
 \end{bmatrix}$$
 Where the superscript of each element represents the index of the training samples.
+\newline
+\newline
+\noindent \textit{Finite Difference Approximation (3b)}
+\newline
+To check that the gradient was computed correctly, the gradient with respect to weight $w_{i, j}$ was approximated using finite differences, for all coordinates in the weight matrix. $10$ values for the differential quantity, $h$, were tested, for which the maximum total error was $2.698$ for $h = 1$ and the minimum total error was $3.054 \times 10^{-7}$ for $h = 1 \times 10^{-7}$. Thus, for sufficiently small $h$, the finite difference approximation and vectorized computation converge to the same quantity, suggesting the vectorized computation is correct. The complete results are summarized in Table~\ref{tab:part3_grad}, below.
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{ | m{12em} | m{2cm} | }
+\hline
+\textbf{Total error} & \textbf{h}\\
+\hline
+2.698202291518717  &1.0\\
+\hline
+0.200166359876926  &0.1\\
+\hline
+0.019912135073950066  &0.01\\
+\hline
+0.0019906216532900034  &0.001\\
+\hline
+0.00019905646908402463  &0.0001\\
+\hline
+1.990372311189148e-05  &1e-05\\
+\hline
+1.9841905873896337e-06  &1e-06\\
+\hline
+3.2450363651737035e-07  &1e-07\\
+\hline
+3.0542104362263345e-06  &1e-08\\
+\hline
+2.747131061797692e-05  &1e-09\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Sum of differences between vectorized gradient computation and finite difference approximation.}
+\label{tab:part3_grad}
+\end{table}
 \clearpage
 \end{homeworkProblem}
 
 
 % Part 4
 \begin{homeworkProblem}
-	
+
 \clearpage
 \end{homeworkProblem}
 
