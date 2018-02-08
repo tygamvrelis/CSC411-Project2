@@ -67,7 +67,7 @@ def negLogLossGrad(X, Y, W):
     P = Part2(W, X)
 
     return np.dot(X, (P - Y).transpose())
-P = [[1, 4],[2, 5],[3, 6]]
+P = [[12, 4],[2, 5],[3, 6]]
 Y = [[1, 0], [0, 0], [0, 1]]
 P = np.array(P)
 Y = np.array(Y)
