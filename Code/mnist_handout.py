@@ -49,7 +49,7 @@ def softmax(y):
     '''
     
     return exp(y)/tile(sum(exp(y),0), (len(y),1))
-    
+######
 def Part2(theta, X):
     '''
     Part2 returns the vectorized multiplication of the (n x 10) parameter matrix 
@@ -62,7 +62,16 @@ def Part2(theta, X):
     
     return softmax(np.dot(theta.T, X))
 
+####PART 3#############
+def negLogLossGrad(X, Y, W):
+    P = Part2(W, X)
 
+    return np.dot(X, (P - Y).transpose())
+P = [[1, 4],[2, 5],[3, 6]]
+Y = [[1, 0], [0, 0], [0, 1]]
+P = np.array(P)
+Y = np.array(Y)
+#######################3
 ## Others
 def tanh_layer(y, W, b):    
     '''

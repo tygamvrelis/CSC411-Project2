@@ -140,7 +140,7 @@
 }{
 \enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
 }
-\setlength\parindent{24pt}
+\setlength\parindent{0pt}
 %----------------------------------------------------------------------------------------
 %	NAME AND CLASS SECTION
 %----------------------------------------------------------------------------------------
@@ -308,7 +308,85 @@ return softmax(np.dot(theta.T, X))
 
 % Part 3
 \begin{homeworkProblem}
+	\noindent \textit{Cost Function of Negative Log Probabilities}
 	
+	The Cost function that will be used for the network described in part 2 is:
+	$$C = - \sum_{q = 1}^{m} (\sum_{l = 1}^{k} y_llog(p_l))_q$$
+	Where $k$ is the number of output nodes, $m$ is the number of training samples, $p_l = \frac{e^{o_l}}{\sum_{c = 1}^{k} e^{o_c}}$ and $y_l$ is equal to $1$ if the training sample is labeled as $l$ and 0 otherwise.\newline
+	\break
+	
+	\noindent \textit{Partial Derivative of the Cost Function (3a)}
+	
+	Let the matrix $W =  \begin{bmatrix}
+    w_{11}       &w_{12} & w_{13} & \dots & w_{1k} \\
+    w_{21}       &w_{22} & w_{23} & \dots & w_{2k} \\
+    \hdotsfor{5} \\
+    w_{n1}       &w_{n2} & w_{n3} & \dots & w_{nk}
+\end{bmatrix}$ and let $W_j$ be the $j^{th}$ column of matrix $W$. This results in $o_j = W_j^Tx$ where
+$x = \begin{bmatrix}
+    x_{1} \\
+    x_{2} \\
+    \hdotsfor{1} \\
+    x_{n} 
+\end{bmatrix}$ and $n$ is equal to the number of pixels with an extra $1$ to multiply into the bias.\newline
+
+	To calculate the partial derivative of C, we will consider only \textbf{a single training sample}: 
+	$C = - \sum_{l = 1}^{k} y_llog(p_l)$
+	The partial derivative with respect to $w_{ij}$ is:
+	$$\frac{\partial C(W)}{\partial w_{ij}} = - \sum_{l = 1}^{k} \frac{\partial C}{\partial p_l}\frac{\partial p_l}{\partial o_j}\frac{\partial o_j}{\partial w_{ij}}$$
+	The first term is straight forward: $\frac{\partial C}{\partial p_l} = \frac{y_l}{p_l}$.\newline
+	
+	For the second term, we have $\frac{\partial p_l}{\partial o_j} = 
+	\begin{cases}\frac{-e^{o_l}e^{o_j}}{(\sum_{c = 1}^{k} e^{o_c})^2} = -p_lp_j, \text{if } l \ne j\\
+	\frac{e^{o_j}}{\sum_{c = 1}^{k} e^{o_c}} - \frac{e^{2o_j}}{(\sum_{c = 1}^{k} e^{o_c})^2} = p_j - p_j^2, \text{if } l = j
+	 \end{cases}$
+
+	
+	From the equation: $o_j = W_j^Tx$, we have $o_j = w_{1j}x_1 + w_{2j}x_2 + \dots + w_{nj}x_n$ and it is clear to see that: $\frac{\partial o_j}{\partial w_{ij}} = x_i$.\newline
+	
+	Putting it all together, we have:
+	$$\frac{\partial C(W)}{\partial w_{ij}} = - (\sum_{l \ne j} (-\frac{y_l}{p_l}p_lp_j) + \frac{y_j}{p_j}(p_j - p_j^2))x_i = (\sum_{l \ne j} (y_lp_j) + y_j(p_j - 1))x_i$$
+	Considering that we are using 1-hot encoding, only a single $y_l$ can equal 1. Therefore, $$\frac{\partial C(W)}{\partial w_{ij}} = \begin{cases}
+    (p_j - 1)x_i,& \text{if } y_j = 1\\
+    p_jx_i,              & \text{otherwise}
+\end{cases}$$
+Which is equivalent to saying: $\frac{\partial C(W)}{\partial w_{ij}} = (p_j - y_j)x_i$. To extend this to all training samples, we just have to sum up each individual contribution, resulting in the equation: $\frac{\partial C(W)}{\partial w_{ij}} = \sum_{q = 1}^{m}((p_j - y_j)x_i)_q$.
+\clearpage
+
+\noindent \textit{Vectorized Implementation of Gradient (3b)}
+
+To vectorize the gradient, we first define the gradient matrix to be:  $$\frac{\partial C(W)}{\partial W} = 
+\begin{bmatrix}
+    \frac{\partial C}{w_{11}}       &\dots & \dots & \dots & \frac{\partial C}{w_{1k}} \\
+    \frac{\partial C}{w_{21}}       &\dots & \dots & \dots & \frac{\partial C}{w_{2k}} \\
+    \hdotsfor{5} \\
+    \frac{\partial C}{w_{n1}}       &\dots & \dots & \dots & \frac{\partial C}{w_{nk}}
+\end{bmatrix} = \begin{bmatrix}
+    \sum_{q = 1}^{m}((p_1 - y_1)x_1)_q       &\dots & \dots & \dots & \sum_{q = 1}^{m}((p_k - y_k)x_1)_q \\
+    \sum_{q = 1}^{m}((p_1 - y_1)x_2)_q       &\dots & \dots & \dots & \sum_{q = 1}^{m}((p_k - y_k)x_2)_q \\
+    \hdotsfor{5} \\
+    \sum_{q = 1}^{m}((p_1 - y_1)x_n)_q       &\dots & \dots & \dots & \sum_{q = 1}^{m}((p_k - y_k)x_n)_q
+\end{bmatrix}$$
+
+This is equivalent to: $ X(P - Y)^T$ where: $$X = \begin{bmatrix}
+    x_{1}^{(1)}       & x_{1}^{(2)} & x_{1}^{(3)} & \dots & x_{1}^{(m)} \\
+    x_{2}^{(1)}       & x_{2}^{(2)} & x_{2}^{(3)} & \dots & x_{2}^{(m)} \\
+    \hdotsfor{5} \\
+    x_{n}^{(1)}       & x_{n}^{(2)} & x_{n}^{(3)} & \dots & x_{n}^{(m)}
+\end{bmatrix}
+Y = \begin{bmatrix}
+    y_{1}^{(1)}       & y_{1}^{(2)} & y_{1}^{(3)} & \dots & y_{1}^{(m)} \\
+    y_{2}^{(1)}       & y_{2}^{(2)} & y_{2}^{(3)} & \dots & y_{2}^{(m)} \\
+    \hdotsfor{5} \\
+    y_{k}^{(1)}       & y_{k}^{(2)} & y_{k}^{(3)} & \dots & y_{k}^{(m)}
+\end{bmatrix}
+P =  \begin{bmatrix}
+    p_{1}^{(1)}       & p_{1}^{(2)} & p_{1}^{(3)} & \dots & p_{1}^{(m)} \\
+    p_{2}^{(1)}       & p_{2}^{(2)} & p_{2}^{(3)} & \dots & p_{2}^{(m)} \\
+    \hdotsfor{5} \\
+    p_{k}^{(1)}       & p_{k}^{(2)} & p_{k}^{(3)} & \dots & p_{k}^{(m)}
+\end{bmatrix}$$
+Where the superscript of each element represents the index of the training samples.
 \clearpage
 \end{homeworkProblem}
 
