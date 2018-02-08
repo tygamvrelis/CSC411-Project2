@@ -49,10 +49,25 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
     
     return(current_W, history)
     
-def part4_train():
+def part4_train(trainingSet, numImages, alpha, eps, max_iter):
     '''
-    part4_train returns...
+    part4_train returns the parameter W fit to the data in trainingSet using
+    numImages images per digit via gradient descent.
+    
+    Arguments:
+     trainingSet -- a list in the form (imageMatrix, labels) used to train W
+     numImages -- a numerical value specifying the number of images per digit
+     alpha -- gradient descent "learning rate" parameter (proportional to step
+              size)
+     eps -- gradient descent parameter determining how tight the convergence
+            criterion is
     '''
+    
+    # Basically, initialize some weight W and call gradient descent then return
+    # the output
+    
+    #init_W = ??
+    #return p4.part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter)
     
     
 def part4_classify():

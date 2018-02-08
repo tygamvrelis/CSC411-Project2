@@ -94,6 +94,9 @@ def part3():
 ##  Part 4: Training using vanilla gradient descent
 import part4 as p4
 
+# Train and classify while increasing the number of images per digit
+# store the results in a list so that we can plot them later
+
 
 ## Others
 def tanh_layer(y, W, b):    
