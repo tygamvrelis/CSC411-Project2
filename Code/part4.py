@@ -48,3 +48,26 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         iter += 1
     
     return(current_W, history)
+    
+def part4_train():
+    '''
+    part4_train returns...
+    '''
+    
+    
+def part4_classify():
+    '''
+    part4_classify returns...
+    '''
+
+def part4_plotLearningCurves(history):
+    '''
+    part4_plotLearningCurves plots the learning curves associated with training
+    a neural network.
+    
+    Arguments:
+        history -- a list of pairs of numbers (error, num_examples), where
+                   error is the error associated with training the neural
+                   network using num_examples training examples.
+    '''
+    

@@ -92,7 +92,7 @@ def part3():
         h /= 10
 
 ##  Part 4: Training using vanilla gradient descent
-
+import part4 as p4
 
 
 ## Others
