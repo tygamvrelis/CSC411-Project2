@@ -6,6 +6,50 @@
 import part2 as p2
 import part3 as p3
 
+def makeMatrices():
+    '''
+    makeMatrices returns 2 matrices:
+        X -- the training matrix whose columns correspond to images
+        Y -- the label matrix whose i-th column corresponds to the i-th target
+             output
+             
+    Also returned is a list of tuples (digit, start index). This way, one can
+    easily reference the images for each digit from within X and Y.
+    '''
+    
+    M = loadmat("../Data/mnist_all.mat") # Load MNIST dataset
+    
+    numExamples = sum([len(M[k]) for k in M.keys() if "train" in k])
+    
+    # Pre-allocate space for matrices
+    X = np.empty((28 * 28 + 1, numExamples)) # 28 * 28 + 1 = num_pixels + bias
+    Y = np.empty((10, numExamples)) # 10 is the number of output classes
+    
+    indices = list()
+    i = 0
+    for k in M.keys():
+        if("train" in k):
+            print(k)
+            numImages = M[k].shape[0] # Number of images for the current digit
+            digitNum = int(re.findall('\d', k)[0]) # The current digit
+            indices.append((digitNum, i)) # Track the starting index for this
+                                          # digit in the columns of X
+            
+            M[k] = np.true_divide(M[k], 255.0) # Normalize images
+            M[k] = np.vstack((np.ones((1, numImages)), M[k].T)) # Stack 1s ontop
+            
+            X[:, i:i + numImages] = M[k].copy() # Put images in X matrix
+            
+            # Make the label for this set of images
+            label = np.zeros((10, 1))
+            label[digitNum] = 1
+            Y[:, i:i + numImages] = label
+            
+            i += numImages
+            
+    return (X, Y, indices)
+    
+
 def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
     '''
     part4_gradient_descent finds a local minimum of the hyperplane defined by
@@ -18,7 +62,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         Y -- input data for X (the actual/target data)
         init_W -- the initial guess for the local minimum (starting point)
         alpha -- the learning rate; proportional to the step size
-        eps -- used to determine img[0]when the algorithm has converged on a 
+        eps -- used to determine when the algorithm has converged on a 
                solution
         max_iter -- the maximum number of times the algorithm will loop before
                     terminating

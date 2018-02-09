@@ -98,7 +98,10 @@ import part4 as p4
 # store the results in a list so that we can plot them later
     p4_history = list()
     
-    for i in range(min(len(M[k]) for k in M.keys() if "train" in k or "test" in k)):
+    # We can only increase the training set to be as large as the smallest
+    # training set
+    size = min(len(M[k]) for k in M.keys() if "train" in k)
+    for i in range(size):
         # print("PART 5: i = ", i)
         # (theta, history) = p5.part5_train(actList, i + 1, 1.60E-5, 5E-7, 600000)
         # (cost_actList, corr_actList) = p5.part5_classify(actList, theta, i + 1) # Test on training set
