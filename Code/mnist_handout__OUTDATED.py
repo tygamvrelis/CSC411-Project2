@@ -120,7 +120,7 @@ X = np.array(X)
 W = [[1, 0, 1.2, 3], [1, 2, 0.2, 1.2], [1, 8, 1, 4], [1, -2, 3, 1], [1, 0, 3, 1]]
 W = np.array(W)
 Y = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
->>>>>>> a357b01f3e52ed7ef254118a1aa4763503ad5278:Code/mnist_handout__OUTDATED.py
+
 Y = np.array(Y)
 G1 = negLogLossGrad(X, Y, W)
 h = 1.0

@@ -287,20 +287,17 @@ def softmax(y):
 	is an NxM matrix where N is the number of outputs for a single case, and M
 	is the number of cases
 	'''
-	
 	return exp(y)/tile(sum(exp(y),0), (len(y),1))
 
 def SimpleNetwork(W, X):
     '''
 	SimpleNetwork returns the vectorized multiplication of the (n x 10) 
 	parameter matrix W with the data X.
-	
 	Arguments:
 		W -- (n x 10) matrix of parameters (weights and biases)
 		x -- (n x m) matrix whose i-th column corresponds to the i-th training 
 	image
 	'''
-
 	return softmax(np.dot(W.T, X))
 	\end{lstlisting}
 	\caption{Python implementation of network using NumPy.}
@@ -391,12 +388,34 @@ P =  \begin{bmatrix}
     \hdotsfor{5} \\
     p_{k}^{(1)}       & p_{k}^{(2)} & p_{k}^{(3)} & \dots & p_{k}^{(m)}
 \end{bmatrix}$$
-Where the superscript of each element represents the index of the training samples.
+Where the superscript of each element represents the index of the training samples. The code used to compute the gradient is shown in Figure~\ref{fig:part3_gradient}.
 \newline
-\newline
+\begin{figure}[!ht]
+	\begin{lstlisting}
+def negLogLossGrad(X, Y, W):
+    '''
+    negLogLossGrad returns the gradient of the cost function of negative log
+    probabilities.
+    
+    Arguments:
+        X -- Input image(s) from which predictions will be made (n x m)
+        Y -- Target output(s) (actual labels) (10 x m)
+        W -- Weight matrix (n x 10)
+    '''
+    
+    P = SimpleNetwork(W, X) # Get the prediction for X using the weights W
+
+    return np.dot(X, (P - Y).transpose())
+	\end{lstlisting}
+	\caption{Vectorized Implementation of the Negative Log Loss Gradient}
+	\label{fig:part3_gradient}
+\end{figure}
+\clearpage
+
+
 \noindent \textit{Finite Difference Approximation (3b)}
 \newline
-To check that the gradient was computed correctly, the gradient with respect to weight $w_{ij}$ was approximated using finite differences, for all coordinates in the weight matrix. $10$ values for the differential quantity, $h$, were tested, for which the maximum total error was $2.698$ for $h = 1$ and the minimum total error was $3.054 \times 10^{-7}$ for $h = 1 \times 10^{-7}$. Thus, for sufficiently small $h$, the finite difference approximation and vectorized computation converge to the same quantity, suggesting the vectorized computation is correct. The complete results are summarized in Table~\ref{tab:part3_grad}, below.
+To check that the gradient was computed correctly, the gradient with respect to weight $w_{ij}$ was approximated using finite differences, for all coordinates in the weight matrix. $10$ values for the differential quantity, $h$, were tested, for which the maximum total error was $2.698$ for $h = 1$ and the minimum total error was $3.054 \times 10^{-7}$ for $h = 1 \times 10^{-7}$. Thus, for sufficiently small $h$, the finite difference approximation and vectorized computation converge to the same quantity, suggesting the vectorized computation is correct. The test case used to obtain this result is shown in Figure~\ref{fig:part3_test}. The complete results are summarized in Table~\ref{tab:part3_grad}, below.
 \begin{table}[!ht]
 \begin{center}
 \begin{tabular}{ | m{12em} | m{2cm} | }
@@ -428,6 +447,27 @@ To check that the gradient was computed correctly, the gradient with respect to 
 \caption{Sum of differences between vectorized gradient computation and finite difference approximation for $10$ $h$-values.}
 \label{tab:part3_grad}
 \end{table}
+
+
+\begin{figure}[!ht]
+	\begin{lstlisting}    
+# Test part 3
+X = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3 ,4],[1, 2, 3, 4]]
+X = np.array(X)
+W = [[1, 0, 1.2, 3], [1, 2, 0.2, 1.2], [1, 8, 1, 4], [1, -2, 3, 1], [1, 0, 3, 1]]
+W = np.array(W)
+Y = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+Y = np.array(Y)
+G1 = negLogLossGrad(X, Y, W)
+h = 1.0
+for i in range(10):
+    G2 = negLogLossGrad_FiniteDifference(X, Y, W, h)
+    print "Total error: ", sum(abs(G1 - G2)), "h: ", h
+    h /= 10
+	\end{lstlisting}
+	\caption{Test Case Used to Calculate Error Between Finite Difference Approximation and the Vectorized Gradient}
+	\label{fig:part3_test}
+\end{figure}
 \clearpage
 \end{homeworkProblem}
 

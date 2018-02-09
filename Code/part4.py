@@ -23,7 +23,8 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         max_iter -- the maximum number of times the algorithm will loop before
                     terminating
     '''
-    
+
+    size = len(X[0])
     iter = 0
     previous_W = 0
     current_W = init_W.copy()
@@ -45,7 +46,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         
         if(iter % (max_iter // 100) == 0):
             # Print updates every so often and save cost into history list
-            cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
+            cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)/size
             history.append((iter, cost))
             print("Iter: ", iter, " | Cost: ", cost)
             
@@ -74,7 +75,7 @@ def part4_train(trainingSet, numImages, alpha, eps, max_iter):
     #return p4.part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter)
     
     
-def part4_classify(input, W, size):
+def part4_classify(input, W):
     '''
     part4_classify returns the average cost and percentage of correct
     classifications for the hypothesis np.dot(W.T, x), using the learned
@@ -86,6 +87,20 @@ def part4_classify(input, W, size):
         W -- the learned parameters that will be used to make predictions
         size -- the size of the classification set to be tested
     '''
+    correct = 0.0
+    X = input[0]
+    Y = input[1]
+    size = len(X[0])
+    P = p2.SimpleNetwork(W, X)
+
+    for i in range(size):
+        highest = np.argmax(P[:, i])
+        if Y[highest, i] == 1:
+            correct += 1
+    correct = correct/size
+    cost = p3.NLL(P, Y)/size
+    return (cost, correct)
+
 
 def part4_plotLearningCurves(history):
     '''
@@ -93,8 +108,13 @@ def part4_plotLearningCurves(history):
     a neural network.
     
     Arguments:
-        history -- a list of pairs of numbers (cost, num_examples), where
+        history -- a list of pairs of numbers (num_iterations, cost), where
                    cost is the average cost associated with training the neural
                    network using num_examples training examples.
     '''
-    
+
+    plt.plot(history[0], history[1])
+    plt.ylabel('Cost')
+    plt.xlabel('Iterations')
+    plt.title('Training Set Learning Curve')
+    plt.show()
