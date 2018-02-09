@@ -337,7 +337,7 @@ $x = \begin{bmatrix}
 
 	To calculate the partial derivative of C, we will consider only \textbf{a single training sample}: 
 	$C = - \sum_{l = 1}^{k} y_llog(p_l)$
-	The partial derivative with respect to $w_{ij}$ is:
+	By the chain rule, the partial derivative with respect to $w_{ij}$ is:
 	$$\frac{\partial C(W)}{\partial w_{ij}} = - \sum_{l = 1}^{k} \frac{\partial C}{\partial p_l}\frac{\partial p_l}{\partial o_j}\frac{\partial o_j}{\partial w_{ij}}$$
 	The first term is straight forward: $\frac{\partial C}{\partial p_l} = \frac{y_l}{p_l}$.\newline
 	
@@ -396,7 +396,7 @@ Where the superscript of each element represents the index of the training sampl
 \newline
 \noindent \textit{Finite Difference Approximation (3b)}
 \newline
-To check that the gradient was computed correctly, the gradient with respect to weight $w_{i, j}$ was approximated using finite differences, for all coordinates in the weight matrix. $10$ values for the differential quantity, $h$, were tested, for which the maximum total error was $2.698$ for $h = 1$ and the minimum total error was $3.054 \times 10^{-7}$ for $h = 1 \times 10^{-7}$. Thus, for sufficiently small $h$, the finite difference approximation and vectorized computation converge to the same quantity, suggesting the vectorized computation is correct. The complete results are summarized in Table~\ref{tab:part3_grad}, below.
+To check that the gradient was computed correctly, the gradient with respect to weight $w_{ij}$ was approximated using finite differences, for all coordinates in the weight matrix. $10$ values for the differential quantity, $h$, were tested, for which the maximum total error was $2.698$ for $h = 1$ and the minimum total error was $3.054 \times 10^{-7}$ for $h = 1 \times 10^{-7}$. Thus, for sufficiently small $h$, the finite difference approximation and vectorized computation converge to the same quantity, suggesting the vectorized computation is correct. The complete results are summarized in Table~\ref{tab:part3_grad}, below.
 \begin{table}[!ht]
 \begin{center}
 \begin{tabular}{ | m{12em} | m{2cm} | }
@@ -425,7 +425,7 @@ To check that the gradient was computed correctly, the gradient with respect to 
 \hline
 \end{tabular}
 \end{center}
-\caption{Sum of differences between vectorized gradient computation and finite difference approximation.}
+\caption{Sum of differences between vectorized gradient computation and finite difference approximation for $10$ $h$-values.}
 \label{tab:part3_grad}
 \end{table}
 \clearpage
