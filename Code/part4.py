@@ -20,6 +20,8 @@ def makeMatrices():
     M = loadmat("../Data/mnist_all.mat") # Load MNIST dataset
     
     numExamples = sum([len(M[k]) for k in M.keys() if "train" in k])
+    
+    # Pre-allocate space for matrices
     X = np.empty((28 * 28 + 1, numExamples)) # 28 * 28 + 1 = num_pixels + bias
     Y = np.empty((10, numExamples)) # 10 is the number of output classes
     
@@ -28,18 +30,21 @@ def makeMatrices():
     for k in M.keys():
         if("train" in k):
             print(k)
-            numImages = M[k].shape[0]
-            digitNum = int(re.findall('\d', k)[0])
-            indices.append((digitNum, i))
+            numImages = M[k].shape[0] # Number of images for the current digit
+            digitNum = int(re.findall('\d', k)[0]) # The current digit
+            indices.append((digitNum, i)) # Track the starting index for this
+                                          # digit in the columns of X
             
-            M[k] = np.true_divide(M[k], 255.0)
-            M[k] = np.vstack((np.ones((1, numImages)), M[k].T))
+            M[k] = np.true_divide(M[k], 255.0) # Normalize images
+            M[k] = np.vstack((np.ones((1, numImages)), M[k].T)) # Stack 1s ontop
             
-            X[:, i:i + numImages] = M[k].copy()
+            X[:, i:i + numImages] = M[k].copy() # Put images in X matrix
             
+            # Make the label for this set of images
             label = np.zeros((10, 1))
             label[digitNum] = 1
             Y[:, i:i + numImages] = label
+            
             i += numImages
             
     return (X, Y, indices)
