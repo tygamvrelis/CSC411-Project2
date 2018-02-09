@@ -132,7 +132,7 @@ def part3():
     alpha = 1e-5
     eps = 1e-6
     max_iter = 50000
-    init_v = 0.5 # Initial momentum value
+    init_v = 0.1 # Initial momentum value
     momentum = 0.9
     num_images = 1000 # Number of images per digit to use for training
     (W, history) = p5.part5_train(XTrain, YTrain, indicesTrain, num_images, alpha, 
