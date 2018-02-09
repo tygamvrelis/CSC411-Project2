@@ -230,7 +230,10 @@ def part4_plotLearningCurves(history):
                    network using num_examples training examples.
     '''
 
-    plt.plot(history[0], history[1])
+    num_iter = [i[0] for i in history]
+    cost = [i[1] for i in history]
+    
+    plt.plot(num_iter, cost)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Training Set Learning Curve')
