@@ -141,9 +141,9 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
             iter < max_iter)):
         firstPass = False
         
-        previous_W = current_W.copy() # Update the previous theta value
+        previous_W = current_W.copy() # Update the previous W value
         
-        # Update theta
+        # Update W
         current_W = current_W - alpha * p3.negLogLossGrad(X, Y, current_W)
         
         if(iter % (max_iter // 100) == 0):
