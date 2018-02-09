@@ -3,6 +3,9 @@
 # network in part 2 using vanilla gradient descent, and plotting learning
 # curves.
 
+import part2 as p2
+import part3 as p3
+
 def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
     '''
     part4_gradient_descent finds a local minimum of the hyperplane defined by
@@ -37,11 +40,11 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         previous_W = current_W.copy() # Update the previous theta value
         
         # Update theta
-        current_W = current_W - alpha * part6_grad_J(current_W, X, Y)
+        current_W = current_W - alpha * p3.negLogLossGrad(X, Y, current_W)
         
         if(iter % (max_iter // 100) == 0):
             # Print updates every so often
-            cost = part6_J(current_W, X, Y)
+            cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
             history.append((iter, cost))
             print("Iter: ", iter, " | Cost: ", cost)
             
