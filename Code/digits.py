@@ -96,7 +96,21 @@ import part4 as p4
 
 # Train and classify while increasing the number of images per digit
 # store the results in a list so that we can plot them later
-
+    p4_history = list()
+    
+    for i in range(min(len(M[k]) for k in M.keys() if "train" in k or "test" in k)):
+        # print("PART 5: i = ", i)
+        # (theta, history) = p5.part5_train(actList, i + 1, 1.60E-5, 5E-7, 600000)
+        # (cost_actList, corr_actList) = p5.part5_classify(actList, theta, i + 1) # Test on training set
+        # if(i < 60):
+        #     (cost_val_actList, corr_val_actList) = p5.part5_classify(val_actList, theta, i + 1) # Test on validation set
+        #     (cost_val_not_actList, corr_val_not_actList) = p5.part5_classify(val_not_actList, theta, i + 1) # Test on validation set for 6 actors not in act
+        # else:
+        #     (cost_val_actList, corr_val_actList) = p5.part5_classify(val_actList, theta, 60) # Test on validation set
+        #     (cost_val_not_actList, corr_val_not_actList) = p5.part5_classify(val_not_actList, theta, 60) # Test on validation set for 6 actors not in act
+        # 
+        # p5_history.append((cost_actList, corr_actList, cost_val_actList, corr_val_actList,
+        #                    cost_val_not_actList, corr_val_not_actList))
 
 ## Others
 def tanh_layer(y, W, b):    
