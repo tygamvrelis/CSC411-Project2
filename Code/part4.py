@@ -53,25 +53,6 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
     
     return(current_W, history)
     
-def tanh_layer(y, W, b):    
-    '''
-    Return the output of a tanh layer for the input matrix y. y
-    is an NxM matrix where N is the number of inputs for a single case, and M
-    is the number of cases
-    '''
-    
-    return tanh(dot(W.T, y)+b)
-
-def forward(x, W0, b0, W1, b1):
-    '''
-    
-    '''
-    
-    L0 = tanh_layer(x, W0, b0)
-    L1 = dot(W1.T, L0) + b1
-    output = softmax(L1)
-    return L0, L1, output
-    
 def part4_train(trainingSet, numImages, alpha, eps, max_iter):
     '''
     part4_train returns the parameter W fit to the data in trainingSet using

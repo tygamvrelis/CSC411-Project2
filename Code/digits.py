@@ -99,7 +99,20 @@ import part4 as p4
 
 
 ## Others
+def tanh_layer(y, W, b):    
+    '''
+    Return the output of a tanh layer for the input matrix y. y
+    is an NxM matrix where N is the number of inputs for a single case, and M
+    is the number of cases
+    '''
     
+    return tanh(dot(W.T, y)+b)
+
+def forward(x, W0, b0, W1, b1):
+    L0 = tanh_layer(x, W0, b0) # tanh layer output
+    L1 = dot(W1.T, L0) + b1 # inner product layer output
+    output = softmax(L1)
+    return L0, L1, output
 
 def deriv_multilayer(W0, b0, W1, b1, x, L0, L1, y, y_):
     '''
