@@ -10,9 +10,7 @@ import matplotlib.image as mpimg
 from scipy.ndimage import filters
 import urllib
 from numpy import random
-
 import cPickle
-
 import os
 from scipy.io import loadmat
 
@@ -38,8 +36,7 @@ print test
 # Normalize images (map to [0, 1])
 for k in M.keys():
     if("train" in k or "test" in k):
-        temp = [a / 255.0 for a in M[k]]
-        M[k] = temp
+        M[k] = np.true_divide(M[k], 255.0)
 
 def softmax(y):
     '''
@@ -49,29 +46,92 @@ def softmax(y):
     '''
     
     return exp(y)/tile(sum(exp(y),0), (len(y),1))
-######
-def Part2(theta, X):
+    
+def SimpleNetwork(theta, X):
     '''
-    Part2 returns the vectorized multiplication of the (n x 10) parameter matrix 
-    theta with the data X.
+    SimpleNetwork returns the vectorized multiplication of the (n x 10) 
+    parameter matrix W with the data X.
     
     Arguments:
-        theta -- (n x 10) matrix of parameters (weights and biases)
-        x -- (n x 1) matrix whose rows correspond to pixels in images
+        W -- (n x 10) matrix of parameters (weights and biases)
+        x -- (n x m) matrix whose i-th column corresponds to the i-th training 
+             image
     '''
     
     return softmax(np.dot(theta.T, X))
+    
+# Part 2 test code
+np.random.seed(3)
+W = np.random.rand(28*28,10) # Randomly initialize some theta matrix
+X = M["train5"][148:149].T # Image of "5"
+plt.imshow(x.reshape((28,28)))
+plt.show()
+y = SimpleNetwork(W, X)
+print("y: ", y) # Should be a 10x1 vector with random values
+print("sum(y): ", sum(y)) # Should be 1
 
-####PART 3#############
+
+##  Part 3: Negative log loss of gradient
 def negLogLossGrad(X, Y, W):
-    P = Part2(W, X)
+    '''
+    negLogLossGrad returns the gradient of the cost function of negative log
+    probabilities.
+    
+    Arguments:
+        X -- Input image(s) from which predictions will be made (n x m)
+        Y -- Target output(s) (actual labels) (10 x m)
+        W -- Weight matrix (n x 10)
+    '''
+    
+    P = SimpleNetwork(W, X) # Get the prediction for X using the weights W
 
     return np.dot(X, (P - Y).transpose())
+<<<<<<< HEAD:Code/mnist_handout.py
 P = [[12, 4],[2, 5],[3, 6]]
 Y = [[1, 0], [0, 0], [0, 1]]
 P = np.array(P)
+=======
+
+def negLogLossGrad_FiniteDifference(X, Y, W, h):
+    '''
+    negLogLossGrad_FiniteDifference returns the finite difference approximation
+    for the gradient of the negative log loss with respect to weight w_(i, j),
+    for all w_(i,j) in W.
+   
+    Arguments:
+        X -- Input image(s) from which predictions will be made
+        Y -- Target output(s) (actual labels)
+        W -- Weight matrix
+        h -- differential quantity
+    '''
+   
+    W_old = W.copy()
+    Gradient = np.zeros((len(W), len(W[0])))
+    for row in range(len(W)):
+        for col in range(len(W[0])):
+            W = W_old.copy()
+            W[row, col] += h
+            Gradient[row, col] = (NLL(SimpleNetwork(W, X), Y) - NLL(SimpleNetwork(W_old, X), Y)) / h
+    return Gradient
+   
+# Test part 3
+X = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3 ,4],[1, 2, 3, 4]]
+X = np.array(X)
+W = [[1, 0, 1.2, 3], [1, 2, 0.2, 1.2], [1, 8, 1, 4], [1, -2, 3, 1], [1, 0, 3, 1]]
+W = np.array(W)
+Y = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+>>>>>>> a357b01f3e52ed7ef254118a1aa4763503ad5278:Code/mnist_handout__OUTDATED.py
 Y = np.array(Y)
-#######################3
+G1 = negLogLossGrad(X, Y, W)
+h = 1.0
+for i in range(10):
+    G2 = negLogLossGrad_FiniteDifference(X, Y, W, h)
+    print "Total error: ", sum(abs(G1 - G2)), "h: ", h
+    h /= 10
+
+##  Part 4: Training using vanilla gradient descent
+
+
 ## Others
 def tanh_layer(y, W, b):    
     '''
@@ -88,8 +148,8 @@ def forward(x, W0, b0, W1, b1):
     output = softmax(L1)
     return L0, L1, output
     
-def NLL(y, y_):
-    return -sum(y_*log(y)) 
+def NLL(P, Y):
+    return -sum(Y*log(P)) 
 
 def deriv_multilayer(W0, b0, W1, b1, x, L0, L1, y, y_):
     '''

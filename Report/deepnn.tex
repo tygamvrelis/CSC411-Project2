@@ -206,13 +206,13 @@ Part 1 provides a description of the MNIST dataset from which the images of hand
 \begin{homeworkProblem}
 \noindent \textit{Dataset description}
 
-\noindent The MNIST dataset is made of thousands of 28 by 28 pixel images of the handwritten digits: 0 to 9. The images are split into training set and test set images labelled `train0' to `train9' and `test0' to `test9'. The number of images with each label is as follows:
+\noindent The MNIST dataset is made of thousands of 28 by 28 pixel images of the handwritten digits: 0 to 9. The images are split into training set and test set images labelled `train0' to `train9' and `test0' to `test9'. The number of images with each label is presented in Table~\ref{tab:part1_MNIST}, below.
 
-
+\begin{table}[!ht]
 \begin{center}
-\begin{tabular}{ | m{3em} | m{3cm}| m{3em} | m{3cm}| } 
+\begin{tabular}{ | m{3em} | m{4cm}| m{3em} | m{4cm}| } 
 \hline
-Label & Number of Images  &Label & Number of Images\\ 
+\textbf{Label} & \textbf{Number of Images}  &\textbf{Label} & \textbf{Number of Images}\\ 
 \hline
 train0 & 5923  &test0 & 980\\ 
 \hline
@@ -236,6 +236,9 @@ train9 & 5949  &test9 & 1009\\
 \hline
 \end{tabular}
 \end{center}
+\caption{Quantity of each type of image in the MNIST dataset.}
+\label{tab:part1_MNIST}
+\end{table}
 
 Ten images of each number were taken from the training sets and displayed in Figure~\ref{fig:numberExamples}. The correct labels of most of the pictures can be discerned at a glance by humans However, since the digits are handwritten, some of them may not be completely obvious. For example, Figure~\ref{fig:example99} is categorized as a 9 but looks like an 8.
 
@@ -266,7 +269,7 @@ Ten images of each number were taken from the training sets and displayed in Fig
 
 % Part 2
 \begin{homeworkProblem}
-\noindent \textit{Computing a simple network}
+\noindent \textit{Computing a Simple Network}
 
 \noindent In this part, the simple network depicted in Figure~\ref{fig:part2_simple_network} was implemented as a function in Python using NumPy, the code listing for which is presented is Figure~\ref{fig:part2_code}.
 
@@ -279,24 +282,26 @@ Ten images of each number were taken from the training sets and displayed in Fig
 \begin{figure}[!ht]
 	\begin{lstlisting}
 def softmax(y):
-'''
-Return the output of the softmax function for the matrix of output y. y
-is an NxM matrix where N is the number of outputs for a single case, and M
-is the number of cases
-'''
-return exp(y)/tile(sum(exp(y),0), (len(y),1))
+	'''
+	Return the output of the softmax function for the matrix of output y. y
+	is an NxM matrix where N is the number of outputs for a single case, and M
+	is the number of cases
+	'''
+	
+	return exp(y)/tile(sum(exp(y),0), (len(y),1))
 
-def Part2(theta, X):
-'''
-Part2 returns the vectorized multiplication of the (n x 10) parameter matrix 
-theta with the data X.
+def SimpleNetwork(W, X):
+    '''
+	SimpleNetwork returns the vectorized multiplication of the (n x 10) 
+	parameter matrix W with the data X.
+	
+	Arguments:
+		W -- (n x 10) matrix of parameters (weights and biases)
+		x -- (n x m) matrix whose i-th column corresponds to the i-th training 
+	image
+	'''
 
-Arguments:
-theta -- (n x 10) matrix of parameters (weights and biases)
-x -- (n x 1) matrix whose rows correspond to pixels in images
-'''
-
-return softmax(np.dot(theta.T, X))
+	return softmax(np.dot(W.T, X))
 	\end{lstlisting}
 	\caption{Python implementation of network using NumPy.}
 	\label{fig:part2_code}
@@ -312,7 +317,7 @@ return softmax(np.dot(theta.T, X))
 	
 	The Cost function that will be used for the network described in part 2 is:
 	$$C = - \sum_{q = 1}^{m} (\sum_{l = 1}^{k} y_llog(p_l))_q$$
-	Where $k$ is the number of output nodes, $m$ is the number of training samples, $p_l = \frac{e^{o_l}}{\sum_{c = 1}^{k} e^{o_c}}$ and $y_l$ is equal to $1$ if the training sample is labeled as $l$ and 0 otherwise.\newline
+	Where $k$ is the number of output nodes, $m$ is the number of training samples, $p_l = \frac{e^{o_l}}{\sum_{c = 1}^{k} e^{o_c}}$ and $y_l$ is equal to $1$ if the training sample is labelled as $l$ and 0 otherwise.\newline
 	\break
 	
 	\noindent \textit{Partial Derivative of the Cost Function (3a)}
@@ -328,11 +333,11 @@ $x = \begin{bmatrix}
     x_{2} \\
     \hdotsfor{1} \\
     x_{n} 
-\end{bmatrix}$ and $n$ is equal to the number of pixels with an extra $1$ to multiply into the bias.\newline
+\end{bmatrix}$ and $n$ is equal to the number of pixels with an extra $1$ to multiply into the bias. That is, $x_1 ^q$ is always taken to be $1$ while $x_2 ^q,...,x_n ^q$ are the inputs to the network corresponding to the $q^{th}$ training example. \newline
 
 	To calculate the partial derivative of C, we will consider only \textbf{a single training sample}: 
 	$C = - \sum_{l = 1}^{k} y_llog(p_l)$
-	The partial derivative with respect to $w_{ij}$ is:
+	By the chain rule, the partial derivative with respect to $w_{ij}$ is:
 	$$\frac{\partial C(W)}{\partial w_{ij}} = - \sum_{l = 1}^{k} \frac{\partial C}{\partial p_l}\frac{\partial p_l}{\partial o_j}\frac{\partial o_j}{\partial w_{ij}}$$
 	The first term is straight forward: $\frac{\partial C}{\partial p_l} = \frac{y_l}{p_l}$.\newline
 	
@@ -387,13 +392,65 @@ P =  \begin{bmatrix}
     p_{k}^{(1)}       & p_{k}^{(2)} & p_{k}^{(3)} & \dots & p_{k}^{(m)}
 \end{bmatrix}$$
 Where the superscript of each element represents the index of the training samples.
+\newline
+\newline
+\noindent \textit{Finite Difference Approximation (3b)}
+\newline
+To check that the gradient was computed correctly, the gradient with respect to weight $w_{ij}$ was approximated using finite differences, for all coordinates in the weight matrix. $10$ values for the differential quantity, $h$, were tested, for which the maximum total error was $2.698$ for $h = 1$ and the minimum total error was $3.054 \times 10^{-7}$ for $h = 1 \times 10^{-7}$. Thus, for sufficiently small $h$, the finite difference approximation and vectorized computation converge to the same quantity, suggesting the vectorized computation is correct. The complete results are summarized in Table~\ref{tab:part3_grad}, below.
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{ | m{12em} | m{2cm} | }
+\hline
+\textbf{Total error} & \textbf{h}\\
+\hline
+2.698202291518717  &1.0\\
+\hline
+0.200166359876926  &0.1\\
+\hline
+0.019912135073950066  &0.01\\
+\hline
+0.0019906216532900034  &0.001\\
+\hline
+0.00019905646908402463  &0.0001\\
+\hline
+1.990372311189148e-05  &1e-05\\
+\hline
+1.9841905873896337e-06  &1e-06\\
+\hline
+3.2450363651737035e-07  &1e-07\\
+\hline
+3.0542104362263345e-06  &1e-08\\
+\hline
+2.747131061797692e-05  &1e-09\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Sum of differences between vectorized gradient computation and finite difference approximation for $10$ $h$-values.}
+\label{tab:part3_grad}
+\end{table}
 \clearpage
 \end{homeworkProblem}
 
 
 % Part 4
 \begin{homeworkProblem}
-	
+In this section, the neural network from part 2 was trained using vanilla gradient descent. The optimization procedure is described below, and learning curves and visualizations of the weights going into each of the output units are presented.
+\newline
+\newline
+\noindent \textit{Optimization Procedure}
+\newline
+%State how we initialized weights and what learning rate we used
+Words
+\newline
+\newline
+\noindent \textit{Learning Curves}
+\newline
+Words
+\newline
+\newline
+\noindent \textit{Weights Going Into Output Units}
+\newline
+Words
 \clearpage
 \end{homeworkProblem}
 
