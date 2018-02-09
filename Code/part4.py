@@ -6,9 +6,9 @@
 import part2 as p2
 import part3 as p3
 
-def makeMatrices():
+def makeTrainingMatrices():
     '''
-    makeMatrices returns 2 matrices:
+    makeTrainingMatrices returns 2 matrices:
         X -- the training matrix whose columns correspond to images
         Y -- the label matrix whose i-th column corresponds to the i-th target
              output
@@ -29,6 +29,49 @@ def makeMatrices():
     i = 0
     for k in M.keys():
         if("train" in k):
+            # print(k) # Notice that digit 0,...,10 are not grabbed in order
+            numImages = M[k].shape[0] # Number of images for the current digit
+            digitNum = int(re.findall('\d', k)[0]) # The current digit
+            indices.append((digitNum, i)) # Track the starting index for this
+                                          # digit in the columns of X
+            
+            M[k] = np.true_divide(M[k], 255.0) # Normalize images
+            M[k] = np.vstack((np.ones((1, numImages)), M[k].T)) # Stack 1s ontop
+            
+            X[:, i:i + numImages] = M[k].copy() # Put images in X matrix
+            
+            # Make the label for this set of images
+            label = np.zeros((10, 1))
+            label[digitNum] = 1
+            Y[:, i:i + numImages] = label
+            
+            i += numImages
+            
+    return (X, Y, indices)
+    
+def makeTestMatrices():
+    '''
+    makeTestMatrices returns 2 matrices:
+        X -- the test matrix whose columns correspond to images
+        Y -- the label matrix whose i-th column corresponds to the i-th target
+             output
+             
+    Also returned is a list of tuples (digit, start index). This way, one can
+    easily reference the images for each digit from within X and Y.
+    '''
+    
+    M = loadmat("../Data/mnist_all.mat") # Load MNIST dataset
+    
+    numExamples = sum([len(M[k]) for k in M.keys() if "test" in k])
+    
+    # Pre-allocate space for matrices
+    X = np.empty((28 * 28 + 1, numExamples)) # 28 * 28 + 1 = num_pixels + bias
+    Y = np.empty((10, numExamples)) # 10 is the number of output classes
+    
+    indices = list()
+    i = 0
+    for k in M.keys():
+        if("test" in k):
             print(k)
             numImages = M[k].shape[0] # Number of images for the current digit
             digitNum = int(re.findall('\d', k)[0]) # The current digit
@@ -67,8 +110,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         max_iter -- the maximum number of times the algorithm will loop before
                     terminating
     '''
-
-    size = len(X[0])
+    
     iter = 0
     previous_W = 0
     current_W = init_W.copy()
@@ -90,7 +132,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         
         if(iter % (max_iter // 100) == 0):
             # Print updates every so often and save cost into history list
-            cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)/size
+            cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
             history.append((iter, cost))
             print("Iter: ", iter, " | Cost: ", cost)
             
@@ -98,42 +140,57 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
     
     return(current_W, history)
     
-def part4_train(trainingSet, numImages, alpha, eps, max_iter):
+def part4_train(X, Y, indices, numImages, alpha, eps, max_iter, init_W):
     '''
     part4_train returns the parameter W fit to the data in trainingSet using
     numImages images per digit via gradient descent.
     
     Arguments:
-     trainingSet -- a list in the form (imageMatrix, labels) used to train W
-     numImages -- a numerical value specifying the number of images per digit
-     alpha -- gradient descent "learning rate" parameter (proportional to step
-              size)
-     eps -- gradient descent parameter determining how tight the convergence
-            criterion is
+        X -- matrix of training examples whose columns correspond to images from
+             which predictions are to be made
+        Y -- matrix of labels whose i-th column corresponds to the actual/target
+             output for the i-th column in X
+        indices -- a list containing the starting indexes for the various digits
+        numImages -- a numerical value specifying the number of images per digit
+                     to be used for training
+        alpha -- gradient descent "learning rate" parameter (proportional to 
+                 step size)
+        eps -- gradient descent parameter determining how tight the convergence
+               criterion is
+        init_W -- initial weight to be used as a guess (starting point)
     '''
     
-    # Basically, initialize some weight W and call gradient descent then return
-    # the output
+    # Prepare data
+    numDigits = len(indices) # 10
+    x = np.zeros(shape = (X.shape[0], size * numDigits))
+    y = np.zeros(shape = (Y.shape[0], size * numDigits))
     
-    #init_W = ??
-    #return p4.part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter)
+    j = 0
+    for j in range(numDigits):
+        offset = [k[1] for k in indices if k[0] == j][0]
+        for i in range(size):
+            x[:, i + j * size] = X[:, i + offset] # data to predict upon (images)
+            y[:, i + j * size] = Y[:, i + offset] # target/actual values (labels)
+        j += 1
+    
+    # Run gradient descent
+    return part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter)
     
     
-def part4_classify(input, W):
+def part4_classify(X, Y, W, size):
     '''
     part4_classify returns the average cost and percentage of correct
     classifications for the hypothesis np.dot(W.T, x), using the learned
     weights W and testing the images in the input set against the labels.
     
     Arguments:
-        input -- a list in the form (imageMatrix, labels) used to make
-                 predictions and determine performance characteristics
+        X -- the input image matrix from which predictions are to be made
+        Y -- the label matrix which the predictions will be compared to
         W -- the learned parameters that will be used to make predictions
         size -- the size of the classification set to be tested
     '''
+    
     correct = 0.0
-    X = input[0]
-    Y = input[1]
     size = len(X[0])
     P = p2.SimpleNetwork(W, X)
 

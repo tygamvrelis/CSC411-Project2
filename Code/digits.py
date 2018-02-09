@@ -92,28 +92,30 @@ def part3():
         h /= 10
 
 ##  Part 4: Training using vanilla gradient descent
-import part4 as p4
+    import part4 as p4
 
-# Train and classify while increasing the number of images per digit
-# store the results in a list so that we can plot them later
-    p4_history = list()
+    # Make training and test matrices
+    (XTrain, YTrain, indicesTrain) = p4.makeTrainingMatrices()
+    (XTest, YTest, indicesTest) = p4.makeTestMatrices()
     
-    # We can only increase the training set to be as large as the smallest
-    # training set
-    size = min(len(M[k]) for k in M.keys() if "train" in k)
-    for i in range(size):
-        # print("PART 5: i = ", i)
-        # (theta, history) = p5.part5_train(actList, i + 1, 1.60E-5, 5E-7, 600000)
-        # (cost_actList, corr_actList) = p5.part5_classify(actList, theta, i + 1) # Test on training set
-        # if(i < 60):
-        #     (cost_val_actList, corr_val_actList) = p5.part5_classify(val_actList, theta, i + 1) # Test on validation set
-        #     (cost_val_not_actList, corr_val_not_actList) = p5.part5_classify(val_not_actList, theta, i + 1) # Test on validation set for 6 actors not in act
-        # else:
-        #     (cost_val_actList, corr_val_actList) = p5.part5_classify(val_actList, theta, 60) # Test on validation set
-        #     (cost_val_not_actList, corr_val_not_actList) = p5.part5_classify(val_not_actList, theta, 60) # Test on validation set for 6 actors not in act
-        # 
-        # p5_history.append((cost_actList, corr_actList, cost_val_actList, corr_val_actList,
-        #                    cost_val_not_actList, corr_val_not_actList))
+    # Gradient descent
+    np.random.seed(3)
+    init_W = np.random.rand(28*28,10) # Randomly initialize weight matrix
+    alpha = 1e-5
+    eps = 1e-6
+    max_iter = 50000
+    num_images = 100 # Number of images per digit to use for training
+    (W, history) = part4_train(XTrain, XTrain, indicesTrain, num_images, alpha, 
+                               eps, max_iter, init_W)
+    
+    # Make predictions on test set
+    size = 10
+    (cost, correct) = part4_classify(XTest, YTest, W, size)
+    
+    # Plot learning curves
+    part4_plotLearningCurves(history)
+    
+        
 
 ## Others
 def tanh_layer(y, W, b):    
