@@ -181,7 +181,6 @@ def part4_train(X, Y, indices, numImages, alpha, eps, max_iter, init_W):
     x = np.zeros(shape = (X.shape[0], numImages * numDigits))
     y = np.zeros(shape = (Y.shape[0], numImages * numDigits))
     
-    j = 0
     for j in range(numDigits):
         offset = [k[1] for k in indices if k[0] == j][0]
         for i in range(numImages):
@@ -193,7 +192,7 @@ def part4_train(X, Y, indices, numImages, alpha, eps, max_iter, init_W):
     return part4_gradient_descent(x, y, init_W, alpha, eps, max_iter)
     
     
-def part4_classify(X, Y, W, size):
+def part4_classify(X, Y, W, Yindices, size):
     '''
     part4_classify returns the average cost and percentage of correct
     classifications for the hypothesis np.dot(W.T, x), using the learned
@@ -203,20 +202,27 @@ def part4_classify(X, Y, W, size):
         X -- the input image matrix from which predictions are to be made
         Y -- the label matrix which the predictions will be compared to
         W -- the learned parameters that will be used to make predictions
+        Yindices -- a list containing the starting indexes for the various
+                    output labels
         size -- the size of the classification set to be tested
     '''
     
-    correct = 0.0
-    size = len(X[0])
-    P = p2.SimpleNetwork(W, X)
+    output = list()
+    numDigits = len(Yindices) # 10
+    P = p2.SimpleNetwork(W, X) # Make predictions for ALL inputs
 
-    for i in range(size):
-        highest = np.argmax(P[:, i])
-        if Y[highest, i] == 1:
-            correct += 1
-    correct = correct/size
-    cost = p3.NLL(P, Y)/size
-    return (cost, correct)
+    for j in range(numDigits):
+        correct = 0.0
+        cost = 0.0
+        offset = [k[1] for k in Yindices if k[0] == j][0]
+        for i in range(size):
+            highest = np.argmax(P[:, i + offset])
+            if Y[highest, i + offset] == np.max(Y[:, i + offset]):
+                correct += 1
+        correct = correct / size
+        cost = p3.NLL(P[:, offset:offset + size], Y[:, offset:offset + size])/size
+        output.append((j, cost, correct))
+    return output
 
 
 def part4_plotLearningCurves(history):
@@ -240,7 +246,7 @@ def part4_plotLearningCurves(history):
     plt.show()
     plt.gcf().clear()
     
-def part4_plotWeights(W, indices, imagePath):
+def part4_plotWeights(W, indices, imagePath, str_part):
     '''
     part4_plotWeights produces visualizations of the learned parameters in the
     weight matrix W.
@@ -249,6 +255,7 @@ def part4_plotWeights(W, indices, imagePath):
         W -- the weight matrix to be visualized
         indices -- a list containing the starting indexes for the various digits
         imagePath -- a string giving the location to which images should be saved
+        str_part -- a string indicating the project part
     '''
     
     nums = [k[0] for k in indices]
@@ -256,5 +263,5 @@ def part4_plotWeights(W, indices, imagePath):
         plt.yscale('linear')
         plt.title("(Part 4) " + str(n))
         plt.imshow(W[1:,n].reshape((28,28)), interpolation = 'gaussian', cmap = plt.cm.coolwarm)
-        plt.savefig(imagePath + "p4_" + str(n) + ".jpg")
+        plt.savefig(imagePath + str_part + str(n) + ".jpg")
         plt.gcf().clear()
