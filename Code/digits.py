@@ -118,6 +118,32 @@ def part3():
     # Plot weights
     imagePath = "../Report/images/"
     p4.part4_plotWeights(W, indicesTrain, imagePath)
+    
+##  Part 5: Gradient descent using momentum
+    import part5 as p5
+    
+    # Make training and test matrices
+    (XTrain, YTrain, indicesTrain) = p4.makeTrainingMatrices()
+    (XTest, YTest, indicesTest) = p4.makeTestMatrices()
+    
+    # Gradient descent
+    np.random.seed(3)
+    init_W = np.random.rand(28*28 + 1,10) # Randomly initialize weight matrix
+    alpha = 1e-5
+    eps = 1e-6
+    max_iter = 50000
+    momentum = 0.9
+    num_images = 1000 # Number of images per digit to use for training
+    (W, history) = p5.part5_train(XTrain, YTrain, indicesTrain, num_images, alpha, 
+                                  eps, max_iter, init_W, momentum)
+    
+    # Make predictions on test set
+    size = 100
+    (cost, correct) = p4.part4_classify(XTest, YTest, W, size)
+    
+    # Plot learning curves
+    p4.part4_plotLearningCurves(history)
+    
 
 ## Others
 def tanh_layer(y, W, b):    

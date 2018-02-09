@@ -113,7 +113,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
     '''
     part4_gradient_descent finds a local minimum of the hyperplane defined by
     the hypothesis dot(W.T, X). The algorithm terminates when successive
-    values of theta differ by less than eps (convergence), or when the number of
+    values of W differ by less than eps (convergence), or when the number of
     iterations exceeds max_iter.
     
     Arguments:
