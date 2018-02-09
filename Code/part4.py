@@ -6,6 +6,28 @@
 import part2 as p2
 import part3 as p3
 
+def makeMatrices():
+    '''
+    makeMatrices returns 2 matrices:
+        X -- the training matrix whose columns correspond to images
+        Y -- the label matrix whose i-th column corresponds to the i-th target
+             output
+    '''
+    
+    M = loadmat("../Data/mnist_all.mat") # Load MNIST dataset
+    
+    numExamples = sum([len(M[k]) for k in M.keys() if "train" in k])
+    X = np.empty((28*28 + 1, numExamples))
+    i = 0
+    for k in M.keys():
+        if("train" in k or "test" in k):
+            M[k] = np.true_divide(M[k], 255.0)
+            M[k] = np.vstack((np.ones((1, M[k].shape[0])), M[k].T))
+            
+            X[:, i:i+M[k].shape[0]] = M[k].copy()
+            i += M[k].shape[0]
+    
+
 def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
     '''
     part4_gradient_descent finds a local minimum of the hyperplane defined by
@@ -18,7 +40,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         Y -- input data for X (the actual/target data)
         init_W -- the initial guess for the local minimum (starting point)
         alpha -- the learning rate; proportional to the step size
-        eps -- used to determine img[0]when the algorithm has converged on a 
+        eps -- used to determine when the algorithm has converged on a 
                solution
         max_iter -- the maximum number of times the algorithm will loop before
                     terminating
