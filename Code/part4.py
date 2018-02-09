@@ -12,20 +12,37 @@ def makeMatrices():
         X -- the training matrix whose columns correspond to images
         Y -- the label matrix whose i-th column corresponds to the i-th target
              output
+             
+    Also returned is a list of tuples (digit, start index). This way, one can
+    easily reference the images for each digit from within X and Y.
     '''
     
     M = loadmat("../Data/mnist_all.mat") # Load MNIST dataset
     
     numExamples = sum([len(M[k]) for k in M.keys() if "train" in k])
-    X = np.empty((28*28 + 1, numExamples))
+    X = np.empty((28 * 28 + 1, numExamples)) # 28 * 28 + 1 = num_pixels + bias
+    Y = np.empty((10, numExamples)) # 10 is the number of output classes
+    
+    indices = list()
     i = 0
     for k in M.keys():
-        if("train" in k or "test" in k):
-            M[k] = np.true_divide(M[k], 255.0)
-            M[k] = np.vstack((np.ones((1, M[k].shape[0])), M[k].T))
+        if("train" in k):
+            print(k)
+            numImages = M[k].shape[0]
+            digitNum = int(re.findall('\d', k)[0])
+            indices.append((digitNum, i))
             
-            X[:, i:i+M[k].shape[0]] = M[k].copy()
-            i += M[k].shape[0]
+            M[k] = np.true_divide(M[k], 255.0)
+            M[k] = np.vstack((np.ones((1, numImages)), M[k].T))
+            
+            X[:, i:i + numImages] = M[k].copy()
+            
+            label = np.zeros((10, 1))
+            label[digitNum] = 1
+            Y[:, i:i + numImages] = label
+            i += numImages
+            
+    return (X, Y, indices)
     
 
 def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
