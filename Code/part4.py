@@ -23,6 +23,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         max_iter -- the maximum number of times the algorithm will loop before
                     terminating
     '''
+    
     iter = 0
     previous_W = 0
     current_W = init_W.copy()
@@ -43,7 +44,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         current_W = current_W - alpha * p3.negLogLossGrad(X, Y, current_W)
         
         if(iter % (max_iter // 100) == 0):
-            # Print updates every so often
+            # Print updates every so often and save cost into history list
             cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
             history.append((iter, cost))
             print("Iter: ", iter, " | Cost: ", cost)
@@ -51,6 +52,25 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         iter += 1
     
     return(current_W, history)
+    
+def tanh_layer(y, W, b):    
+    '''
+    Return the output of a tanh layer for the input matrix y. y
+    is an NxM matrix where N is the number of inputs for a single case, and M
+    is the number of cases
+    '''
+    
+    return tanh(dot(W.T, y)+b)
+
+def forward(x, W0, b0, W1, b1):
+    '''
+    
+    '''
+    
+    L0 = tanh_layer(x, W0, b0)
+    L1 = dot(W1.T, L0) + b1
+    output = softmax(L1)
+    return L0, L1, output
     
 def part4_train(trainingSet, numImages, alpha, eps, max_iter):
     '''
@@ -73,9 +93,17 @@ def part4_train(trainingSet, numImages, alpha, eps, max_iter):
     #return p4.part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter)
     
     
-def part4_classify():
+def part4_classify(input, W, size):
     '''
-    part4_classify returns...
+    part4_classify returns the average cost and percentage of correct
+    classifications for the hypothesis np.dot(W.T, x), using the learned
+    weights W and testing the images in the input set against the labels.
+    
+    Arguments:
+        input -- a list in the form (imageMatrix, labels) used to make
+                 predictions and determine performance characteristics
+        W -- the learned parameters that will be used to make predictions
+        size -- the size of the classification set to be tested
     '''
 
 def part4_plotLearningCurves(history):
@@ -84,8 +112,8 @@ def part4_plotLearningCurves(history):
     a neural network.
     
     Arguments:
-        history -- a list of pairs of numbers (error, num_examples), where
-                   error is the error associated with training the neural
+        history -- a list of pairs of numbers (cost, num_examples), where
+                   cost is the average cost associated with training the neural
                    network using num_examples training examples.
     '''
     
