@@ -103,13 +103,13 @@ def part3():
     init_W = np.random.rand(28*28 + 1,10) # Randomly initialize weight matrix
     alpha = 1e-5
     eps = 1e-6
-    max_iter = 1000
-    num_images = 100 # Number of images per digit to use for training
+    max_iter = 50000
+    num_images = 1000 # Number of images per digit to use for training
     (W, history) = p4.part4_train(XTrain, YTrain, indicesTrain, num_images, alpha, 
                                   eps, max_iter, init_W)
     
     # Make predictions on test set
-    size = 10
+    size = 100
     (cost, correct) = p4.part4_classify(XTest, YTest, W, size)
     
     # Plot learning curves

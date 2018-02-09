@@ -238,6 +238,7 @@ def part4_plotLearningCurves(history):
     plt.xlabel('Iterations')
     plt.title('Training Set Learning Curve')
     plt.show()
+    plt.gcf().clear()
     
 def part4_plotWeights(W, indices, imagePath):
     '''
