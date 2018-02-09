@@ -138,12 +138,12 @@ def part3():
     # Gradient descent
     np.random.seed(3)
     init_W = np.random.rand(28*28 + 1,10) # Randomly initialize weight matrix
-    alpha = 1e-4
-    eps = 1e-6
-    max_iter = 10000
+    alpha = 1e-5
+    eps = 1e-4
+    max_iter = 1000
     init_v = 0.1 # Initial momentum value
-    momentum = 0.9
-    num_images = 1000 # Number of images per digit to use for training
+    momentum = 0.90
+    num_images = 5000 # Number of images per digit to use for training
     (W, history) = p5.part5_train(XTrain, YTrain, indicesTrain, num_images, alpha, 
                                   eps, max_iter, init_W, init_v, momentum)
     
