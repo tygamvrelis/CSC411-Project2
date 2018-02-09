@@ -103,10 +103,10 @@ def part3():
     init_W = np.random.rand(28*28 + 1,10) # Randomly initialize weight matrix
     alpha = 1e-5
     eps = 1e-6
-    max_iter = 50000
+    max_iter = 10000
     num_images = 100 # Number of images per digit to use for training
     (W, history) = p4.part4_train(XTrain, YTrain, indicesTrain, num_images, alpha, 
-                               eps, max_iter, init_W)
+                                  eps, max_iter, init_W)
     
     # Make predictions on test set
     size = 10
@@ -115,7 +115,9 @@ def part3():
     # Plot learning curves
     p4.part4_plotLearningCurves(history)
     
-        
+    # Plot weights
+    imagePath = "../Report/images/"
+    p4.part4_plotWeights(W, indicesTrain, imagePath)
 
 ## Others
 def tanh_layer(y, W, b):    

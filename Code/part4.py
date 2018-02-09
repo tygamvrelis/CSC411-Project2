@@ -238,3 +238,23 @@ def part4_plotLearningCurves(history):
     plt.xlabel('Iterations')
     plt.title('Training Set Learning Curve')
     plt.show()
+    
+def part4_plotWeights(W, indices, imagePath):
+    '''
+    part4_plotWeights produces visualizations of the learned parameters in the
+    weight matrix W.
+    
+    Arguments:
+        W -- the weight matrix to be visualized
+        indices -- a list containing the starting indexes for the various digits
+        imagePath -- a string giving the location to which images should be saved
+    '''
+    
+    nums = [k[0] for k in indices]
+    for n in nums:
+        plt.yscale('linear')
+        plt.title("(Part 4) " + str(n))
+        plt.imshow(W[1:,n].reshape((28,28)), interpolation = 'gaussian', cmap = plt.cm.coolwarm)
+        plt.savefig(imagePath + "p4_" + str(n) + ".jpg")
+        plt.show()
+        plt.gcf().clear()
