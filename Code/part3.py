@@ -33,9 +33,9 @@ def negLogLossGrad(X, Y, W):
         W -- Weight matrix (n x 10)
     '''
     
-    P = p2.SimpleNetwork(W, X) # Get the prediction for X using the weights W
+    #p2.SimpleNetwork(W, X) gets the prediction for X using the weights W
 
-    return np.dot(X, (P - Y).transpose())
+    return np.dot(X, (p2.SimpleNetwork(W, X) - Y).transpose())
 
 def negLogLossGrad_FiniteDifference(X, Y, W, h):
     '''

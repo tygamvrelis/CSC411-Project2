@@ -3,6 +3,22 @@
 # network in part 2 using vanilla gradient descent, and plotting learning
 # curves.
 
+from pylab import *
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.cbook as cbook
+import time
+from scipy.misc import imread
+from scipy.misc import imresize
+import matplotlib.image as mpimg
+from scipy.ndimage import filters
+import urllib
+from numpy import random
+import cPickle
+import os
+from scipy.io import loadmat
+import re
+
 import part2 as p2
 import part3 as p3
 
@@ -72,7 +88,7 @@ def makeTestMatrices():
     i = 0
     for k in M.keys():
         if("test" in k):
-            print(k)
+            # print(k)
             numImages = M[k].shape[0] # Number of images for the current digit
             digitNum = int(re.findall('\d', k)[0]) # The current digit
             indices.append((digitNum, i)) # Track the starting index for this
@@ -162,19 +178,19 @@ def part4_train(X, Y, indices, numImages, alpha, eps, max_iter, init_W):
     
     # Prepare data
     numDigits = len(indices) # 10
-    x = np.zeros(shape = (X.shape[0], size * numDigits))
-    y = np.zeros(shape = (Y.shape[0], size * numDigits))
+    x = np.zeros(shape = (X.shape[0], numImages * numDigits))
+    y = np.zeros(shape = (Y.shape[0], numImages * numDigits))
     
     j = 0
     for j in range(numDigits):
         offset = [k[1] for k in indices if k[0] == j][0]
-        for i in range(size):
-            x[:, i + j * size] = X[:, i + offset] # data to predict upon (images)
-            y[:, i + j * size] = Y[:, i + offset] # target/actual values (labels)
+        for i in range(numImages):
+            x[:, i + j * numImages] = X[:, i + offset] # data to predict upon (images)
+            y[:, i + j * numImages] = Y[:, i + offset] # target/actual values (labels)
         j += 1
     
     # Run gradient descent
-    return part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter)
+    return part4_gradient_descent(x, y, init_W, alpha, eps, max_iter)
     
     
 def part4_classify(X, Y, W, size):
