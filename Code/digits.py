@@ -130,6 +130,45 @@ imagePath = "../Report/images/"
 p4.part4_plotWeights(Whistory[99], indicesTrain, imagePath, "p4_")
 
 ##  Part 5: Gradient descent using momentum
+<<<<<<< HEAD
+    import part4 as p4
+    import part5 as p5
+    
+    # Make training and test matrices
+    (XTrain, YTrain, indicesTrain) = p4.makeTrainingMatrices()
+    (XTest, YTest, indicesTest) = p4.makeTestMatrices()
+    
+    # Gradient descent
+    np.random.seed(3)
+    init_W = np.random.rand(28*28 + 1,10) # Randomly initialize weight matrix
+    alpha = 1e-5
+    eps = 1e-4
+    max_iter = 1000
+    init_v = 0.1 # Initial momentum value
+    momentum = 0.90
+    num_images = 5000 # Number of images per digit to use for training
+    (W, history) = p5.part5_train(XTrain, YTrain, indicesTrain, num_images, alpha, 
+                                  eps, max_iter, init_W, init_v, momentum)
+    
+    # Make predictions on training set
+    size = 1000
+    outputList = p4.part4_classify(XTrain, YTrain, W, indicesTrain, size)
+    print "(Training; size: ", size," im/digit) Avg. cost: ", sum([a[1] for a in outputList])/len(outputList)
+    print "(Training; size: ", size," im/digit) Avg. percent correct: ", sum([a[2] for a in outputList])/len(outputList)
+    
+    # Make predictions on test set
+    size = 600
+    outputList = p4.part4_classify(XTest, YTest, W, indicesTest, size)
+    print "(Test; size: ", size," im/digit) Avg. cost: ", sum([a[1] for a in outputList])/len(outputList)
+    print "(Test; size: ", size," im/digit) Avg. percent correct: ", sum([a[2] for a in outputList])/len(outputList)
+    
+    # Plot learning curves
+    p4.part4_plotLearningCurves(history)
+    
+    # Plot weights
+    imagePath = "../Report/images/"
+    p4.part4_plotWeights(W, indicesTrain, imagePath, "p5_")
+=======
 import part4 as p4
 import part5 as p5
 
@@ -167,6 +206,7 @@ p4.part4_plotLearningCurves(history)
 # Plot weights
 imagePath = "../Report/images/"
 p4.part4_plotWeights(W, indicesTrain, imagePath, "p5_")
+>>>>>>> 35123ab2d42568ed91934c1f9c42cb8238545294
     
 
 ## Others
