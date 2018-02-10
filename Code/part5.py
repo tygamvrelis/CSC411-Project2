@@ -48,7 +48,8 @@ def part5_gradient_descent(X, Y, init_W, alpha, eps, max_iter, init_v, momentum)
     current_v = init_v # Initial momentum...
     firstPass = True
     history = list()
-    
+    Whistory = list()
+
     m = Y.shape[1]
     
     # Do-while...
@@ -68,11 +69,12 @@ def part5_gradient_descent(X, Y, init_W, alpha, eps, max_iter, init_v, momentum)
             # Print updates every so often and save cost into history list
             cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
             history.append((iter, cost))
+            Whistory.append(current_W)
             print("Iter: ", iter, " | Cost: ", cost)
             
         iter += 1
     
-    return(current_W, history)
+    return(Whistory, history)
     
 def part5_train(X, Y, indices, numImages, alpha, eps, max_iter, init_W, init_v, momentum):
     '''
