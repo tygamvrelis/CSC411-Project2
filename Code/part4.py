@@ -147,7 +147,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         if(iter % (max_iter // 100) == 0):
             # Print updates every so often and save cost into history list
             cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
-            history.append((iter, cost))
+            history.append((float(iter), cost))
             Whistory.append(current_W)
             print("Iter: ", iter, " | Cost: ", cost)
             
@@ -259,57 +259,52 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
                    cost is the average cost associated with training the neural
                    network using num_examples training examples.
     '''
-    correctTrain = []
-    correctVal = []
-    costTrain = []
-    costVal = []
-    num_iter = [i[0] for i in history]
-    cost = [i[1] for i in history]
+    correctTrain = [0]*100
+    correctVal = [0]*100
+    costTrain = [0]*100
+    costVal = [0]*100
+
 
     for i in range(100):
         outputList = part4_classify(XTrain, YTrain, Whistory[i])
-        correctTrain.append(sum([a[2] for a in outputList])/len(outputList))
-        costTrain.append(sum([a[1] for a in outputList]))
+        correctTrain[i] = sum([a[2] for a in outputList])/len(outputList)
+        costTrain[i] = (sum([a[1] for a in outputList]))
 
         outputList = part4_classify(XVal, YVal, Whistory[i])
 
-        costVal.append(sum([a[1] for a in outputList]))
-        correctVal.append(sum([a[2] for a in outputList]) / len(outputList))
+        costVal[i] = (sum([a[1] for a in outputList]))
+        correctVal[i] = (sum([a[2] for a in outputList]) / len(outputList))
 
     num_iter = [i[0] for i in history]
     cost = [i[1] for i in history]
 
+    figure(1)
     plt.plot(num_iter, cost)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Training Set Cost Learning Curve')
     plt.show()
-    plt.savefig("../Report/images/Training Set Cost Curve.jpg")
-    #plt.gcf().clear()
 
+    figure(2)
     plt.plot(num_iter, correctTrain)
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
     plt.title('Training Set Accuracy Learning Curve')
     plt.show()
-    plt.savefig("../Report/images/Training Set Accuracy Curve.jpg")
-    #plt.gcf().clear()
 
+    figure(3)
     plt.plot(num_iter, costVal)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Validation Set Cost Learning Curve')
     plt.show()
-    plt.savefig("../Report/images/Validation Set Cost Curve.jpg")
-    #plt.gcf().clear()
 
+    figure(4)
     plt.plot(num_iter, correctVal)
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
     plt.title('Validation Set Accuracy Learning Curve')
     plt.show()
-    plt.savefig("../Report/images/Validation Set Accuracy Curve.jpg")
-    plt.gcf().clear()
     
 def part4_plotWeights(W, indices, imagePath, str_part):
     '''
