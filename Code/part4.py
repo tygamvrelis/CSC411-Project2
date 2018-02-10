@@ -259,11 +259,21 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
                    cost is the average cost associated with training the neural
                    network using num_examples training examples.
     '''
+<<<<<<< HEAD
     correctTrain = [0]*100
     correctVal = [0]*100
     costTrain = [0]*100
     costVal = [0]*100
 
+=======
+    
+    correctTrain = []
+    correctVal = []
+    costTrain = []
+    costVal = []
+    num_iter = [i[0] for i in history]
+    cost = [i[1] for i in history]
+>>>>>>> fc4bcfd5e2f23599a2605272bea4bb6041612bc3
 
     for i in range(100):
         outputList = part4_classify(XTrain, YTrain, Whistory[i])
@@ -284,7 +294,13 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     plt.xlabel('Iterations')
     plt.title('Training Set Cost Learning Curve')
     plt.show()
+<<<<<<< HEAD
 
+=======
+    plt.savefig("../Report/images/Training Set Cost Curve.jpg")
+    #plt.gcf().clear()
+    
+>>>>>>> fc4bcfd5e2f23599a2605272bea4bb6041612bc3
     figure(2)
     plt.plot(num_iter, correctTrain)
     plt.ylabel('Accuracy')
@@ -305,6 +321,11 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     plt.xlabel('Iterations')
     plt.title('Validation Set Accuracy Learning Curve')
     plt.show()
+<<<<<<< HEAD
+=======
+    plt.savefig("../Report/images/Validation Set Accuracy Curve.jpg")
+    #plt.gcf().clear()
+>>>>>>> fc4bcfd5e2f23599a2605272bea4bb6041612bc3
     
 def part4_plotWeights(W, indices, imagePath, str_part):
     '''
