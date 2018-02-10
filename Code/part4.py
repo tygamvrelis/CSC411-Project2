@@ -259,6 +259,7 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
                    cost is the average cost associated with training the neural
                    network using num_examples training examples.
     '''
+    
     correctTrain = []
     correctVal = []
     costTrain = []
@@ -279,6 +280,7 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     num_iter = [i[0] for i in history]
     cost = [i[1] for i in history]
 
+    figure(1)
     plt.plot(num_iter, cost)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
@@ -286,7 +288,8 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     plt.show()
     plt.savefig("../Report/images/Training Set Cost Curve.jpg")
     #plt.gcf().clear()
-
+    
+    figure(2)
     plt.plot(num_iter, correctTrain)
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
@@ -295,6 +298,7 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     plt.savefig("../Report/images/Training Set Accuracy Curve.jpg")
     #plt.gcf().clear()
 
+    figure(3)
     plt.plot(num_iter, costVal)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
@@ -303,13 +307,14 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     plt.savefig("../Report/images/Validation Set Cost Curve.jpg")
     #plt.gcf().clear()
 
+    figure(4)
     plt.plot(num_iter, correctVal)
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
     plt.title('Validation Set Accuracy Learning Curve')
     plt.show()
     plt.savefig("../Report/images/Validation Set Accuracy Curve.jpg")
-    plt.gcf().clear()
+    #plt.gcf().clear()
     
 def part4_plotWeights(W, indices, imagePath, str_part):
     '''
