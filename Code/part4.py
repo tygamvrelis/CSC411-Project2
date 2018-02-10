@@ -133,8 +133,6 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
     firstPass = True
     history = list()
     
-    m = Y.shape[1]
-    
     # Do-while...
     while(firstPass or
             (np.linalg.norm(current_W  - previous_W) > eps and 
@@ -265,6 +263,9 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     correctVal = []
     costTrain = []
     costVal = []
+    num_iter = [i[0] for i in history]
+    cost = [i[1] for i in history]
+
     for i in range(100):
         outputList = part4_classify(XTrain, YTrain, Whistory[i])
         correctTrain.append(sum([a[2] for a in outputList])/len(outputList))
@@ -276,15 +277,15 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
         correctVal.append(sum([a[2] for a in outputList]) / len(outputList))
 
     num_iter = [i[0] for i in history]
-    #cost = [i[1] for i in history]
+    cost = [i[1] for i in history]
 
-    plt.plot(num_iter, costTrain)
+    plt.plot(num_iter, cost)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Training Set Cost Learning Curve')
     plt.show()
     plt.savefig("../Report/images/Training Set Cost Curve.jpg")
-    plt.gcf().clear()
+    #plt.gcf().clear()
 
     plt.plot(num_iter, correctTrain)
     plt.ylabel('Accuracy')
@@ -292,7 +293,7 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     plt.title('Training Set Accuracy Learning Curve')
     plt.show()
     plt.savefig("../Report/images/Training Set Accuracy Curve.jpg")
-    plt.gcf().clear()
+    #plt.gcf().clear()
 
     plt.plot(num_iter, costVal)
     plt.ylabel('Cost')
@@ -300,7 +301,7 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     plt.title('Validation Set Cost Learning Curve')
     plt.show()
     plt.savefig("../Report/images/Validation Set Cost Curve.jpg")
-    plt.gcf().clear()
+    #plt.gcf().clear()
 
     plt.plot(num_iter, correctVal)
     plt.ylabel('Accuracy')
