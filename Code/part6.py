@@ -45,7 +45,10 @@ def plot_contour(W, X, Y, i1, j1, i2, j2):
 
 
     plt.figure(5)
+    plt.subplot()
     plt.contour(W1, W2, Z)
-    #plt.plot([-1, 0, 1], [1, 0, -1])
+    
+    plt.subplot()
+    plt.plot([-2, -1, 0, 0], [0.5, 1, 0, 1])
     plt.title('Contour Map')
     plt.show()
