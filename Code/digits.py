@@ -107,42 +107,51 @@ np.random.seed(3)
 init_W = np.random.rand(28*28 + 1,10) # Randomly initialize weight matrix
 alpha = 1e-5
 eps = 1e-6
-max_iter = 5000
+max_iter = 500
 
 
-(Whistory, history) = p4.part4_gradient_descent(XTrain, YTrain, init_W, alpha, eps, max_iter)
-
-
-# Make predictions on training set
-outputList = p4.part4_classify(XTrain, YTrain, Whistory[99])
-print "(Training; size: ", train_size," im/digit) Avg. cost: ", sum([a[1] for a in outputList])/len(outputList)
-print "(Training; size: ", train_size," im/digit) Avg. percent correct: ", sum([a[2] for a in outputList])/len(outputList)
-
-# Make predictions on test set
-outputList = p4.part4_classify(XVal, YVal, Whistory[99])
-print "(Test; size: ", val_size," im/digit) Avg. cost: ", sum([a[1] for a in outputList])/len(outputList)
-print "(Test; size: ", val_size," im/digit) Avg. percent correct: ", sum([a[2] for a in outputList])/len(outputList)
-
-# Plot learning curves
-p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history)
-
-# Plot weights
-imagePath = "../Report/images/"
-p4.part4_plotWeights(Whistory[99], indicesTrain, imagePath, "p4_")
+# (Whistory, history) = p4.part4_gradient_descent(XTrain, YTrain, init_W, alpha, eps, max_iter)
+#
+#
+# # Make predictions on training set
+# outputList = p4.part4_classify(XTrain, YTrain, Whistory[99])
+# print "(Training; size: ", train_size," im/digit) Avg. cost: ", sum([a[1] for a in outputList])/len(outputList)
+# print "(Training; size: ", train_size," im/digit) Avg. percent correct: ", sum([a[2] for a in outputList])/len(outputList)
+#
+# # Make predictions on test set
+# outputList = p4.part4_classify(XVal, YVal, Whistory[99])
+# print "(Test; size: ", val_size," im/digit) Avg. cost: ", sum([a[1] for a in outputList])/len(outputList)
+# print "(Test; size: ", val_size," im/digit) Avg. percent correct: ", sum([a[2] for a in outputList])/len(outputList)
+#
+# # Plot learning curves
+# p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history)
+#
+# # Plot weights
+#
+# imagePath = "../Report/images/"
+#
+# p4.part4_plotWeights(Whistory[99], indicesTrain, imagePath, "p4_")
 
 #Now do it for momentum
 init_v = 0.1 # Initial momentum value
 momentum = 0.9
 
-(Whistory, history) = p5.part5_gradient_descent(XTrain, YTrain, init_W, alpha, eps, max_iter, init_v, momentum)
+# (Whistory, history) = p5.part5_gradient_descent(XTrain, YTrain, init_W, alpha, eps, max_iter, init_v, momentum)
+# np.savetxt("Weights", Whistory[99])
+W = np.loadtxt("Weights")
+# W = Whistory[99]
+
+
 # Plot learning curves
-p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history)
+# p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history)
 
 # Plot weights
-p4.part4_plotWeights(Whistory[99], indicesTrain, imagePath, "p5_")
+# p4.part4_plotWeights(W, indicesTrain, imagePath, "p5_")
 
 
-##  Part 5: Gradient descent using momentum
+##  Part 6: Contour Plot
+import part6 as p6
+p6.plot_contour(W, XTrain, YTrain, 200, 2, 201, 2)
     
 
 ## Others
