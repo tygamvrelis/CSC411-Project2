@@ -16,6 +16,17 @@ import part3 as p3
 import part2 as p2
 
 def plot_contour(W, X, Y, i1, j1, i2, j2):
+    '''
+    Contour map takes a weight matrix, W, and the coordinates for 2 weights.
+    It plots a contour map of the NLL function with respect to X, W and Y by
+    varying the weights w1 and w2.
+
+    W:  The weight matrix of size nx10
+    X:  A matrix of data of size nxm. Should use training set.
+    Y:  A matrix of labels for the X matrix, of size 10xm
+    i1, j1: Coordinates for w1 in the weight matrix s.t. w1 = W[i1, j1]
+    i2, j2: Coordinates for w2 in the weight matrix s.t. w2 = W[i2, j2]
+    '''
     delta = 0.1
 
     w1 = np.arange(-3, 0, delta)
@@ -31,10 +42,10 @@ def plot_contour(W, X, Y, i1, j1, i2, j2):
             Wchanged[i1, j1] = w1[i]
             Wchanged[i2, j2] = w2[j]
             Z[j , i] = p3.NLL(p2.SimpleNetwork(Wchanged, X), Y)/int(X.shape[1])
-    # print Z
-    #levels = np.arange(np.min(Z), 2*np.min(Z), np.min(Z)/2)
+
 
     plt.figure(5)
     plt.contour(W1, W2, Z)
+    #plt.plot([-1, 0, 1], [1, 0, -1])
     plt.title('Contour Map')
     plt.show()
