@@ -151,8 +151,12 @@ W = np.loadtxt("Weights")
 
 ##  Part 6: Contour Plot
 import part6 as p6
-p6.plot_contour(W, XTrain, YTrain, 200, 2, 201, 2)
-    
+k = 20
+alpha = 1e-1
+(w1_van, w2_van) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, 200, 2, 201, 2)
+(w1_mom, w2_mom) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, 200, 2, 201, 2, momentum)
+p6.plot_contour(init_W, XTrain, YTrain, 200, 2, 201, 2, w1_van, w2_van, w1_mom, w2_mom)
+
 
 ## Others
 def tanh_layer(y, W, b):    
