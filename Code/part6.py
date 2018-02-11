@@ -52,3 +52,44 @@ def plot_contour(W, X, Y, i1, j1, i2, j2):
     plt.plot([-2, -1, 0, 0], [0.5, 1, 0, 1])
     plt.title('Contour Map')
     plt.show()
+    
+def k_steps_gradient_descent(X, Y, init_W, alpha, k, momentum = 0, i1, j1, i2, j2):
+    '''
+    k_steps_gradient_descent finds a local minimum of the hyperplane defined by
+    the hypothesis dot(W.T, X). The algorithm terminates when k iterations have
+    been performed.
+    
+    Arguments:
+        X -- input data for X (the data to be used to make predictions)
+        Y -- input data for X (the actual/target data)
+        init_W -- the initial guess for the local minimum (starting point)
+        alpha -- the learning rate; proportional to the step size
+        k -- the number of iterations to be performed
+        momentum -- the momentum parameter in range (0, 1)
+        i1, j1: Coordinates for w1 in the weight matrix s.t. w1 = W[i1, j1]
+        i2, j2: Coordinates for w2 in the weight matrix s.t. w2 = W[i2, j2]
+    '''
+    Whistory = list()
+    iter = 0
+    previous_W = 0
+    current_W = init_W.copy()
+    previous_v = 0
+    current_v = init_v # Initial momentum...
+    
+    # Do-while...
+    while(firstPass or iter < k):
+        firstPass = False
+        
+        previous_W = current_W.copy() # Update the previous W value
+        
+        # Update W and v
+        current_v = momentum * current_v + alpha * p3.negLogLossGrad(X, Y, current_W)
+        current_W[i1, j1] = current_W[i1, j1] - current_v[i1, j1]
+        current_W[i2, j2] = current_W[i2, j2] - current_v[i2, j2]
+        
+
+        Whistory.append(current_W)
+            
+        iter += 1
+    
+    return(Whistory)
