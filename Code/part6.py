@@ -17,23 +17,24 @@ import part2 as p2
 
 def plot_contour(W, X, Y, i1, j1, i2, j2, w1_vanil, w2_vanil, w1_mom, w2_mom):
     '''
-    Contour map takes a weight matrix, W, and the coordinates for 2 weights.
+    plot_contour takes a weight matrix, W, and the coordinates for 2 weights.
     It plots a contour map of the NLL function with respect to X, W and Y by
     varying the weights w1 and w2. It then plots the path taken by w1 and w2
     using both vanilla and momentum gradient descent.
 
-    W:  The weight matrix of size nx10
-    X:  A matrix of data of size nxm. Should use training set.
-    Y:  A matrix of labels for the X matrix, of size 10xm
-    i1, j1: Coordinates for w1 in the weight matrix s.t. w1 = W[i1, j1]
-    i2, j2: Coordinates for w2 in the weight matrix s.t. w2 = W[i2, j2]
-    w1_vanil, w2_vanil: Lists of w1 and w2 for each step using vanilla gradient descent.
-    w1_mom, w2_mom: Lists of w1 and w2 for each step using momentum gradient descent.
+    Arguments:
+        W:  The weight matrix of size nx10
+        X:  A matrix of data of size nxm. Should use training set.
+        Y:  A matrix of labels for the X matrix, of size 10xm
+        i1, j1: Coordinates for w1 in the weight matrix s.t. w1 = W[i1, j1]
+        i2, j2: Coordinates for w2 in the weight matrix s.t. w2 = W[i2, j2]
+        w1_vanil, w2_vanil: Lists of w1 and w2 for each step using vanilla gradient descent.
+        w1_mom, w2_mom: Lists of w1 and w2 for each step using momentum gradient descent.
     '''
-    delta = 0.1
+    delta = 0.2
 
-    w1 = np.arange(-3, 0, delta)
-    w2 = np.arange (-1, 3, delta)
+    w1 = np.arange(-7, 2, delta)
+    w2 = np.arange (0, 7, delta)
     Wchanged = W.copy()
 
     W1, W2 = np.meshgrid(w1, w2)
@@ -49,15 +50,17 @@ def plot_contour(W, X, Y, i1, j1, i2, j2, w1_vanil, w2_vanil, w1_mom, w2_mom):
 
     plt.figure(5)
     plt.subplot()
-    plt.contour(W1, W2, Z)
+    plt.contour(W1, W2, Z, cmap = plt.cm.coolwarm)
 
     plt.subplot()
-    plt.plot(w1_vanil, w2_vanil)
-    print w1_vanil
-    print w2_vanil
+    plt.plot(w1_vanil, w2_vanil, 'yo-', label = 'vanilla')
     plt.subplot()
-    plt.plot(w1_mom, w2_mom)
-    plt.title('Contour Map')
+    plt.plot(w1_mom, w2_mom, 'go-', label = 'momentum')
+    
+    plt.title('Contour Map (k = {0})'.format(len(w1_vanil) - 1))
+    plt.xlabel('w1')
+    plt.ylabel('w2')
+    plt.legend()
     plt.show()
     
 def k_steps_gradient_descent(X, Y, init_W, alpha, k, i1, j1, i2, j2, momentum = 0):
@@ -89,6 +92,7 @@ def k_steps_gradient_descent(X, Y, init_W, alpha, k, i1, j1, i2, j2, momentum = 
         firstPass = False
         
         previous_W = current_W.copy() # Update the previous W value
+        previous_v = current_v # Update previous momentum
         
         # Update W and v
         current_v = momentum * current_v + alpha * p3.negLogLossGrad(X, Y, current_W)

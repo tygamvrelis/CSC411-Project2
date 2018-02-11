@@ -59,7 +59,7 @@ def part5_gradient_descent(X, Y, init_W, alpha, eps, max_iter, init_v, momentum)
         firstPass = False
         
         previous_W = current_W.copy() # Update the previous W value
-        previous_v = current_v # Update momentum
+        previous_v = current_v # Update previous momentum
         
         # Update W
         current_v = momentum * current_v + alpha * p3.negLogLossGrad(X, Y, current_W)
