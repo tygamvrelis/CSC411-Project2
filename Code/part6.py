@@ -31,7 +31,7 @@ def plot_contour(W, X, Y, i1, j1, i2, j2, w1_vanil, w2_vanil, w1_mom, w2_mom):
         w1_vanil, w2_vanil: Lists of w1 and w2 for each step using vanilla gradient descent.
         w1_mom, w2_mom: Lists of w1 and w2 for each step using momentum gradient descent.
     '''
-    delta = 0.2
+    delta = 0.3
 
     w1 = np.arange(-7, 2, delta)
     w2 = np.arange (0, 7, delta)
