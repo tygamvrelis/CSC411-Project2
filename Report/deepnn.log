@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  9 FEB 2018 00:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  17 FEB 2018 02:33
 entering extended mode
 **./deepnn.tex
 (deepnn.tex
@@ -1065,22 +1065,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 477--494
 
 ] [11
 
-] [12
+]
+Overfull \hbox (1.23572pt too wide) in paragraph at lines 548--549
+\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]; :::; a[]\OT1/cmr/m/n/1
+0 )$. Each $\OML/cmm/m/it/10 a[]$ \OT1/cmr/m/n/10 is in turn com-puted by first
+ eval-u-at-ing the in-ner prod-uct $[][] \OML/cmm/m/it/10 W[]a[]$\OT1/cmr/m/n/1
+0 ,
+ []
 
-] [13
+[12
 
-] [14
+]
+Underfull \hbox (badness 10000) in paragraph at lines 620--625
+
+ []
+
+[13] [14
 
 ] [15
+
+] [16
+
+] [17
 
 ] 
 AED: lastpage setting LastPage
 (deepnn.aux) ) 
 Here is how much of TeX's memory you used:
- 6586 strings out of 493323
- 99990 string characters out of 3139066
+ 6587 strings out of 493323
+ 99999 string characters out of 3139066
  308855 words of memory out of 3000000
- 9909 multiletter control sequences out of 15000+200000
+ 9910 multiletter control sequences out of 15000+200000
  14368 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,44p,1080b,1475s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1099,12 +1114,13 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsl10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
-0.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><D:/Progr
-am Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on deepnn.pdf (15 pages, 367536 bytes).
+/cm/cmsy5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:
+/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><D:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on deepnn.pdf (17 pages, 391032 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
+ 340 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  506 words of extra memory for PDF output out of 10000 (max. 10000000)
 
