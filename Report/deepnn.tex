@@ -536,6 +536,7 @@ Also, the following reasonable assumptions are made to simplify the analysis:
 	\item Addition is negligible
 	\item Assume that an N-layer neural network includes the input and output layers in the count; that is, it has $N-2$ hidden layers
 	\item Assume activations functions and non-linearities such as softmax at the output layer can be ignored
+	\item Partial derivatives in tables (i.e. previously-solved subproblems) take negligible time to retrieve
 \end{enumerate}
 \noindent \textit{Characterization of Na\"ive Approach (Brute Force)}
 \newline
@@ -637,8 +638,30 @@ Now we will analyse the ``better" solution, backpropagation. Intuitively, we exp
 \newline
 Note the following:
 \begin{enumerate}
-	\item 
+	\item Fully connected implies $k \times k = k^2$ weights per inter-layer junction
+	\item $N$ layers implies $N-1$ inter-layer junctions
+	\item Each partial derivative should be constant time to compute
+	\item $(N-1)k^2$ total weights in the network
 \end{enumerate}
+Now, in the final layer of the network, there is $1$ partial derivative to compute for each $a^{(N)} _k$, which is simply $\frac{\partial C}{\partial a^{(N)} _k}$. However, in the previous inter-layer junction (i.e. connecting the $(N-1)$\textsuperscript{th} layer to the $N$\textsuperscript{th} layer), there are $2$ partial derivatives to compute, as shown below:
+
+$$
+\frac{\partial C}{\partial W^{(i, j, k)}}
+=
+\frac{\partial C}{\partial a^{(N)} _k} % times
+\frac{\partial a^{(N)} _k}{\partial W^{(N, j, k)}}
+$$
+
+But ${\partial a^{(N)} _k}$ is computed when considering the derivative of the cost function with respect to the output layer. So, if we work backwards through the neural network, we can see we can save time on computation since we don't need to keep computing partial derivatives whose values we already know. That is, in the case shown above, there were two partial derivatives that needed to be computed, but only one of them would need to be computed if the derivatives in the previous layer were already solved.
+\newline
+\newline
+This concept generalizes across the network; thus, since there is one new computation required per weight, and there are $k^2$ weights per inter-layer junction, the total number of computations required to solve the gradient of the network with respect to all weights is:
+
+$$
+k^2 + k^2 + ... + k^2 \quad\quad\quad\quad \text{$N$ times}
+$$
+
+This gives an asymptotic upper bound on the runtime complexity of $O(k^2 N)$.
 \clearpage
 \end{homeworkProblem}
 

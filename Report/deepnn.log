@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  17 FEB 2018 02:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  17 FEB 2018 02:54
 entering extended mode
 **./deepnn.tex
 (deepnn.tex
@@ -1066,7 +1066,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 477--494
 ] [11
 
 ]
-Overfull \hbox (1.23572pt too wide) in paragraph at lines 548--549
+Overfull \hbox (1.23572pt too wide) in paragraph at lines 549--550
 \OML/cmm/m/it/10 C\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]; :::; a[]\OT1/cmr/m/n/1
 0 )$. Each $\OML/cmm/m/it/10 a[]$ \OT1/cmr/m/n/10 is in turn com-puted by first
  eval-u-at-ing the in-ner prod-uct $[][] \OML/cmm/m/it/10 W[]a[]$\OT1/cmr/m/n/1
@@ -1076,11 +1076,21 @@ Overfull \hbox (1.23572pt too wide) in paragraph at lines 548--549
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 620--625
+Underfull \hbox (badness 10000) in paragraph at lines 621--626
 
  []
 
-[13] [14
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 634--641
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 655--659
+
+ []
+
+[14
 
 ] [15
 
@@ -1118,7 +1128,7 @@ amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 .pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:
 /Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><D:/Program Files/
 MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on deepnn.pdf (17 pages, 391032 bytes).
+Output written on deepnn.pdf (17 pages, 393442 bytes).
 PDF statistics:
  340 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
