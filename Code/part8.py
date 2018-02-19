@@ -6,7 +6,6 @@ from scipy.io import loadmat
 import os
 from scipy.misc import imread
 
-
 #matplotlib inline
 M = loadmat("../Data/mnist_all.mat")
 
@@ -49,65 +48,70 @@ def get_set(file, RESOLUTION, act):
         batch_y_s = np.vstack((batch_y_s, one_hot))
     return batch_xs, batch_y_s
 
-#
-# def get_train(M):
-#     batch_xs = np.zeros((0, 28 * 28))
-#     batch_y_s = np.zeros((0, 10))
-#
-#     train_k = ["train" + str(i) for i in range(10)]
-#     for k in range(10):
-#         batch_xs = np.vstack((batch_xs, ((np.array(M[train_k[k]])[:]) / 255.)))
-#         one_hot = np.zeros(10)
-#         one_hot[k] = 1
-#         batch_y_s = np.vstack((batch_y_s, np.tile(one_hot, (len(M[train_k[k]]), 1))))
-#     return batch_xs, batch_y_s
-#
-#
-# train_x, train_y = get_train(M)
-# test_x, test_y = get_test(M)
-#
-# train_x, train_y = get_train(M)
-# test_x, test_y = get_test(M)
-#
-# dim_x = 28 * 28
-# dim_h = 20
-# dim_out = 10
-#
-# dtype_float = torch.FloatTensor
-# dtype_long = torch.LongTensor
-#
-# ################################################################################
-# # Subsample the training set for faster training
-#
-# train_idx = np.random.permutation(range(train_x.shape[0]))[:1000]
-# x = Variable(torch.from_numpy(train_x[train_idx]), requires_grad=False).type(dtype_float)
-# y_classes = Variable(torch.from_numpy(np.argmax(train_y[train_idx], 1)), requires_grad=False).type(dtype_long)
-# #################################################################################
-#
-# model = torch.nn.Sequential(
-#     torch.nn.Linear(dim_x, dim_h),
-#     torch.nn.ReLU(),
-#     torch.nn.Linear(dim_h, dim_out),
-# )
-#
-# loss_fn = torch.nn.CrossEntropyLoss()
-# learning_rate = 1e-2
-# optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
-# for t in range(10000):
-#     y_pred = model(x)
-#     loss = loss_fn(y_pred, y_classes)
-#
-#     model.zero_grad()  # Zero out the previous gradient computation
-#     loss.backward()    # Compute the gradient
-#     optimizer.step()   # Use the gradient information to
-#                        # make a step
-# x = Variable(torch.from_numpy(test_x), requires_grad=False).type(dtype_float)
-# y_pred = model(x).data.numpy()
-#
-# np.mean(np.argmax(y_pred, 1) == np.argmax(test_y, 1))
-# model[0].weight
-# model[0].weight.data.numpy()[10, :].shape
-# plt.imshow(model[0].weight.data.numpy()[10, :].reshape((28, 28)), cmap=plt.cm.coolwarm)
-# plt.show()
-# plt.imshow(model[0].weight.data.numpy()[12, :].reshape((28, 28)), cmap=plt.cm.coolwarm)
-# plt.show()
+def train_set(trainX, trainY, valX, valY, model, steps, loss_fn, optimizer):
+    tloss_hist = []
+    tperf_hist = []
+    vloss_hist = []
+    vperf_hist = []
+    num_iter = []
+    for t in range(steps):
+        train_idx = np.random.permutation(range(trainX.shape[0]))[:100]
+        (loss, perf) = classify(trainX[train_idx], trainY[train_idx], model, loss_fn)
+
+        model.zero_grad()  # Zero out the previous gradient computation
+        loss.backward()  # Compute the gradient
+        optimizer.step()  # Use the gradient information to
+        # make a step
+
+        if (t % (steps // 100) == 0):
+            # Print updates every so often and save cost into history list
+            (loss, perf) = classify(trainX, trainY, model, loss_fn)
+            tloss_hist.append(loss.cpu().data)
+            tperf_hist.append(perf)
+
+            (loss, perf) = classify(valX, valY, model, loss_fn)
+            vloss_hist.append(loss.cpu().data)
+            vperf_hist.append(perf)
+            num_iter.append(t)
+
+    return (tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, model)
+
+
+def classify(X, Y, model, loss_fn):
+    dtype_float = torch.FloatTensor
+    dtype_long = torch.LongTensor
+    x = Variable(torch.from_numpy(X), requires_grad=False).type(dtype_float).cuda()
+    y_classes = Variable(torch.from_numpy(np.argmax(Y, 1)), requires_grad=False).type(dtype_long).cuda()
+    y_pred = model(x)
+    loss = loss_fn(y_pred, y_classes)
+    perf = np.mean(np.argmax(y_pred.cpu().data.numpy(), 1) == np.argmax(Y, 1))
+
+    return (loss, perf)
+
+def draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter):
+    plt.figure(1)
+    plt.plot(num_iter, tloss_hist)
+    plt.ylabel('Cost')
+    plt.xlabel('Iterations')
+    plt.title('Training Set Cost Learning Curve')
+
+    plt.figure(2)
+    plt.plot(num_iter, tperf_hist)
+    plt.ylabel('Accuracy')
+    plt.xlabel('Iterations')
+    plt.title('Training Set Accuracy Learning Curve')
+
+    plt.figure(3)
+    plt.plot(num_iter, vloss_hist)
+    plt.ylabel('Cost')
+    plt.xlabel('Iterations')
+    plt.title('Validation Set Cost Learning Curve')
+
+    plt.figure(4)
+    plt.plot(num_iter, vperf_hist)
+    plt.ylabel('Accuracy')
+    plt.xlabel('Iterations')
+    plt.title('Validation Set Accuracy Learning Curve')
+    plt.show()
+
+    plt.gcf().clear()
