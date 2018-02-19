@@ -70,20 +70,20 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
                     cropped = face[int(Coords[1]):int(Coords[3]), int(Coords[0]):int(Coords[2])]
                     resized = imresize(cropped, (RESOLUTION, RESOLUTION))
 
-                    if(resized.shape == (RESOLUTION*1L, RESOLUTION*1L, 3L) or resized.shape == (RESOLUTION*1L, RESOLUTION*1L, 4L)):
-                        processed = rgb2gray(resized)
-                    else:
-                        processed = resized
+                    # if(resized.shape == (RESOLUTION*1L, RESOLUTION*1L, 3L) or resized.shape == (RESOLUTION*1L, RESOLUTION*1L, 4L)):
+                    #     processed = rgb2gray(resized)
+                    # else:
+                    #     processed = resized
 
                     savename = name + str(total) + '.' + line.split()[4].split('.')[-1]
 
 
                     if total < train_size:
-                        imsave("../Data/Faces/training set" + str(RESOLUTION) + "/" + savename, processed)
+                        imsave("../Data/Faces/training set" + str(RESOLUTION) + "/" + savename, resized)
                     elif total < (train_size + test_size):
-                        imsave("../Data/Faces/validation set" + str(RESOLUTION) + "/" + savename, processed)
+                        imsave("../Data/Faces/validation set" + str(RESOLUTION) + "/" + savename, resized)
                     elif total < (train_size + test_size + val_size):
-                        imsave("../Data/Faces/test set" + str(RESOLUTION) + "/" + savename, processed)
+                        imsave("../Data/Faces/test set" + str(RESOLUTION) + "/" + savename, resized)
                     else:
                         break
                     total += 1

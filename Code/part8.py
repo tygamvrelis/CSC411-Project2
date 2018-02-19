@@ -1,10 +1,32 @@
 import numpy as np
 from torch.autograd import Variable
 import torch
-
 import matplotlib.pyplot as plt
-
 from scipy.io import loadmat
+
+import image_processing as improc
+
+def preProcess(RESOLUTION, train_size, val_size, test_size):
+    '''
+    Makes a training set, validation set, and test set using actor
+    faces of RESOLUTION x RESOLUTION resolution. Returns the numpy
+    arrays associated with these sets.
+
+    Arguments:
+        RESOLUTION -- the desired cropped image dimension (square)
+        train_size -- the desired training set size for each actor
+        val_size -- the desired validation set size for each actor
+        test_size -- the desired test set size for each actor
+    '''
+
+    # Make new folders with the relevant images in them
+    improc.make3Sets(RESOLUTION, train_size, val_size, test_size)
+
+    # Make training, validation, and test numpy arrays
+    # TODO
+    # ...
+    # return(XTrain, YTrain, XVal, YVal, XTest, YTest)
+
 
 #matplotlib inline
 
