@@ -6,9 +6,6 @@ from scipy.io import loadmat
 import os
 from scipy.misc import imread
 
-#matplotlib inline
-M = loadmat("../Data/mnist_all.mat")
-
 def processActorString(filename):
     '''This function takes the name of an image file and returns its actor and pic number.
      The file name is assumed to have the naming convention: 'actor#.ext'.
@@ -48,14 +45,14 @@ def get_set(file, RESOLUTION, act):
         batch_y_s = np.vstack((batch_y_s, one_hot))
     return batch_xs, batch_y_s
 
-def train_set(trainX, trainY, valX, valY, model, steps, loss_fn, optimizer):
+def train_set(trainX, trainY, valX, valY, model, steps, batch_size, loss_fn, optimizer):
     tloss_hist = []
     tperf_hist = []
     vloss_hist = []
     vperf_hist = []
     num_iter = []
     for t in range(steps):
-        train_idx = np.random.permutation(range(trainX.shape[0]))[:100]
+        train_idx = np.random.permutation(range(trainX.shape[0]))[:batch_size]
         (loss, perf) = classify(trainX[train_idx], trainY[train_idx], model, loss_fn)
 
         model.zero_grad()  # Zero out the previous gradient computation

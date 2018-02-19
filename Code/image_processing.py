@@ -9,7 +9,10 @@ from scipy.misc.pilutil import imresize
 from scipy.misc import imsave
 import os
 from hashlib import sha256
-
+import part8 as p8
+#Hashing seems to take out some valide images so I hard code them back in here.
+valid_gilpin = [2, 3, 15, 19, 24, 41, 43, 58, 62, 68, 70, 76, 84, 109, 117, 122, 135, 137, 139, 140, 141, 143, 146, 153, 154, 159, 164, 167, 170 , 175, 194]
+valid_harmon = [4, 16, 18, 30, 37, 38, 52, 56, 58, 78, 82, 87, 93, 99, 101, 116, 155, 166, 168, 177, 181]
 def rgb2gray(rgb):
     '''Return the grayscale version of the RGB image rgb as a 2D numpy array
     whose range is 0..1
@@ -41,7 +44,8 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
         os.makedirs("../Data/Faces/test set" + str(RESOLUTION))
 
     badHashCount = 0
-
+    g = 0
+    invalidFiles = 0
     #Changing to grayscale and cropping
     act =['Lorraine Bracco', 'Peri Gilpin', 'Angie Harmon', 'Alec Baldwin', 'Bill Hader', 'Steve Carell']
     for a in act:
@@ -51,9 +55,9 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
         for line in open("../Data/Faces/actors.txt"):
             if a in line:
                 filename = name + str(i) + '.' + line.split()[4].split('.')[-1]
-
                 if not os.path.isfile("../Data/Faces/uncropped/" + filename):
                     i += 1
+                    invalidFiles += 1
                     continue
                 try:
                     line_split = line.split('\t')
@@ -61,14 +65,23 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
                     img = open("../Data/Faces/uncropped/" + filename, "rb").read()
                     computedHash = sha256(img).hexdigest()
                     if computedHash != expectedHash:
-                        print("Hash doesn't match! File: " + filename)
-                        badHashCount += 1
-                        i += 1
-                        continue
+                        remove = True
+                        (actor, number) = p8.processActorString(filename)
+                        if actor == "gilpin" and number in valid_gilpin:
+                             remove = False
+                        if actor == "harmon" and number in valid_harmon:
+                            remove = False
+                        if remove:
+                            print("Hash doesn't match! File: " + filename)
+                            badHashCount += 1
+                            i += 1
+                            continue
                     face = imread("../Data/Faces/uncropped/" + filename)
                     try:
                         face.shape[2]
                     except:
+                        print("grayscale")
+                        g += 1
                         i += 1
                         continue
                     Coords = line_split[4].split(',')
@@ -95,6 +108,8 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
                 except IOError:
                     print 'file not valid'
                 i += 1
+
+
     print "Number of mismatched hashes: ", badHashCount
     minNumTraining = ("", sys.maxsize)
     minNumValidation = ("", sys.maxsize)
@@ -118,3 +133,5 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
     print("Min #training: " + str(minNumTraining))
     print("Min #validation: " + str(minNumValidation))
     print("Min #test: " + str(minNumTest))
+    print("Grayscale images: " + str(g))
+    print("Unopenable Files " + str(invalidFiles))

@@ -25,34 +25,38 @@ np.random.seed(0)
 ## Part 8: Using PyTorch to train a single-hidden-layer fully-connected NN to classify faces
 act = ['bracco', 'gilpin', 'harmon', 'baldwin', 'hader', 'carell']
 #Note: The act array determines the index of each actor in the one-hot encoding.
+
 dtype_float = torch.FloatTensor
 dtype_long = torch.LongTensor
-RESOLUTION = 32
+RESOLUTION = 28
 train_size = 70
 val_size = 20
 test_size = 20
+
 #improc.make3Sets(RESOLUTION, train_size, val_size, test_size)
+
 (trainX, trainY) = p8.get_set("../Data/Faces/training set" + str(RESOLUTION), RESOLUTION, act)
 (valX, valY) = p8.get_set("../Data/Faces/validation set" + str(RESOLUTION), RESOLUTION, act)
+(testX, testY) = p8.get_set("../Data/Faces/validation set" + str(RESOLUTION), RESOLUTION, act)
 
 dim_x = RESOLUTION ** 2 * 3
-dim_h = 6
+dim_h = 50
 dim_out = 6
 model = torch.nn.Sequential(
     torch.nn.Linear(dim_x, dim_h),
-    torch.nn.Tanhshrink(),
+    torch.nn.Tanh(),
     torch.nn.Linear(dim_h, dim_out),
 ).cuda()
 loss_fn = torch.nn.CrossEntropyLoss()
 learning_rate = 1e-3
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
-steps = 1000
+steps = 2000
+batch_size = 50
 
-(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, model) = p8.train_set(trainX, trainY, valX, valY, model, steps, loss_fn, optimizer)
+(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, model) = p8.train_set(trainX, trainY, valX, valY, model, steps, batch_size, loss_fn, optimizer)
 
 
 (loss, perf) = p8.classify(valX, valY, model, loss_fn)
-
 print perf
 # model[0].weight
 # model[0].weight.data.numpy()[10, :].shape
