@@ -17,7 +17,7 @@ act = ['bracco', 'gilpin', 'harmon', 'baldwin', 'hader', 'carell']
 
 dtype_float = torch.FloatTensor
 dtype_long = torch.LongTensor
-RESOLUTION = 28
+RESOLUTION = 32
 train_size = 70
 val_size = 20
 test_size = 20
@@ -28,6 +28,7 @@ test_size = 20
 (valX, valY) = p8.get_set("../Data/Faces/validation set" + str(RESOLUTION), RESOLUTION, act)
 (testX, testY) = p8.get_set("../Data/Faces/validation set" + str(RESOLUTION), RESOLUTION, act)
 
+
 dim_x = RESOLUTION ** 2 * 3
 dim_h = 50
 dim_out = 6
@@ -36,6 +37,8 @@ model = torch.nn.Sequential(
     torch.nn.Tanh(),
     torch.nn.Linear(dim_h, dim_out),
 )
+if torch.cuda.is_available():
+    model = model.cuda()
 loss_fn = torch.nn.CrossEntropyLoss()
 learning_rate = 1e-3
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)

@@ -53,6 +53,17 @@ def get_set(file, RESOLUTION, act, noflatten = 0):
     return batch_xs, batch_y_s
 
 def train_set(trainX, trainY, valX, valY, model, steps, batch_size, loss_fn, optimizer):
+    '''This function trains a model described in PyTorch using minibatches of batch_size.
+    It returns the training and validation loss and performance histories, the number of
+    iterations at each entry and the final trained model.
+    trainX, trainY: The training set
+    valX, valY: The validation set
+    model: The model to train
+    steps: Number of iterations to train over
+    batch_size: Number of random samples in each batch
+    loss_fn: The loss function used during training
+    optimizer: The PyTorch optimizer chosen
+    '''
     tloss_hist = []
     tperf_hist = []
     vloss_hist = []
@@ -69,30 +80,46 @@ def train_set(trainX, trainY, valX, valY, model, steps, batch_size, loss_fn, opt
 
         if (t % (steps // 100) == 0):
             # Print updates every so often and save cost into history list
-            (loss, perf) = classify(trainX, trainY, model, loss_fn)
-            tloss_hist.append(loss.cpu().data)
-            tperf_hist.append(perf)
-
-            (loss, perf) = classify(valX, valY, model, loss_fn)
-            vloss_hist.append(loss.cpu().data)
-            vperf_hist.append(perf)
+            (tloss, tperf) = classify(trainX, trainY, model, loss_fn)
+            (vloss, vperf) = classify(valX, valY, model, loss_fn)
+            if torch.cuda.is_available():
+                tloss = tloss.cpu()
+                vloss = vloss.cpu()
+            tloss_hist.append(tloss.data)
+            tperf_hist.append(tperf)
+            vloss_hist.append(vloss.data)
+            vperf_hist.append(vperf)
             num_iter.append(t)
 
     return (tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, model)
 
 
 def classify(X, Y, model, loss_fn):
+    '''This function takes a set of inputs and labels, a pytorch model and a loss function, loss_fn.
+    The inputs are categorized according to the model and compared to their labels. The loss and
+    percent accuracy of the model are returned.
+    '''
     dtype_float = torch.FloatTensor
     dtype_long = torch.LongTensor
     x = Variable(torch.from_numpy(X), requires_grad=False).type(dtype_float)
     y_classes = Variable(torch.from_numpy(np.argmax(Y, 1)), requires_grad=False).type(dtype_long)
+
+    if torch.cuda.is_available():
+        x = x.cuda()
+        y_classes = y_classes.cuda()
     y_pred = model(x)
     loss = loss_fn(y_pred, y_classes)
-    perf = np.mean(np.argmax(y_pred.cpu().data.numpy(), 1) == np.argmax(Y, 1))
+
+    if torch.cuda.is_available():
+        y_pred = y_pred.cpu()
+    perf = np.mean(np.argmax(y_pred.data.numpy(), 1) == np.argmax(Y, 1))
 
     return (loss, perf)
 
 def draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter):
+    '''This function takes in 5 arrays of equal length and plot the first
+    4 arrays on the Y-axis against num_iter on the X-axis.
+    '''
     plt.figure(1)
     plt.plot(num_iter, tloss_hist)
     plt.ylabel('Cost')
