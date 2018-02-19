@@ -21,7 +21,7 @@ def processActorString(filename):
     pic_number = int(temp_actor.replace(actor, ''))
     return (actor, pic_number)
 
-def get_set(file, RESOLUTION, act):
+def get_set(file, RESOLUTION, act, noflatten = 0):
     '''This function creates input and label matrices of size [# of samples]x[RESOLUTION^2*3]
     from all of the images in a given file path. The images are all assumed to have the naming
     convention: 'actor#.ext' with the actors being one of those in the act array.
@@ -30,15 +30,21 @@ def get_set(file, RESOLUTION, act):
 
     image_size = RESOLUTION * RESOLUTION
 
-    batch_xs = np.zeros((0, image_size * 3))
+    if(noflatten):
+        batch_xs = np.zeros((RESOLUTION, RESOLUTION, 3))
+    else:
+        batch_xs = np.zeros((0, image_size * 3))
     batch_y_s = np.zeros((0, 6))
 
 
     for filename in os.listdir(file):
         face = imread(file + '/' + filename)
         (actor, throw_away) = processActorString(filename)
-        input = np.concatenate((np.array(face[:, :, 0]).reshape(image_size), np.array(face[:, :, 1]).reshape(image_size), np.array(face[:, :, 2]).reshape(image_size)))
-        batch_xs = np.vstack((batch_xs, (input / 255.)))
+        if (noflatten):
+            batch_xs = np.vstack((batch_xs, (face / 255.)))
+        else:
+            input = np.concatenate((np.array(face[:, :, 0]).reshape(image_size), np.array(face[:, :, 1]).reshape(image_size), np.array(face[:, :, 2]).reshape(image_size)))
+            batch_xs = np.vstack((batch_xs, (input / 255.)))
 
         one_hot = np.zeros(6)
         one_hot[act.index(actor)] = 1

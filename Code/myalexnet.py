@@ -67,30 +67,27 @@ class MyAlexNet(nn.Module):
         x = self.classifier(x)
         return x
 
-# model_orig = torchvision.models.alexnet(pretrained=True)
-model = MyAlexNet()
-model.eval()
-
-# Read an image
-im = imread('kiwi227.png')[:,:,:3]
-im = im - np.mean(im.flatten())
-im = im/np.max(np.abs(im.flatten()))
-im = np.rollaxis(im, -1).astype(float32)
-
-# turn the image into a numpy variable
-im_v = Variable(torch.from_numpy(im).unsqueeze_(0), requires_grad=False)    
-
-# run the forward pass AlexNet prediction
-softmax = torch.nn.Softmax()
-all_probs = softmax(model.forward(im_v)).data.numpy()[0]
-sorted_ans = np.argsort(all_probs)
-
-for i in range(-1, -6, -1):
-    print("Answer:", class_names[sorted_ans[i]], ", Prob:", all_probs[sorted_ans[i]])
-
-ans = np.argmax(model.forward(im_v).data.numpy())
-prob_ans = softmax(model.forward(im_v)).data.numpy()[0][ans]
-print("Top Answer:", class_names[ans], "P(ans) = ", prob_ans)
-
-
-
+# # model_orig = torchvision.models.alexnet(pretrained=True)
+# model = MyAlexNet()
+# model.eval()
+#
+# # Read an image
+# im = imread('kiwi227.png')[:,:,:3]
+# im = im - np.mean(im.flatten())
+# im = im/np.max(np.abs(im.flatten()))
+# im = np.rollaxis(im, -1).astype(float32)
+#
+# # turn the image into a numpy variable
+# im_v = Variable(torch.from_numpy(im).unsqueeze_(0), requires_grad=False)
+#
+# # run the forward pass AlexNet prediction
+# softmax = torch.nn.Softmax()
+# all_probs = softmax(model.forward(im_v)).data.numpy()[0]
+# sorted_ans = np.argsort(all_probs)
+#
+# for i in range(-1, -6, -1):
+#     print("Answer:", class_names[sorted_ans[i]], ", Prob:", all_probs[sorted_ans[i]])
+#
+# ans = np.argmax(model.forward(im_v).data.numpy())
+# prob_ans = softmax(model.forward(im_v)).data.numpy()[0][ans]
+# print("Top Answer:", class_names[ans], "P(ans) = ", prob_ans)
