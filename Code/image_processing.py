@@ -66,6 +66,11 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
                         i += 1
                         continue
                     face = imread("../Data/Faces/uncropped/" + filename)
+                    try:
+                        face.shape[2]
+                    except:
+                        i += 1
+                        continue
                     Coords = line_split[4].split(',')
                     cropped = face[int(Coords[1]):int(Coords[3]), int(Coords[0]):int(Coords[2])]
                     resized = imresize(cropped, (RESOLUTION, RESOLUTION))
@@ -113,9 +118,3 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
     print("Min #training: " + str(minNumTraining))
     print("Min #validation: " + str(minNumValidation))
     print("Min #test: " + str(minNumTest))
-
-RESOLUTION = 32
-train_size = 70
-val_size = 20
-test_size = 20
-make3Sets(RESOLUTION, train_size, val_size, test_size)

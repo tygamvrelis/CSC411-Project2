@@ -16,13 +16,15 @@ from numpy import random
 import cPickle
 import os
 from scipy.io import loadmat
-
+import image_processing as improc
 import part8 as p8
 
 ## Part 8: Using PyTorch to train a single-hidden-layer fully-connected NN to classify faces
+act = ['bracco', 'gilpin', 'harmon', 'baldwin', 'hader', 'carell']
+#Note: The act array determines the index of each actor in the one-hot encoding.
 RESOLUTION = 32
 train_size = 70
 val_size = 20
 test_size = 20
-
-p8.preProcess(RESOLUTION, train_size, val_size, test_size)
+#improc.make3Sets(RESOLUTION, train_size, val_size, test_size)
+(trainX, trainY) = p8.get_set("../Data/Faces/training set" + str(RESOLUTION), RESOLUTION, act)
