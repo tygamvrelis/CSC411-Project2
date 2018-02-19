@@ -1,15 +1,13 @@
 from pylab import *
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.cbook as cbook
-import random
-import time
+# import numpy as np
+# import matplotlib.pyplot as plt
+# import matplotlib.cbook as cbook
+# import random
+# import time
 from scipy.misc import imread
-from scipy.misc import imresize
-import matplotlib.image as mpimg
+from scipy.misc.pilutil import imresize
+from scipy.misc import imsave
 import os
-from scipy.ndimage import filters
-import urllib
 from hashlib import sha256
 
 def rgb2gray(rgb):
@@ -24,6 +22,8 @@ def rgb2gray(rgb):
     gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
 
     return gray / 255
+
+
 def make3Sets(RESOLUTION, train_size, val_size, test_size):
     '''This function creates three sets of processed images with RESOLUTIONxRESOLUTION
     resolution. The size of each set is also given as an argument.
@@ -40,6 +40,8 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
     if not os.path.exists("../Data/Faces/test set" + str(RESOLUTION)):
         os.makedirs("../Data/Faces/test set" + str(RESOLUTION))
 
+    badHashCount = 0
+
     #Changing to grayscale and cropping
     act =['Lorraine Bracco', 'Peri Gilpin', 'Angie Harmon', 'Alec Baldwin', 'Bill Hader', 'Steve Carell']
     for a in act:
@@ -55,10 +57,13 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
                     continue
                 try:
                     line_split = line.split('\t')
-                    hash = line_split[-1]
-                    Image = open("../Data/Faces/uncropped/" + filename, "rb").read()
-                    if sha256(Image) != hash:
-                        print("Hash doesn't match")
+                    expectedHash = line_split[-1].rstrip()
+                    img = open("../Data/Faces/uncropped/" + filename, "rb").read()
+                    computedHash = sha256(img).hexdigest()
+                    if computedHash != expectedHash:
+                        print("Hash doesn't match! File: " + filename)
+                        badHashCount += 1
+                        i += 1
                         continue
                     face = imread("../Data/Faces/uncropped/" + filename)
                     Coords = line_split[4].split(',')
@@ -74,17 +79,40 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
 
 
                     if total < train_size:
-                        imsave("../Data/Faces/training set" + str(RESOLUTION) + "/" + savename, processed, cmap = 'gray')
+                        imsave("../Data/Faces/training set" + str(RESOLUTION) + "/" + savename, processed)
                     elif total < (train_size + test_size):
-                        imsave("../Data/Faces/validation set" + str(RESOLUTION) + "/" + savename, processed, cmap='gray')
+                        imsave("../Data/Faces/validation set" + str(RESOLUTION) + "/" + savename, processed)
                     elif total < (train_size + test_size + val_size):
-                        imsave("../Data/Faces/test set" + str(RESOLUTION) + "/" + savename, processed, cmap='gray')
+                        imsave("../Data/Faces/test set" + str(RESOLUTION) + "/" + savename, processed)
                     else:
                         break
                     total += 1
                 except IOError:
                     print 'file not valid'
                 i += 1
+    print "Number of mismatched hashes: ", badHashCount
+    minNumTraining = ("", sys.maxsize)
+    minNumValidation = ("", sys.maxsize)
+    minNumTest = ("", sys.maxsize)
+    for actor in act:
+        a = actor.split()[1].lower()
+        numTraining = len([name for name in os.listdir("../Data/Faces/training set" + str(RESOLUTION)) if a in name])
+        numValidation = len([name for name in os.listdir("../Data/Faces/validation set" + str(RESOLUTION)) if a in name])
+        numTest = len([name for name in os.listdir("../Data/Faces/test set" + str(RESOLUTION)) if a in name])
+        print("Actor: " + a +
+              "| #training: " + str(numTraining) +
+              "| #validation: " + str(numValidation) +
+              "| #Test: " + str(numTest)
+              )
+        if(numTraining < minNumTraining[1]):
+            minNumTraining = (a, numTraining)
+        if (numValidation < minNumValidation[1]):
+            minNumValidation = (a, numValidation)
+        if (numTest < minNumTest[1]):
+            minNumTest = (a, numTest)
+    print("Min #training: " + str(minNumTraining))
+    print("Min #validation: " + str(minNumValidation))
+    print("Min #test: " + str(minNumTest))
 
 RESOLUTION = 32
 train_size = 70
