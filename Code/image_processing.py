@@ -10,9 +10,11 @@ from scipy.misc import imsave
 import os
 from hashlib import sha256
 import part8 as p8
-#Hashing seems to take out some valide images so I hard code them back in here.
+
+#Hashing seems to take out some valid images so I hard code them back in here.
 valid_gilpin = [2, 3, 15, 19, 24, 41, 43, 58, 62, 68, 70, 76, 84, 109, 117, 122, 135, 137, 139, 140, 141, 143, 146, 153, 154, 159, 164, 167, 170 , 175, 194]
 valid_harmon = [4, 16, 18, 30, 37, 38, 52, 56, 58, 78, 82, 87, 93, 99, 101, 116, 155, 166, 168, 177, 181]
+
 def rgb2gray(rgb):
     '''Return the grayscale version of the RGB image rgb as a 2D numpy array
     whose range is 0..1
