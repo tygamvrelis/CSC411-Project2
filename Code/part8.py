@@ -36,11 +36,12 @@ def get_set(file, RESOLUTION, act, noflatten = 0):
         batch_xs = np.zeros((0, image_size * 3))
     batch_y_s = np.zeros((0, 6))
 
-
     for filename in os.listdir(file):
         face = imread(file + '/' + filename)
         (actor, throw_away) = processActorString(filename)
         if (noflatten):
+            face = face[:, :, :3]
+
             batch_xs = np.vstack((batch_xs, (face / 255.)))
         else:
             input = np.concatenate((np.array(face[:, :, 0]).reshape(image_size), np.array(face[:, :, 1]).reshape(image_size), np.array(face[:, :, 2]).reshape(image_size)))
@@ -112,6 +113,7 @@ def classify(X, Y, model, loss_fn):
 
     if torch.cuda.is_available():
         y_pred = y_pred.cpu()
+
     perf = np.mean(np.argmax(y_pred.data.numpy(), 1) == np.argmax(Y, 1))
 
     return (loss, perf)

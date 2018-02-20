@@ -63,8 +63,11 @@ class MyAlexNet(nn.Module):
 
     def forward(self, x):
         x = self.features(x)
-        x = x.view(x.size(0), 256 * 6 * 6)
-        x = self.classifier(x)
+        len = 1
+        for dim in x.shape:
+            len *= dim
+        x = x.view(1, len)
+        # x = self.classifier(x)
         return x
 
 # # model_orig = torchvision.models.alexnet(pretrained=True)
