@@ -56,8 +56,8 @@ batch_size = 50
 
 
 (loss, perf) = p8.classify(valX_feat, valY, model, loss_fn)
-print "Classification Val performance: ", perf
+print "Classification Val performance: ", perf                  #96.67%
 (loss, perf) = p8.classify(testX_feat, testY, model, loss_fn)
-print "Classification Test performance: ", perf
+print "Classification Test performance: ", perf                 #98.33%
 
 p8.draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter)
