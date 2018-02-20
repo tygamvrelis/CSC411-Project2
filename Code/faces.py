@@ -58,29 +58,35 @@ print "Classification Test performance: ", perf
 p8.draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter)
 
 
-# ## Part 9: Visualize the weights of the hidden units that are useful for classifying each actor
-# # Define "useful" to mean the weights from the hidden layer to the output layer with the
-# # largest maximum value, once multiplied by its activation
-# imagePath = "../Report/images/"
-#
-# # ind selects an image in the validation set. IF this image is classified correctly,
-# # it will be fed into the network. The two neurons in the hidden layer that have the
-# # most positive and most negative outputs given this image are then taken to be the
-# # most "useful" neurons in classifying photos of this actor. The weights connecting
-# # the input image to these two neurons are then displayed in color.
-# ind = 100
-# x = valX[ind:ind+1,:]
-#
-# # If this image is correctly classified, we can proceed
-# output = p8.viewOutputLayer(x, model)
-# if np.argmax(output.cpu().data.numpy(), 1) == np.argmax(valY[ind:ind+1,:], 1):
-#     y_ind = np.argmax(valY[ind:ind+1,:], 1)
-#     hidden = p8.viewHiddenLayer(x, y_ind, model, dim_x, dim_h)
-#
-#     # Select the "useful" hidden units
-#     hidden = hidden.cpu().data.numpy()
-#     maxNeuron = np.argmax(hidden)
-#     minNeuron = np.argmin(hidden)
-#
-#     # Visualize
-#     p8.viewWeights(maxNeuron, model, RESOLUTION, imagePath, act[int(y_ind)])
+## Part 9: Visualize the weights of the hidden units that are useful for classifying each actor
+# Define "useful" to mean the weights from the hidden layer to the output layer with the
+# largest maximum value, once multiplied by its activation
+imagePath = "../Report/images/"
+
+# ind selects an image in the validation set. IF this image is classified correctly,
+# it will be fed into the network. The two neurons in the hidden layer that have the
+# most positive and most negative outputs given this image are then taken to be the
+# most "useful" neurons in classifying photos of this actor. The weights connecting
+# the input image to these two neurons are then displayed in color.
+ind = 100
+x = valX[ind:ind+1,:]
+
+# If this image is correctly classified, we can proceed
+output = p8.viewOutputLayer(x, model)
+if torch.cuda.is_available():
+    output = output.cpu()
+
+if np.argmax(output.data.numpy(), 1) == np.argmax(valY[ind:ind+1,:], 1):
+    y_ind = np.argmax(valY[ind:ind+1,:], 1)
+    hidden = p8.viewHiddenLayer(x, y_ind, model, dim_x, dim_h)
+
+    if torch.cuda.is_available():
+        hidden = hidden.cpu()
+
+    # Select the "useful" hidden units
+    hidden = hidden.data.numpy()
+    maxNeuron = np.argmax(hidden)
+    minNeuron = np.argmin(hidden)
+
+    # Visualize
+    p8.viewWeights(maxNeuron, model, RESOLUTION, imagePath, act[int(y_ind)])

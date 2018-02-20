@@ -4,6 +4,15 @@ import torch
 from torch.autograd import Variable
 
 def get_feature_set(X,size, RESOLUTION, modelAN):
+    '''
+    This function takes an unflattened matrix of input images, puts them through
+    modelAN and stacks the resulting outputs in a new matrix.
+    X: Matrix of size: (size*RESOLUTION, RESOLUTION, 3)
+    size: Number of input images in X
+    RESOLUTION: Resolution of input images
+
+    Output: Matrix of size: (size, number of outputs from modelAN for each Image)
+    '''
     # Read an image
     first_pass = True
     for ind in range(size):
