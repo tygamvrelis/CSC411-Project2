@@ -31,7 +31,7 @@ def get_set(file, RESOLUTION, act, noflatten = 0):
     image_size = RESOLUTION * RESOLUTION
 
     if(noflatten):
-        batch_xs = np.zeros((RESOLUTION, RESOLUTION, 3))
+        batch_xs = np.zeros((0, RESOLUTION, 3))
     else:
         batch_xs = np.zeros((0, image_size * 3))
     batch_y_s = np.zeros((0, 6))

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d221de6d-77d2-4f6a-83f9-79cb2c892033" name="Default" comment="Cleaned up more code.">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Code/part10.py" />
+    <list default="true" id="d221de6d-77d2-4f6a-83f9-79cb2c892033" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Code/deepfaces.py" afterPath="$PROJECT_DIR$/Code/deepfaces.py" />
       <change beforePath="$PROJECT_DIR$/Code/faces.py" afterPath="$PROJECT_DIR$/Code/faces.py" />
       <change beforePath="$PROJECT_DIR$/Code/myalexnet.py" afterPath="$PROJECT_DIR$/Code/myalexnet.py" />
+      <change beforePath="$PROJECT_DIR$/Code/part10.py" afterPath="$PROJECT_DIR$/Code/part10.py" />
       <change beforePath="$PROJECT_DIR$/Code/part8.py" afterPath="$PROJECT_DIR$/Code/part8.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +21,7 @@
       <file leaf-file-name="digits.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/digits.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
+            <state relative-caret-position="18">
               <caret line="157" column="15" lean-forward="false" selection-start-line="157" selection-start-column="15" selection-end-line="157" selection-end-column="15" />
               <folding>
                 <element signature="e#164#183#0" expanded="true" />
@@ -29,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faces.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="faces.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/faces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
               <folding>
                 <element signature="e#180#199#0" expanded="true" />
               </folding>
@@ -41,37 +42,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="part10.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Code/part10.py">
+      <file leaf-file-name="part4.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/part4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+            <state relative-caret-position="279">
+              <caret line="311" column="14" lean-forward="true" selection-start-line="311" selection-start-column="14" selection-end-line="311" selection-end-column="14" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="part8.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Code/part8.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myalexnet.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Code/myalexnet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="65" column="15" lean-forward="false" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-              <folding>
-                <element signature="e#1#13#0" expanded="true" />
-                <marker date="1519084104015" expanded="true" signature="1777:1862" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -82,6 +58,18 @@
             <state relative-caret-position="55854">
               <caret line="3103" column="184" lean-forward="false" selection-start-line="3103" selection-start-column="184" selection-end-line="3103" selection-end-column="184" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myalexnet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/myalexnet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-27">
+              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+              <folding>
+                <element signature="e#1#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,17 +107,18 @@
         <option value="$PROJECT_DIR$/Code/digits.py" />
         <option value="$PROJECT_DIR$/Code/image_processing.py" />
         <option value="$PROJECT_DIR$/Code/part8.py" />
+        <option value="$PROJECT_DIR$/Code/part10.py" />
+        <option value="$PROJECT_DIR$/Code/deepfaces.py" />
         <option value="$PROJECT_DIR$/Code/myalexnet.py" />
         <option value="$PROJECT_DIR$/Code/faces.py" />
-        <option value="$PROJECT_DIR$/Code/part10.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="75" />
-    <option name="y" value="103" />
-    <option name="width" value="1557" />
-    <option name="height" value="787" />
+    <option name="x" value="287" />
+    <option name="y" value="-4" />
+    <option name="width" value="1555" />
+    <option name="height" value="779" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -146,7 +135,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,16 +152,11 @@
               <item name="CSC411-Project2" type="462c0819:PsiDirectoryNode" />
               <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CSC411-Project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSC411-Project2" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-              <item name="Faces" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -218,6 +201,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSC411-Project2" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/part8.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="deepfaces" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSC411-Project2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/deepfaces.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -277,24 +278,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="mnist_handout" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CSC411-Project2" />
-      <option name="SCRIPT_NAME" value="D:\CSC411\CSC411-Project2\Code\mnist_handout.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="part8" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -315,19 +298,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Cuda" />
-      <item index="1" class="java.lang.String" itemvalue="Python.mnist_handout" />
-      <item index="2" class="java.lang.String" itemvalue="Python.digits" />
-      <item index="3" class="java.lang.String" itemvalue="Python.part8" />
-      <item index="4" class="java.lang.String" itemvalue="Python.image_processing" />
-      <item index="5" class="java.lang.String" itemvalue="Python.faces" />
+      <item index="1" class="java.lang.String" itemvalue="Python.digits" />
+      <item index="2" class="java.lang.String" itemvalue="Python.part8" />
+      <item index="3" class="java.lang.String" itemvalue="Python.image_processing" />
+      <item index="4" class="java.lang.String" itemvalue="Python.faces" />
+      <item index="5" class="java.lang.String" itemvalue="Python.deepfaces" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.faces" />
-        <item index="1" class="java.lang.String" itemvalue="Python.image_processing" />
-        <item index="2" class="java.lang.String" itemvalue="Python.part8" />
-        <item index="3" class="java.lang.String" itemvalue="Python.digits" />
-        <item index="4" class="java.lang.String" itemvalue="Python.mnist_handout" />
+        <item index="1" class="java.lang.String" itemvalue="Python.deepfaces" />
+        <item index="2" class="java.lang.String" itemvalue="Python.image_processing" />
+        <item index="3" class="java.lang.String" itemvalue="Python.part8" />
+        <item index="4" class="java.lang.String" itemvalue="Python.digits" />
       </list>
     </recent_temporary>
   </component>
@@ -380,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519010930809</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Almost done part10&#10;First img in each set is giving me 0">
+      <created>1519085233694</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1519085233694</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -399,13 +389,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18941048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5026076" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329843" sideWeight="0.49739245" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698414" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19581152" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3329843" sideWeight="0.49739245" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981523" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39790577" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39790577" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -424,7 +414,8 @@
     <MESSAGE value="Input and label matrices can be made easily" />
     <MESSAGE value="Cuda run" />
     <MESSAGE value="Cleaned up code into different functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up code into different functions." />
+    <MESSAGE value="Almost done part10&#10;First img in each set is giving me 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost done part10&#10;First img in each set is giving me 0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -599,20 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/part5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-280">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/part4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="282" column="0" lean-forward="false" selection-start-line="282" selection-start-column="0" selection-end-line="313" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/part3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-424">
@@ -632,9 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-738">
           <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#19#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -642,15 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1013">
           <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,17 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/digits.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="157" column="15" lean-forward="false" selection-start-line="157" selection-start-column="15" selection-end-line="157" selection-end-column="15" />
-          <folding>
-            <element signature="e#164#183#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -676,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="2956" column="0" lean-forward="false" selection-start-line="2956" selection-start-column="0" selection-end-line="2956" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,45 +637,81 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/part8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1625">
+          <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/part5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-423">
+          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/myalexnet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="65" column="15" lean-forward="false" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
+        <state relative-caret-position="-27">
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding>
             <element signature="e#1#13#0" expanded="true" />
-            <marker date="1519084104015" expanded="true" signature="1777:1862" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/faces.py">
+    <entry file="file://$PROJECT_DIR$/Code/part4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state relative-caret-position="279">
+          <caret line="311" column="14" lean-forward="true" selection-start-line="311" selection-start-column="14" selection-end-line="311" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" column="11" lean-forward="false" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
           <folding>
-            <element signature="e#180#199#0" expanded="true" />
+            <element signature="e#89#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/part10.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="423">
+          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/part8.py">
+    <entry file="file://$PROJECT_DIR$/Code/digits.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="18">
+          <caret line="157" column="15" lean-forward="false" selection-start-line="157" selection-start-column="15" selection-end-line="157" selection-end-column="15" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#164#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/faces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+          <folding>
+            <element signature="e#180#199#0" expanded="true" />
           </folding>
         </state>
       </provider>

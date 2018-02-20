@@ -25,7 +25,6 @@ def get_feature_set(X,size, RESOLUTION, modelAN):
         res = res.data.numpy()
         if first_pass:
             batch_xs = np.zeros((0, res.shape[1]))
-            print res.shape[1]
             first_pass = False
         batch_xs = np.vstack((batch_xs, res))
     return batch_xs

@@ -22,7 +22,7 @@ class MyAlexNet(nn.Module):
     def load_weights(self):
         an_builtin = torchvision.models.alexnet(pretrained=True)
         
-        features_weight_i = [0, 3, 6, 8, 10]
+        features_weight_i = [0, 3, 6] #, 8 , 10]
         for i in features_weight_i:
             self.features[i].weight = an_builtin.features[i].weight
             self.features[i].bias = an_builtin.features[i].bias
@@ -43,12 +43,14 @@ class MyAlexNet(nn.Module):
             nn.MaxPool2d(kernel_size=3, stride=2),
             nn.Conv2d(192, 384, kernel_size=3, padding=1),
             nn.ReLU(inplace=True),
-            nn.Conv2d(384, 256, kernel_size=3, padding=1),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(256, 256, kernel_size=3, padding=1),
-            nn.ReLU(inplace=True),
-            nn.MaxPool2d(kernel_size=3, stride=2),
+            # nn.Conv2d(384, 256, kernel_size=3, padding=1),
+            # nn.ReLU(inplace=True),
+            # nn.Conv2d(256, 256, kernel_size=3, padding=1),
+            # nn.ReLU(inplace=True),
+            # nn.MaxPool2d(kernel_size=3, stride=2),
         )
+        #Good results from conv4 after MaxPool
+        #conv2 after ReLU
         self.classifier = nn.Sequential(
             nn.Dropout(),
             nn.Linear(256 * 6 * 6, 4096),
