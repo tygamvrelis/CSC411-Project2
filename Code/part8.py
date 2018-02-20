@@ -288,12 +288,12 @@ def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, showch = 0):
             #plt.savefig(imagePath + "part8" + actorName + ".jpg")
     else:
         plt.figure(1)
+        plt.subplot(1, 2, 1)
         plt.imshow(Wpos, interpolation = 'gaussian')
         plt.title('Useful weights for ' + actorName + " (positive values)")
-        plt.show()
         # plt.savefig(imagePath + "part8" + actorName + ".jpg")
 
-        plt.figure(2)
+        plt.subplot(1, 2, 2)
         plt.imshow(Wneg,  interpolation = 'gaussian')
         plt.title('Useful weights for ' + actorName + " (negative values)")
         plt.show()

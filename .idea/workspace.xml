@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d221de6d-77d2-4f6a-83f9-79cb2c892033" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Code/digits.py" afterPath="$PROJECT_DIR$/Code/digits.py" />
-      <change beforePath="$PROJECT_DIR$/Code/faces.py" afterPath="$PROJECT_DIR$/Code/faces.py" />
       <change beforePath="$PROJECT_DIR$/Code/part8.py" afterPath="$PROJECT_DIR$/Code/part8.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,8 +83,8 @@
       <file leaf-file-name="part8.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/part8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="505">
+              <caret line="292" column="12" lean-forward="false" selection-start-line="292" selection-start-column="12" selection-end-line="292" selection-end-column="12" />
               <folding>
                 <element signature="e#163#181#0" expanded="true" />
               </folding>
@@ -97,8 +95,8 @@
       <file leaf-file-name="faces.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/faces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="66" column="38" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+            <state relative-caret-position="588">
+              <caret line="82" column="77" lean-forward="false" selection-start-line="82" selection-start-column="77" selection-end-line="82" selection-end-column="77" />
               <folding>
                 <element signature="e#180#199#0" expanded="true" />
               </folding>
@@ -481,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519164806247</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add Hao's revisions from the previous 30 min as well as my own">
+      <created>1519167091809</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1519167091809</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -539,6 +544,14 @@
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
               </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
@@ -564,7 +577,8 @@
     <MESSAGE value="whoops had digits commented out" />
     <MESSAGE value="Done part 8 and 10" />
     <MESSAGE value="Added weight init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added weight init" />
+    <MESSAGE value="Add Hao's revisions from the previous 30 min as well as my own" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Hao's revisions from the previous 30 min as well as my own" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -836,8 +850,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/faces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="66" column="38" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+        <state relative-caret-position="588">
+          <caret line="82" column="77" lean-forward="false" selection-start-line="82" selection-start-column="77" selection-end-line="82" selection-end-column="77" />
           <folding>
             <element signature="e#180#199#0" expanded="true" />
           </folding>
@@ -846,8 +860,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/part8.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="505">
+          <caret line="292" column="12" lean-forward="false" selection-start-line="292" selection-start-column="12" selection-end-line="292" selection-end-column="12" />
           <folding>
             <element signature="e#163#181#0" expanded="true" />
           </folding>
