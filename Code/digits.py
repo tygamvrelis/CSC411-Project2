@@ -156,14 +156,46 @@ p4.part4_plotWeights(W, indicesTrain, imagePath, "p5_")
 
 ##  Part 6: Contour Plot
 import part6 as p6
+import part4 as p4
+
+# Make training and test matrices
+(X, Y, indicesTrain) = p4.makeTrainingMatrices()
+(XTest, YTest, indicesTest) = p4.makeTestMatrices()
+train_size = 1000 # Number of images per digit to use for training
+val_size = 100
+(XTrain, YTrain, XVal, YVal) = p4.part4_split_sets(X, Y, train_size, val_size, indicesTrain)
+
+# Gradient descent
+np.random.seed(3)
+init_W = np.random.rand(28*28 + 1,10) # Randomly initialize weight matrix
+alpha = 1e-5
+eps = 1e-6
+max_iter = 500
+(i1, j1) = (200, 2)
+(i2, j2) = (201, 2)
+
 k = 20
 alpha = 0.55
 momentum = 0.3
-(w1_van, w2_van) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, 200, 2, 201, 2)
-(w1_mom, w2_mom) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, 200, 2, 201, 2, momentum)
+(w1_van, w2_van) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2)
+(w1_mom, w2_mom) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2, momentum)
 p6.plot_contour(init_W, XTrain, YTrain, 200, 2, 201, 2, w1_van, w2_van, w1_mom, w2_mom)
 plt.gcf().clear()
 
+
+alpha = 0.5
+momentum = 0.3
+(w1_van, w2_van) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2)
+(w1_mom, w2_mom) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2, momentum)
+p6.plot_contour(init_W, XTrain, YTrain, 200, 2, 201, 2, w1_van, w2_van, w1_mom, w2_mom)
+plt.gcf().clear()
+
+alpha = 0.5
+momentum = 0.9
+(w1_van, w2_van) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2)
+(w1_mom, w2_mom) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2, momentum)
+p6.plot_contour(init_W, XTrain, YTrain, 200, 2, 201, 2, w1_van, w2_van, w1_mom, w2_mom)
+plt.gcf().clear()
 
 
 
