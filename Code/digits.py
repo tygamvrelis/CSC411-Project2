@@ -116,16 +116,6 @@ max_iter = 500
 (Whistory, history) = p4.part4_gradient_descent(XTrain, YTrain, init_W, alpha, eps, max_iter)
 
 
-# # Make predictions on training set
-# outputList = p4.part4_classify(XTrain, YTrain, Whistory[99])
-# print "(Training; size: ", train_size," im/digit) Avg. cost: ", sum([a[1] for a in outputList])/len(outputList)
-# print "(Training; size: ", train_size," im/digit) Avg. percent correct: ", sum([a[2] for a in outputList])/len(outputList)
-#
-# # Make predictions on test set
-# outputList = p4.part4_classify(XVal, YVal, Whistory[99])
-# print "(Test; size: ", val_size," im/digit) Avg. cost: ", sum([a[1] for a in outputList])/len(outputList)
-# print "(Test; size: ", val_size," im/digit) Avg. percent correct: ", sum([a[2] for a in outputList])/len(outputList)
-
 # Plot learning curves
 p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history)
 
@@ -133,7 +123,6 @@ p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history)
 #Plot weight visualizations and save
 imagePath = "../Report/images/"
 p4.part4_plotWeights(Whistory[99], indicesTrain, imagePath, "p4_")
-
 
 
 

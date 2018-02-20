@@ -38,6 +38,7 @@ model = torch.nn.Sequential(
     torch.nn.Tanh(),
     torch.nn.Linear(dim_h, dim_out),
 )
+
 if torch.cuda.is_available():
     model = model.cuda()
 loss_fn = torch.nn.CrossEntropyLoss()

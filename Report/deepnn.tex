@@ -794,6 +794,8 @@ Batch Size & 60\\
 \hline
 Steps & 500\\ 
 \hline
+Initial Weights & Default Values\\ 
+\hline
 \end{tabular}
 \end{center}
 \caption{Properties of the Best Performing Neural Network}
@@ -828,17 +830,21 @@ Steps & 500\\
 	\label{fig:part8curves}
 \end{figure}
 
-\noindent \textit{Experimental Observations for Part 8}\newline
+\noindent \textit{Experimental Observations for Part 8}
 
 \noindent \textit{The Effect of Resolution on Performance}
 
-		The network was trained on square images at varying resolutions by making the input layer a function of the resolution. The resolutions used include: $64x64$, $32x32$, $28x28$, $24x24$ and $14x14$. It was found that images close to $32x32$ in size resulted in the best performance while those at resolutions of $14x14$ and $64x64$ gave slightly lower performances. It was also found that a larger resolution such as $64x64$ required a much larger hidden layer to optimize than lower hidden layers.\newline
+		The network was trained on square images at varying resolutions by making the input layer a function of the resolution. The resolutions used include: 64x64, 32x32, 28x28, 24x24 and 14x14. It was found that images close to 32x32 in size resulted in the best performance while those at resolutions of 14x14 and 64x64 gave slightly lower performances. It was also found that a larger resolution such as 64x64 required a much larger hidden layer to optimize than lower hidden layers.\newline
 		
 \noindent \textit{The Effect of Activation Functions on Performance}		
 		
 		Different activation functions for the hidden layer were also tested and it was found that as long as the hidden layer is large enough, (ie. ~50 nodes), most activation functions only made a few percentage difference. However, certain activation functions such as Softmin and Softmax would perform poorly no matter the size of the hidden layer.
 		When the hidden layer was small,(ie. ~6 nodes), it was found that the best activation functions were relatively linear functions that could take both positive and negative values such as linear, Tanhshrink and Softshrink.\newline
 		
+		\noindent \textit{Weight Initialization}
+		
+	Different methods were tried to initialize the weights using functions such as normal\_(), uniform\_() and zero() with various parameters. It was found that if the weights are too large then the performance stays constant at 1/6. The weights that gave the best performance were the default weights.\newline
+	
 		Different loss functions and optimizers were also attempted but it was found that most loss functions required a different format of input so it was kept as $CrossEntropyLoss()$ while Adam was confirmed to be the best optimizer. 
 \clearpage
 \end{homeworkProblem}
@@ -898,6 +904,8 @@ Learning Rate & 1e-3\\
 Batch Size & 50\\ 
 \hline
 Steps & 200\\ 
+\hline
+Initial Weights & Default Values\\ 
 \hline
 \end{tabular}
 \end{center}
