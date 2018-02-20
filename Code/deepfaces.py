@@ -36,6 +36,7 @@ trainX_feat = p10.get_feature_set(trainX, train_size*6 ,RESOLUTION, modelAN)
 valX_feat = p10.get_feature_set(valX, val_size*6 ,RESOLUTION, modelAN)
 testX_feat = p10.get_feature_set(testX, test_size*6 ,RESOLUTION, modelAN)
 dim_x = trainX_feat.shape[1]
+print dim_x
 dim_h = 50
 dim_out = 6
 
