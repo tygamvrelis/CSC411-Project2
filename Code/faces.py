@@ -68,25 +68,17 @@ imagePath = "../Report/images/"
 # most positive and most negative outputs given this image are then taken to be the
 # most "useful" neurons in classifying photos of this actor. The weights connecting
 # the input image to these two neurons are then displayed in color.
-ind = 100
-x = valX[ind:ind+1,:]
 
-# If this image is correctly classified, we can proceed
-output = p8.viewOutputLayer(x, model)
-if torch.cuda.is_available():
-    output = output.cpu()
+# For the two actors, select Harmon ([0 0 1 0 0 0]), and Gilpin ([0 1 0 0 0 0])
+indHarmon = act.index('harmon')
+indGilpin = act.index('gilpin')
 
-if np.argmax(output.data.numpy(), 1) == np.argmax(valY[ind:ind+1,:], 1):
-    y_ind = np.argmax(valY[ind:ind+1,:], 1)
-    hidden = p8.viewHiddenLayer(x, y_ind, model, dim_x, dim_h)
+# Get useful neuron indices
+(maxNeuronHarmon, minNeuronHarmon) = p8.findUsefulNeurons(valX, valY, model, dim_x, dim_h, indHarmon)
+(maxNeuronGilpin, minNeuronGilpin) = p8.findUsefulNeurons(valX, valY, model, dim_x, dim_h, indGilpin)
 
-    if torch.cuda.is_available():
-        hidden = hidden.cpu()
-
-    # Select the "useful" hidden units
-    hidden = hidden.data.numpy()
-    maxNeuron = np.argmax(hidden)
-    minNeuron = np.argmin(hidden)
-
-    # Visualize
-    p8.viewWeights(maxNeuron, model, RESOLUTION, imagePath, act[int(y_ind)])
+# View useful neurons
+p8.viewWeights(maxNeuronHarmon, model, RESOLUTION, imagePath, act[indHarmon])
+p8.viewWeights(minNeuronHarmon, model, RESOLUTION, imagePath, act[indHarmon])
+p8.viewWeights(maxNeuronGilpin, model, RESOLUTION, imagePath, act[indHarmon])
+p8.viewWeights(minNeuronGilpin, model, RESOLUTION, imagePath, act[indHarmon])
