@@ -768,7 +768,7 @@ Steps & 500\\
 \end{figure}
 \clearpage
 
-\noindent \textit{Experimental Observations}\newline
+\noindent \textit{Experimental Observations for Part 8}\newline
 
 \noindent \textit{The Effect of Resolution on Performance}
 
@@ -779,7 +779,7 @@ Steps & 500\\
 		Different activation functions for the hidden layer were also tested and it was found that as long as the hidden layer is large enough, (ie. ~50 nodes), most activation functions only made a few percentage difference. However, certain activation functions such as Softmin and Softmax would perform poorly no matter the size of the hidden layer.
 		When the hidden layer was small,(ie. ~6 nodes), it was found that the best activation functions were relatively linear functions that could take both positive and negative values such as linear, Tanhshrink and Softshrink.\newline
 		
-		Different loss functions and optimizers were also attempted but it was found that most loss functions required a different format of input so it was kept as $CrossEntropyLoss()$ and Adam was confirmed to be the best optimizer. 
+		Different loss functions and optimizers were also attempted but it was found that most loss functions required a different format of input so it was kept as $CrossEntropyLoss()$ while Adam was confirmed to be the best optimizer. 
 \clearpage
 \end{homeworkProblem}
 
@@ -793,7 +793,9 @@ Steps & 500\\
 
 % Part 10
 \begin{homeworkProblem}
+	\noindent \textit{Implementing a Fully Connected Neural Network on Top of MyAlexNet}	
 	
+	To increase the accuracy of classification, the images were put into MyAlexNet and outputs from its features layers were taken and connected to a fully connected network with 1 hidden layer. To access the Top feature layer of MyAlexNet, the classifier in the forward function was commented out and the output was reshaped into a 1D vector. To access deeper layers, they are commented out in the $self.features$ section of the class. For every convolutional layer that's commented out, we also comment out an in dex in the $features\_weight\_i$ array to prevent the program from trying to load weights into a non-existent layer.
 \clearpage
 \end{homeworkProblem}
 

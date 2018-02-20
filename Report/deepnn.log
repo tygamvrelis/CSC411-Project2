@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.19)  20 FEB 2018 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.19)  20 FEB 2018 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1231,7 +1231,7 @@ t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/
 ucrro8a.pfb>
-Output written on deepnn.pdf (19 pages, 707295 bytes).
+Output written on deepnn.pdf (19 pages, 708691 bytes).
 PDF statistics:
  357 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams
