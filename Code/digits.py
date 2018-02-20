@@ -19,7 +19,7 @@ from scipy.io import loadmat
 
 
 ## Part 1: Describing the dataset
-Load the MNIST digit data
+# Load the MNIST digit data
 M = loadmat("../Data/mnist_all.mat")
 
 def part1SaveImages():

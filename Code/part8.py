@@ -1,9 +1,14 @@
+## part8. py
+# In this file, several helper functions are defined for face recognition using a single-hidden-layer
+# fully-connected neural network with PyTorch.
+
 import numpy as np
 from torch.autograd import Variable
 import torch
 import matplotlib.pyplot as plt
 import os
 from scipy.misc import imread
+from collections import Counter
 
 def processActorString(filename):
     '''This function takes the name of an image file and returns its actor and pic number.
@@ -193,6 +198,51 @@ def viewHiddenLayer(X, y_ind, model, dim_x, dim_h):
 
     return hidden
 
+def findUsefulNeurons(valX, valY, model, dim_x, dim_h, indActor):
+    '''
+    findUsefulNeurons returns a tuple containing the most "useful" promotor and most "useful" inhibitor neurons indices.
+
+    Arguments:
+        valX -- the input to the network (validation set)
+        valY -- the labels for the inputs (validation set)
+        model -- the trained model
+        dim_x -- the dimension of the input
+        dim_h -- the dimension of the hidden layer
+        indActor -- the actor index (specifies the output neuron whose connections we are interested in studying)
+    '''
+
+    # Get the indices of the validation set that have images corresponding to the actors
+    idxActor = list()
+    for i in range(valY.shape[0]):
+        if (int(np.argmax(valY[i:i + 1, :], 1))) == indActor:
+            idxActor.append(i)
+
+    # Determine the most "useful" neurons for each input image
+    maxNeuronList = list()
+    minNeuronList = list()
+    for idx in idxActor:
+        # If this image is correctly classified, we can proceed
+        output = viewOutputLayer(valX[idx:idx + 1, :], model)
+        if torch.cuda.is_available():
+            output = output.cpu()
+        if np.argmax(output.data.numpy(), 1) == np.argmax(valY[idx:idx + 1, :], 1):
+            y_ind = np.argmax(valY[idx:idx + 1, :], 1)
+            hidden = viewHiddenLayer(valX[idx:idx + 1, :], y_ind, model, dim_x, dim_h)
+
+            if torch.cuda.is_available():
+                hidden = hidden.cpu()
+
+            # Select the "useful" hidden units
+            hidden = hidden.data.numpy()
+            maxNeuronList.append(np.argmax(hidden))
+            minNeuronList.append(np.argmin(hidden))
+
+    # Find the "useful" hidden neurons of maximum frequency
+    maxNeuron, maxNumMostFrequent = Counter(maxNeuronList).most_common(1)[0]
+    minNeuron, minNumMostFrequent = Counter(minNeuronList).most_common(1)[0]
+
+    return (maxNeuron, minNeuron)
+
 def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, showch = 0):
     '''
     viewWeights provides a visualization of the weights going into the specified
@@ -250,3 +300,4 @@ def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, showch = 0):
         # plt.savefig(imagePath + "part8" + actorName + ".jpg")
 
     #plt.gcf().clear()
+
