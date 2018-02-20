@@ -561,7 +561,9 @@ Words
 \begin{homeworkProblem}
 	\noindent \textit{Comparison Between Momentum and Vanilla Gradient Descent}
 \newline
-The effect of momentum on gradient descent was studied by taking two different weights, treating them as coordinates and plotting their path over 20 iterations on a contour plot. Gradient descent was run two times for each plot, using the same initial weight matrices and only changing the two chosen weights while keeping the other weights constant. The coordinates of the weights studied were $W[200, 2]$ and $W[201, 2]$. Figure~\ref{fig:part6Equal} shows a plot where the two methods were comparable.
+The effect of momentum on gradient descent was studied by taking two different weights, treating them as coordinates and plotting their path over 20 iterations on a contour plot. Gradient descent was run two times for each plot, using the same initial weight matrices and only changing the two chosen weights while keeping the other weights constant. The coordinates of the weights studied were $W[200, 2]$ and $W[201, 2]$. Figure~\ref{fig:part6Equal} shows a plot where the two methods were comparable.\newline
+		
+		\noindent \textit{Results}
 
 It was found that the effects of momentum could be seen most clearly when the learning rate was slightly increased, shown in Figure~\ref{fig:part6Mom}. This is because in the vanilla method, the weights would travel mostly vertically, due to the shape of the contour, while in the momentum method, the vertical components of the weights would cancel each other out over consecutive steps.
 
