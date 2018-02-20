@@ -504,7 +504,34 @@ Words
 
 % Part 6
 \begin{homeworkProblem}
-	
+	\noindent \textit{Comparison Between Momentum and Vanilla Gradient Descent}
+\newline
+The effect of momentum on gradient descent was studied by taking two different weights, treating them as coordinates and plotting their path over 20 iterations on a contour plot. Gradient descent was run two times for each plot, using the same initial weight matrices and only changing the two chosen weights while keeping the other weights constant. The coordinates of the weights studied were $W[200, 2]$ and $W[201, 2]$. Figure~\ref{fig:part6Equal} shows a plot where the two methods were comparable.
+
+It was found that the effects of momentum could be seen most clearly when the learning rate was slightly increased, shown in Figure~\ref{fig:part6Mom}. This is because in the vanilla method, the weights would travel mostly vertically, due to the shape of the contour, while in the momentum method, the vertical components of the weights would cancel each other out over consecutive steps.
+
+However, when momentum is too high, the contributions from the previous steps would have too much of an effect, resulting in the weights overshooting the minimum like in Figure~\ref{fig:part6Van}.
+
+\begin{figure}[!ht]
+
+	\begin{subfigure}[b]{0.5\textwidth}
+    	\includegraphics[width=\textwidth]{images/contour_20k_05a_03mom.jpeg}
+    	\caption{Alpha = 0.5, Momentum = 0.3}
+		\label{fig:part6Equal}
+	\end{subfigure}
+%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{images/contour_20k_055a_03mom.jpeg}
+		\caption{Alpha = 0.55, Momentum = 0.3}
+		\label{fig:part6Mom}
+	\end{subfigure}
+    %	
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{images/contour_20k_05a_09mom.jpeg}
+		\caption{Alpha = 0.5, Momentum = 0.9}
+	\label{fig:part6Van}
+	\end{subfigure}
+\end{figure}
 \clearpage
 \end{homeworkProblem}
 
@@ -668,7 +695,8 @@ This gives an asymptotic upper bound on the runtime complexity of $O(k^2 N)$.
 
 % Part 8
 \begin{homeworkProblem}
-	
+		\noindent \textit{Implementation of a Fully Connected Neural Network in PyTorch}
+		A fully connected neural network was implemented in PyTorch with a single hidden layer and 6 output nodes. The network was trained on the faces of the 6 actors from project 1: Lorraine Bracco, Peri Gilpin, Angie Harmon, Alec Baldwin, Bill Hader and Steve Carell. The number of photos used per actor for each set was 70 for the training set and 20 for both validation and test sets. To obtain each set, the uncropped photos from project1 were processed using the $make3Sets()$ found in $image\_processing.py$. 
 \clearpage
 \end{homeworkProblem}
 

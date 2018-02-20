@@ -18,7 +18,7 @@ act = ['bracco', 'gilpin', 'harmon', 'baldwin', 'hader', 'carell']
 
 dtype_float = torch.FloatTensor
 dtype_long = torch.LongTensor
-RESOLUTION = 28
+RESOLUTION = 32
 train_size = 70
 val_size = 20
 test_size = 20
@@ -35,7 +35,7 @@ dim_h = 70
 dim_out = 6
 model = torch.nn.Sequential(
     torch.nn.Linear(dim_x, dim_h),
-    torch.nn.Tanh(),
+    torch.nn.SoftmTanh(),
     torch.nn.Linear(dim_h, dim_out),
 )
 if torch.cuda.is_available():
