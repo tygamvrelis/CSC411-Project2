@@ -485,7 +485,33 @@ Words
 \newline
 \noindent \textit{Learning Curves}
 \newline
-Words
+	\begin{figure}[!ht]
+	\begin{subfigure}[b]{0.5\textwidth}
+    	\includegraphics[width=\textwidth]{images/p4_training_set_acc.jpeg}
+    	\caption{Performance Curve on the Training Set}
+		\label{fig:part4trainPerf}
+	\end{subfigure}
+%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_training_set_cost.jpeg}
+		\caption{Loss Curve on the Training Set}
+		\label{fig:part4trainLoss}
+	\end{subfigure}
+    %	
+	\begin{subfigure}[b]{0.5\textwidth}
+    	\includegraphics[width=\textwidth]{images/p4_valid_set_acc.jpeg}
+    	\caption{Performance Curve on the Validation Set}
+		\label{fig:part4validPerf}
+	\end{subfigure}
+%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_valid_set_cost.jpeg}
+		\caption{Loss Curve on the Validation Set}
+		\label{fig:part4validLoss}
+	\end{subfigure}
+   \caption{Part 4 Learning Curves}
+	\label{fig:part4curves}
+\end{figure}
 \newline
 \newline
 \noindent \textit{Weights Going Into Output Units}
@@ -498,6 +524,35 @@ Words
 % Part 5
 \begin{homeworkProblem}
 	
+	
+	
+	\begin{figure}[!ht]
+	\begin{subfigure}[b]{0.5\textwidth}
+    	\includegraphics[width=\textwidth]{images/p5_training_set_acc.jpeg}
+    	\caption{Performance Curve on the Training Set}
+		\label{fig:part5trainPerf}
+	\end{subfigure}
+%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{images/p5_training_set_cost.jpeg}
+		\caption{Loss Curve on the Training Set}
+		\label{fig:part5trainLoss}
+	\end{subfigure}
+    %	
+	\begin{subfigure}[b]{0.5\textwidth}
+    	\includegraphics[width=\textwidth]{images/p5_valid_set_acc.jpeg}
+    	\caption{Performance Curve on the Validation Set}
+		\label{fig:part5validPerf}
+	\end{subfigure}
+%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{images/p5_valid_set_cost.jpeg}
+		\caption{Loss Curve on the Validation Set}
+		\label{fig:part5validLoss}
+	\end{subfigure}
+   \caption{Part 5 Learning Curves}
+	\label{fig:part5curves}
+\end{figure}
 \clearpage
 \end{homeworkProblem}
 
@@ -506,7 +561,9 @@ Words
 \begin{homeworkProblem}
 	\noindent \textit{Comparison Between Momentum and Vanilla Gradient Descent}
 \newline
-The effect of momentum on gradient descent was studied by taking two different weights, treating them as coordinates and plotting their path over 20 iterations on a contour plot. Gradient descent was run two times for each plot, using the same initial weight matrices and only changing the two chosen weights while keeping the other weights constant. The coordinates of the weights studied were $W[200, 2]$ and $W[201, 2]$. Figure~\ref{fig:part6Equal} shows a plot where the two methods were comparable.
+The effect of momentum on gradient descent was studied by taking two different weights, treating them as coordinates and plotting their path over 20 iterations on a contour plot. Gradient descent was run two times for each plot, using the same initial weight matrices and only changing the two chosen weights while keeping the other weights constant. The coordinates of the weights studied were $W[200, 2]$ and $W[201, 2]$. Figure~\ref{fig:part6Equal} shows a plot where the two methods were comparable.\newline
+		
+		\noindent \textit{Results}
 
 It was found that the effects of momentum could be seen most clearly when the learning rate was slightly increased, shown in Figure~\ref{fig:part6Mom}. This is because in the vanilla method, the weights would travel mostly vertically, due to the shape of the contour, while in the momentum method, the vertical components of the weights would cancel each other out over consecutive steps.
 
@@ -701,11 +758,17 @@ This gives an asymptotic upper bound on the runtime complexity of $O(k^2 N)$.
 		
 		A fully connected neural network was implemented in PyTorch with a single hidden layer and 6 output nodes. The network was trained on the faces of the 6 actors from project 1: Lorraine Bracco, Peri Gilpin, Angie Harmon, Alec Baldwin, Bill Hader and Steve Carell.\newline
 		
+		\noindent \textit{Image Processing}
+		
 		The number of photos used per actor for each set was 70 for the training set and 20 for both validation and test sets. To obtain each set, the uncropped photos from project1 were processed using the $make3Sets()$ function found in $image\_processing.py$, which creates the 3 sets of colored photos at the desired resolution. The function also compares the hashes of each photo to their expected hashes given by $actors.txt$ but some of the valid photos were wrongly skipped so they were hard coded back in. \newline
 		
-		To create the input matrices for each set, each color channel of a photo was flattened into a 1D vector and concatenated along the 1D axis. This input vector was then stacked on to of a matrix which contained the input vectors of the other images in the set. In the resulting matrix, each row represented a different image while each column represented one of 3 colour values of a single pixel.\newline
+		\noindent \textit{Creation of Input Matrices}
 		
-		The properties of the final and best performing network created can be seen in Figure~\ref{tab:part8_properties}. The network's final performance on both validation and test sets was 82.5\% correct. The learning curves at these settings for both test and validation sets are shown in Figure~\ref{fig:part8curves}.
+		To create the input matrices for each set, each color channel of a photo was flattened into a 1D vector and concatenated along the 1D axis. This input vector was then stacked on to of a matrix which contained the input vectors of the other images in the set. In the resulting matrix, each row represented a different image while each column represented one of 3 colour values of a single pixel. The label matrices of each set were created by one hot encoding a 1 by 6 vector and stacking them on top of each other.\newline
+		
+		\noindent \textit{Final Results}
+		
+		The properties of the final and best performing network created can be seen in Table~\ref{tab:part8_properties}. The network's final performance on both validation and test sets was 82.5\% correct. The learning curves at these settings for both test and validation sets are shown in Figure~\ref{fig:part8curves}.
 		
 \begin{table}[!ht]
 \begin{center}
@@ -732,6 +795,8 @@ Learning Rate & 1e-3\\
 Batch Size & 60\\ 
 \hline
 Steps & 500\\ 
+\hline
+Initial Weights & Default Values\\ 
 \hline
 \end{tabular}
 \end{center}
@@ -763,23 +828,26 @@ Steps & 500\\
 		\caption{Loss Curve on the Validation Set}
 		\label{fig:part8validLoss}
 	\end{subfigure}
-   \caption{Learning Curves}
+   \caption{Part 8Learning Curves}
 	\label{fig:part8curves}
 \end{figure}
-\clearpage
 
-\noindent \textit{Experimental Observations}\newline
+\noindent \textit{Experimental Observations for Part 8}
 
 \noindent \textit{The Effect of Resolution on Performance}
 
-		The network was trained on square images at varying resolutions by making the input layer a function of the resolution. The resolutions used include: $64x64$, $32x32$, $28x28$, $24x24$ and $14x14$. It was found that images close to $32x32$ in size resulted in the best performance while those at resolutions of $14x14$ and $64x64$ gave slightly lower performances. It was also found that a larger resolution such as $64x64$ required a much larger hidden layer to optimize than lower hidden layers.\newline
+		The network was trained on square images at varying resolutions by making the input layer a function of the resolution. The resolutions used include: 64x64, 32x32, 28x28, 24x24 and 14x14. It was found that images close to 32x32 in size resulted in the best performance while those at resolutions of 14x14 and 64x64 gave slightly lower performances. It was also found that a larger resolution such as 64x64 required a much larger hidden layer to optimize than lower hidden layers.\newline
 		
 \noindent \textit{The Effect of Activation Functions on Performance}		
 		
 		Different activation functions for the hidden layer were also tested and it was found that as long as the hidden layer is large enough, (ie. ~50 nodes), most activation functions only made a few percentage difference. However, certain activation functions such as Softmin and Softmax would perform poorly no matter the size of the hidden layer.
 		When the hidden layer was small,(ie. ~6 nodes), it was found that the best activation functions were relatively linear functions that could take both positive and negative values such as linear, Tanhshrink and Softshrink.\newline
 		
-		Different loss functions and optimizers were also attempted but it was found that most loss functions required a different format of input so it was kept as $CrossEntropyLoss()$ and Adam was confirmed to be the best optimizer. 
+		\noindent \textit{Weight Initialization}
+		
+	Different methods were tried to initialize the weights using functions such as normal\_(), uniform\_() and zero() with various parameters. It was found that if the weights are too large then the performance stays constant at 1/6. The weights that gave the best performance were the default weights.\newline
+	
+		Different loss functions and optimizers were also attempted but it was found that most loss functions required a different format of input so it was kept as $CrossEntropyLoss()$ while Adam was confirmed to be the best optimizer. 
 \clearpage
 \end{homeworkProblem}
 
@@ -793,7 +861,87 @@ Steps & 500\\
 
 % Part 10
 \begin{homeworkProblem}
+	\noindent \textit{Implementing a Fully Connected Neural Network on Top of MyAlexNet}	
 	
+	To increase the accuracy of classification, the images were put into MyAlexNet and outputs from its features layers were taken and connected to a fully connected network with 1 hidden layer. \newline
+	
+	\noindent \textit{Modifying MyAlexNet}	
+	
+	To access the Top feature layer of MyAlexNet, the classifier in the forward function was commented out and the output was reshaped into a 1D vector. To access deeper layers, they are commented out in the $self.features$ section of the class. For every convolutional layer that's commented out, we also comment out an in dex in the $features\_weight\_i$ array to prevent the program from trying to load weights into a non-existent layer.\newline
+	
+	\noindent \textit{Computing the Input Matrix for the Fully Connected Layers}	
+	
+	After MyAlexNet is modified to provide the desired output, we take each image in a set and put it into MyAlexNet using the sample code given, obtain its corresponding 1D vector and compile it into a set matrix. In the resulting matrix, each row represents an image in that set while each column represents an output of MyAlexNet corresponding to that image. The label matrices are created in the same way as in part 8.
+		
+	Since only the fully connected layers are trained, the training set matrix from MyAlexNet will always stay the same. Therefore, we can use the output of MyAlexNet as the new inputs to the the fully connected layers without having to recalculate them every time. The input layer of the fully connected layers also has to be resized to match the number of outputs from MyAlexNet.\newline
+	
+	\noindent \textit{Final Results}	
+	
+	The properties of the optimal configuration are shown in Table~\ref{tab:part10_properties}. The outputs from conv4 after the MaxPool layer and from conv2 after the ReLU layer were found to provide the best results but the latter, while having more outputs, gave slightly better performance. The final performance on the validation set was 96.6\% while the final performance on the test set was 98.33\%. This represents approximately a 70\% drop in the error rate from part 8. The learning curves of the test and validation sets are disaplayed in Figure~\ref{fig:part10curves}\newline
+	
+	\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{ | m{5.5cm} | m{12em}|}
+\hline
+\textbf{Property} & \textbf{Value} \\
+\hline
+Input Resolution & 227x227 \\ 
+\hline
+MyAlexNet Output Layer & conv2 after ReLU \\ 
+\hline
+Input Layer Size & 64896\\ 
+\hline
+Hidden Layer Size & 50\\ 
+\hline
+Output Layer Size & 6\\ 
+\hline
+Hidden Layer Activation Function & Tanh\\ 
+\hline
+Loss Function & Cross Entropy Loss\\ 
+\hline
+Optimizer & Adam\\ 
+\hline
+Learning Rate & 1e-3\\ 
+\hline
+Batch Size & 50\\ 
+\hline
+Steps & 200\\ 
+\hline
+Initial Weights & Default Values\\ 
+\hline
+\end{tabular}
+\end{center}
+\caption{Properties of the Best Performing Neural Network}
+\label{tab:part10_properties}
+\end{table}
+
+\begin{figure}[!ht]
+	\begin{subfigure}[b]{0.5\textwidth}
+    	\includegraphics[width=\textwidth]{images/p10_training_set_acc.jpeg}
+    	\caption{Performance Curve on the Training Set}
+		\label{fig:part10trainPerf}
+	\end{subfigure}
+%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{images/p10_training_set_cost.jpeg}
+		\caption{Loss Curve on the Training Set}
+		\label{fig:part10trainLoss}
+	\end{subfigure}
+    %	
+	\begin{subfigure}[b]{0.5\textwidth}
+    	\includegraphics[width=\textwidth]{images/p10_valid_set_acc.jpeg}
+    	\caption{Performance Curve on the Validation Set}
+		\label{fig:part10validPerf}
+	\end{subfigure}
+%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{images/p10_valid_set_cost.jpeg}
+		\caption{Loss Curve on the Validation Set}
+		\label{fig:part10validLoss}
+	\end{subfigure}
+   \caption{Part 10 Learning Curves}
+	\label{fig:part10curves}
+\end{figure}
 \clearpage
 \end{homeworkProblem}
 
