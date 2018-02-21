@@ -79,7 +79,7 @@ indGilpin = act.index('gilpin')
 (maxNeuronGilpin, minNeuronGilpin) = p8.findUsefulNeurons(valX, valY, model, dim_x, dim_h, indGilpin)
 
 # View useful neurons
-p8.viewWeights(maxNeuronHarmon, model, RESOLUTION, imagePath, act[indHarmon])
-p8.viewWeights(minNeuronHarmon, model, RESOLUTION, imagePath, act[indHarmon])
-p8.viewWeights(maxNeuronGilpin, model, RESOLUTION, imagePath, act[indHarmon])
-p8.viewWeights(minNeuronGilpin, model, RESOLUTION, imagePath, act[indHarmon])
+p8.viewWeights(maxNeuronHarmon, model, RESOLUTION, imagePath, act[indHarmon], "promoter")
+p8.viewWeights(minNeuronHarmon, model, RESOLUTION, imagePath, act[indHarmon], "inhibitor")
+p8.viewWeights(maxNeuronGilpin, model, RESOLUTION, imagePath, act[indGilpin], "promoter")
+p8.viewWeights(minNeuronGilpin, model, RESOLUTION, imagePath, act[indGilpin], "inhibitor")

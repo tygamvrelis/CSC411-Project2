@@ -243,7 +243,7 @@ def findUsefulNeurons(valX, valY, model, dim_x, dim_h, indActor):
 
     return (maxNeuron, minNeuron)
 
-def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, showch = 0):
+def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, neuronType, showch = 0):
     '''
     viewWeights provides a visualization of the weights going into the specified
     hidden neuron. The positive and negative weights are displayed separately since
@@ -255,6 +255,7 @@ def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, showch = 0):
         res -- the resolution of the images
         imagePath -- a string indicating where to save plots
         actorName -- the name of the actor (to be used while saving images)
+        neuronType -- a string that adds addition description for the neuron being visualized
         showch -- if 1, then the colors channels for the weight visualization are
                   plotted separately; otherwise, the weights are plotted in color
     '''
@@ -287,17 +288,16 @@ def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, showch = 0):
             plt.show()
             #plt.savefig(imagePath + "part8" + actorName + ".jpg")
     else:
-        plt.figure(1)
+        plt.figure(1, figsize=(12, 6))
         plt.subplot(1, 2, 1)
         plt.imshow(Wpos, interpolation = 'gaussian')
-        plt.title('Useful weights for ' + actorName + " (positive values)")
-        # plt.savefig(imagePath + "part8" + actorName + ".jpg")
+        plt.title('Useful weights for ' + actorName + " (positive values; " + neuronType + ")")
 
         plt.subplot(1, 2, 2)
         plt.imshow(Wneg,  interpolation = 'gaussian')
-        plt.title('Useful weights for ' + actorName + " (negative values)")
+        plt.title('Useful weights for ' + actorName + " (negative values; " + neuronType + ")")
+
+        plt.tight_layout()
         plt.show()
-        # plt.savefig(imagePath + "part8" + actorName + ".jpg")
-
-    #plt.gcf().clear()
-
+        plt.savefig(imagePath + "part8" + actorName + neuronType + ".jpg")
+    plt.gcf().clear()
