@@ -180,7 +180,7 @@
 In this project, neural networks of various depth were used to recognize handwritten digits and faces.
 \newline
 \newline
-Part 1 provides a description of the MNIST dataset from which the images of handwritten digits were taken. Part 2 implements the computation of a simple network. Part 3 presents the \textit{sum of the negative log-probabilities} as a cost function, and derives the expression for its gradient with respect to one of its weights. Part 4 details the training and optimization procedures for a digit-recognition neural network, and part 5 improves upon the results by modifying gradient descent to use momentum. Learning curves are presents in parts 4 and 5. Part 6 presents an analysis of network behaviour with respect to two of its weights. Part 7 provides an analysis of the performance of two different backpropagation computation techniques. Part 8 presents a face recognition network architecture for classifying actors, and uses PyTorch for implementation. Part 9 presents visualizations of hidden unit weights relevant to two of the actors. Part 10 uses activations of AlexNet to train a neural network to perform classification of the actors.
+Part 1 provides a description of the MNIST dataset from which the images of handwritten digits were taken. Part 2 implements the computation of a simple network. Part 3 presents the \textit{sum of the negative log-probabilities} as a cost function, and derives the expression for its gradient with respect to one of its weights. Part 4 details the training and optimization procedures for a digit-recognition neural network, and part 5 improves upon the results by modifying gradient descent to use momentum. Learning curves are presented in parts 4 and 5, and weight visualization is presented for part 4. Part 6 analyses the behaviour of the network with respect to two of its weights. Part 7 derives asymptotic upper bounds for the runtime complexity of two different backpropagation computation techniques. Part 8 presents a face recognition network architecture for classifying actors, and uses PyTorch for implementation. Part 9 presents visualizations of hidden unit weights relevant to two of the actors. Part 10 uses activations of AlexNet to train a neural network to perform classification of the actors.
 \newline
 \newline
 \textbf{System Details for Reproducibility:}
@@ -197,6 +197,9 @@ Part 1 provides a description of the MNIST dataset from which the images of hand
 		\item urllib
 		\item cPickle
 		\item PyTorch
+		\item hashlib
+		\item collections
+		\item re
 	\end{itemize}
 \end{itemize}
 \clearpage
@@ -474,12 +477,14 @@ for i in range(10):
 
 % Part 4
 \begin{homeworkProblem}
+\noindent \textit{Training a Digit Classifier Using Vanilla Gradient Descent}
+
 In this section, the neural network from part 2 was trained using vanilla gradient descent. The optimization procedure is described below, and learning curves and visualizations of the weights going into each of the output units are presented in Figure~\ref{fig:part4curves} and Figure~\ref{fig:part4weights}, respectively.
 \newline
 \newline
 \noindent \textit{Optimization Procedure}
 \newline
-The final gradient descent parameters used were $\epsilon = 1 \times 10^{-5}$, $\alpha = 1 \times 10^{-6}$, and a maximum number of iterations of $500$. The initial guess for the weight matrix was randomly initialized using {\tt np.random.rand()}, seeded with the value of $3$. These parameters were determined experimentally by observing the performance on the validation set. Several values between $500$ and $5000$ were tested for the maximum number of iterations, but little difference in validation set performance was observed; given this, $500$ was chosen to reduce the risk of over-fitting. The value of $\epsilon$ did not play a significant role in the optimization procedure given this number of iterations. The value for $\alpha$ was initialized to the same value used in part 3 of project 1, and provided acceptable performance; thus it was not altered.
+The final gradient descent parameters used were $\epsilon = 1 \times 10^{-5}$, $\alpha = 1 \times 10^{-6}$, and a maximum number of iterations of $500$. The initial guess for the weight matrix was randomly initialized using {\tt np.random.rand()}, seeded with the value of $3$. These parameters were determined experimentally by observing the performance on the validation set. Values between $500$ and $5000$ were tested for the maximum number of iterations, but little difference in performance was observed. Thus, $500$ was chosen to reduce the risk of over-fitting. The value of $\epsilon$ did not play a significant role given this number of iterations. The value for $\alpha$ was initialized to the same value used in part 3 of project 1, and provided acceptable performance; thus it was not altered.
 \newline
 \newline
 \noindent \textit{Learning Curves}
@@ -507,7 +512,7 @@ The final gradient descent parameters used were $\epsilon = 1 \times 10^{-5}$, $
 		\caption{Loss Curve on the Validation Set}
 		\label{fig:part4validLoss}
 	\end{subfigure}
-   \caption{Part 4 Learning Curves}
+    \caption{Part 4 Learning Curves}
 	\label{fig:part4curves}
 \end{figure}
 
@@ -584,7 +589,22 @@ The final gradient descent parameters used were $\epsilon = 1 \times 10^{-5}$, $
 
 % Part 5
 \begin{homeworkProblem}
-	
+\noindent \textit{Training a Digit Classifier Using Gradient Descent With Momentum}
+
+In this section, the neural network from part 2 was trained using gradient descent with momentum. The learning curves are presented in Figure~\ref{fig:part5curves}, and the vectorized implementation of gradient descent with momentum is presented in Figure~\ref{fig:part5_code}. The only difference between vanilla gradient descent and gradient descent with momentum is the update rule: momentum accelerates convergence towards the direction most consistently travelled.
+\newline
+\newline
+Vanilla gradient descent update rule:
+$$
+W \leftarrow W - \alpha \frac{\partial C}{\partial W}
+$$
+Gradient descent with momentum update rule:
+$$
+\nu \leftarrow \gamma \nu + \alpha \frac{\partial C}{\partial W}
+$$
+$$
+W \leftarrow W - \nu
+$$
 	
 \begin{figure}[!ht]
 	\begin{subfigure}[b]{0.5\textwidth}
