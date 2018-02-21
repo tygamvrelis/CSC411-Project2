@@ -146,7 +146,7 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\hmwkTitle}{Project\ \#2} % Assignment title
-\newcommand{\hmwkDueDate}{Sunday,\ February\ 18,\ 2018} % Due date
+\newcommand{\hmwkDueDate}{Sunday,\ February\ 23,\ 2018} % Due date
 \newcommand{\hmwkClass}{CSC411} % Course/class
 \newcommand{\hmwkClassTime}{L0101} % Class/lecture time
 \newcommand{\hmwkAuthorName}{Hao Zhang \& Tyler Gamvrelis} % Your name
@@ -597,7 +597,7 @@ However, when momentum is too high, the contributions from the previous steps wo
 
 % Part 7
 \begin{homeworkProblem}
-\noindent \textit{Effect of Caching on the Time Required to Compute the Gradient}
+\noindent \textit{The Effect of Caching on the Time Required to Compute the Gradient}
 \newline
 A neural network consists of several layers of \textit{neurons} connected to each other by edges which each have their own \textit{weight}. In order to optimize a neural network, we need to ``learn" the values for the weights that minimize the cost function. The \textit{gradient} of the cost function can be computed with respect to each weight in the network; this matrix-valued quantity indicates (up to a proportionality constant) how much each of the weights should be changed to achieve the target output. Traditionally, there are two algorithms that come to mind for how to compute the gradient, both of which make excessive use of the chain rule from calculus:
 \begin{enumerate}[(1)]
@@ -854,7 +854,82 @@ Initial Weights & Default Values\\
 
 % Part 9
 \begin{homeworkProblem}
+\noindent \textit{Visualizing the Weights of ``Useful" Hidden Units}
+
+	The single-hidden-layer fully-connected network presented in part 8 was explored in greater depth in this part of the project. Consider the task of classifying images of just one actor, for example, Angie Harmon. Since the label vector, $y$, used a one-hot encoding scheme, a ``perfect" classification of an image of Harmon would have resulted in the output $[0\quad0\quad1\quad0\quad0\quad0]^T$ from the neural network. Note that only one output neuron is activated; let this output neuron corresponding to the actor be called $o_i$. One can then inquire about which hidden units were the most important, or ``useful" in computing this classification correctly. This part of the project explored a way of determining which hidden units were the most ``useful" for classifying input photos of Angie Harmon and Peri Gilpin, and visualizing the weights going into these ``useful" hidden units from the input layer. \newline
+
+\noindent \textit{Defining ``Useful"}
+
+	It was assumed that there were $2$ ``useful" hidden units for each actor:
 	
+	\begin{enumerate}[(1)]
+		\item The hidden unit with the \textit{maximum} input value to $o_i$. This hidden unit promotes the activation of $o_i$ the most.
+		\item The hidden unit with the \textit{minimum} input value to $o_i$. This hidden unit inhibits the activation of $o_i$ the most.
+	\end{enumerate}
+	
+	Note that \textit{input value} refers neither to the activation value of the hidden neuron nor the weight of the edge connecting the hidden neuron to $o_i$; rather, it refers to the product of these two quantities. This product represents the \textit{actual} contribution from the hidden unit. \newline
+
+\noindent \textit{Procedure to Determine the Most ``Useful" Hidden Units}
+
+	\begin{enumerate}[(1)]
+		\item Pick the actor whose ``useful" hidden units are to be determined. This specifies an output neuron $o_i$ whose connections to the hidden layer will be studied
+		
+		\begin{enumerate}[(a)]
+			\item Feed an input of the actor from the validation set into the neural network
+			\item Observe the weights connecting the hidden layer to $o_i$
+			\item Observe the activation values from the neurons in the hidden layer
+			\item For each neuron in the hidden layer, multiply its activation value by the weight connecting it to $o_i$. This product represents the actual contribution from the hidden unit
+			\item Record the indices for the ``useful" hidden units (as per the definition of ``useful" above
+		\end{enumerate}
+	
+		\item Repeat the previous step for all images of the actor
+		\item Pick the most frequently-occurring promoter neuron, and the most frequently-occurring inhibitor neuron. Continue to the next step, considering just these two neurons to be ``useful"
+		\item Visualize the weights connecting the ``useful" hidden units to the input layer
+		\item Repeat for the next actor
+	\end{enumerate}
+
+\clearpage
+\noindent \textit{Comments on Weight Visualization}
+
+	The weights connecting the hidden layer to the most ``useful" hidden units are presented below, with the weights for Angie Harmon in Figure~\ref{fig:part9imagesHarmon}, and the weights for Peri Gilpin in Figure~\ref{fig:part9imagesGilpin}. Since it is possible for weights to be both positive and negative, the positive and negative parts of the weights were plotted as two separate images; below, the positive parts of the weights are on the left while the negative parts are on the right. The omitted values were set to $0$ for each plot.To obtain the weight visualizations from the weight vectors, the portions of the weight vectors representing the red, green, and blue channels of the input images were reshaped back to a $2$-D color image.
+
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{images/part8harmonpromoter}
+		\caption{The hidden unit promoting the activation of Harmon the most.}
+		\label{fig:part9HarmonPromoter}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{images/part8harmoninhibitor}
+		\caption{The hidden unit inhibiting the activation of Harmon the most.}
+		\label{fig:part9HarmonInhibitor}
+	\end{subfigure}
+	\caption{Weight visualizations for Angie Harmon.}
+	\label{fig:part9imagesHarmon}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{images/part8gilpinpromoter}
+		\caption{The hidden unit promoting the activation of Gilpin the most.}
+		\label{fig:part9GilpinPromoter}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{images/part8gilpininhibitor}
+		\caption{The hidden unit inhibiting the activation of Gilpin the most.}
+		\label{fig:part9GilpinInhibitor}
+	\end{subfigure}
+	\caption{Weight visualizations for Peri Gilpin.}
+	\label{fig:part9imagesGilpin}
+\end{figure}
+
 \clearpage
 \end{homeworkProblem}
 
