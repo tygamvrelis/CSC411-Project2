@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  21 FEB 2018 05:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  21 FEB 2018 05:34
 entering extended mode
 **./deepnn.tex
 (deepnn.tex
@@ -1084,17 +1084,12 @@ Overfull \hbox (2.2222pt too wide) in paragraph at lines 489--512
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--520
+Underfull \hbox (badness 10000) in paragraph at lines 477--515
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--520
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--520
+Underfull \hbox (badness 10000) in paragraph at lines 477--515
 
  []
 
@@ -1102,308 +1097,372 @@ Underfull \hbox (badness 10000) in paragraph at lines 477--520
 
  <./images/p4_training_set_acc.jpeg> <./images/p4_training_set_cost.jpeg> <./im
 ages/p4_valid_set_acc.jpeg> <./images/p4_valid_set_cost.jpeg>]
-<images/p5_training_set_acc.jpeg, id=255, 462.528pt x 341.1144pt>
+<images/p4_0.jpg, id=255, 462.528pt x 346.896pt>
+File: images/p4_0.jpg Graphic file (type jpg)
+ <use images/p4_0.jpg>
+Package pdftex.def Info: images/p4_0.jpg used on input line 521.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_1.jpg, id=256, 462.528pt x 346.896pt>
+File: images/p4_1.jpg Graphic file (type jpg)
+ <use images/p4_1.jpg>
+Package pdftex.def Info: images/p4_1.jpg used on input line 527.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<Images/p4_2.jpg, id=257, 462.528pt x 346.896pt>
+File: Images/p4_2.jpg Graphic file (type jpg)
+ <use Images/p4_2.jpg>
+Package pdftex.def Info: Images/p4_2.jpg used on input line 533.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_3.jpg, id=258, 462.528pt x 346.896pt>
+File: images/p4_3.jpg Graphic file (type jpg)
+ <use images/p4_3.jpg>
+Package pdftex.def Info: images/p4_3.jpg used on input line 539.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_4.jpg, id=259, 462.528pt x 346.896pt>
+File: images/p4_4.jpg Graphic file (type jpg)
+ <use images/p4_4.jpg>
+Package pdftex.def Info: images/p4_4.jpg used on input line 545.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_5.jpg, id=260, 462.528pt x 346.896pt>
+File: images/p4_5.jpg Graphic file (type jpg)
+ <use images/p4_5.jpg>
+Package pdftex.def Info: images/p4_5.jpg used on input line 551.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_6.jpg, id=261, 462.528pt x 346.896pt>
+File: images/p4_6.jpg Graphic file (type jpg)
+ <use images/p4_6.jpg>
+Package pdftex.def Info: images/p4_6.jpg used on input line 557.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_7.jpg, id=262, 462.528pt x 346.896pt>
+File: images/p4_7.jpg Graphic file (type jpg)
+ <use images/p4_7.jpg>
+Package pdftex.def Info: images/p4_7.jpg used on input line 563.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_8.jpg, id=263, 462.528pt x 346.896pt>
+File: images/p4_8.jpg Graphic file (type jpg)
+ <use images/p4_8.jpg>
+Package pdftex.def Info: images/p4_8.jpg used on input line 569.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_9.jpg, id=264, 462.528pt x 346.896pt>
+File: images/p4_9.jpg Graphic file (type jpg)
+ <use images/p4_9.jpg>
+Package pdftex.def Info: images/p4_9.jpg used on input line 575.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+ [10
+
+ <./images/p4_0.jpg> <./images/p4_1.jpg> <./Images/p4_2.jpg> <./images/p4_3.jpg
+> <./images/p4_4.jpg> <./images/p4_5.jpg> <./images/p4_6.jpg> <./images/p4_7.jp
+g> <./images/p4_8.jpg> <./images/p4_9.jpg>]
+<images/p5_training_set_acc.jpeg, id=268, 462.528pt x 341.1144pt>
 File: images/p5_training_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p5_training_set_acc.jpeg>
-Package pdftex.def Info: images/p5_training_set_acc.jpeg used on input line 531
+Package pdftex.def Info: images/p5_training_set_acc.jpeg used on input line 594
 .
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/p5_training_set_cost.jpeg, id=256, 462.528pt x 341.1144pt>
+<images/p5_training_set_cost.jpeg, id=269, 462.528pt x 341.1144pt>
 File: images/p5_training_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p5_training_set_cost.jpeg>
-Package pdftex.def Info: images/p5_training_set_cost.jpeg used on input line 53
-7.
+Package pdftex.def Info: images/p5_training_set_cost.jpeg used on input line 60
+0.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/p5_valid_set_acc.jpeg, id=257, 462.528pt x 341.1144pt>
+<images/p5_valid_set_acc.jpeg, id=270, 462.528pt x 341.1144pt>
 File: images/p5_valid_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p5_valid_set_acc.jpeg>
-Package pdftex.def Info: images/p5_valid_set_acc.jpeg used on input line 543.
+Package pdftex.def Info: images/p5_valid_set_acc.jpeg used on input line 606.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/p5_valid_set_cost.jpeg, id=258, 462.528pt x 341.1144pt>
+<images/p5_valid_set_cost.jpeg, id=271, 462.528pt x 341.1144pt>
 File: images/p5_valid_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p5_valid_set_cost.jpeg>
-Package pdftex.def Info: images/p5_valid_set_cost.jpeg used on input line 549.
+Package pdftex.def Info: images/p5_valid_set_cost.jpeg used on input line 612.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 530--553
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 593--616
 [][] []
  []
 
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 530--553
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 593--616
 [] [] 
  []
 
-[10
+[11
 
  <./images/p5_training_set_acc.jpeg> <./images/p5_training_set_cost.jpeg> <./im
 ages/p5_valid_set_acc.jpeg> <./images/p5_valid_set_cost.jpeg>]
 
-LaTeX Warning: Float too large for page by 13.07268pt on input line 616.
+LaTeX Warning: Float too large for page by 13.07268pt on input line 679.
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 623--626
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 686--689
 
  []
 
-<images/contour_20k_05a_03mom.jpeg, id=265, 462.528pt x 341.1144pt>
+<images/contour_20k_05a_03mom.jpeg, id=278, 462.528pt x 341.1144pt>
 File: images/contour_20k_05a_03mom.jpeg Graphic file (type jpg)
 
 <use images/contour_20k_05a_03mom.jpeg>
 Package pdftex.def Info: images/contour_20k_05a_03mom.jpeg used on input line 6
-36.
+99.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/contour_20k_055a_03mom.jpeg, id=266, 462.528pt x 341.1144pt>
+<images/contour_20k_055a_03mom.jpeg, id=279, 462.528pt x 341.1144pt>
 File: images/contour_20k_055a_03mom.jpeg Graphic file (type jpg)
 
 <use images/contour_20k_055a_03mom.jpeg>
 Package pdftex.def Info: images/contour_20k_055a_03mom.jpeg used on input line 
-642.
+705.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/contour_20k_05a_09mom.jpeg, id=267, 462.528pt x 346.896pt>
+<images/contour_20k_05a_09mom.jpeg, id=280, 462.528pt x 346.896pt>
 File: images/contour_20k_05a_09mom.jpeg Graphic file (type jpg)
 
 <use images/contour_20k_05a_09mom.jpeg>
-Package pdftex.def Info: images/contour_20k_05a_09mom.jpeg used on input line 6
-48.
+Package pdftex.def Info: images/contour_20k_05a_09mom.jpeg used on input line 7
+11.
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 635--652
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 698--715
 [][] []
  []
 
-[12
+[13
 
 
  <./images/contour_20k_05a_03mom.jpeg> <./images/contour_20k_055a_03mom.jpeg> <
 ./images/contour_20k_05a_09mom.jpeg>]
-Overfull \hbox (1.23572pt too wide) in paragraph at lines 696--697
+Overfull \hbox (1.23572pt too wide) in paragraph at lines 759--760
 \OML/cmm/m/it/10 C\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]; :::; a[]\OT1/cmr/m/n/1
 0 )$. Each $\OML/cmm/m/it/10 a[]$ \OT1/cmr/m/n/10 is in turn com-puted by first
  eval-u-at-ing the in-ner prod-uct $[][] \OML/cmm/m/it/10 W[]a[]$\OT1/cmr/m/n/1
 0 ,
  []
 
-[13
+[14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 768--773
+Underfull \hbox (badness 10000) in paragraph at lines 831--836
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 781--788
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 802--806
-
- []
-
-[15
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 820--821
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 844--851
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--825
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 828--829
-
- []
-
-<images/p8_training_set_acc.jpeg, id=282, 462.528pt x 346.896pt>
-File: images/p8_training_set_acc.jpeg Graphic file (type jpg)
-
-<use images/p8_training_set_acc.jpeg>
-Package pdftex.def Info: images/p8_training_set_acc.jpeg used on input line 870
-.
-(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
-
-<images/p8_training_set_cost.jpeg, id=283, 462.528pt x 346.896pt>
-File: images/p8_training_set_cost.jpeg Graphic file (type jpg)
-
-<use images/p8_training_set_cost.jpeg>
-Package pdftex.def Info: images/p8_training_set_cost.jpeg used on input line 87
-6.
-(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
-
-<images/p8_valid_set_acc.jpeg, id=284, 462.528pt x 346.896pt>
-File: images/p8_valid_set_acc.jpeg Graphic file (type jpg)
-
-<use images/p8_valid_set_acc.jpeg>
-Package pdftex.def Info: images/p8_valid_set_acc.jpeg used on input line 882.
-(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
-
-<images/p8_valid_set_cost.jpeg, id=285, 462.528pt x 346.896pt>
-File: images/p8_valid_set_cost.jpeg Graphic file (type jpg)
-
-<use images/p8_valid_set_cost.jpeg>
-Package pdftex.def Info: images/p8_valid_set_cost.jpeg used on input line 888.
-(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
-
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 869--892
-[][] []
- []
-
-
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 869--892
-[] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 900--901
+Underfull \hbox (badness 10000) in paragraph at lines 865--869
 
  []
 
 [16
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 904--906
+Underfull \hbox (badness 10000) in paragraph at lines 883--884
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 909--910
-
- []
-
-[17 <./images/p8_training_set_acc.jpeg> <./images/p8_training_set_cost.jpeg> <.
-/images/p8_valid_set_acc.jpeg> <./images/p8_valid_set_cost.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 920--921
+Underfull \hbox (badness 10000) in paragraph at lines 887--888
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
+Underfull \hbox (badness 10000) in paragraph at lines 891--892
 
  []
 
-[18
+<images/p8_training_set_acc.jpeg, id=295, 462.528pt x 346.896pt>
+File: images/p8_training_set_acc.jpeg Graphic file (type jpg)
 
-] <images/part8harmonpromoter.jpg, id=295, 867.24pt x 433.62pt>
-File: images/part8harmonpromoter.jpg Graphic file (type jpg)
-
-<use images/part8harmonpromoter.jpg>
-Package pdftex.def Info: images/part8harmonpromoter.jpg used on input line 961.
-
-(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
-
-<images/part8harmoninhibitor.jpg, id=296, 867.24pt x 433.62pt>
-File: images/part8harmoninhibitor.jpg Graphic file (type jpg)
-
-<use images/part8harmoninhibitor.jpg>
-Package pdftex.def Info: images/part8harmoninhibitor.jpg used on input line 967
-.
-(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
- [19
-
- <./images/part8harmonpromoter.jpg> <./images/part8harmoninhibitor.jpg>]
-<images/part8gilpinpromoter.jpg, id=301, 867.24pt x 433.62pt>
-File: images/part8gilpinpromoter.jpg Graphic file (type jpg)
-
-<use images/part8gilpinpromoter.jpg>
-Package pdftex.def Info: images/part8gilpinpromoter.jpg used on input line 980.
-
-(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
-
-<images/part8gilpininhibitor.jpg, id=302, 867.24pt x 433.62pt>
-File: images/part8gilpininhibitor.jpg Graphic file (type jpg)
-
-<use images/part8gilpininhibitor.jpg>
-Package pdftex.def Info: images/part8gilpininhibitor.jpg used on input line 986
-.
-(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
- [20
-
- <./images/part8gilpinpromoter.jpg> <./images/part8gilpininhibitor.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1006--1007
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1017
-
- []
-
-<images/p10_training_set_acc.jpeg, id=306, 462.528pt x 346.896pt>
-File: images/p10_training_set_acc.jpeg Graphic file (type jpg)
-
-<use images/p10_training_set_acc.jpeg>
-Package pdftex.def Info: images/p10_training_set_acc.jpeg used on input line 10
-56.
-(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
-
-<images/p10_training_set_cost.jpeg, id=307, 462.528pt x 346.896pt>
-File: images/p10_training_set_cost.jpeg Graphic file (type jpg)
-
-<use images/p10_training_set_cost.jpeg>
-Package pdftex.def Info: images/p10_training_set_cost.jpeg used on input line 1
-062.
-(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
-
-<images/p10_valid_set_acc.jpeg, id=308, 462.528pt x 346.896pt>
-File: images/p10_valid_set_acc.jpeg Graphic file (type jpg)
-
-<use images/p10_valid_set_acc.jpeg>
-Package pdftex.def Info: images/p10_valid_set_acc.jpeg used on input line 1068.
-
-(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
-
-<images/p10_valid_set_cost.jpeg, id=309, 462.528pt x 346.896pt>
-File: images/p10_valid_set_cost.jpeg Graphic file (type jpg)
-
-<use images/p10_valid_set_cost.jpeg>
-Package pdftex.def Info: images/p10_valid_set_cost.jpeg used on input line 1074
+<use images/p8_training_set_acc.jpeg>
+Package pdftex.def Info: images/p8_training_set_acc.jpeg used on input line 933
 .
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 1055--1078
+<images/p8_training_set_cost.jpeg, id=296, 462.528pt x 346.896pt>
+File: images/p8_training_set_cost.jpeg Graphic file (type jpg)
+
+<use images/p8_training_set_cost.jpeg>
+Package pdftex.def Info: images/p8_training_set_cost.jpeg used on input line 93
+9.
+(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
+
+<images/p8_valid_set_acc.jpeg, id=297, 462.528pt x 346.896pt>
+File: images/p8_valid_set_acc.jpeg Graphic file (type jpg)
+
+<use images/p8_valid_set_acc.jpeg>
+Package pdftex.def Info: images/p8_valid_set_acc.jpeg used on input line 945.
+(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
+
+<images/p8_valid_set_cost.jpeg, id=298, 462.528pt x 346.896pt>
+File: images/p8_valid_set_cost.jpeg Graphic file (type jpg)
+
+<use images/p8_valid_set_cost.jpeg>
+Package pdftex.def Info: images/p8_valid_set_cost.jpeg used on input line 951.
+(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
+
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 932--955
 [][] []
  []
 
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 1055--1078
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 932--955
 [] [] 
  []
 
-[21
 
-] [22 <./images/p10_training_set_acc.jpeg> <./images/p10_training_set_cost.jpeg
+Underfull \hbox (badness 10000) in paragraph at lines 963--964
+
+ []
+
+[17
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 967--969
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--973
+
+ []
+
+[18 <./images/p8_training_set_acc.jpeg> <./images/p8_training_set_cost.jpeg> <.
+/images/p8_valid_set_acc.jpeg> <./images/p8_valid_set_cost.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 983--984
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 994--995
+
+ []
+
+[19
+
+] <images/part8harmonpromoter.jpg, id=309, 867.24pt x 433.62pt>
+File: images/part8harmonpromoter.jpg Graphic file (type jpg)
+
+<use images/part8harmonpromoter.jpg>
+Package pdftex.def Info: images/part8harmonpromoter.jpg used on input line 1024
+.
+(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
+
+<images/part8harmoninhibitor.jpg, id=310, 867.24pt x 433.62pt>
+File: images/part8harmoninhibitor.jpg Graphic file (type jpg)
+
+<use images/part8harmoninhibitor.jpg>
+Package pdftex.def Info: images/part8harmoninhibitor.jpg used on input line 103
+0.
+(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
+ [20
+
+ <./images/part8harmonpromoter.jpg> <./images/part8harmoninhibitor.jpg>]
+<images/part8gilpinpromoter.jpg, id=314, 867.24pt x 433.62pt>
+File: images/part8gilpinpromoter.jpg Graphic file (type jpg)
+
+<use images/part8gilpinpromoter.jpg>
+Package pdftex.def Info: images/part8gilpinpromoter.jpg used on input line 1043
+.
+(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
+
+<images/part8gilpininhibitor.jpg, id=315, 867.24pt x 433.62pt>
+File: images/part8gilpininhibitor.jpg Graphic file (type jpg)
+
+<use images/part8gilpininhibitor.jpg>
+Package pdftex.def Info: images/part8gilpininhibitor.jpg used on input line 104
+9.
+(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
+ [21
+
+ <./images/part8gilpinpromoter.jpg> <./images/part8gilpininhibitor.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1066
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1070
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1076
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1080
+
+ []
+
+<images/p10_training_set_acc.jpeg, id=319, 462.528pt x 346.896pt>
+File: images/p10_training_set_acc.jpeg Graphic file (type jpg)
+
+<use images/p10_training_set_acc.jpeg>
+Package pdftex.def Info: images/p10_training_set_acc.jpeg used on input line 11
+19.
+(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
+
+<images/p10_training_set_cost.jpeg, id=320, 462.528pt x 346.896pt>
+File: images/p10_training_set_cost.jpeg Graphic file (type jpg)
+
+<use images/p10_training_set_cost.jpeg>
+Package pdftex.def Info: images/p10_training_set_cost.jpeg used on input line 1
+125.
+(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
+
+<images/p10_valid_set_acc.jpeg, id=321, 462.528pt x 346.896pt>
+File: images/p10_valid_set_acc.jpeg Graphic file (type jpg)
+
+<use images/p10_valid_set_acc.jpeg>
+Package pdftex.def Info: images/p10_valid_set_acc.jpeg used on input line 1131.
+
+(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
+
+<images/p10_valid_set_cost.jpeg, id=322, 462.528pt x 346.896pt>
+File: images/p10_valid_set_cost.jpeg Graphic file (type jpg)
+
+<use images/p10_valid_set_cost.jpeg>
+Package pdftex.def Info: images/p10_valid_set_cost.jpeg used on input line 1137
+.
+(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
+
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 1118--1141
+[][] []
+ []
+
+
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 1118--1141
+[] [] 
+ []
+
+[22
+
+] [23 <./images/p10_training_set_acc.jpeg> <./images/p10_training_set_cost.jpeg
 > <./images/p10_valid_set_acc.jpeg> <./images/p10_valid_set_cost.jpeg>]
 
 AED: lastpage setting LastPage
 (deepnn.aux) ) 
 Here is how much of TeX's memory you used:
- 6786 strings out of 493323
- 105324 string characters out of 3139066
+ 6858 strings out of 493323
+ 106599 string characters out of 3139066
  310855 words of memory out of 3000000
- 10085 multiletter control sequences out of 15000+200000
+ 10146 multiletter control sequences out of 15000+200000
  14368 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,44p,1080b,1475s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1426,9 +1485,9 @@ amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 .pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:
 /Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><D:/Program Files/
 MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on deepnn.pdf (22 pages, 1605022 bytes).
+Output written on deepnn.pdf (23 pages, 2109269 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
+ 392 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 621 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 671 words of extra memory for PDF output out of 10000 (max. 10000000)
 

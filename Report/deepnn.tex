@@ -474,7 +474,7 @@ for i in range(10):
 
 % Part 4
 \begin{homeworkProblem}
-In this section, the neural network from part 2 was trained using vanilla gradient descent. The optimization procedure is described below, and learning curves and visualizations of the weights going into each of the output units are presented.
+In this section, the neural network from part 2 was trained using vanilla gradient descent. The optimization procedure is described below, and learning curves and visualizations of the weights going into each of the output units are presented in Figure~\ref{fig:part4curves} and Figure~\ref{fig:part4weights}, respectively.
 \newline
 \newline
 \noindent \textit{Optimization Procedure}
@@ -485,13 +485,13 @@ Words
 \newline
 \noindent \textit{Learning Curves}
 \newline
-	\begin{figure}[!ht]
+\begin{figure}[!ht]
 	\begin{subfigure}[b]{0.5\textwidth}
     	\includegraphics[width=\textwidth]{images/p4_training_set_acc.jpeg}
     	\caption{Performance Curve on the Training Set}
 		\label{fig:part4trainPerf}
 	\end{subfigure}
-%
+	%
 	\begin{subfigure}[b]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{images/p4_training_set_cost.jpeg}
 		\caption{Loss Curve on the Training Set}
@@ -503,7 +503,7 @@ Words
     	\caption{Performance Curve on the Validation Set}
 		\label{fig:part4validPerf}
 	\end{subfigure}
-%
+	%
 	\begin{subfigure}[b]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{images/p4_valid_set_cost.jpeg}
 		\caption{Loss Curve on the Validation Set}
@@ -512,11 +512,74 @@ Words
    \caption{Part 4 Learning Curves}
 	\label{fig:part4curves}
 \end{figure}
-\newline
-\newline
+
+\clearpage
 \noindent \textit{Weights Going Into Output Units}
-\newline
-Words
+
+\begin{figure}[!ht]
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_0}
+		\caption{Digit 0}
+		\label{fig:part4digit0}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_1}
+		\caption{Digit 1}
+		\label{fig:part4digit1}
+	\end{subfigure}
+	%	
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{Images/p4_2}
+		\caption{Digit 2}
+		\label{fig:part4digit2}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_3}
+		\caption{Digit 3}
+		\label{fig:part4digit3}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_4}
+		\caption{Digit 4}
+		\label{fig:part4digit4}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_5}
+		\caption{Digit 5}
+		\label{fig:part4digit5}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_6}
+		\caption{Digit 6}
+		\label{fig:part4digit6}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_7}
+		\caption{Digit 7}
+		\label{fig:part4digit7}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_8}
+		\caption{Digit 8}
+		\label{fig:part4digit8}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_9}
+		\caption{Digit 9}
+		\label{fig:part4digit9}
+	\end{subfigure}
+	%
+	\caption{Visualization of the Weights for Digits 0 Through 9 in Part 4}
+	\label{fig:part4weights}
+\end{figure}
 \clearpage
 \end{homeworkProblem}
 
