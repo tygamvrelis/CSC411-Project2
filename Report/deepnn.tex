@@ -479,12 +479,10 @@ In this section, the neural network from part 2 was trained using vanilla gradie
 \newline
 \noindent \textit{Optimization Procedure}
 \newline
-%State how we initialized weights and what learning rate we used
-Words
+The final gradient descent parameters used were $\epsilon = 1 \times 10^{-5}$, $\alpha = 1 \times 10^{-6}$, and a maximum number of iterations of $500$. The initial guess for the weight matrix was randomly initialized using {\tt np.random.rand()}, seeded with the value of $3$. These parameters were determined experimentally by observing the performance on the validation set. Several values between $500$ and $5000$ were tested for the maximum number of iterations, but little difference in validation set performance was observed; given this, $500$ was chosen to reduce the risk of over-fitting. The value of $\epsilon$ did not play a significant role in the optimization procedure given this number of iterations. The value for $\alpha$ was initialized to the same value used in part 3 of project 1, and provided acceptable performance; thus it was not altered.
 \newline
 \newline
 \noindent \textit{Learning Curves}
-\newline
 \begin{figure}[!ht]
 	\begin{subfigure}[b]{0.5\textwidth}
     	\includegraphics[width=\textwidth]{images/p4_training_set_acc.jpeg}
@@ -588,8 +586,7 @@ Words
 \begin{homeworkProblem}
 	
 	
-	
-	\begin{figure}[!ht]
+\begin{figure}[!ht]
 	\begin{subfigure}[b]{0.5\textwidth}
     	\includegraphics[width=\textwidth]{images/p5_training_set_acc.jpeg}
     	\caption{Performance Curve on the Training Set}
