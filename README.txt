@@ -26,4 +26,4 @@ There are 3 different scripts that can be run:
 	2. faces.py -- parts 8 and 9 of the project
 	3. deepfaces.py -- part 10 of the project
 
-Prior to running any of these, make sure that the current working directory (os.getcwd()) is set to the "Code" folder created previously. After this, running any of the three scripts should work as desired
+Prior to running any of these, make sure that the current working directory (os.getcwd()) is set to the "Code" folder created previously. After this, please run the scripts in the order listed above.
