@@ -15,8 +15,7 @@ Instructions for setting up project environment (please read to the end of this 
 	2.1. In this directory, place mnist_all.mat and snapshot50.pkl
 	2.2 In this directory, create a new folder called Faces.
 		2.2.1 Within Faces, place actors.txt
-		2.2.2 Within Faces, create a folder called "uncropped". Place the uncropped set of actor images there
-
+		2.2.2 Within Faces, unzip the "faces28.zip", "test227.zip", "training227.zip", and "validation227.zip" files provided. After this, there should be 6 folders in Faces, namely "test set28", "training set28", "validation set28", "test set227", "training set227", "validation set227"
 
 
 
