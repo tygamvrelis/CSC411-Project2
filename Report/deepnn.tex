@@ -550,8 +550,69 @@ Words
 		\caption{Loss Curve on the Validation Set}
 		\label{fig:part5validLoss}
 	\end{subfigure}
-   \caption{Part 5 Learning Curves}
+    \caption{Part 5 Learning Curves}
 	\label{fig:part5curves}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[!ht]
+	\begin{lstlisting}    
+def part5_gradient_descent(X, Y, init_W, alpha, eps, max_iter, init_v, momentum):
+	'''
+	part5_gradient_descent finds a local minimum of the hyperplane defined by
+	the hypothesis dot(W.T, X). The algorithm terminates when successive
+	values of W differ by less than eps (convergence), or when the number of
+	iterations exceeds max_iter. This function uses momentum
+	
+	Arguments:
+		X -- input data for X (the data to be used to make predictions)
+		Y -- input data for X (the actual/target data)
+		init_W -- the initial guess for the local minimum (starting point)
+		alpha -- the learning rate; proportional to the step size
+		eps -- used to determine when the algorithm has converged on a solution
+		max_iter -- the maximum number of times the algorithm will loop before
+		terminating
+		init_v -- the initial momentum value
+		momentum -- the momentum parameter in range (0, 1)
+	'''
+	
+	iter = 0
+	previous_W = 0
+	current_W = init_W.copy()
+	previous_v = 0
+	current_v = init_v # Initial momentum...
+	firstPass = True
+	history = list()
+	Whistory = list()
+	
+	m = Y.shape[1]
+	
+	# Do-while...
+	while(firstPass or
+			(np.linalg.norm(current_W  - previous_W) > eps and 
+			iter < max_iter)):
+		firstPass = False
+		
+		previous_W = current_W.copy() # Update the previous W value
+		previous_v = current_v # Update previous momentum
+		
+		current_v = momentum * current_v + alpha * p3.negLogLossGrad(X, Y, current_W)
+		current_W = current_W - current_v
+		
+		if(iter % (max_iter // 100) == 0):
+			# Print updates every so often and save cost into history list
+			cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
+			history.append((iter, cost))
+			Whistory.append(current_W)
+			print("Iter: ", iter, " | Cost: ", cost)
+		
+		iter += 1
+	
+	return(Whistory, history)
+	\end{lstlisting}
+	\caption{Vectorized Code for Gradient Descent with Momentum}
+	\label{fig:part5_code}
 \end{figure}
 \clearpage
 \end{homeworkProblem}
