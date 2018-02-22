@@ -31,12 +31,11 @@ test_size = 20
 (valX, valY) = p8.get_set("../Data/Faces/validation set" + str(RESOLUTION), RESOLUTION, act, noflatten = 1)
 (testX, testY) = p8.get_set("../Data/Faces/test set" + str(RESOLUTION), RESOLUTION, act, noflatten = 1)
 
-
 trainX_feat = p10.get_feature_set(trainX, train_size*6 ,RESOLUTION, modelAN)
 valX_feat = p10.get_feature_set(valX, val_size*6 ,RESOLUTION, modelAN)
 testX_feat = p10.get_feature_set(testX, test_size*6 ,RESOLUTION, modelAN)
 dim_x = trainX_feat.shape[1]
-print dim_x
+
 dim_h = 50
 dim_out = 6
 
@@ -57,9 +56,9 @@ batch_size = 50
 
 
 (loss, perf) = p8.classify(valX_feat, valY, model, loss_fn)
-print "Classification Val performance: ", perf                  #96.67%
+print "Classification Val performance: ", perf                  #97.5%
 (loss, perf) = p8.classify(testX_feat, testY, model, loss_fn)
-print "Classification Test performance: ", perf                 #98.33%
+print "Classification Test performance: ", perf                 #97.5%
 
 imagePath = "../Report/images/"
 p8.draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, imagePath, "p10_")

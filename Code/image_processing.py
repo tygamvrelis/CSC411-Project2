@@ -100,7 +100,7 @@ def make3Sets(RESOLUTION, train_size, val_size, test_size):
 
                     if total < train_size:
                         imsave("../Data/Faces/training set" + str(RESOLUTION) + "/" + savename, resized)
-                    elif total < (train_size + test_size):
+                    elif total < (train_size + val_size):
                         imsave("../Data/Faces/validation set" + str(RESOLUTION) + "/" + savename, resized)
                     elif total < (train_size + test_size + val_size):
                         imsave("../Data/Faces/test set" + str(RESOLUTION) + "/" + savename, resized)

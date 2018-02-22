@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="d221de6d-77d2-4f6a-83f9-79cb2c892033" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Code/part8.py" afterPath="$PROJECT_DIR$/Code/part8.py" />
+      <change beforePath="$PROJECT_DIR$/Code/deepfaces.py" afterPath="$PROJECT_DIR$/Code/deepfaces.py" />
+      <change beforePath="$PROJECT_DIR$/Code/image_processing.py" afterPath="$PROJECT_DIR$/Code/image_processing.py" />
       <change beforePath="$PROJECT_DIR$/Report/deepnn.log" afterPath="$PROJECT_DIR$/Report/deepnn.log" />
       <change beforePath="$PROJECT_DIR$/Report/deepnn.pdf" afterPath="$PROJECT_DIR$/Report/deepnn.pdf" />
       <change beforePath="$PROJECT_DIR$/Report/deepnn.synctex.gz" afterPath="$PROJECT_DIR$/Report/deepnn.synctex.gz" />
+      <change beforePath="$PROJECT_DIR$/Report/deepnn.tex" afterPath="$PROJECT_DIR$/Report/deepnn.tex" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p10_training_set_cost.jpeg" afterPath="$PROJECT_DIR$/Report/images/p10_training_set_cost.jpeg" />
+      <change beforePath="$PROJECT_DIR$/faces28.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test227.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/training227.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/validation227.zip" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +24,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="deepfaces.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="faces.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/faces.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1116">
+              <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+              <folding>
+                <element signature="e#280#299#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deepfaces.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+            <state relative-caret-position="342">
+              <caret line="31" column="103" lean-forward="false" selection-start-line="31" selection-start-column="103" selection-end-line="31" selection-end-column="103" />
               <folding>
                 <element signature="e#89#113#0" expanded="true" />
               </folding>
@@ -29,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="part8.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="part8.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/part8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="63" column="57" lean-forward="true" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
+            <state relative-caret-position="1962">
+              <caret line="115" column="21" lean-forward="false" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -71,16 +90,16 @@
         <option value="$PROJECT_DIR$/Code/part5.py" />
         <option value="$PROJECT_DIR$/Code/part2.py" />
         <option value="$PROJECT_DIR$/Data/Faces/actors.txt" />
-        <option value="$PROJECT_DIR$/Code/image_processing.py" />
         <option value="$PROJECT_DIR$/Code/part10.py" />
         <option value="$PROJECT_DIR$/Code/part6.py" />
-        <option value="$PROJECT_DIR$/Code/deepfaces.py" />
         <option value="$PROJECT_DIR$/Code/myalexnet.py" />
         <option value="$PROJECT_DIR$/Code/image_download.py" />
         <option value="$PROJECT_DIR$/Code/faces.py" />
         <option value="$PROJECT_DIR$/Code/part4.py" />
         <option value="$PROJECT_DIR$/Code/digits.py" />
         <option value="$PROJECT_DIR$/Code/part8.py" />
+        <option value="$PROJECT_DIR$/Code/image_processing.py" />
+        <option value="$PROJECT_DIR$/Code/deepfaces.py" />
       </list>
     </option>
   </component>
@@ -105,7 +124,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,6 +136,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -142,165 +161,6 @@
       <recent name="D:\CSC411\CSC411-Project2\Code" />
       <recent name="D:\CSC411\CSC411-Project2" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/CSC411-Project2.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Code/deepfaces.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Code/digits.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Code/faces.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Code/part4.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Code/part6.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Code/part8.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/README.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/deepnn.aux</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/deepnn.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/deepnn.pdf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/deepnn.synctex.gz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/deepnn.tex</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_0.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_7.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_8.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_9.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_training_set_acc.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_training_set_cost.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_valid_set_acc.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p4_valid_set_cost.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_0.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_7.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_8.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_9.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_training_set_acc.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_training_set_cost.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_valid_set_acc.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p5_valid_set_cost.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p8_training_set_acc.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p8_training_set_cost.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p8_valid_set_acc.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/p8_valid_set_cost.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/part8gilpininhibitor.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/part8gilpinpromoter.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/part8harmoninhibitor.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Report/images/part8harmonpromoter.jpg</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -589,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519264488220</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="minor changes">
+      <created>1519320980141</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1519320980141</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -603,35 +470,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="287" y="-4" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18941048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5026076" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3172775" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19581152" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3172775" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19581152" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329843" sideWeight="0.49739245" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981523" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39790577" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5026076" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3172775" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19581152" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329843" sideWeight="0.49739245" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18941048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981523" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39790577" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -657,7 +513,8 @@
     <MESSAGE value="Images commit" />
     <MESSAGE value="Download code added" />
     <MESSAGE value="latex slightly changed to work with me" />
-    <option name="LAST_COMMIT_MESSAGE" value="latex slightly changed to work with me" />
+    <MESSAGE value="minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -668,7 +525,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -853,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/image_processing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/part10.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -897,26 +747,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/faces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="1116">
           <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding>
+            <element signature="e#280#299#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
+    <entry file="file://$PROJECT_DIR$/Code/image_processing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding>
-            <element signature="e#89#113#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="427">
+          <caret line="104" column="62" lean-forward="true" selection-start-line="104" selection-start-column="62" selection-end-line="104" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/part8.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="63" column="57" lean-forward="true" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
+        <state relative-caret-position="1962">
+          <caret line="115" column="21" lean-forward="false" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="31" column="103" lean-forward="false" selection-start-line="31" selection-start-column="103" selection-end-line="31" selection-end-column="103" />
+          <folding>
+            <element signature="e#89#113#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
