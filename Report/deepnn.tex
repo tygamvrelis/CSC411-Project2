@@ -915,15 +915,15 @@ This gives an asymptotic upper bound on the runtime complexity of $O(K^2 N)$.
 		
 		\noindent \textit{Image Processing}
 		
-		The number of photos used per actor for each set was 70 for the training set and 20 for both validation and test sets. To obtain each set, the uncropped photos from project1 were processed using the $make3Sets()$ function found in $image\_processing.py$, which creates the 3 sets of colored photos at the desired resolution. The function also compares the hashes of each photo to their expected hashes given by $actors.txt$ but some of the valid photos were wrongly skipped so they were hard coded back in. \newline
+		The number of photos used per actor for each set was 70 for the training set and 20 for both validation and test sets. To obtain each set, the uncropped photos from project 1 were processed using the {\tt make3Sets()} function found in {\tt image\_processing.py}, which creates the 3 sets of colored photos at the desired resolution. The function also compares the hashes of each photo to their expected hashes given in {\tt actors.txt}, but some of the valid photos were wrongly skipped so they were hardcoded back in. \newline
 		
 		\noindent \textit{Creation of Input Matrices}
 		
-		To create the input matrices for each set, each color channel of a photo was flattened into a 1D vector and concatenated along the 1D axis. This input vector was then stacked on to of a matrix which contained the input vectors of the other images in the set. In the resulting matrix, each row represented a different image while each column represented one of 3 colour values of a single pixel. The label matrices of each set were created by one hot encoding a 1 by 6 vector and stacking them on top of each other.\newline
+		To create the input matrices for each set, each color channel of a photo was flattened into a 1D vector and concatenated along the 1D axis. This input vector was then stacked on top of a matrix which contained the input vectors of the other images in the set. In the resulting matrix, each row represented a different image while each column represented one of 3 colour values of a single pixel. The label matrices of each set were created by one-hot encoding 1 by 6 vectors and stacking them on top of each other.\newline
 		
 		\noindent \textit{Final Results}
 		
-		The properties of the final and best performing network created can be seen in Table~\ref{tab:part8_properties}. The network's final performance on both validation and test sets was 82.5\% correct. The learning curves at these settings for both test and validation sets are shown in Figure~\ref{fig:part8curves}.
+		The properties of the final and best performing network created can be seen in Table~\ref{tab:part8_properties}. The network's final performance was $82.25 \%$ correct on the validation set and $80.5 \%$ correct on the test set. The learning curves at these settings for both test and validation sets are shown in Figure~\ref{fig:part8curves}.
 		
 \begin{table}[!ht]
 \begin{center}
@@ -995,14 +995,14 @@ Initial Weights & Default Values\\
 		
 \noindent \textit{The Effect of Activation Functions on Performance}		
 		
-		Different activation functions for the hidden layer were also tested and it was found that as long as the hidden layer is large enough, (ie. ~50 nodes), most activation functions only made a few percentage difference. However, certain activation functions such as Softmin and Softmax would perform poorly no matter the size of the hidden layer.
-		When the hidden layer was small,(ie. ~6 nodes), it was found that the best activation functions were relatively linear functions that could take both positive and negative values such as linear, Tanhshrink and Softshrink.\newline
+		Different activation functions for the hidden layer were also tested and it was found that as long as the hidden layer is large enough, (ie. $\approx$50 nodes), most activation functions only made a few percentage difference. However, certain activation functions such as Softmin and Softmax would perform poorly no matter the size of the hidden layer.
+		When the hidden layer was small,(ie. $\approx$6 nodes), it was found that the best activation functions were relatively linear functions that could take both positive and negative values such as linear, Tanhshrink and Softshrink.\newline
 		
 		\noindent \textit{Weight Initialization}
 		
-	Different methods were tried to initialize the weights using functions such as normal\_(), uniform\_() and zero() with various parameters. It was found that if the weights are too large then the performance stays constant at 1/6. The weights that gave the best performance were the default weights.\newline
+	Different methods were tried to initialize the weights using functions such as {\tt normal\_()}, {\tt uniform\_()} and {\tt zero()} with various parameters. It was found that if the weights were too large then the performance stayed constant at $1/6$. The weights that gave the best performance were the default weights.\newline
 	
-		Different loss functions and optimizers were also attempted but it was found that most loss functions required a different format of input so it was kept as $CrossEntropyLoss()$ while Adam was confirmed to be the best optimizer. 
+		Different loss functions and optimizers were also attempted but it was found that most loss functions required a different format of input so it was kept as {\tt CrossEntropyLoss()} while Adam was confirmed to be the best optimizer. 
 \clearpage
 \end{homeworkProblem}
 
@@ -1046,7 +1046,7 @@ Initial Weights & Default Values\\
 \clearpage
 \noindent \textit{Comments on Weight Visualization}
 
-	The weights connecting the hidden layer to the most ``useful" hidden units are presented below, with the weights for Angie Harmon in Figure~\ref{fig:part9imagesHarmon}, and the weights for Peri Gilpin in Figure~\ref{fig:part9imagesGilpin}. Since it is possible for weights to be both positive and negative, the positive and negative parts of the weights were plotted as two separate images; below, the positive parts of the weights are on the left while the negative parts are on the right. The omitted values were set to $0$ for each plot.To obtain the weight visualizations from the weight vectors, the portions of the weight vectors representing the red, green, and blue channels of the input images were reshaped back to a $2$-D color image.
+	The weights connecting the hidden layer to the most ``useful" hidden units are presented below, with the weights for Angie Harmon in Figure~\ref{fig:part9imagesHarmon}, and the weights for Peri Gilpin in Figure~\ref{fig:part9imagesGilpin}. Since it is possible for weights to be both positive and negative, the positive and negative parts of the weights were plotted as two separate images; below, the positive parts of the weights are on the left while the negative parts are on the right. The omitted values were set to $0$ for each plot. To obtain the weight visualizations from the weight vectors, the portions of the weight vectors representing the red, green, and blue channels of the input images were reshaped back to a $2$-D color image.
 
 
 \begin{figure}[!ht]
