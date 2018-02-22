@@ -486,10 +486,14 @@ In this section, the neural network from part 2 was trained using vanilla gradie
 \newline
 \noindent \textit{Optimization Procedure}
 \newline
-The final gradient descent parameters used were $\epsilon = 1 \times 10^{-5}$, $\alpha = 1 \times 10^{-6}$, and a maximum number of iterations of $500$. The initial guess for the weight matrix was randomly initialized using {\tt np.random.rand()}, seeded with the value of $3$. These parameters were determined experimentally by observing the performance on the validation set. Values between $500$ and $5000$ were tested for the maximum number of iterations, but little difference in performance was observed. Thus, $500$ was chosen to reduce the risk of over-fitting. The value of $\epsilon$ did not play a significant role given this number of iterations. The value for $\alpha$ was initialized to the same value used in part 3 of project 1, and provided acceptable performance; thus it was not altered.
-\newline
-\newline
+The final gradient descent parameters used were $\epsilon = 1 \times 10^{-5}$, $\alpha = 1 \times 10^{-6}$, and a maximum number of iterations of $500$. The initial guess for the weight matrix was randomly initialized using {\tt np.random.rand()}, seeded with the value of $3$. The decision to randomly initialize the weight matrix was made arbitrarily at the beginning of the optimization procedure to obtain a distribution of value, and was not changed since acceptable performance resulted. The gradient descent parameters were determined experimentally by observing the performance on the validation set. Values between $500$ and $5000$ were tested for the maximum number of iterations, but little difference in performance was observed. Thus, $500$ was chosen to reduce the risk of over-fitting. The value of $\epsilon$ did not play a significant role given this number of iterations, as the cost function was decreasing by a large amount (approximately 10) between iterations. Thus, the stopping criterion was effectively the number of iterations. The value for $\alpha$ was initialized to the same value used in part 3 of project 1, and provided acceptable performance; thus it was not altered.
+
+\clearpage
+
 \noindent \textit{Learning Curves}
+\newline
+The learning and loss curves followed similar trajectories for the training and validation sets. One key difference is that the validation set was slightly more ``bumpy" than the training set.
+
 \begin{figure}[!ht]
 	\begin{subfigure}[b]{0.5\textwidth}
     	\includegraphics[width=\textwidth]{images/p4_training_set_acc.jpeg}
@@ -520,6 +524,8 @@ The final gradient descent parameters used were $\epsilon = 1 \times 10^{-5}$, $
 
 \clearpage
 \noindent \textit{Weights Going Into Output Units}
+\newline
+Most of the weights did not bear strong resemblances to the digits they corresponded to. However, one can still observe the iconic circular shape for the digit zero, and the vertical line for the digit one. Other weights such as three and seven share some visual resemblance to their digits, although not obviously.
 
 \begin{figure}[!ht]
 	\begin{subfigure}[b]{0.33\textwidth}
