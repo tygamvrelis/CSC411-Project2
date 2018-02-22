@@ -146,7 +146,7 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\hmwkTitle}{Project\ \#2} % Assignment title
-\newcommand{\hmwkDueDate}{Sunday,\ February\ 18,\ 2018} % Due date
+\newcommand{\hmwkDueDate}{Sunday,\ February\ 23,\ 2018} % Due date
 \newcommand{\hmwkClass}{CSC411} % Course/class
 \newcommand{\hmwkClassTime}{L0101} % Class/lecture time
 \newcommand{\hmwkAuthorName}{Hao Zhang \& Tyler Gamvrelis} % Your name
@@ -180,7 +180,7 @@
 In this project, neural networks of various depth were used to recognize handwritten digits and faces.
 \newline
 \newline
-Part 1 provides a description of the MNIST dataset from which the images of handwritten digits were taken. Part 2 implements the computation of a simple network. Part 3 presents the \textit{sum of the negative log-probabilities} as a cost function, and derives the expression for its gradient with respect to one of its weights. Part 4 details the training and optimization procedures for a digit-recognition neural network, and part 5 improves upon the results by modifying gradient descent to use momentum. Learning curves are presents in parts 4 and 5. Part 6 presents an analysis of network behaviour with respect to two of its weights. Part 7 provides an analysis of the performance of two different backpropagation computation techniques. Part 8 presents a face recognition network architecture for classifying actors, and uses PyTorch for implementation. Part 9 presents visualizations of hidden unit weights relevant to two of the actors. Part 10 uses activations of AlexNet to train a neural network to perform classification of the actors.
+Part 1 provides a description of the MNIST dataset from which the images of handwritten digits were taken. Part 2 implements the computation of a simple network. Part 3 presents the \textit{sum of the negative log-probabilities} as a cost function, and derives the expression for its gradient with respect to one of its weights. Part 4 details the training and optimization procedures for a digit-recognition neural network, and part 5 improves upon the results by modifying gradient descent to use momentum. Learning curves are presented in parts 4 and 5, and weight visualization is presented for part 4. Part 6 analyses the behaviour of the network with respect to two of its weights. Part 7 derives asymptotic upper bounds for the runtime complexity of two different backpropagation computation techniques. Part 8 presents a face recognition network architecture for classifying actors, and uses PyTorch for implementation. Part 9 presents visualizations of hidden unit weights relevant to two of the actors. Part 10 uses activations of AlexNet to train a neural network to perform classification of the actors.
 \newline
 \newline
 \textbf{System Details for Reproducibility:}
@@ -197,6 +197,9 @@ Part 1 provides a description of the MNIST dataset from which the images of hand
 		\item urllib
 		\item cPickle
 		\item PyTorch
+		\item hashlib
+		\item collections
+		\item re
 	\end{itemize}
 \end{itemize}
 \clearpage
@@ -474,24 +477,24 @@ for i in range(10):
 
 % Part 4
 \begin{homeworkProblem}
-In this section, the neural network from part 2 was trained using vanilla gradient descent. The optimization procedure is described below, and learning curves and visualizations of the weights going into each of the output units are presented.
+\noindent \textit{Training a Digit Classifier Using Vanilla Gradient Descent}
+
+In this section, the neural network from part 2 was trained using vanilla gradient descent. The optimization procedure is described below, and learning curves and visualizations of the weights going into each of the output units are presented in Figure~\ref{fig:part4curves} and Figure~\ref{fig:part4weights}, respectively.
 \newline
 \newline
 \noindent \textit{Optimization Procedure}
 \newline
-%State how we initialized weights and what learning rate we used
-Words
+The final gradient descent parameters used were $\epsilon = 1 \times 10^{-5}$, $\alpha = 1 \times 10^{-6}$, and a maximum number of iterations of $500$. The initial guess for the weight matrix was randomly initialized using {\tt np.random.rand()}, seeded with the value of $3$. These parameters were determined experimentally by observing the performance on the validation set. Values between $500$ and $5000$ were tested for the maximum number of iterations, but little difference in performance was observed. Thus, $500$ was chosen to reduce the risk of over-fitting. The value of $\epsilon$ did not play a significant role given this number of iterations. The value for $\alpha$ was initialized to the same value used in part 3 of project 1, and provided acceptable performance; thus it was not altered.
 \newline
 \newline
 \noindent \textit{Learning Curves}
-\newline
-	\begin{figure}[!ht]
+\begin{figure}[!ht]
 	\begin{subfigure}[b]{0.5\textwidth}
     	\includegraphics[width=\textwidth]{images/p4_training_set_acc.jpeg}
     	\caption{Performance Curve on the Training Set}
 		\label{fig:part4trainPerf}
 	\end{subfigure}
-%
+	%
 	\begin{subfigure}[b]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{images/p4_training_set_cost.jpeg}
 		\caption{Loss Curve on the Training Set}
@@ -503,30 +506,107 @@ Words
     	\caption{Performance Curve on the Validation Set}
 		\label{fig:part4validPerf}
 	\end{subfigure}
-%
+	%
 	\begin{subfigure}[b]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{images/p4_valid_set_cost.jpeg}
 		\caption{Loss Curve on the Validation Set}
 		\label{fig:part4validLoss}
 	\end{subfigure}
-   \caption{Part 4 Learning Curves}
+    \caption{Part 4 Learning Curves}
 	\label{fig:part4curves}
 \end{figure}
-\newline
-\newline
+
+\clearpage
 \noindent \textit{Weights Going Into Output Units}
-\newline
-Words
+
+\begin{figure}[!ht]
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_0}
+		\caption{Digit 0}
+		\label{fig:part4digit0}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_1}
+		\caption{Digit 1}
+		\label{fig:part4digit1}
+	\end{subfigure}
+	%	
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{Images/p4_2}
+		\caption{Digit 2}
+		\label{fig:part4digit2}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_3}
+		\caption{Digit 3}
+		\label{fig:part4digit3}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_4}
+		\caption{Digit 4}
+		\label{fig:part4digit4}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_5}
+		\caption{Digit 5}
+		\label{fig:part4digit5}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_6}
+		\caption{Digit 6}
+		\label{fig:part4digit6}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_7}
+		\caption{Digit 7}
+		\label{fig:part4digit7}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_8}
+		\caption{Digit 8}
+		\label{fig:part4digit8}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.33\textwidth}
+		\includegraphics[width=\textwidth]{images/p4_9}
+		\caption{Digit 9}
+		\label{fig:part4digit9}
+	\end{subfigure}
+	%
+	\caption{Visualization of the Weights for Digits 0 Through 9 in Part 4}
+	\label{fig:part4weights}
+\end{figure}
 \clearpage
 \end{homeworkProblem}
 
 
 % Part 5
 \begin{homeworkProblem}
+\noindent \textit{Training a Digit Classifier Using Gradient Descent With Momentum}
+
+In this section, the neural network from part 2 was trained using gradient descent with momentum. The learning curves are presented in Figure~\ref{fig:part5curves}, and the vectorized implementation of gradient descent with momentum is presented in Figure~\ref{fig:part5_code}. The only difference between vanilla gradient descent and gradient descent with momentum is the update rule: momentum accelerates convergence towards the direction most consistently travelled.
+\newline
+\newline
+Vanilla gradient descent update rule:
+$$
+W \leftarrow W - \alpha \frac{\partial C}{\partial W}
+$$
+Gradient descent with momentum update rule:
+$$
+\nu \leftarrow \gamma \nu + \alpha \frac{\partial C}{\partial W}
+$$
+$$
+W \leftarrow W - \nu
+$$
 	
-	
-	
-	\begin{figure}[!ht]
+\begin{figure}[!ht]
 	\begin{subfigure}[b]{0.5\textwidth}
     	\includegraphics[width=\textwidth]{images/p5_training_set_acc.jpeg}
     	\caption{Performance Curve on the Training Set}
@@ -550,8 +630,69 @@ Words
 		\caption{Loss Curve on the Validation Set}
 		\label{fig:part5validLoss}
 	\end{subfigure}
-   \caption{Part 5 Learning Curves}
+    \caption{Part 5 Learning Curves}
 	\label{fig:part5curves}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[!ht]
+	\begin{lstlisting}    
+def part5_gradient_descent(X, Y, init_W, alpha, eps, max_iter, init_v, momentum):
+	'''
+	part5_gradient_descent finds a local minimum of the hyperplane defined by
+	the hypothesis dot(W.T, X). The algorithm terminates when successive
+	values of W differ by less than eps (convergence), or when the number of
+	iterations exceeds max_iter. This function uses momentum
+	
+	Arguments:
+		X -- input data for X (the data to be used to make predictions)
+		Y -- input data for X (the actual/target data)
+		init_W -- the initial guess for the local minimum (starting point)
+		alpha -- the learning rate; proportional to the step size
+		eps -- used to determine when the algorithm has converged on a solution
+		max_iter -- the maximum number of times the algorithm will loop before
+		terminating
+		init_v -- the initial momentum value
+		momentum -- the momentum parameter in range (0, 1)
+	'''
+	
+	iter = 0
+	previous_W = 0
+	current_W = init_W.copy()
+	previous_v = 0
+	current_v = init_v # Initial momentum...
+	firstPass = True
+	history = list()
+	Whistory = list()
+	
+	m = Y.shape[1]
+	
+	# Do-while...
+	while(firstPass or
+			(np.linalg.norm(current_W  - previous_W) > eps and 
+			iter < max_iter)):
+		firstPass = False
+		
+		previous_W = current_W.copy() # Update the previous W value
+		previous_v = current_v # Update previous momentum
+		
+		current_v = momentum * current_v + alpha * p3.negLogLossGrad(X, Y, current_W)
+		current_W = current_W - current_v
+		
+		if(iter % (max_iter // 100) == 0):
+			# Print updates every so often and save cost into history list
+			cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
+			history.append((iter, cost))
+			Whistory.append(current_W)
+			print("Iter: ", iter, " | Cost: ", cost)
+		
+		iter += 1
+	
+	return(Whistory, history)
+	\end{lstlisting}
+	\caption{Vectorized Code for Gradient Descent with Momentum}
+	\label{fig:part5_code}
 \end{figure}
 \clearpage
 \end{homeworkProblem}
@@ -597,7 +738,7 @@ However, when momentum is too high, the contributions from the previous steps wo
 
 % Part 7
 \begin{homeworkProblem}
-\noindent \textit{Effect of Caching on the Time Required to Compute the Gradient}
+\noindent \textit{The Effect of Caching on the Time Required to Compute the Gradient}
 \newline
 A neural network consists of several layers of \textit{neurons} connected to each other by edges which each have their own \textit{weight}. In order to optimize a neural network, we need to ``learn" the values for the weights that minimize the cost function. The \textit{gradient} of the cost function can be computed with respect to each weight in the network; this matrix-valued quantity indicates (up to a proportionality constant) how much each of the weights should be changed to achieve the target output. Traditionally, there are two algorithms that come to mind for how to compute the gradient, both of which make excessive use of the chain rule from calculus:
 \begin{enumerate}[(1)]
@@ -854,7 +995,82 @@ Initial Weights & Default Values\\
 
 % Part 9
 \begin{homeworkProblem}
+\noindent \textit{Visualizing the Weights of ``Useful" Hidden Units}
+
+	The single-hidden-layer fully-connected network presented in part 8 was explored in greater depth in this part of the project. Consider the task of classifying images of just one actor, for example, Angie Harmon. Since the label vector, $y$, used a one-hot encoding scheme, a ``perfect" classification of an image of Harmon would have resulted in the output $[0\quad0\quad1\quad0\quad0\quad0]^T$ from the neural network. Note that only one output neuron is activated; let this output neuron corresponding to the actor be called $o_i$. One can then inquire about which hidden units were the most important, or ``useful" in computing this classification correctly. This part of the project explored a way of determining which hidden units were the most ``useful" for classifying input photos of Angie Harmon and Peri Gilpin, and visualizing the weights going into these ``useful" hidden units from the input layer. \newline
+
+\noindent \textit{Defining ``Useful"}
+
+	It was assumed that there were $2$ ``useful" hidden units for each actor:
 	
+	\begin{enumerate}[(1)]
+		\item The hidden unit with the \textit{maximum} input value to $o_i$. This hidden unit promotes the activation of $o_i$ the most.
+		\item The hidden unit with the \textit{minimum} input value to $o_i$. This hidden unit inhibits the activation of $o_i$ the most.
+	\end{enumerate}
+	
+	Note that \textit{input value} refers neither to the activation value of the hidden neuron nor the weight of the edge connecting the hidden neuron to $o_i$; rather, it refers to the product of these two quantities. This product represents the \textit{actual} contribution from the hidden unit. \newline
+
+\noindent \textit{Procedure to Determine the Most ``Useful" Hidden Units}
+
+	\begin{enumerate}[(1)]
+		\item Pick the actor whose ``useful" hidden units are to be determined. This specifies an output neuron $o_i$ whose connections to the hidden layer will be studied
+		
+		\begin{enumerate}[(a)]
+			\item Feed an input of the actor from the validation set into the neural network
+			\item Observe the weights connecting the hidden layer to $o_i$
+			\item Observe the activation values from the neurons in the hidden layer
+			\item For each neuron in the hidden layer, multiply its activation value by the weight connecting it to $o_i$. This product represents the actual contribution from the hidden unit
+			\item Record the indices for the ``useful" hidden units (as per the definition of ``useful" above
+		\end{enumerate}
+	
+		\item Repeat the previous step for all images of the actor
+		\item Pick the most frequently-occurring promoter neuron, and the most frequently-occurring inhibitor neuron. Continue to the next step, considering just these two neurons to be ``useful"
+		\item Visualize the weights connecting the ``useful" hidden units to the input layer
+		\item Repeat for the next actor
+	\end{enumerate}
+
+\clearpage
+\noindent \textit{Comments on Weight Visualization}
+
+	The weights connecting the hidden layer to the most ``useful" hidden units are presented below, with the weights for Angie Harmon in Figure~\ref{fig:part9imagesHarmon}, and the weights for Peri Gilpin in Figure~\ref{fig:part9imagesGilpin}. Since it is possible for weights to be both positive and negative, the positive and negative parts of the weights were plotted as two separate images; below, the positive parts of the weights are on the left while the negative parts are on the right. The omitted values were set to $0$ for each plot.To obtain the weight visualizations from the weight vectors, the portions of the weight vectors representing the red, green, and blue channels of the input images were reshaped back to a $2$-D color image.
+
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{images/part8harmonpromoter}
+		\caption{The hidden unit promoting the activation of Harmon the most.}
+		\label{fig:part9HarmonPromoter}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{images/part8harmoninhibitor}
+		\caption{The hidden unit inhibiting the activation of Harmon the most.}
+		\label{fig:part9HarmonInhibitor}
+	\end{subfigure}
+	\caption{Weight visualizations for Angie Harmon.}
+	\label{fig:part9imagesHarmon}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{images/part8gilpinpromoter}
+		\caption{The hidden unit promoting the activation of Gilpin the most.}
+		\label{fig:part9GilpinPromoter}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{images/part8gilpininhibitor}
+		\caption{The hidden unit inhibiting the activation of Gilpin the most.}
+		\label{fig:part9GilpinInhibitor}
+	\end{subfigure}
+	\caption{Weight visualizations for Peri Gilpin.}
+	\label{fig:part9imagesGilpin}
+\end{figure}
+
 \clearpage
 \end{homeworkProblem}
 

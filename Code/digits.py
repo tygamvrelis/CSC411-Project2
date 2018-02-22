@@ -110,7 +110,7 @@ np.random.seed(3)
 init_W = np.random.rand(28*28 + 1,10) # Randomly initialize weight matrix
 alpha = 1e-5
 eps = 1e-6
-max_iter = 500
+max_iter = 100
 
 
 (Whistory, history) = p4.part4_gradient_descent(XTrain, YTrain, init_W, alpha, eps, max_iter)

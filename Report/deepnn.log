@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.19)  20 FEB 2018 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.1.15)  21 FEB 2018 06:26
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**deepnn.tex
-(./deepnn.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+**./deepnn.tex
+(deepnn.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,74 +21,77 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip43
-\f@ncyO@elh=\skip44
-\f@ncyO@erh=\skip45
-\f@ncyO@olh=\skip46
-\f@ncyO@orh=\skip47
-\f@ncyO@elf=\skip48
-\f@ncyO@erf=\skip49
-\f@ncyO@olf=\skip50
-\f@ncyO@orf=\skip51
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
 )
-(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\lastpage\lastpage.sty
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/extramarks.sty
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\extramarks.sty
+Package: extramarks 2017/06/30 v3.9a Extra marks for LaTeX
 \@temptokenb=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 143.
+Package color Info: Driver file: pdftex.def on input line 147.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen105
 \captionmargin@=\dimen106
@@ -105,7 +106,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \c@subfigure=\count89
 \c@subtable=\count90
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count91
 \lst@gtempboxa=\box26
 \lst@token=\toks16
@@ -119,32 +120,32 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \lst@lineno=\count96
 \lst@maxwidth=\dimen115
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count97
 \lst@skipnumbers=\count98
 \lst@framebox=\box27
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\lipsum\lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count99
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks17
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks18
 \symAMSa=\mathgroup4
@@ -152,41 +153,41 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
 \ex@=\dimen116
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen117
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count100
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count101
 \leftroot@=\count102
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count103
 \DOTSCASE@=\count104
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box28
 \strutbox@=\box29
 \big@size=\dimen118
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count105
 \c@MaxMatrixCols=\count106
 \dotsspace@=\muskip10
@@ -207,34 +208,35 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \multlinegap=\skip53
 \multlinetaggap=\skip54
 \mathdisplay@stack=\toks23
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+("D:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen125
 \extrarowheight=\dimen126
 \NC@list=\toks24
 \extratabsurround=\skip55
 \backup@length=\skip56
 )
-(/usr/share/texlive/texmf-dist/tex/latex/forloop/forloop.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\forloop\forloop.sty"
 Package: forloop 2006/09/18 v3.0 For Loops for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/alphalph.sty
-Package: alphalph 2011/05/13 v2.4 Convert numbers to letters (HO)
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\alphalph.sty"
+Package: alphalph 2016/05/16 v2.5 Convert numbers to letters (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/intcalc.sty
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\intcalc.sty"
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 \c@homeworkProblemCounter=\count112
- (./deepnn.aux)
+
+(deepnn.aux)
 \openout1 = `deepnn.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
@@ -253,7 +255,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 171.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+(C:\Users\Admin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen127
@@ -266,70 +268,67 @@ Package lastpage Info: Please have a look at the pageslts package at
 \MPnumerator=\count117
 \makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks26
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+) ("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+("D:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+("D:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+("D:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count119
 LaTeX Font Info:    Try loading font information for U+msa on input line 173.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 173.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 180--187
 
  []
@@ -341,7 +340,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--187
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 188.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -353,604 +352,604 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 \c@ith=\count120
 \c@num=\count121
 
-<images/number0_0.jpg, id=17, 28.105pt x 28.105pt>
+<images/number0_0.jpg, id=16, 28.105pt x 28.105pt>
 File: images/number0_0.jpg Graphic file (type jpg)
  <use images/number0_0.jpg>
-Package pdftex.def Info: images/number0_0.jpg used on input line 260.
+Package pdftex.def Info: images/number0_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number0_1.jpg, id=19, 28.105pt x 28.105pt>
+<images/number0_1.jpg, id=18, 28.105pt x 28.105pt>
 File: images/number0_1.jpg Graphic file (type jpg)
  <use images/number0_1.jpg>
-Package pdftex.def Info: images/number0_1.jpg used on input line 260.
+Package pdftex.def Info: images/number0_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number0_2.jpg, id=20, 28.105pt x 28.105pt>
+<images/number0_2.jpg, id=19, 28.105pt x 28.105pt>
 File: images/number0_2.jpg Graphic file (type jpg)
  <use images/number0_2.jpg>
-Package pdftex.def Info: images/number0_2.jpg used on input line 260.
+Package pdftex.def Info: images/number0_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number0_3.jpg, id=21, 28.105pt x 28.105pt>
+<images/number0_3.jpg, id=20, 28.105pt x 28.105pt>
 File: images/number0_3.jpg Graphic file (type jpg)
  <use images/number0_3.jpg>
-Package pdftex.def Info: images/number0_3.jpg used on input line 260.
+Package pdftex.def Info: images/number0_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number0_4.jpg, id=22, 28.105pt x 28.105pt>
+<images/number0_4.jpg, id=21, 28.105pt x 28.105pt>
 File: images/number0_4.jpg Graphic file (type jpg)
  <use images/number0_4.jpg>
-Package pdftex.def Info: images/number0_4.jpg used on input line 260.
+Package pdftex.def Info: images/number0_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number0_5.jpg, id=23, 28.105pt x 28.105pt>
+<images/number0_5.jpg, id=22, 28.105pt x 28.105pt>
 File: images/number0_5.jpg Graphic file (type jpg)
  <use images/number0_5.jpg>
-Package pdftex.def Info: images/number0_5.jpg used on input line 260.
+Package pdftex.def Info: images/number0_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number0_6.jpg, id=24, 28.105pt x 28.105pt>
+<images/number0_6.jpg, id=23, 28.105pt x 28.105pt>
 File: images/number0_6.jpg Graphic file (type jpg)
  <use images/number0_6.jpg>
-Package pdftex.def Info: images/number0_6.jpg used on input line 260.
+Package pdftex.def Info: images/number0_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number0_7.jpg, id=25, 28.105pt x 28.105pt>
+<images/number0_7.jpg, id=24, 28.105pt x 28.105pt>
 File: images/number0_7.jpg Graphic file (type jpg)
  <use images/number0_7.jpg>
-Package pdftex.def Info: images/number0_7.jpg used on input line 260.
+Package pdftex.def Info: images/number0_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number0_8.jpg, id=26, 28.105pt x 28.105pt>
+<images/number0_8.jpg, id=25, 28.105pt x 28.105pt>
 File: images/number0_8.jpg Graphic file (type jpg)
  <use images/number0_8.jpg>
-Package pdftex.def Info: images/number0_8.jpg used on input line 260.
+Package pdftex.def Info: images/number0_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number0_9.jpg, id=27, 28.105pt x 28.105pt>
+<images/number0_9.jpg, id=26, 28.105pt x 28.105pt>
 File: images/number0_9.jpg Graphic file (type jpg)
  <use images/number0_9.jpg>
-Package pdftex.def Info: images/number0_9.jpg used on input line 260.
+Package pdftex.def Info: images/number0_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_0.jpg, id=28, 28.105pt x 28.105pt>
+<images/number1_0.jpg, id=27, 28.105pt x 28.105pt>
 File: images/number1_0.jpg Graphic file (type jpg)
  <use images/number1_0.jpg>
-Package pdftex.def Info: images/number1_0.jpg used on input line 260.
+Package pdftex.def Info: images/number1_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_1.jpg, id=29, 28.105pt x 28.105pt>
+<images/number1_1.jpg, id=28, 28.105pt x 28.105pt>
 File: images/number1_1.jpg Graphic file (type jpg)
  <use images/number1_1.jpg>
-Package pdftex.def Info: images/number1_1.jpg used on input line 260.
+Package pdftex.def Info: images/number1_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_2.jpg, id=30, 28.105pt x 28.105pt>
+<images/number1_2.jpg, id=29, 28.105pt x 28.105pt>
 File: images/number1_2.jpg Graphic file (type jpg)
  <use images/number1_2.jpg>
-Package pdftex.def Info: images/number1_2.jpg used on input line 260.
+Package pdftex.def Info: images/number1_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_3.jpg, id=31, 28.105pt x 28.105pt>
+<images/number1_3.jpg, id=30, 28.105pt x 28.105pt>
 File: images/number1_3.jpg Graphic file (type jpg)
  <use images/number1_3.jpg>
-Package pdftex.def Info: images/number1_3.jpg used on input line 260.
+Package pdftex.def Info: images/number1_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_4.jpg, id=32, 28.105pt x 28.105pt>
+<images/number1_4.jpg, id=31, 28.105pt x 28.105pt>
 File: images/number1_4.jpg Graphic file (type jpg)
  <use images/number1_4.jpg>
-Package pdftex.def Info: images/number1_4.jpg used on input line 260.
+Package pdftex.def Info: images/number1_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_5.jpg, id=33, 28.105pt x 28.105pt>
+<images/number1_5.jpg, id=32, 28.105pt x 28.105pt>
 File: images/number1_5.jpg Graphic file (type jpg)
  <use images/number1_5.jpg>
-Package pdftex.def Info: images/number1_5.jpg used on input line 260.
+Package pdftex.def Info: images/number1_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_6.jpg, id=34, 28.105pt x 28.105pt>
+<images/number1_6.jpg, id=33, 28.105pt x 28.105pt>
 File: images/number1_6.jpg Graphic file (type jpg)
  <use images/number1_6.jpg>
-Package pdftex.def Info: images/number1_6.jpg used on input line 260.
+Package pdftex.def Info: images/number1_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_7.jpg, id=35, 28.105pt x 28.105pt>
+<images/number1_7.jpg, id=34, 28.105pt x 28.105pt>
 File: images/number1_7.jpg Graphic file (type jpg)
  <use images/number1_7.jpg>
-Package pdftex.def Info: images/number1_7.jpg used on input line 260.
+Package pdftex.def Info: images/number1_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_8.jpg, id=36, 28.105pt x 28.105pt>
+<images/number1_8.jpg, id=35, 28.105pt x 28.105pt>
 File: images/number1_8.jpg Graphic file (type jpg)
  <use images/number1_8.jpg>
-Package pdftex.def Info: images/number1_8.jpg used on input line 260.
+Package pdftex.def Info: images/number1_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number1_9.jpg, id=37, 28.105pt x 28.105pt>
+<images/number1_9.jpg, id=36, 28.105pt x 28.105pt>
 File: images/number1_9.jpg Graphic file (type jpg)
  <use images/number1_9.jpg>
-Package pdftex.def Info: images/number1_9.jpg used on input line 260.
+Package pdftex.def Info: images/number1_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_0.jpg, id=38, 28.105pt x 28.105pt>
+<images/number2_0.jpg, id=37, 28.105pt x 28.105pt>
 File: images/number2_0.jpg Graphic file (type jpg)
  <use images/number2_0.jpg>
-Package pdftex.def Info: images/number2_0.jpg used on input line 260.
+Package pdftex.def Info: images/number2_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_1.jpg, id=39, 28.105pt x 28.105pt>
+<images/number2_1.jpg, id=38, 28.105pt x 28.105pt>
 File: images/number2_1.jpg Graphic file (type jpg)
  <use images/number2_1.jpg>
-Package pdftex.def Info: images/number2_1.jpg used on input line 260.
+Package pdftex.def Info: images/number2_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_2.jpg, id=40, 28.105pt x 28.105pt>
+<images/number2_2.jpg, id=39, 28.105pt x 28.105pt>
 File: images/number2_2.jpg Graphic file (type jpg)
  <use images/number2_2.jpg>
-Package pdftex.def Info: images/number2_2.jpg used on input line 260.
+Package pdftex.def Info: images/number2_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_3.jpg, id=41, 28.105pt x 28.105pt>
+<images/number2_3.jpg, id=40, 28.105pt x 28.105pt>
 File: images/number2_3.jpg Graphic file (type jpg)
  <use images/number2_3.jpg>
-Package pdftex.def Info: images/number2_3.jpg used on input line 260.
+Package pdftex.def Info: images/number2_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_4.jpg, id=42, 28.105pt x 28.105pt>
+<images/number2_4.jpg, id=41, 28.105pt x 28.105pt>
 File: images/number2_4.jpg Graphic file (type jpg)
  <use images/number2_4.jpg>
-Package pdftex.def Info: images/number2_4.jpg used on input line 260.
+Package pdftex.def Info: images/number2_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_5.jpg, id=43, 28.105pt x 28.105pt>
+<images/number2_5.jpg, id=42, 28.105pt x 28.105pt>
 File: images/number2_5.jpg Graphic file (type jpg)
  <use images/number2_5.jpg>
-Package pdftex.def Info: images/number2_5.jpg used on input line 260.
+Package pdftex.def Info: images/number2_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_6.jpg, id=44, 28.105pt x 28.105pt>
+<images/number2_6.jpg, id=43, 28.105pt x 28.105pt>
 File: images/number2_6.jpg Graphic file (type jpg)
  <use images/number2_6.jpg>
-Package pdftex.def Info: images/number2_6.jpg used on input line 260.
+Package pdftex.def Info: images/number2_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_7.jpg, id=45, 28.105pt x 28.105pt>
+<images/number2_7.jpg, id=44, 28.105pt x 28.105pt>
 File: images/number2_7.jpg Graphic file (type jpg)
  <use images/number2_7.jpg>
-Package pdftex.def Info: images/number2_7.jpg used on input line 260.
+Package pdftex.def Info: images/number2_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_8.jpg, id=46, 28.105pt x 28.105pt>
+<images/number2_8.jpg, id=45, 28.105pt x 28.105pt>
 File: images/number2_8.jpg Graphic file (type jpg)
  <use images/number2_8.jpg>
-Package pdftex.def Info: images/number2_8.jpg used on input line 260.
+Package pdftex.def Info: images/number2_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number2_9.jpg, id=47, 28.105pt x 28.105pt>
+<images/number2_9.jpg, id=46, 28.105pt x 28.105pt>
 File: images/number2_9.jpg Graphic file (type jpg)
  <use images/number2_9.jpg>
-Package pdftex.def Info: images/number2_9.jpg used on input line 260.
+Package pdftex.def Info: images/number2_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_0.jpg, id=48, 28.105pt x 28.105pt>
+<images/number3_0.jpg, id=47, 28.105pt x 28.105pt>
 File: images/number3_0.jpg Graphic file (type jpg)
  <use images/number3_0.jpg>
-Package pdftex.def Info: images/number3_0.jpg used on input line 260.
+Package pdftex.def Info: images/number3_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_1.jpg, id=49, 28.105pt x 28.105pt>
+<images/number3_1.jpg, id=48, 28.105pt x 28.105pt>
 File: images/number3_1.jpg Graphic file (type jpg)
  <use images/number3_1.jpg>
-Package pdftex.def Info: images/number3_1.jpg used on input line 260.
+Package pdftex.def Info: images/number3_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_2.jpg, id=50, 28.105pt x 28.105pt>
+<images/number3_2.jpg, id=49, 28.105pt x 28.105pt>
 File: images/number3_2.jpg Graphic file (type jpg)
  <use images/number3_2.jpg>
-Package pdftex.def Info: images/number3_2.jpg used on input line 260.
+Package pdftex.def Info: images/number3_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_3.jpg, id=51, 28.105pt x 28.105pt>
+<images/number3_3.jpg, id=50, 28.105pt x 28.105pt>
 File: images/number3_3.jpg Graphic file (type jpg)
  <use images/number3_3.jpg>
-Package pdftex.def Info: images/number3_3.jpg used on input line 260.
+Package pdftex.def Info: images/number3_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_4.jpg, id=52, 28.105pt x 28.105pt>
+<images/number3_4.jpg, id=51, 28.105pt x 28.105pt>
 File: images/number3_4.jpg Graphic file (type jpg)
  <use images/number3_4.jpg>
-Package pdftex.def Info: images/number3_4.jpg used on input line 260.
+Package pdftex.def Info: images/number3_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_5.jpg, id=53, 28.105pt x 28.105pt>
+<images/number3_5.jpg, id=52, 28.105pt x 28.105pt>
 File: images/number3_5.jpg Graphic file (type jpg)
  <use images/number3_5.jpg>
-Package pdftex.def Info: images/number3_5.jpg used on input line 260.
+Package pdftex.def Info: images/number3_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_6.jpg, id=54, 28.105pt x 28.105pt>
+<images/number3_6.jpg, id=53, 28.105pt x 28.105pt>
 File: images/number3_6.jpg Graphic file (type jpg)
  <use images/number3_6.jpg>
-Package pdftex.def Info: images/number3_6.jpg used on input line 260.
+Package pdftex.def Info: images/number3_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_7.jpg, id=55, 28.105pt x 28.105pt>
+<images/number3_7.jpg, id=54, 28.105pt x 28.105pt>
 File: images/number3_7.jpg Graphic file (type jpg)
  <use images/number3_7.jpg>
-Package pdftex.def Info: images/number3_7.jpg used on input line 260.
+Package pdftex.def Info: images/number3_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_8.jpg, id=56, 28.105pt x 28.105pt>
+<images/number3_8.jpg, id=55, 28.105pt x 28.105pt>
 File: images/number3_8.jpg Graphic file (type jpg)
  <use images/number3_8.jpg>
-Package pdftex.def Info: images/number3_8.jpg used on input line 260.
+Package pdftex.def Info: images/number3_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number3_9.jpg, id=57, 28.105pt x 28.105pt>
+<images/number3_9.jpg, id=56, 28.105pt x 28.105pt>
 File: images/number3_9.jpg Graphic file (type jpg)
  <use images/number3_9.jpg>
-Package pdftex.def Info: images/number3_9.jpg used on input line 260.
+Package pdftex.def Info: images/number3_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_0.jpg, id=58, 28.105pt x 28.105pt>
+<images/number4_0.jpg, id=57, 28.105pt x 28.105pt>
 File: images/number4_0.jpg Graphic file (type jpg)
  <use images/number4_0.jpg>
-Package pdftex.def Info: images/number4_0.jpg used on input line 260.
+Package pdftex.def Info: images/number4_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_1.jpg, id=59, 28.105pt x 28.105pt>
+<images/number4_1.jpg, id=58, 28.105pt x 28.105pt>
 File: images/number4_1.jpg Graphic file (type jpg)
  <use images/number4_1.jpg>
-Package pdftex.def Info: images/number4_1.jpg used on input line 260.
+Package pdftex.def Info: images/number4_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_2.jpg, id=60, 28.105pt x 28.105pt>
+<images/number4_2.jpg, id=59, 28.105pt x 28.105pt>
 File: images/number4_2.jpg Graphic file (type jpg)
  <use images/number4_2.jpg>
-Package pdftex.def Info: images/number4_2.jpg used on input line 260.
+Package pdftex.def Info: images/number4_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_3.jpg, id=61, 28.105pt x 28.105pt>
+<images/number4_3.jpg, id=60, 28.105pt x 28.105pt>
 File: images/number4_3.jpg Graphic file (type jpg)
  <use images/number4_3.jpg>
-Package pdftex.def Info: images/number4_3.jpg used on input line 260.
+Package pdftex.def Info: images/number4_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_4.jpg, id=62, 28.105pt x 28.105pt>
+<images/number4_4.jpg, id=61, 28.105pt x 28.105pt>
 File: images/number4_4.jpg Graphic file (type jpg)
  <use images/number4_4.jpg>
-Package pdftex.def Info: images/number4_4.jpg used on input line 260.
+Package pdftex.def Info: images/number4_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_5.jpg, id=63, 28.105pt x 28.105pt>
+<images/number4_5.jpg, id=62, 28.105pt x 28.105pt>
 File: images/number4_5.jpg Graphic file (type jpg)
  <use images/number4_5.jpg>
-Package pdftex.def Info: images/number4_5.jpg used on input line 260.
+Package pdftex.def Info: images/number4_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_6.jpg, id=64, 28.105pt x 28.105pt>
+<images/number4_6.jpg, id=63, 28.105pt x 28.105pt>
 File: images/number4_6.jpg Graphic file (type jpg)
  <use images/number4_6.jpg>
-Package pdftex.def Info: images/number4_6.jpg used on input line 260.
+Package pdftex.def Info: images/number4_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_7.jpg, id=65, 28.105pt x 28.105pt>
+<images/number4_7.jpg, id=64, 28.105pt x 28.105pt>
 File: images/number4_7.jpg Graphic file (type jpg)
  <use images/number4_7.jpg>
-Package pdftex.def Info: images/number4_7.jpg used on input line 260.
+Package pdftex.def Info: images/number4_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_8.jpg, id=66, 28.105pt x 28.105pt>
+<images/number4_8.jpg, id=65, 28.105pt x 28.105pt>
 File: images/number4_8.jpg Graphic file (type jpg)
  <use images/number4_8.jpg>
-Package pdftex.def Info: images/number4_8.jpg used on input line 260.
+Package pdftex.def Info: images/number4_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number4_9.jpg, id=67, 28.105pt x 28.105pt>
+<images/number4_9.jpg, id=66, 28.105pt x 28.105pt>
 File: images/number4_9.jpg Graphic file (type jpg)
  <use images/number4_9.jpg>
-Package pdftex.def Info: images/number4_9.jpg used on input line 260.
+Package pdftex.def Info: images/number4_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_0.jpg, id=68, 28.105pt x 28.105pt>
+<images/number5_0.jpg, id=67, 28.105pt x 28.105pt>
 File: images/number5_0.jpg Graphic file (type jpg)
  <use images/number5_0.jpg>
-Package pdftex.def Info: images/number5_0.jpg used on input line 260.
+Package pdftex.def Info: images/number5_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_1.jpg, id=69, 28.105pt x 28.105pt>
+<images/number5_1.jpg, id=68, 28.105pt x 28.105pt>
 File: images/number5_1.jpg Graphic file (type jpg)
  <use images/number5_1.jpg>
-Package pdftex.def Info: images/number5_1.jpg used on input line 260.
+Package pdftex.def Info: images/number5_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_2.jpg, id=70, 28.105pt x 28.105pt>
+<images/number5_2.jpg, id=69, 28.105pt x 28.105pt>
 File: images/number5_2.jpg Graphic file (type jpg)
  <use images/number5_2.jpg>
-Package pdftex.def Info: images/number5_2.jpg used on input line 260.
+Package pdftex.def Info: images/number5_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_3.jpg, id=71, 28.105pt x 28.105pt>
+<images/number5_3.jpg, id=70, 28.105pt x 28.105pt>
 File: images/number5_3.jpg Graphic file (type jpg)
  <use images/number5_3.jpg>
-Package pdftex.def Info: images/number5_3.jpg used on input line 260.
+Package pdftex.def Info: images/number5_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_4.jpg, id=72, 28.105pt x 28.105pt>
+<images/number5_4.jpg, id=71, 28.105pt x 28.105pt>
 File: images/number5_4.jpg Graphic file (type jpg)
  <use images/number5_4.jpg>
-Package pdftex.def Info: images/number5_4.jpg used on input line 260.
+Package pdftex.def Info: images/number5_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_5.jpg, id=73, 28.105pt x 28.105pt>
+<images/number5_5.jpg, id=72, 28.105pt x 28.105pt>
 File: images/number5_5.jpg Graphic file (type jpg)
  <use images/number5_5.jpg>
-Package pdftex.def Info: images/number5_5.jpg used on input line 260.
+Package pdftex.def Info: images/number5_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_6.jpg, id=74, 28.105pt x 28.105pt>
+<images/number5_6.jpg, id=73, 28.105pt x 28.105pt>
 File: images/number5_6.jpg Graphic file (type jpg)
  <use images/number5_6.jpg>
-Package pdftex.def Info: images/number5_6.jpg used on input line 260.
+Package pdftex.def Info: images/number5_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_7.jpg, id=75, 28.105pt x 28.105pt>
+<images/number5_7.jpg, id=74, 28.105pt x 28.105pt>
 File: images/number5_7.jpg Graphic file (type jpg)
  <use images/number5_7.jpg>
-Package pdftex.def Info: images/number5_7.jpg used on input line 260.
+Package pdftex.def Info: images/number5_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_8.jpg, id=76, 28.105pt x 28.105pt>
+<images/number5_8.jpg, id=75, 28.105pt x 28.105pt>
 File: images/number5_8.jpg Graphic file (type jpg)
  <use images/number5_8.jpg>
-Package pdftex.def Info: images/number5_8.jpg used on input line 260.
+Package pdftex.def Info: images/number5_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number5_9.jpg, id=77, 28.105pt x 28.105pt>
+<images/number5_9.jpg, id=76, 28.105pt x 28.105pt>
 File: images/number5_9.jpg Graphic file (type jpg)
  <use images/number5_9.jpg>
-Package pdftex.def Info: images/number5_9.jpg used on input line 260.
+Package pdftex.def Info: images/number5_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_0.jpg, id=78, 28.105pt x 28.105pt>
+<images/number6_0.jpg, id=77, 28.105pt x 28.105pt>
 File: images/number6_0.jpg Graphic file (type jpg)
  <use images/number6_0.jpg>
-Package pdftex.def Info: images/number6_0.jpg used on input line 260.
+Package pdftex.def Info: images/number6_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_1.jpg, id=79, 28.105pt x 28.105pt>
+<images/number6_1.jpg, id=78, 28.105pt x 28.105pt>
 File: images/number6_1.jpg Graphic file (type jpg)
  <use images/number6_1.jpg>
-Package pdftex.def Info: images/number6_1.jpg used on input line 260.
+Package pdftex.def Info: images/number6_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_2.jpg, id=80, 28.105pt x 28.105pt>
+<images/number6_2.jpg, id=79, 28.105pt x 28.105pt>
 File: images/number6_2.jpg Graphic file (type jpg)
  <use images/number6_2.jpg>
-Package pdftex.def Info: images/number6_2.jpg used on input line 260.
+Package pdftex.def Info: images/number6_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_3.jpg, id=81, 28.105pt x 28.105pt>
+<images/number6_3.jpg, id=80, 28.105pt x 28.105pt>
 File: images/number6_3.jpg Graphic file (type jpg)
  <use images/number6_3.jpg>
-Package pdftex.def Info: images/number6_3.jpg used on input line 260.
+Package pdftex.def Info: images/number6_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_4.jpg, id=82, 28.105pt x 28.105pt>
+<images/number6_4.jpg, id=81, 28.105pt x 28.105pt>
 File: images/number6_4.jpg Graphic file (type jpg)
  <use images/number6_4.jpg>
-Package pdftex.def Info: images/number6_4.jpg used on input line 260.
+Package pdftex.def Info: images/number6_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_5.jpg, id=83, 28.105pt x 28.105pt>
+<images/number6_5.jpg, id=82, 28.105pt x 28.105pt>
 File: images/number6_5.jpg Graphic file (type jpg)
  <use images/number6_5.jpg>
-Package pdftex.def Info: images/number6_5.jpg used on input line 260.
+Package pdftex.def Info: images/number6_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_6.jpg, id=84, 28.105pt x 28.105pt>
+<images/number6_6.jpg, id=83, 28.105pt x 28.105pt>
 File: images/number6_6.jpg Graphic file (type jpg)
  <use images/number6_6.jpg>
-Package pdftex.def Info: images/number6_6.jpg used on input line 260.
+Package pdftex.def Info: images/number6_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_7.jpg, id=85, 28.105pt x 28.105pt>
+<images/number6_7.jpg, id=84, 28.105pt x 28.105pt>
 File: images/number6_7.jpg Graphic file (type jpg)
  <use images/number6_7.jpg>
-Package pdftex.def Info: images/number6_7.jpg used on input line 260.
+Package pdftex.def Info: images/number6_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_8.jpg, id=86, 28.105pt x 28.105pt>
+<images/number6_8.jpg, id=85, 28.105pt x 28.105pt>
 File: images/number6_8.jpg Graphic file (type jpg)
  <use images/number6_8.jpg>
-Package pdftex.def Info: images/number6_8.jpg used on input line 260.
+Package pdftex.def Info: images/number6_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number6_9.jpg, id=87, 28.105pt x 28.105pt>
+<images/number6_9.jpg, id=86, 28.105pt x 28.105pt>
 File: images/number6_9.jpg Graphic file (type jpg)
  <use images/number6_9.jpg>
-Package pdftex.def Info: images/number6_9.jpg used on input line 260.
+Package pdftex.def Info: images/number6_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_0.jpg, id=88, 28.105pt x 28.105pt>
+<images/number7_0.jpg, id=87, 28.105pt x 28.105pt>
 File: images/number7_0.jpg Graphic file (type jpg)
  <use images/number7_0.jpg>
-Package pdftex.def Info: images/number7_0.jpg used on input line 260.
+Package pdftex.def Info: images/number7_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_1.jpg, id=89, 28.105pt x 28.105pt>
+<images/number7_1.jpg, id=88, 28.105pt x 28.105pt>
 File: images/number7_1.jpg Graphic file (type jpg)
  <use images/number7_1.jpg>
-Package pdftex.def Info: images/number7_1.jpg used on input line 260.
+Package pdftex.def Info: images/number7_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_2.jpg, id=90, 28.105pt x 28.105pt>
+<images/number7_2.jpg, id=89, 28.105pt x 28.105pt>
 File: images/number7_2.jpg Graphic file (type jpg)
  <use images/number7_2.jpg>
-Package pdftex.def Info: images/number7_2.jpg used on input line 260.
+Package pdftex.def Info: images/number7_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_3.jpg, id=91, 28.105pt x 28.105pt>
+<images/number7_3.jpg, id=90, 28.105pt x 28.105pt>
 File: images/number7_3.jpg Graphic file (type jpg)
  <use images/number7_3.jpg>
-Package pdftex.def Info: images/number7_3.jpg used on input line 260.
+Package pdftex.def Info: images/number7_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_4.jpg, id=92, 28.105pt x 28.105pt>
+<images/number7_4.jpg, id=91, 28.105pt x 28.105pt>
 File: images/number7_4.jpg Graphic file (type jpg)
  <use images/number7_4.jpg>
-Package pdftex.def Info: images/number7_4.jpg used on input line 260.
+Package pdftex.def Info: images/number7_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_5.jpg, id=93, 28.105pt x 28.105pt>
+<images/number7_5.jpg, id=92, 28.105pt x 28.105pt>
 File: images/number7_5.jpg Graphic file (type jpg)
  <use images/number7_5.jpg>
-Package pdftex.def Info: images/number7_5.jpg used on input line 260.
+Package pdftex.def Info: images/number7_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_6.jpg, id=94, 28.105pt x 28.105pt>
+<images/number7_6.jpg, id=93, 28.105pt x 28.105pt>
 File: images/number7_6.jpg Graphic file (type jpg)
  <use images/number7_6.jpg>
-Package pdftex.def Info: images/number7_6.jpg used on input line 260.
+Package pdftex.def Info: images/number7_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_7.jpg, id=95, 28.105pt x 28.105pt>
+<images/number7_7.jpg, id=94, 28.105pt x 28.105pt>
 File: images/number7_7.jpg Graphic file (type jpg)
  <use images/number7_7.jpg>
-Package pdftex.def Info: images/number7_7.jpg used on input line 260.
+Package pdftex.def Info: images/number7_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_8.jpg, id=96, 28.105pt x 28.105pt>
+<images/number7_8.jpg, id=95, 28.105pt x 28.105pt>
 File: images/number7_8.jpg Graphic file (type jpg)
  <use images/number7_8.jpg>
-Package pdftex.def Info: images/number7_8.jpg used on input line 260.
+Package pdftex.def Info: images/number7_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number7_9.jpg, id=97, 28.105pt x 28.105pt>
+<images/number7_9.jpg, id=96, 28.105pt x 28.105pt>
 File: images/number7_9.jpg Graphic file (type jpg)
  <use images/number7_9.jpg>
-Package pdftex.def Info: images/number7_9.jpg used on input line 260.
+Package pdftex.def Info: images/number7_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_0.jpg, id=98, 28.105pt x 28.105pt>
+<images/number8_0.jpg, id=97, 28.105pt x 28.105pt>
 File: images/number8_0.jpg Graphic file (type jpg)
  <use images/number8_0.jpg>
-Package pdftex.def Info: images/number8_0.jpg used on input line 260.
+Package pdftex.def Info: images/number8_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_1.jpg, id=99, 28.105pt x 28.105pt>
+<images/number8_1.jpg, id=98, 28.105pt x 28.105pt>
 File: images/number8_1.jpg Graphic file (type jpg)
  <use images/number8_1.jpg>
-Package pdftex.def Info: images/number8_1.jpg used on input line 260.
+Package pdftex.def Info: images/number8_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_2.jpg, id=100, 28.105pt x 28.105pt>
+<images/number8_2.jpg, id=99, 28.105pt x 28.105pt>
 File: images/number8_2.jpg Graphic file (type jpg)
  <use images/number8_2.jpg>
-Package pdftex.def Info: images/number8_2.jpg used on input line 260.
+Package pdftex.def Info: images/number8_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_3.jpg, id=101, 28.105pt x 28.105pt>
+<images/number8_3.jpg, id=100, 28.105pt x 28.105pt>
 File: images/number8_3.jpg Graphic file (type jpg)
  <use images/number8_3.jpg>
-Package pdftex.def Info: images/number8_3.jpg used on input line 260.
+Package pdftex.def Info: images/number8_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_4.jpg, id=102, 28.105pt x 28.105pt>
+<images/number8_4.jpg, id=101, 28.105pt x 28.105pt>
 File: images/number8_4.jpg Graphic file (type jpg)
  <use images/number8_4.jpg>
-Package pdftex.def Info: images/number8_4.jpg used on input line 260.
+Package pdftex.def Info: images/number8_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_5.jpg, id=103, 28.105pt x 28.105pt>
+<images/number8_5.jpg, id=102, 28.105pt x 28.105pt>
 File: images/number8_5.jpg Graphic file (type jpg)
  <use images/number8_5.jpg>
-Package pdftex.def Info: images/number8_5.jpg used on input line 260.
+Package pdftex.def Info: images/number8_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_6.jpg, id=104, 28.105pt x 28.105pt>
+<images/number8_6.jpg, id=103, 28.105pt x 28.105pt>
 File: images/number8_6.jpg Graphic file (type jpg)
  <use images/number8_6.jpg>
-Package pdftex.def Info: images/number8_6.jpg used on input line 260.
+Package pdftex.def Info: images/number8_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_7.jpg, id=105, 28.105pt x 28.105pt>
+<images/number8_7.jpg, id=104, 28.105pt x 28.105pt>
 File: images/number8_7.jpg Graphic file (type jpg)
  <use images/number8_7.jpg>
-Package pdftex.def Info: images/number8_7.jpg used on input line 260.
+Package pdftex.def Info: images/number8_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_8.jpg, id=106, 28.105pt x 28.105pt>
+<images/number8_8.jpg, id=105, 28.105pt x 28.105pt>
 File: images/number8_8.jpg Graphic file (type jpg)
  <use images/number8_8.jpg>
-Package pdftex.def Info: images/number8_8.jpg used on input line 260.
+Package pdftex.def Info: images/number8_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number8_9.jpg, id=107, 28.105pt x 28.105pt>
+<images/number8_9.jpg, id=106, 28.105pt x 28.105pt>
 File: images/number8_9.jpg Graphic file (type jpg)
  <use images/number8_9.jpg>
-Package pdftex.def Info: images/number8_9.jpg used on input line 260.
+Package pdftex.def Info: images/number8_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_0.jpg, id=108, 28.105pt x 28.105pt>
+<images/number9_0.jpg, id=107, 28.105pt x 28.105pt>
 File: images/number9_0.jpg Graphic file (type jpg)
  <use images/number9_0.jpg>
-Package pdftex.def Info: images/number9_0.jpg used on input line 260.
+Package pdftex.def Info: images/number9_0.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_1.jpg, id=109, 28.105pt x 28.105pt>
+<images/number9_1.jpg, id=108, 28.105pt x 28.105pt>
 File: images/number9_1.jpg Graphic file (type jpg)
  <use images/number9_1.jpg>
-Package pdftex.def Info: images/number9_1.jpg used on input line 260.
+Package pdftex.def Info: images/number9_1.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_2.jpg, id=110, 28.105pt x 28.105pt>
+<images/number9_2.jpg, id=109, 28.105pt x 28.105pt>
 File: images/number9_2.jpg Graphic file (type jpg)
  <use images/number9_2.jpg>
-Package pdftex.def Info: images/number9_2.jpg used on input line 260.
+Package pdftex.def Info: images/number9_2.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_3.jpg, id=111, 28.105pt x 28.105pt>
+<images/number9_3.jpg, id=110, 28.105pt x 28.105pt>
 File: images/number9_3.jpg Graphic file (type jpg)
  <use images/number9_3.jpg>
-Package pdftex.def Info: images/number9_3.jpg used on input line 260.
+Package pdftex.def Info: images/number9_3.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_4.jpg, id=112, 28.105pt x 28.105pt>
+<images/number9_4.jpg, id=111, 28.105pt x 28.105pt>
 File: images/number9_4.jpg Graphic file (type jpg)
  <use images/number9_4.jpg>
-Package pdftex.def Info: images/number9_4.jpg used on input line 260.
+Package pdftex.def Info: images/number9_4.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_5.jpg, id=113, 28.105pt x 28.105pt>
+<images/number9_5.jpg, id=112, 28.105pt x 28.105pt>
 File: images/number9_5.jpg Graphic file (type jpg)
  <use images/number9_5.jpg>
-Package pdftex.def Info: images/number9_5.jpg used on input line 260.
+Package pdftex.def Info: images/number9_5.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_6.jpg, id=114, 28.105pt x 28.105pt>
+<images/number9_6.jpg, id=113, 28.105pt x 28.105pt>
 File: images/number9_6.jpg Graphic file (type jpg)
  <use images/number9_6.jpg>
-Package pdftex.def Info: images/number9_6.jpg used on input line 260.
+Package pdftex.def Info: images/number9_6.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_7.jpg, id=115, 28.105pt x 28.105pt>
+<images/number9_7.jpg, id=114, 28.105pt x 28.105pt>
 File: images/number9_7.jpg Graphic file (type jpg)
  <use images/number9_7.jpg>
-Package pdftex.def Info: images/number9_7.jpg used on input line 260.
+Package pdftex.def Info: images/number9_7.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_8.jpg, id=116, 28.105pt x 28.105pt>
+<images/number9_8.jpg, id=115, 28.105pt x 28.105pt>
 File: images/number9_8.jpg Graphic file (type jpg)
  <use images/number9_8.jpg>
-Package pdftex.def Info: images/number9_8.jpg used on input line 260.
+Package pdftex.def Info: images/number9_8.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
-<images/number9_9.jpg, id=117, 28.105pt x 28.105pt>
+<images/number9_9.jpg, id=116, 28.105pt x 28.105pt>
 File: images/number9_9.jpg Graphic file (type jpg)
  <use images/number9_9.jpg>
-Package pdftex.def Info: images/number9_9.jpg used on input line 260.
+Package pdftex.def Info: images/number9_9.jpg used on input line 263.
 (pdftex.def)             Requested size: 28.10492pt x 28.10492pt.
 
 [3
@@ -987,55 +986,55 @@ es/number8_8.jpg> <./images/number8_9.jpg> <./images/number9_0.jpg> <./images/n
 umber9_1.jpg> <./images/number9_2.jpg> <./images/number9_3.jpg> <./images/numbe
 r9_4.jpg> <./images/number9_5.jpg> <./images/number9_6.jpg> <./images/number9_7
 .jpg> <./images/number9_8.jpg> <./images/number9_9.jpg>]
-<images/part2_simple_network.png, id=224, 963.6pt x 542.025pt>
+<images/part2_simple_network.png, id=223, 963.6pt x 542.025pt>
 File: images/part2_simple_network.png Graphic file (type png)
 
 <use images/part2_simple_network.png>
-Package pdftex.def Info: images/part2_simple_network.png used on input line 277
+Package pdftex.def Info: images/part2_simple_network.png used on input line 280
 .
 (pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 283.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 286.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 285.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 288.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [5
 
  <./images/part2_simple_network.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 316--319
+Underfull \hbox (badness 10000) in paragraph at lines 319--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--319
+Underfull \hbox (badness 10000) in paragraph at lines 319--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--334
+Underfull \hbox (badness 10000) in paragraph at lines 325--337
 
  []
 
 
-Overfull \hbox (4.735pt too wide) in paragraph at lines 335--338
+Overfull \hbox (4.735pt too wide) in paragraph at lines 338--341
 []\OT1/cmr/m/n/10 To cal-cu-late the par-tial deriva-tive of C, we will con-sid
 er only \OT1/cmr/bx/n/10 a sin-gle train-ing sam-ple\OT1/cmr/m/n/10 : $\OML/cmm
-/m/it/10 C \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ [][] \OML/cmm/m/it/10 y[]log\
-OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )$
+/m/it/10 C \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10   [][] \OML/cmm/m/it/10 y[]log\OT
+1/cmr/m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--340
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
@@ -1045,57 +1044,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
 ] [8
 
-] <images/p4_training_set_acc.jpeg, id=249, 462.528pt x 341.1144pt>
+] <images/p4_training_set_acc.jpeg, id=248, 462.528pt x 341.1144pt>
 File: images/p4_training_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p4_training_set_acc.jpeg>
-Package pdftex.def Info: images/p4_training_set_acc.jpeg used on input line 490
+Package pdftex.def Info: images/p4_training_set_acc.jpeg used on input line 493
 .
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/p4_training_set_cost.jpeg, id=250, 462.528pt x 341.1144pt>
+<images/p4_training_set_cost.jpeg, id=249, 462.528pt x 341.1144pt>
 File: images/p4_training_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p4_training_set_cost.jpeg>
 Package pdftex.def Info: images/p4_training_set_cost.jpeg used on input line 49
-6.
+9.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/p4_valid_set_acc.jpeg, id=251, 462.528pt x 341.1144pt>
+<images/p4_valid_set_acc.jpeg, id=250, 462.528pt x 341.1144pt>
 File: images/p4_valid_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p4_valid_set_acc.jpeg>
-Package pdftex.def Info: images/p4_valid_set_acc.jpeg used on input line 502.
+Package pdftex.def Info: images/p4_valid_set_acc.jpeg used on input line 505.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/p4_valid_set_cost.jpeg, id=252, 462.528pt x 341.1144pt>
+<images/p4_valid_set_cost.jpeg, id=251, 462.528pt x 341.1144pt>
 File: images/p4_valid_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p4_valid_set_cost.jpeg>
-Package pdftex.def Info: images/p4_valid_set_cost.jpeg used on input line 508.
+Package pdftex.def Info: images/p4_valid_set_cost.jpeg used on input line 511.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 489--512
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 492--515
 [][] []
  []
 
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 489--512
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 492--515
 [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--520
+Underfull \hbox (badness 10000) in paragraph at lines 482--518
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--520
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--520
+Underfull \hbox (badness 10000) in paragraph at lines 482--518
 
  []
 
@@ -1103,284 +1097,401 @@ Underfull \hbox (badness 10000) in paragraph at lines 477--520
 
  <./images/p4_training_set_acc.jpeg> <./images/p4_training_set_cost.jpeg> <./im
 ages/p4_valid_set_acc.jpeg> <./images/p4_valid_set_cost.jpeg>]
-<images/p5_training_set_acc.jpeg, id=256, 462.528pt x 341.1144pt>
+<images/p4_0.jpg, id=255, 462.528pt x 346.896pt>
+File: images/p4_0.jpg Graphic file (type jpg)
+ <use images/p4_0.jpg>
+Package pdftex.def Info: images/p4_0.jpg used on input line 524.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_1.jpg, id=256, 462.528pt x 346.896pt>
+File: images/p4_1.jpg Graphic file (type jpg)
+ <use images/p4_1.jpg>
+Package pdftex.def Info: images/p4_1.jpg used on input line 530.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<Images/p4_2.jpg, id=257, 462.528pt x 346.896pt>
+File: Images/p4_2.jpg Graphic file (type jpg)
+ <use Images/p4_2.jpg>
+Package pdftex.def Info: Images/p4_2.jpg used on input line 536.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_3.jpg, id=258, 462.528pt x 346.896pt>
+File: images/p4_3.jpg Graphic file (type jpg)
+ <use images/p4_3.jpg>
+Package pdftex.def Info: images/p4_3.jpg used on input line 542.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_4.jpg, id=259, 462.528pt x 346.896pt>
+File: images/p4_4.jpg Graphic file (type jpg)
+ <use images/p4_4.jpg>
+Package pdftex.def Info: images/p4_4.jpg used on input line 548.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_5.jpg, id=260, 462.528pt x 346.896pt>
+File: images/p4_5.jpg Graphic file (type jpg)
+ <use images/p4_5.jpg>
+Package pdftex.def Info: images/p4_5.jpg used on input line 554.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_6.jpg, id=261, 462.528pt x 346.896pt>
+File: images/p4_6.jpg Graphic file (type jpg)
+ <use images/p4_6.jpg>
+Package pdftex.def Info: images/p4_6.jpg used on input line 560.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_7.jpg, id=262, 462.528pt x 346.896pt>
+File: images/p4_7.jpg Graphic file (type jpg)
+ <use images/p4_7.jpg>
+Package pdftex.def Info: images/p4_7.jpg used on input line 566.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_8.jpg, id=263, 462.528pt x 346.896pt>
+File: images/p4_8.jpg Graphic file (type jpg)
+ <use images/p4_8.jpg>
+Package pdftex.def Info: images/p4_8.jpg used on input line 572.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+
+<images/p4_9.jpg, id=264, 462.528pt x 346.896pt>
+File: images/p4_9.jpg Graphic file (type jpg)
+ <use images/p4_9.jpg>
+Package pdftex.def Info: images/p4_9.jpg used on input line 578.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+ [10
+
+ <./images/p4_0.jpg> <./images/p4_1.jpg> <./Images/p4_2.jpg> <./images/p4_3.jpg
+> <./images/p4_4.jpg> <./images/p4_5.jpg> <./images/p4_6.jpg> <./images/p4_7.jp
+g> <./images/p4_8.jpg> <./images/p4_9.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 594--598
+
+ []
+
+<images/p5_training_set_acc.jpeg, id=268, 462.528pt x 341.1144pt>
 File: images/p5_training_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p5_training_set_acc.jpeg>
-Package pdftex.def Info: images/p5_training_set_acc.jpeg used on input line 531
+Package pdftex.def Info: images/p5_training_set_acc.jpeg used on input line 611
 .
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/p5_training_set_cost.jpeg, id=257, 462.528pt x 341.1144pt>
+<images/p5_training_set_cost.jpeg, id=269, 462.528pt x 341.1144pt>
 File: images/p5_training_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p5_training_set_cost.jpeg>
-Package pdftex.def Info: images/p5_training_set_cost.jpeg used on input line 53
+Package pdftex.def Info: images/p5_training_set_cost.jpeg used on input line 61
 7.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/p5_valid_set_acc.jpeg, id=258, 462.528pt x 341.1144pt>
+<images/p5_valid_set_acc.jpeg, id=270, 462.528pt x 341.1144pt>
 File: images/p5_valid_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p5_valid_set_acc.jpeg>
-Package pdftex.def Info: images/p5_valid_set_acc.jpeg used on input line 543.
+Package pdftex.def Info: images/p5_valid_set_acc.jpeg used on input line 623.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-<images/p5_valid_set_cost.jpeg, id=259, 462.528pt x 341.1144pt>
+<images/p5_valid_set_cost.jpeg, id=271, 462.528pt x 341.1144pt>
 File: images/p5_valid_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p5_valid_set_cost.jpeg>
-Package pdftex.def Info: images/p5_valid_set_cost.jpeg used on input line 549.
+Package pdftex.def Info: images/p5_valid_set_cost.jpeg used on input line 629.
 (pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 530--553
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 610--633
 [][] []
  []
 
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 530--553
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 610--633
 [] [] 
- []
-
-[10
-
- <./images/p5_training_set_acc.jpeg> <./images/p5_training_set_cost.jpeg> <./im
-ages/p5_valid_set_acc.jpeg> <./images/p5_valid_set_cost.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 562--565
-
- []
-
-<images/contour_20k_05a_03mom.jpeg, id=263, 462.528pt x 341.1144pt>
-File: images/contour_20k_05a_03mom.jpeg Graphic file (type jpg)
-
-<use images/contour_20k_05a_03mom.jpeg>
-Package pdftex.def Info: images/contour_20k_05a_03mom.jpeg used on input line 5
-75.
-(pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
-
-<images/contour_20k_055a_03mom.jpeg, id=264, 462.528pt x 341.1144pt>
-File: images/contour_20k_055a_03mom.jpeg Graphic file (type jpg)
-
-<use images/contour_20k_055a_03mom.jpeg>
-Package pdftex.def Info: images/contour_20k_055a_03mom.jpeg used on input line 
-581.
-(pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
-
-<images/contour_20k_05a_09mom.jpeg, id=265, 462.528pt x 346.896pt>
-File: images/contour_20k_05a_09mom.jpeg Graphic file (type jpg)
-
-<use images/contour_20k_05a_09mom.jpeg>
-Package pdftex.def Info: images/contour_20k_05a_09mom.jpeg used on input line 5
-87.
-(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
-
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 574--591
-[][] []
  []
 
 [11
 
+ <./images/p5_training_set_acc.jpeg> <./images/p5_training_set_cost.jpeg> <./im
+ages/p5_valid_set_acc.jpeg> <./images/p5_valid_set_cost.jpeg>]
+
+LaTeX Warning: Float too large for page by 13.07268pt on input line 696.
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 703--706
+
+ []
+
+<images/contour_20k_05a_03mom.jpeg, id=278, 462.528pt x 341.1144pt>
+File: images/contour_20k_05a_03mom.jpeg Graphic file (type jpg)
+
+<use images/contour_20k_05a_03mom.jpeg>
+Package pdftex.def Info: images/contour_20k_05a_03mom.jpeg used on input line 7
+16.
+(pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
+
+<images/contour_20k_055a_03mom.jpeg, id=279, 462.528pt x 341.1144pt>
+File: images/contour_20k_055a_03mom.jpeg Graphic file (type jpg)
+
+<use images/contour_20k_055a_03mom.jpeg>
+Package pdftex.def Info: images/contour_20k_055a_03mom.jpeg used on input line 
+722.
+(pdftex.def)             Requested size: 234.87749pt x 173.22171pt.
+
+<images/contour_20k_05a_09mom.jpeg, id=280, 462.528pt x 346.896pt>
+File: images/contour_20k_05a_09mom.jpeg Graphic file (type jpg)
+
+<use images/contour_20k_05a_09mom.jpeg>
+Package pdftex.def Info: images/contour_20k_05a_09mom.jpeg used on input line 7
+28.
+(pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
+
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 715--732
+[][] []
+ []
+
+[13
+
+
  <./images/contour_20k_05a_03mom.jpeg> <./images/contour_20k_055a_03mom.jpeg> <
 ./images/contour_20k_05a_09mom.jpeg>]
-Overfull \hbox (1.23572pt too wide) in paragraph at lines 635--636
+Overfull \hbox (1.23572pt too wide) in paragraph at lines 776--777
 \OML/cmm/m/it/10 C\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]; :::; a[]\OT1/cmr/m/n/1
 0 )$. Each $\OML/cmm/m/it/10 a[]$ \OT1/cmr/m/n/10 is in turn com-puted by first
  eval-u-at-ing the in-ner prod-uct $[][] \OML/cmm/m/it/10 W[]a[]$\OT1/cmr/m/n/1
 0 ,
  []
 
-[12
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 707--712
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 720--727
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 741--745
-
- []
-
 [14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
+Underfull \hbox (badness 10000) in paragraph at lines 848--853
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 861--868
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 763--764
+Underfull \hbox (badness 10000) in paragraph at lines 882--886
+
+ []
+
+[16
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 900--901
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 767--768
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
 
  []
 
-<images/p8_training_set_acc.jpeg, id=280, 462.528pt x 346.896pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--909
+
+ []
+
+<images/p8_training_set_acc.jpeg, id=295, 462.528pt x 346.896pt>
 File: images/p8_training_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p8_training_set_acc.jpeg>
-Package pdftex.def Info: images/p8_training_set_acc.jpeg used on input line 809
+Package pdftex.def Info: images/p8_training_set_acc.jpeg used on input line 950
 .
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-<images/p8_training_set_cost.jpeg, id=281, 462.528pt x 346.896pt>
+<images/p8_training_set_cost.jpeg, id=296, 462.528pt x 346.896pt>
 File: images/p8_training_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p8_training_set_cost.jpeg>
-Package pdftex.def Info: images/p8_training_set_cost.jpeg used on input line 81
-5.
+Package pdftex.def Info: images/p8_training_set_cost.jpeg used on input line 95
+6.
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-<images/p8_valid_set_acc.jpeg, id=282, 462.528pt x 346.896pt>
+<images/p8_valid_set_acc.jpeg, id=297, 462.528pt x 346.896pt>
 File: images/p8_valid_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p8_valid_set_acc.jpeg>
-Package pdftex.def Info: images/p8_valid_set_acc.jpeg used on input line 821.
+Package pdftex.def Info: images/p8_valid_set_acc.jpeg used on input line 962.
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-<images/p8_valid_set_cost.jpeg, id=283, 462.528pt x 346.896pt>
+<images/p8_valid_set_cost.jpeg, id=298, 462.528pt x 346.896pt>
 File: images/p8_valid_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p8_valid_set_cost.jpeg>
-Package pdftex.def Info: images/p8_valid_set_cost.jpeg used on input line 827.
+Package pdftex.def Info: images/p8_valid_set_cost.jpeg used on input line 968.
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 808--831
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 949--972
 [][] []
  []
 
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 808--831
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 949--972
 [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--840
+Underfull \hbox (badness 10000) in paragraph at lines 980--981
 
  []
 
-[15
+[17
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 843--845
+Underfull \hbox (badness 10000) in paragraph at lines 984--986
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--849
+Underfull \hbox (badness 10000) in paragraph at lines 989--990
 
  []
 
-[16 <./images/p8_training_set_acc.jpeg> <./images/p8_training_set_cost.jpeg> <.
-/images/p8_valid_set_acc.jpeg> <./images/p8_valid_set_cost.jpeg>] [17
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 866--867
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 870--871
+[18 <./images/p8_training_set_acc.jpeg> <./images/p8_training_set_cost.jpeg> <.
+/images/p8_valid_set_acc.jpeg> <./images/p8_valid_set_cost.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 876--877
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1012
+
+ []
+
+[19
+
+] <images/part8harmonpromoter.jpg, id=309, 867.24pt x 433.62pt>
+File: images/part8harmonpromoter.jpg Graphic file (type jpg)
+
+<use images/part8harmonpromoter.jpg>
+Package pdftex.def Info: images/part8harmonpromoter.jpg used on input line 1041
+.
+(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
+
+<images/part8harmoninhibitor.jpg, id=310, 867.24pt x 433.62pt>
+File: images/part8harmoninhibitor.jpg Graphic file (type jpg)
+
+<use images/part8harmoninhibitor.jpg>
+Package pdftex.def Info: images/part8harmoninhibitor.jpg used on input line 104
+7.
+(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
+ [20
+
+ <./images/part8harmonpromoter.jpg> <./images/part8harmoninhibitor.jpg>]
+<images/part8gilpinpromoter.jpg, id=314, 867.24pt x 433.62pt>
+File: images/part8gilpinpromoter.jpg Graphic file (type jpg)
+
+<use images/part8gilpinpromoter.jpg>
+Package pdftex.def Info: images/part8gilpinpromoter.jpg used on input line 1060
+.
+(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
+
+<images/part8gilpininhibitor.jpg, id=315, 867.24pt x 433.62pt>
+File: images/part8gilpininhibitor.jpg Graphic file (type jpg)
+
+<use images/part8gilpininhibitor.jpg>
+Package pdftex.def Info: images/part8gilpininhibitor.jpg used on input line 106
+6.
+(pdftex.def)             Requested size: 469.75499pt x 234.87912pt.
+ [21
+
+ <./images/part8gilpinpromoter.jpg> <./images/part8gilpininhibitor.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1083
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--881
+Underfull \hbox (badness 10000) in paragraph at lines 1086--1087
 
  []
 
-<images/p10_training_set_acc.jpeg, id=293, 462.528pt x 346.896pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1092--1093
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1097
+
+ []
+
+<images/p10_training_set_acc.jpeg, id=319, 462.528pt x 346.896pt>
 File: images/p10_training_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p10_training_set_acc.jpeg>
-Package pdftex.def Info: images/p10_training_set_acc.jpeg used on input line 92
-0.
+Package pdftex.def Info: images/p10_training_set_acc.jpeg used on input line 11
+36.
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-<images/p10_training_set_cost.jpeg, id=294, 462.528pt x 346.896pt>
+<images/p10_training_set_cost.jpeg, id=320, 462.528pt x 346.896pt>
 File: images/p10_training_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p10_training_set_cost.jpeg>
-Package pdftex.def Info: images/p10_training_set_cost.jpeg used on input line 9
-26.
+Package pdftex.def Info: images/p10_training_set_cost.jpeg used on input line 1
+142.
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-<images/p10_valid_set_acc.jpeg, id=295, 462.528pt x 346.896pt>
+<images/p10_valid_set_acc.jpeg, id=321, 462.528pt x 346.896pt>
 File: images/p10_valid_set_acc.jpeg Graphic file (type jpg)
 
 <use images/p10_valid_set_acc.jpeg>
-Package pdftex.def Info: images/p10_valid_set_acc.jpeg used on input line 932.
+Package pdftex.def Info: images/p10_valid_set_acc.jpeg used on input line 1148.
+
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-<images/p10_valid_set_cost.jpeg, id=296, 462.528pt x 346.896pt>
+<images/p10_valid_set_cost.jpeg, id=322, 462.528pt x 346.896pt>
 File: images/p10_valid_set_cost.jpeg Graphic file (type jpg)
 
 <use images/p10_valid_set_cost.jpeg>
-Package pdftex.def Info: images/p10_valid_set_cost.jpeg used on input line 938.
-
+Package pdftex.def Info: images/p10_valid_set_cost.jpeg used on input line 1154
+.
 (pdftex.def)             Requested size: 234.87749pt x 176.15768pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 919--942
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 1135--1158
 [][] []
  []
 
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 919--942
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 1135--1158
 [] [] 
  []
 
-[18
+[22
 
-] [19 <./images/p10_training_set_acc.jpeg> <./images/p10_training_set_cost.jpeg
+] [23 <./images/p10_training_set_acc.jpeg> <./images/p10_training_set_cost.jpeg
 > <./images/p10_valid_set_acc.jpeg> <./images/p10_valid_set_cost.jpeg>]
 
 AED: lastpage setting LastPage
-(./deepnn.aux) ) 
+(deepnn.aux) ) 
 Here is how much of TeX's memory you used:
- 6714 strings out of 493029
- 103599 string characters out of 6136234
- 305039 words of memory out of 5000000
- 10013 multiletter control sequences out of 15000+600000
- 14368 words of font info for 54 fonts, out of 8000000 for 9000
+ 6860 strings out of 493323
+ 106619 string characters out of 3139066
+ 310855 words of memory out of 3000000
+ 10147 multiletter control sequences out of 15000+200000
+ 14883 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,44p,1078b,1475s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/
-ucrro8a.pfb>
-Output written on deepnn.pdf (19 pages, 1063730 bytes).
+ 42i,12n,44p,1146b,1475s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<D:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cmextra/cmex7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsl10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:
+/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><D:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on deepnn.pdf (23 pages, 2112553 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 392 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 601 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 671 words of extra memory for PDF output out of 10000 (max. 10000000)
 
