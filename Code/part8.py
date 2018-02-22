@@ -243,13 +243,14 @@ def findUsefulNeurons(valX, valY, model, dim_x, dim_h, indActor):
 
     return (maxNeuron, minNeuron)
 
-def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, neuronType, showch = 0):
+def viewWeights(figIndex, hiddenUnitIndex, model, res, imagePath, actorName, neuronType, showch = 0):
     '''
     viewWeights provides a visualization of the weights going into the specified
     hidden neuron. The positive and negative weights are displayed separately since
     the plot function cannot interpret negative pixel values for images.
 
     Arguments:
+        figIndex -- indexes the figures
         hiddenUnitIndex -- the hidden unit whose input weights are to be examined
         model -- the trained model
         res -- the resolution of the images
@@ -288,7 +289,7 @@ def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, neuronType, s
             plt.show()
             #plt.savefig(imagePath + "part8" + actorName + ".jpg")
     else:
-        plt.figure(1, figsize=(12, 6))
+        plt.figure(figIndex, figsize=(12, 6))
         plt.subplot(1, 2, 1)
         plt.imshow(Wpos, interpolation = 'gaussian')
         plt.title('Useful weights for ' + actorName + " (positive values; " + neuronType + ")")
@@ -300,4 +301,3 @@ def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, neuronType, s
         plt.tight_layout()
         plt.show()
         plt.savefig(imagePath + "part8" + actorName + neuronType + ".jpg")
-    plt.gcf().clear()

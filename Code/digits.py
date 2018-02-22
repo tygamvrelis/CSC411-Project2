@@ -110,17 +110,18 @@ np.random.seed(3)
 init_W = np.random.rand(28*28 + 1,10) # Randomly initialize weight matrix
 alpha = 1e-5
 eps = 1e-6
-max_iter = 100
+max_iter = 500
 
 
 (Whistory, history) = p4.part4_gradient_descent(XTrain, YTrain, init_W, alpha, eps, max_iter)
 
 
 # Plot learning curves
-p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history)
+imagePath = "../Report/images/"
+p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history, imagePath, "p4")
 
 
-#Plot weight visualizations and save
+#Plot weight visualizations
 imagePath = "../Report/images/"
 p4.part4_plotWeights(Whistory[99], indicesTrain, imagePath, "p4_")
 
@@ -137,9 +138,11 @@ W = Whistory[99]
 
 
 #Plot learning curves
-p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history)
+imagePath = "../Report/images/"
+p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history, imagePath, "p5_")
 
-#Plot weight visualizations and save
+#Plot weight visualizations
+imagePath = "../Report/images/"
 p4.part4_plotWeights(W, indicesTrain, imagePath, "p5_")
 
 
@@ -169,7 +172,6 @@ momentum = 0.9
 (w1_van, w2_van) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2)
 (w1_mom, w2_mom) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2, momentum)
 p6.plot_contour(init_W, XTrain, YTrain, i1, j1, i2, j2, w1_van, w2_van, w1_mom, w2_mom)
-plt.gcf().clear()
 
 
 alpha = 0.5
@@ -177,38 +179,10 @@ momentum = 0.3
 (w1_van, w2_van) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2)
 (w1_mom, w2_mom) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2, momentum)
 p6.plot_contour(init_W, XTrain, YTrain, i1, j1, i2, j2, w1_van, w2_van, w1_mom, w2_mom)
-plt.gcf().clear()
+
 
 alpha = 0.55
 momentum = 0.3
 (w1_van, w2_van) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2)
 (w1_mom, w2_mom) = p6.k_steps_gradient_descent(XTrain, YTrain, init_W, alpha, k, i1, j1, i2, j2, momentum)
 p6.plot_contour(init_W, XTrain, YTrain, i1, j1, i2, j2, w1_van, w2_van, w1_mom, w2_mom)
-plt.gcf().clear()
-
-
-
-## Others
-def tanh_layer(y, W, b):    
-    '''
-    Return the output of a tanh layer for the input matrix y. y
-    is an NxM matrix where N is the number of inputs for a single case, and M
-    is the number of cases
-    '''
-    
-    return tanh(dot(W.T, y)+b)
-
-def forward(x, W0, b0, W1, b1):
-    L0 = tanh_layer(x, W0, b0) # tanh layer output
-    L1 = dot(W1.T, L0) + b1 # inner product layer output
-    output = softmax(L1)
-    return L0, L1, output
-
-def deriv_multilayer(W0, b0, W1, b1, x, L0, L1, y, y_):
-    '''
-    Incomplete function for computing the gradient of the cross-entropy
-    cost function w.r.t the parameters of a neural network
-    '''
-    
-    dCdL1 =  y - y_
-    dCdW1 =  dot(L0, dCdL1.T ) 

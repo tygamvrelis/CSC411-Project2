@@ -147,7 +147,7 @@ def part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter):
         if(iter % (max_iter // 100) == 0):
             # Print updates every so often and save cost into history list
             cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
-            history.append((float(iter), cost))
+            history.append((iter, cost))
             Whistory.append(current_W)
             print("Iter: ", iter, " | Cost: ", cost)
             
@@ -190,30 +190,6 @@ def part4_split_sets(X, Y, train_size, val_size, indices):
         j += 1
 
     return (trainX, trainY, valX, valY)
-
-# def part4_train(X, Y, alpha, eps, max_iter, init_W):
-#     '''
-#     part4_train returns the parameter W fit to the data in trainingSet using
-#     numImages images per digit via gradient descent.
-#
-#     Arguments:
-#         X -- matrix of training examples whose columns correspond to images from
-#              which predictions are to be made
-#         Y -- matrix of labels whose i-th column corresponds to the actual/target
-#              output for the i-th column in X
-#         indices -- a list containing the starting indexes for the various digits
-#         numImages -- a numerical value specifying the number of images per digit
-#                      to be used for training
-#         alpha -- gradient descent "learning rate" parameter (proportional to
-#                  step size)
-#         eps -- gradient descent parameter determining how tight the convergence
-#                criterion is
-#         init_W -- initial weight to be used as a guess (starting point)
-#     '''
-#
-#     # Run gradient descent
-#     return part4_gradient_descent(X, Y, init_W, alpha, eps, max_iter)
-    
     
 def part4_classify(X, Y, W):
     '''
@@ -249,7 +225,7 @@ def part4_classify(X, Y, W):
     return output
 
 
-def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
+def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history, imagePath, part):
     '''
     part4_plotLearningCurves plots the learning curves associated with training
     a neural network.
@@ -264,8 +240,6 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     correctVal = []
     costTrain = []
     costVal = []
-    num_iter = [i[0] for i in history]
-    cost = [i[1] for i in history]
 
     for i in range(100):
         outputList = part4_classify(XTrain, YTrain, Whistory[i])
@@ -280,38 +254,37 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history):
     num_iter = [i[0] for i in history]
     #cost = [i[1] for i in history]
 
-    figure(1)
+    plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, costTrain)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Training Set Cost Learning Curve')
+    plt.savefig(imagePath + part + "_training_set_cost" + ".jpeg")
     plt.show()
-    plt.gcf().clear()
 
-    figure(2)
+    plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, correctTrain)
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
     plt.title('Training Set Accuracy Learning Curve')
+    plt.savefig(imagePath + part + "_training_set_acc" + ".jpeg")
     plt.show()
-    plt.gcf().clear()
 
-    figure(3)
+    plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, costVal)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Validation Set Cost Learning Curve')
+    plt.savefig(imagePath + part + "_valid_set_cost" + ".jpeg")
     plt.show()
-    plt.gcf().clear()
 
-    figure(4)
+    plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, correctVal)
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
     plt.title('Validation Set Accuracy Learning Curve')
+    plt.savefig(imagePath + part + "_valid_set_acc" + ".jpeg")
     plt.show()
-
-    plt.gcf().clear()
     
 def part4_plotWeights(W, indices, imagePath, str_part):
     '''
@@ -324,13 +297,13 @@ def part4_plotWeights(W, indices, imagePath, str_part):
         imagePath -- a string giving the location to which images should be saved
         str_part -- a string indicating the project part
     '''
-    
+
     nums = [k[0] for k in indices]
     for n in nums:
+        plt.figure(plt.gcf().number + 1)
         plt.yscale('linear')
         plt.title("(Part 4) " + str(n))
         plt.imshow(W[1:,n].reshape((28,28)), interpolation = 'gaussian', cmap = plt.cm.coolwarm)
         plt.colorbar(orientation='vertical')
         plt.show()
         plt.savefig(imagePath + str_part + str(n) + ".jpg")
-        plt.gcf().clear()
