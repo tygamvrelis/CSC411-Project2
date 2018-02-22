@@ -713,7 +713,7 @@ def part5_gradient_descent(X, Y, init_W, alpha, eps, max_iter, init_v, momentum)
 \begin{homeworkProblem}
 	\noindent \textit{Comparison Between Momentum and Vanilla Gradient Descent}
 \newline
-The effect of momentum on gradient descent was studied by taking two different weights, treating them as coordinates and plotting their path over 20 iterations on a contour plot. Gradient descent was run two times for each plot, using the same initial weight matrices and only changing the two chosen weights while keeping the other weights constant. The coordinates of the weights studied were $W[200, 2]$ and $W[201, 2]$. Figure~\ref{fig:part6Equal} shows a plot where the two methods were comparable.\newline
+The effect of momentum on gradient descent was studied by taking two different weights, treating them as coordinates and plotting their path over 20 iterations on a contour plot. Gradient descent was run two times for each plot, using the same initial weight matrices and only changing the two chosen weights while keeping the other weights constant. The coordinates of the weights studied were $W[200, 2]$ and $W[201, 2]$. Figure~\ref{fig:part6Equal} shows a plot where the two methods were comparable in terms of performance.\newline
 		
 		\noindent \textit{Results}
 
@@ -759,12 +759,12 @@ A neural network consists of several layers of \textit{neurons} connected to eac
 This section presents an analysis of the runtime complexity of these two algorithms, ultimately deriving asymptotic upper bounds for each in the case of a fully-connected network with $N$ layers and $K$ neurons per layer. Note that only one training example will be considered, while in general the gradient would be an average over all training examples. The variables and dimensions to be used are explained as follows:
 \begin{itemize}
 	\item $C$ is the cost function
-	\item $W^{(i, j, k)}$ is the weight corresponding to the edge connecting the $j$\textsuperscript{th} neuron in the $(i-1)$\textsuperscript{th} layer to the $i$\textsuperscript{th} neuron in the $i$\textsuperscript{th} layer
+	\item $W^{(i, j, k)}$ is the weight corresponding to the edge connecting the $j$\textsuperscript{th} neuron in the $(i-1)$\textsuperscript{th} layer to the $k$\textsuperscript{th} neuron in the $i$\textsuperscript{th} layer
 	\begin{itemize}
 		\item $i \in [1, N]$
-		\item $j, k \in [1, k]$
+		\item $j, k \in [1, K]$
 	\end{itemize}
-	\item $a^{(i)} _k$ is the output from the $k$\textsuperscript{th} neuron in the $i$\textsuperscript{th} layer. Note that the neurons $a^{(0)} _k$ form the input layer and the neurons $a^{(N)} _k$ form the output layer.
+	\item $a^{(i)} _k$ is the output from the $k$\textsuperscript{th} neuron in the $i$\textsuperscript{th} layer. Note that the neurons $a^{(N)} _k$ form the output layer and the neurons $a^{(0)} _k$ form the input.
 	\item $N$ is the number of layers in the network
 	\item $K$ is the number of neurons per layer
 \end{itemize}
@@ -772,10 +772,13 @@ Also, the following reasonable assumptions are made to simplify the analysis:
 \begin{enumerate}
 	\item Element-wise multiplication is $O(1)$
 	\item Addition is negligible
-	\item Assume that an N-layer neural network includes the input and output layers in the count; that is, it has $N-2$ hidden layers
-	\item Assume activations functions and non-linearities such as softmax at the output layer can be ignored
+	\item An N-layer neural network includes the output layer in the count; that is, it has $N-1$ hidden layers
+	\item Activation functions and non-linearities such as softmax at the output layer can be ignored
 	\item Partial derivatives in tables (i.e. previously-solved subproblems) take negligible time to retrieve
 \end{enumerate}
+
+\clearpage
+
 \noindent \textit{Characterization of Na\"ive Approach (Brute Force)}
 \newline
 We begin with the na\"ive approach as this will make the analysis for the ``better" approach more simple due to the terminology developed. We begin by writing the derivative of the cost function with respect to an arbitrary weight:
@@ -784,7 +787,7 @@ $$
 \frac{\partial C}{\partial W^{(i, j, k)}}
 $$
 
-Next, we consider the fact that the cost function is evaluated at the output neurons, $a^{(N)} _ k$; that is, $C = C(a^{(N)} _1,...,a^{(N)} _K)$. Each $a^{(N)} _ k$ is in turn computed by first evaluating the inner product $\sum_{j = 1}^{K} W^{(N-1, j, k)}a^{(N-1)} _ j$, which uses the outputs from layer $N-1$ and the weights connecting these outputs to neuron $k$ in layer $N$. Each $a^{(N-1)} _ j$ can also be computed in a similar fashion using the outputs and weights from the previous layer, until layer $1$ is reached, which is the input layer. What this means is that any $a^{(i)} _k$ is technically an input to the cost function, so it makes sense to write expressions such as $\frac{\partial C}{\partial a^{(i)} _k}$. In fact, we can relate this to the partial derivative with respect to an arbitrary weight in the network using the chain rule from calculus:
+Next, we consider the fact that the cost function is evaluated at the output neurons, $a^{(N)} _ k$; that is, $C = C(a^{(N)} _1,...,a^{(N)} _K)$. Each $a^{(N)} _ k$ is in turn computed by first evaluating the inner product $\sum_{j = 1}^{K} W^{(N-1, j, k)}a^{(N-1)} _ j$, which uses the outputs from layer $N-1$ and the weights connecting these outputs to neuron $k$ in layer $N$. Each $a^{(N-1)} _ j$ can also be computed in a similar fashion using the outputs and weights from the previous layer, until the input layer is reached. What this means is that any $a^{(i)} _k$ is technically an input to the cost function, so it makes sense to write expressions such as $\frac{\partial C}{\partial a^{(i)} _k}$. In fact, we can relate this to the partial derivative with respect to an arbitrary weight in the network using the chain rule from calculus:
 
 $$
 \frac{\partial C}{\partial W^{(i, j, k)}}
@@ -857,18 +860,18 @@ $$
 	\Big) %2
 \Big) %1
 $$
-Since there are $N$ sums, and each runs from $1$ to $K$, this computation of the gradient with respect to a weight between the input layer and the first layer involves $k^N$ operations, provided that the previously-stated assumptions hold. Thus, it follows that for a weight connecting the first and second layers, there are $k^{N-1}$ computations (since the indices in the previous expression would all begin at layer $2$ instead of layer $1$). Indeed, for the gradient with respect to any weight connecting neurons in the $(i-1)$\textsuperscript{th} and $i$\textsuperscript{th} layers, there are $k^{N-(i-1)}$ computations. Thus, for weights connecting the $N-1$\textsuperscript{th} and $N$\textsuperscript{th} layers, there are then $k^{N-(N-1)}=k$ computations.
+Since there are $N$ sums, and each runs from $1$ to $K$, this computation of the gradient with respect to a weight between the input layer and the first layer involves $K^N$ operations, provided that the previously-stated assumptions hold. Thus, it follows that for a weight connecting the first and second layers, there are $K^{N-1}$ computations (since the indices in the previous expression would all begin at layer $2$ instead of layer $1$). Indeed, for the gradient with respect to any weight connecting neurons in the $(i-1)$\textsuperscript{th} and $i$\textsuperscript{th} layers, there are $K^{N-(i-1)}$ computations. Thus, for weights connecting the $N-1$\textsuperscript{th} and $N$\textsuperscript{th} layers, there are then $K^{N-(N-1)}=K$ computations.
 \newline
 \newline
-The total number of operations is then:
+The total number of operations is then the product of the number of nodes per layer $(K)$ and the number of operations to compute the gradient with respect to a weight in each layer:
 
 $$
-k(k^N + K^{N-1} + ... + k) = k^{N+1} + k^{N} + ... + k^2 \in O(Nk^{N+1})
+K(K^N + K^{N-1} + ... + K) = K^{N+1} + K^{N} + ... + K^2 \in O(NK^{N+1})
 $$
 
-So the na\"ive algorithm has a runtime complexity that is asymptotically bounded above by $O(Nk^{N+1})$.
-\clearpage
-
+So the na\"ive algorithm has a runtime complexity that is asymptotically bounded above by $O(NK^{N+1})$.
+\newline
+\newline
 \noindent \textit{Characterization of Backpropagation}
 \newline
 Now we will analyse the ``better" solution, backpropagation. Intuitively, we expect that after computing each partial derivative once, we should never need to compute it again as this exemplifies an \textit{overlapping subproblem}. To illustrate this, note that the partial derivative of the cost function in the first layer (implicitly) uses the partial derivatives of the cost function with respect to the outputs and weights in the second layer, and so forth. These latter partial derivatives should be retrievable in constant time if they were computed earlier.
@@ -876,10 +879,10 @@ Now we will analyse the ``better" solution, backpropagation. Intuitively, we exp
 \newline
 Note the following:
 \begin{enumerate}
-	\item Fully connected implies $k \times k = k^2$ weights per inter-layer junction
+	\item Fully connected implies $K \times K = K^2$ weights per inter-layer junction
 	\item $N$ layers implies $N-1$ inter-layer junctions
 	\item Each partial derivative should be constant time to compute
-	\item $(N-1)k^2$ total weights in the network
+	\item $(N-1)K^2$ total weights in the network
 \end{enumerate}
 Now, in the final layer of the network, there is $1$ partial derivative to compute for each $a^{(N)} _k$, which is simply $\frac{\partial C}{\partial a^{(N)} _k}$. However, in the previous inter-layer junction (i.e. connecting the $(N-1)$\textsuperscript{th} layer to the $N$\textsuperscript{th} layer), there are $2$ partial derivatives to compute, as shown below:
 
@@ -890,16 +893,16 @@ $$
 \frac{\partial a^{(N)} _k}{\partial W^{(N, j, k)}}
 $$
 
-But ${\partial a^{(N)} _k}$ is computed when considering the derivative of the cost function with respect to the output layer. So, if we work backwards through the neural network, we can see we can save time on computation since we don't need to keep computing partial derivatives whose values we already know. That is, in the case shown above, there were two partial derivatives that needed to be computed, but only one of them would need to be computed if the derivatives in the previous layer were already solved.
+But $\frac{\partial C}{\partial a^{(N)} _k}$ is computed when considering the derivative of the cost function with respect to the output layer. So, if we work backwards through the neural network, we can see we can save time on computation since we don't need to keep computing partial derivatives whose values we already know. That is, in the case shown above, there were two partial derivatives that needed to be computed, but only one of them would need to be computed if the derivatives in the previous layer were already solved.
 \newline
 \newline
-This concept generalizes across the network; thus, since there is one new computation required per weight, and there are $k^2$ weights per inter-layer junction, the total number of computations required to solve the gradient of the network with respect to all weights is:
+This concept generalizes across the network; thus, since there is one new computation required per weight, and there are $K^2$ weights per inter-layer junction, the total number of computations required to solve the gradient of the network with respect to all weights is:
 
 $$
-k^2 + k^2 + ... + k^2 \quad\quad\quad\quad \text{$N$ times}
+K^2 + K^2 + ... + K^2 \quad\quad\quad\quad \text{$N$ times}
 $$
 
-This gives an asymptotic upper bound on the runtime complexity of $O(k^2 N)$.
+This gives an asymptotic upper bound on the runtime complexity of $O(K^2 N)$.
 \clearpage
 \end{homeworkProblem}
 
