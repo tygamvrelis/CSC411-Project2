@@ -276,8 +276,10 @@ Ten images of each number were taken from the training sets and displayed in Fig
 
 \noindent In this part, the simple network depicted in Figure~\ref{fig:part2_simple_network} was implemented as a function in Python using NumPy, the code listing for which is presented is Figure~\ref{fig:part2_code}.
 
+Note: It is assumed that the biases are incorporated into the weight matrix and that the input vector is concatenated with an extra $x_{785} = 1$. 
+
 \begin{figure}[!ht]
-	\includegraphics[scale=1, width=1\linewidth]{images/part2_simple_network}
+	\includegraphics[scale=0.9, width=0.9\linewidth]{images/part2_simple_network}
 	\caption{Simple network diagram from project handout.}
 	\label{fig:part2_simple_network}
 \end{figure}
@@ -355,7 +357,7 @@ $x = \begin{bmatrix}
     (p_j - 1)x_i,& \text{if } y_j = 1\\
     p_jx_i,              & \text{otherwise}
 \end{cases}$$
-Which is equivalent to saying: $\frac{\partial C(W)}{\partial w_{ij}} = (p_j - y_j)x_i$. To extend this to all training samples, we just have to sum up each individual contribution, resulting in the equation: $\frac{\partial C(W)}{\partial w_{ij}} = \sum_{q = 1}^{m}((p_j - y_j)x_i)_q$.
+Which is equivalent to saying: $\frac{\partial C(W)}{\partial w_{ij}} = (p_j - y_j)x_i$. To extend this to \textbf{all training samples}, we just have to sum up each individual contribution, resulting in the equation: $\frac{\partial C(W)}{\partial w_{ij}} = \sum_{q = 1}^{m}((p_j - y_j)x_i)_q$.
 \clearpage
 
 \noindent \textit{Vectorized Implementation of Gradient (3b)}
@@ -679,7 +681,7 @@ def part5_gradient_descent(X, Y, init_W, alpha, eps, max_iter, init_v, momentum)
 		
 		current_v = momentum * current_v + alpha * p3.negLogLossGrad(X, Y, current_W)
 		current_W = current_W - current_v
-		
+	#As opposed to current_W = current_W - alpha * p3.negLogLossGrad(X, Y, current_W)
 		if(iter % (max_iter // 100) == 0):
 			# Print updates every so often and save cost into history list
 			cost = p3.NLL(p2.SimpleNetwork(current_W, X), Y)
@@ -706,7 +708,7 @@ The effect of momentum on gradient descent was studied by taking two different w
 		
 		\noindent \textit{Results}
 
-It was found that the effects of momentum could be seen most clearly when the learning rate was slightly increased, shown in Figure~\ref{fig:part6Mom}. This is because in the vanilla method, the weights would travel mostly vertically, due to the shape of the contour, while in the momentum method, the vertical components of the weights would cancel each other out over consecutive steps.
+It was found that the effects of momentum could be seen most clearly when the learning rate was slightly increased, shown in Figure~\ref{fig:part6Mom}. This is because in the vanilla method, the weights would travel mostly vertically, due to the shape of the contour, while in the momentum method, the vertical components of the weights would cancel each other out over consecutive steps. Therefore, the momentum method travels further towards the optimum with each step than the vanilla method.
 
 However, when momentum is too high, the contributions from the previous steps would have too much of an effect, resulting in the weights overshooting the minimum like in Figure~\ref{fig:part6Van}.
 
@@ -1038,13 +1040,13 @@ Initial Weights & Default Values\\
 \begin{figure}[!ht]
 	\centering
 	\begin{subfigure}[b]{1\textwidth}
-		\includegraphics[width=\textwidth]{images/part8harmonpromoter}
+		\includegraphics[width=\textwidth]{images/part8harmonpromoter.jpg}
 		\caption{The hidden unit promoting the activation of Harmon the most.}
 		\label{fig:part9HarmonPromoter}
 	\end{subfigure}
 	%
 	\begin{subfigure}[b]{1\textwidth}
-		\includegraphics[width=\textwidth]{images/part8harmoninhibitor}
+		\includegraphics[width=\textwidth]{images/part8harmoninhibitor.jpg}
 		\caption{The hidden unit inhibiting the activation of Harmon the most.}
 		\label{fig:part9HarmonInhibitor}
 	\end{subfigure}
@@ -1057,13 +1059,13 @@ Initial Weights & Default Values\\
 \begin{figure}[!ht]
 	\centering
 	\begin{subfigure}[b]{1\textwidth}
-		\includegraphics[width=\textwidth]{images/part8gilpinpromoter}
+		\includegraphics[width=\textwidth]{images/part8gilpinpromoter.jpg}
 		\caption{The hidden unit promoting the activation of Gilpin the most.}
 		\label{fig:part9GilpinPromoter}
 	\end{subfigure}
 	%
 	\begin{subfigure}[b]{1\textwidth}
-		\includegraphics[width=\textwidth]{images/part8gilpininhibitor}
+		\includegraphics[width=\textwidth]{images/part8gilpininhibitor.jpg}
 		\caption{The hidden unit inhibiting the activation of Gilpin the most.}
 		\label{fig:part9GilpinInhibitor}
 	\end{subfigure}

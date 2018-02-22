@@ -66,7 +66,8 @@ p8.draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter)
 # Define "useful" to mean the weights from the hidden layer to the output layer with the
 # largest maximum value, once multiplied by its activation
 imagePath = "../Report/images/"
-
+if torch.cuda.is_available():
+    model = model.cpu()
 # ind selects an image in the validation set. IF this image is classified correctly,
 # it will be fed into the network. The two neurons in the hidden layer that have the
 # most positive and most negative outputs given this image are then taken to be the

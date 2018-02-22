@@ -3,10 +3,38 @@
   <component name="ChangeListManager">
     <list default="true" id="d221de6d-77d2-4f6a-83f9-79cb2c892033" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Code/digits.py" afterPath="$PROJECT_DIR$/Code/digits.py" />
+      <change beforePath="$PROJECT_DIR$/Code/faces.py" afterPath="$PROJECT_DIR$/Code/faces.py" />
+      <change beforePath="$PROJECT_DIR$/Code/part4.py" afterPath="$PROJECT_DIR$/Code/part4.py" />
+      <change beforePath="$PROJECT_DIR$/Report/deepnn.aux" afterPath="$PROJECT_DIR$/Report/deepnn.aux" />
       <change beforePath="$PROJECT_DIR$/Report/deepnn.log" afterPath="$PROJECT_DIR$/Report/deepnn.log" />
       <change beforePath="$PROJECT_DIR$/Report/deepnn.pdf" afterPath="$PROJECT_DIR$/Report/deepnn.pdf" />
       <change beforePath="$PROJECT_DIR$/Report/deepnn.synctex.gz" afterPath="$PROJECT_DIR$/Report/deepnn.synctex.gz" />
       <change beforePath="$PROJECT_DIR$/Report/deepnn.tex" afterPath="$PROJECT_DIR$/Report/deepnn.tex" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_0.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_0.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_1.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_1.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_2.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_2.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_3.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_3.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_4.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_4.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_5.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_5.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_6.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_6.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_7.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_7.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_8.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_8.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_9.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_9.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_0.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_0.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_1.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_1.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_2.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_2.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_3.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_3.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_4.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_4.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_5.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_5.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_6.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_6.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_7.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_7.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_8.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_8.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_9.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_9.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/part8gilpininhibitor.jpg" afterPath="$PROJECT_DIR$/Report/images/part8gilpininhibitor.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/part8gilpinpromoter.jpg" afterPath="$PROJECT_DIR$/Report/images/part8gilpinpromoter.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/part8harmoninhibitor.jpg" afterPath="$PROJECT_DIR$/Report/images/part8harmoninhibitor.jpg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/part8harmonpromoter.jpg" afterPath="$PROJECT_DIR$/Report/images/part8harmonpromoter.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,18 +48,20 @@
       <file leaf-file-name="faces.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/faces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="135">
+              <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+              <folding>
+                <element signature="e#280#299#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="digits.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Code/digits.py">
+      <file leaf-file-name="part8.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Code/part8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="531">
+              <caret line="296" column="25" lean-forward="true" selection-start-line="296" selection-start-column="25" selection-end-line="296" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -65,7 +95,6 @@
         <option value="$PROJECT_DIR$/Data/mnist_handout.py" />
         <option value="$PROJECT_DIR$/Code/mnist_handout.py" />
         <option value="$PROJECT_DIR$/Code/mnist_handout__OUTDATED.py" />
-        <option value="$PROJECT_DIR$/Code/part4.py" />
         <option value="$PROJECT_DIR$/Code/part5.py" />
         <option value="$PROJECT_DIR$/Code/part2.py" />
         <option value="$PROJECT_DIR$/Data/Faces/actors.txt" />
@@ -75,9 +104,10 @@
         <option value="$PROJECT_DIR$/Code/part6.py" />
         <option value="$PROJECT_DIR$/Code/deepfaces.py" />
         <option value="$PROJECT_DIR$/Code/myalexnet.py" />
-        <option value="$PROJECT_DIR$/Code/digits.py" />
-        <option value="$PROJECT_DIR$/Code/faces.py" />
         <option value="$PROJECT_DIR$/Code/image_download.py" />
+        <option value="$PROJECT_DIR$/Code/faces.py" />
+        <option value="$PROJECT_DIR$/Code/part4.py" />
+        <option value="$PROJECT_DIR$/Code/digits.py" />
       </list>
     </option>
   </component>
@@ -168,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.faces">
+  <component name="RunManager" selected="Python.digits">
     <configuration name="Cuda" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -288,9 +318,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.faces" />
+        <item index="0" class="java.lang.String" itemvalue="Python.digits" />
         <item index="1" class="java.lang.String" itemvalue="Python.deepfaces" />
-        <item index="2" class="java.lang.String" itemvalue="Python.digits" />
+        <item index="2" class="java.lang.String" itemvalue="Python.faces" />
         <item index="3" class="java.lang.String" itemvalue="Python.image_processing" />
         <item index="4" class="java.lang.String" itemvalue="Python.part8" />
       </list>
@@ -436,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519264099365</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="latex slightly changed to work with me">
+      <created>1519264488220</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1519264488220</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -455,9 +492,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18941048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5026076" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3172775" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3172775" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19581152" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329843" sideWeight="0.49739245" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3329843" sideWeight="0.49739245" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981523" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -503,7 +540,8 @@
     <MESSAGE value="slight change" />
     <MESSAGE value="Images commit" />
     <MESSAGE value="Download code added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Download code added" />
+    <MESSAGE value="latex slightly changed to work with me" />
+    <option name="LAST_COMMIT_MESSAGE" value="latex slightly changed to work with me" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -711,27 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/part4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="76" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/part8.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="108" column="20" lean-forward="false" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/image_processing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1062">
@@ -756,28 +773,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/image_download.py">
+    <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#19#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="540">
+          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/faces.py">
+    <entry file="file://$PROJECT_DIR$/Code/part4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state relative-caret-position="261">
+          <caret line="145" column="8" lean-forward="false" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/image_download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-423">
+          <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/digits.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="-1854">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="94" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/faces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding>
+            <element signature="e#280#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/part8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="296" column="25" lean-forward="true" selection-start-line="296" selection-start-column="25" selection-end-line="296" selection-end-column="25" />
           <folding />
         </state>
       </provider>
