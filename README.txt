@@ -26,4 +26,4 @@ There are 3 different scripts that can be run:
 	2. faces.py -- parts 8 and 9 of the project
 	3. deepfaces.py -- part 10 of the project
 
-Prior to running any of these, make sure that the current working directory (os.getcwd()) is set to the "Code" folder created previously. After this, please run the scripts in the order listed above.
+Prior to running any of these, make sure that the current working directory (os.getcwd()) is set to the "Code" folder created previously. After this, please run the scripts in the order listed above. Also, each script is partitioned into sections related to the parts of the project (e.g. part1, part2, etc.). Please run the sections in ascending order. Note that not all sections can be run at once as the number of figures will exceed 20 and thus will get capped off.
