@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d221de6d-77d2-4f6a-83f9-79cb2c892033" name="Default" comment="">
+    <list default="true" id="d221de6d-77d2-4f6a-83f9-79cb2c892033" name="Default" comment="Changed deepfaces.py:&#10;- Made the plots save&#10;&#10;Changed digits.py:&#10;- Fixed a typo&#10;&#10;Changed part4.py:&#10;- Fixed a typo&#10;&#10;Changed faces.py:&#10;- Changed a comment to reflect true performance&#10;- Made the plots save&#10;&#10;Changed part6.py:&#10;- Made the figures auto-index&#10;&#10;Changed part8.py:&#10;- Made the figures auto-index">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Code/deepfaces.py" afterPath="$PROJECT_DIR$/Code/deepfaces.py" />
       <change beforePath="$PROJECT_DIR$/Code/digits.py" afterPath="$PROJECT_DIR$/Code/digits.py" />
-      <change beforePath="$PROJECT_DIR$/Code/faces.py" afterPath="$PROJECT_DIR$/Code/faces.py" />
-      <change beforePath="$PROJECT_DIR$/Code/part4.py" afterPath="$PROJECT_DIR$/Code/part4.py" />
-      <change beforePath="$PROJECT_DIR$/Code/part6.py" afterPath="$PROJECT_DIR$/Code/part6.py" />
-      <change beforePath="$PROJECT_DIR$/Code/part8.py" afterPath="$PROJECT_DIR$/Code/part8.py" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_training_set_acc.jpeg" afterPath="$PROJECT_DIR$/Report/images/p4_training_set_acc.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_training_set_cost.jpeg" afterPath="$PROJECT_DIR$/Report/images/p4_training_set_cost.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_valid_set_acc.jpeg" afterPath="$PROJECT_DIR$/Report/images/p4_valid_set_acc.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p4_valid_set_cost.jpeg" afterPath="$PROJECT_DIR$/Report/images/p4_valid_set_cost.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_training_set_acc.jpeg" afterPath="$PROJECT_DIR$/Report/images/p5_training_set_acc.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_training_set_cost.jpeg" afterPath="$PROJECT_DIR$/Report/images/p5_training_set_cost.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_valid_set_acc.jpeg" afterPath="$PROJECT_DIR$/Report/images/p5_valid_set_acc.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p5_valid_set_cost.jpeg" afterPath="$PROJECT_DIR$/Report/images/p5_valid_set_cost.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p8_training_set_acc.jpeg" afterPath="$PROJECT_DIR$/Report/images/p8_training_set_acc.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p8_training_set_cost.jpeg" afterPath="$PROJECT_DIR$/Report/images/p8_training_set_cost.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p8_valid_set_acc.jpeg" afterPath="$PROJECT_DIR$/Report/images/p8_valid_set_acc.jpeg" />
+      <change beforePath="$PROJECT_DIR$/Report/images/p8_valid_set_cost.jpeg" afterPath="$PROJECT_DIR$/Report/images/p8_valid_set_cost.jpeg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="digits.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="digits.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/digits.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="31" />
+            <state relative-caret-position="609">
+              <caret line="141" column="92" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="141" selection-end-column="92" />
               <folding>
                 <element signature="e#164#183#0" expanded="true" />
               </folding>
@@ -89,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faces.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="faces.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/faces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1383">
-              <caret line="89" column="90" lean-forward="true" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
+            <state relative-caret-position="537">
+              <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
               <folding>
                 <element signature="e#280#299#0" expanded="true" />
               </folding>
@@ -167,11 +174,11 @@
         <option value="$PROJECT_DIR$/Code/myalexnet.py" />
         <option value="$PROJECT_DIR$/Code/image_download.py" />
         <option value="$PROJECT_DIR$/Code/part6.py" />
-        <option value="$PROJECT_DIR$/Code/digits.py" />
         <option value="$PROJECT_DIR$/Code/part4.py" />
         <option value="$PROJECT_DIR$/Code/part8.py" />
         <option value="$PROJECT_DIR$/Code/faces.py" />
         <option value="$PROJECT_DIR$/Code/deepfaces.py" />
+        <option value="$PROJECT_DIR$/Code/digits.py" />
       </list>
     </option>
   </component>
@@ -528,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519280362745</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Changed deepfaces.py:&#10;- Made the plots save&#10;&#10;Changed digits.py:&#10;- Fixed a typo&#10;&#10;Changed part4.py:&#10;- Fixed a typo&#10;&#10;Changed faces.py:&#10;- Changed a comment to reflect true performance&#10;- Made the plots save&#10;&#10;Changed part6.py:&#10;- Made the figures auto-index&#10;&#10;Changed part8.py:&#10;- Made the figures auto-index">
+      <created>1519281420464</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1519281420464</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -625,7 +639,8 @@
     <MESSAGE value="Download code added" />
     <MESSAGE value="latex slightly changed to work with me" />
     <MESSAGE value="Changed digits.py:&#10;- max_iter set to 500 (what was used in the report)&#10;- removed plt.gcf().clear() lines&#10;- removed unused functions at the bottom&#10;&#10;Changed part4.py:&#10;- removed cast for iter to float&#10;- removed plt.gcf().clear() lines&#10;- added lines that make the figures automatically index themselves&#10;- Made the learning curves save to the images folder for the report&#10;&#10;Changed part5.py:&#10;- added lines that make the figures automatically index themselves&#10;&#10;Report:&#10;- Added updated images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed digits.py:&#10;- max_iter set to 500 (what was used in the report)&#10;- removed plt.gcf().clear() lines&#10;- removed unused functions at the bottom&#10;&#10;Changed part4.py:&#10;- removed cast for iter to float&#10;- removed plt.gcf().clear() lines&#10;- added lines that make the figures automatically index themselves&#10;- Made the learning curves save to the images folder for the report&#10;&#10;Changed part5.py:&#10;- added lines that make the figures automatically index themselves&#10;&#10;Report:&#10;- Added updated images" />
+    <MESSAGE value="Changed deepfaces.py:&#10;- Made the plots save&#10;&#10;Changed digits.py:&#10;- Fixed a typo&#10;&#10;Changed part4.py:&#10;- Fixed a typo&#10;&#10;Changed faces.py:&#10;- Changed a comment to reflect true performance&#10;- Made the plots save&#10;&#10;Changed part6.py:&#10;- Made the figures auto-index&#10;&#10;Changed part8.py:&#10;- Made the figures auto-index" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed deepfaces.py:&#10;- Made the plots save&#10;&#10;Changed digits.py:&#10;- Fixed a typo&#10;&#10;Changed part4.py:&#10;- Fixed a typo&#10;&#10;Changed faces.py:&#10;- Changed a comment to reflect true performance&#10;- Made the plots save&#10;&#10;Changed part6.py:&#10;- Made the figures auto-index&#10;&#10;Changed part8.py:&#10;- Made the figures auto-index" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -861,16 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/digits.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="31" />
-          <folding>
-            <element signature="e#164#183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -899,10 +904,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/faces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1383">
-          <caret line="89" column="90" lean-forward="true" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
+        <state relative-caret-position="537">
+          <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
           <folding>
             <element signature="e#280#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/digits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="141" column="92" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="141" selection-end-column="92" />
+          <folding>
+            <element signature="e#164#183#0" expanded="true" />
           </folding>
         </state>
       </provider>

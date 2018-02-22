@@ -18,81 +18,81 @@ import os
 from scipy.io import loadmat
 
 
-# ## Part 1: Describing the dataset
-# # Load the MNIST digit data
-# M = loadmat("../Data/mnist_all.mat")
-#
-# def part1SaveImages():
-#     '''
-#     part1SaveImages saves a sample of images from the MNIST dataset into the
-#     images folder for the report.
-#     '''
-#
-#     for k in range(10):
-#         for i in range(10): #Display the 150-th "5" digit from the training set
-#             imshow(M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
-#             imsave("../Report/images/number" + str(k) + "_"+ str(i) + ".jpg",
-#                    M["train" + str(k)][i].reshape((28,28)),
-#                    cmap=cm.gray)
-#
-# train = zeros(10)
-# test = zeros(10)
-# for i in range(10):
-#     train[i] = len(M["train" + str(i)])
-#     test[i] = len(M["test" + str(i)])
-#
-# # Normalize images (map to [0, 1])
-# for k in M.keys():
-#     if("train" in k or "test" in k):
-#         M[k] = np.true_divide(M[k], 255.0)
-#
-# ## Part 2: Computing a simple network
-# import part2 as p2
-#
-# def testPart2():
-#     '''
-#     testPart2 uses a randomly-initialized weight matrix to make a prediction
-#     about an image from the MNIST dataset (which happens to be 5). The image
-#     is plotted and the output of the SimpleNetwork computation from part 2 is
-#     printed.
-#     '''
-#
-#     np.random.seed(3)
-#     W = np.random.rand(28*28,10) # Randomly initialize some weight matrix
-#     X = M["train5"][148:149].T # Image of "5"
-#     plt.imshow(X.reshape((28,28)))
-#     plt.show()
-#     y = p2.SimpleNetwork(W, X)
-#     print("y: ", y) # Should be a 10x1 vector with random values
-#     print("sum(y): ", sum(y)) # Should be 1
-# testPart2()
-#
-#
-# ##  Part 3: Negative log loss of gradient
-# import part3 as p3
-#
-# def testPart3():
-#     '''
-#     part3Test computes the vectorized gradient as well as a finite difference
-#     approximation for the gradient of the negative log loss for 10 different
-#     values of h (the differential quantity). The differences between all the
-#     gradient matrix entries for the two methods are summed and printed for each
-#     h-value.
-#     '''
-#
-#     X = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3 ,4],[1, 2, 3, 4]]
-#     X = np.array(X)
-#     W = [[1, 0, 1.2, 3], [1, 2, 0.2, 1.2], [1, 8, 1, 4], [1, -2, 3, 1], [1, 0, 3, 1]]
-#     W = np.array(W)
-#     Y = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
-#     Y = np.array(Y)
-#     G1 = p3.negLogLossGrad(X, Y, W)
-#     h = 1.0
-#     for i in range(10):
-#         G2 = p3.negLogLossGrad_FiniteDifference(X, Y, W, h)
-#         print "Total error: ", sum(abs(G1 - G2)), "h: ", h
-#         h /= 10
-# testPart3()
+## Part 1: Describing the dataset
+# Load the MNIST digit data
+M = loadmat("../Data/mnist_all.mat")
+
+def part1SaveImages():
+    '''
+    part1SaveImages saves a sample of images from the MNIST dataset into the
+    images folder for the report.
+    '''
+
+    for k in range(10):
+        for i in range(10): #Display the 150-th "5" digit from the training set
+            imshow(M["train" + str(k)][i].reshape((28,28)), cmap=cm.gray)
+            imsave("../Report/images/number" + str(k) + "_"+ str(i) + ".jpg",
+                   M["train" + str(k)][i].reshape((28,28)),
+                   cmap=cm.gray)
+
+train = zeros(10)
+test = zeros(10)
+for i in range(10):
+    train[i] = len(M["train" + str(i)])
+    test[i] = len(M["test" + str(i)])
+
+# Normalize images (map to [0, 1])
+for k in M.keys():
+    if("train" in k or "test" in k):
+        M[k] = np.true_divide(M[k], 255.0)
+
+## Part 2: Computing a simple network
+import part2 as p2
+
+def testPart2():
+    '''
+    testPart2 uses a randomly-initialized weight matrix to make a prediction
+    about an image from the MNIST dataset (which happens to be 5). The image
+    is plotted and the output of the SimpleNetwork computation from part 2 is
+    printed.
+    '''
+
+    np.random.seed(3)
+    W = np.random.rand(28*28,10) # Randomly initialize some weight matrix
+    X = M["train5"][148:149].T # Image of "5"
+    #plt.imshow(X.reshape((28,28)))
+    #plt.show()
+    y = p2.SimpleNetwork(W, X)
+    print("y: ", y) # Should be a 10x1 vector with random values
+    print("sum(y): ", sum(y)) # Should be 1
+testPart2()
+
+
+##  Part 3: Negative log loss of gradient
+import part3 as p3
+
+def testPart3():
+    '''
+    part3Test computes the vectorized gradient as well as a finite difference
+    approximation for the gradient of the negative log loss for 10 different
+    values of h (the differential quantity). The differences between all the
+    gradient matrix entries for the two methods are summed and printed for each
+    h-value.
+    '''
+
+    X = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3 ,4],[1, 2, 3, 4]]
+    X = np.array(X)
+    W = [[1, 0, 1.2, 3], [1, 2, 0.2, 1.2], [1, 8, 1, 4], [1, -2, 3, 1], [1, 0, 3, 1]]
+    W = np.array(W)
+    Y = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+    Y = np.array(Y)
+    G1 = p3.negLogLossGrad(X, Y, W)
+    h = 1.0
+    for i in range(10):
+        G2 = p3.negLogLossGrad_FiniteDifference(X, Y, W, h)
+        print "Total error: ", sum(abs(G1 - G2)), "h: ", h
+        h /= 10
+testPart3()
 
 ##  Part 4 and 5: Training using vanilla vs. momentum gradient descent
 import part4 as p4
