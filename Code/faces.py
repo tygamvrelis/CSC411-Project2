@@ -1,7 +1,10 @@
 ## Faces.py
 # This file contains the code to run parts 8 through 10 for CSC411 project 2.
 # This involves running machine learning algorithms on faces from the FaceScrub dataset.
-
+'''
+To download uncropped photos, run image_download.py. Hashing is done
+in image_processing.py.
+'''
 from pylab import *
 import numpy as np
 import torch
