@@ -133,7 +133,7 @@ def draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, imagePa
     plt.xlabel('Iterations')
     plt.title('Training Set Cost Learning Curve')
     plt.savefig(imagePath + part + "training_set_cost" + ".jpeg")
-    plt.show
+    plt.show()
 
     plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, tperf_hist)
@@ -141,7 +141,7 @@ def draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, imagePa
     plt.xlabel('Iterations')
     plt.title('Training Set Accuracy Learning Curve')
     plt.savefig(imagePath + part + "training_set_acc" + ".jpeg")
-    plt.show
+    plt.show()
 
     plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, vloss_hist)
@@ -149,7 +149,7 @@ def draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, imagePa
     plt.xlabel('Iterations')
     plt.title('Validation Set Cost Learning Curve')
     plt.savefig(imagePath + part + "valid_set_cost" + ".jpeg")
-    plt.show
+    plt.show()
 
     plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, vperf_hist)
@@ -157,7 +157,7 @@ def draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, imagePa
     plt.xlabel('Iterations')
     plt.title('Validation Set Accuracy Learning Curve')
     plt.savefig(imagePath + part + "valid_set_acc" + ".jpeg")
-    plt.show
+    plt.show()
 
 def viewOutputLayer(X, model):
     '''
