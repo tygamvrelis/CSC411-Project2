@@ -1015,7 +1015,7 @@ Initial Weights & Default Values\\
 
 \noindent \textit{Defining ``Useful"}
 
-	It was assumed that there were $2$ ``useful" hidden units for each actor:
+	It was assumed that there were $2$ ``useful" hidden units for each actor. Note that since this part of the project was open-ended, there were various hidden units that one could have considered to be ``useful", such as all hidden units with positive contributions to the activation. We chose ``useful" to refer to the following two hidden units, as they both indicate something important about what's required to achieve activation of the correct output neuron:
 	
 	\begin{enumerate}[(1)]
 		\item The hidden unit with the \textit{maximum} input value to $o_i$. This hidden unit promotes the activation of $o_i$ the most.
@@ -1030,11 +1030,11 @@ Initial Weights & Default Values\\
 		\item Pick the actor whose ``useful" hidden units are to be determined. This specifies an output neuron $o_i$ whose connections to the hidden layer will be studied
 		
 		\begin{enumerate}[(a)]
-			\item Feed an input of the actor from the validation set into the neural network
+			\item Feed an input of the actor from the validation set into the neural network. If this image is classified correctly, proceed, otherwise repeat this step with the next correctly-classified image
 			\item Observe the weights connecting the hidden layer to $o_i$
 			\item Observe the activation values from the neurons in the hidden layer
 			\item For each neuron in the hidden layer, multiply its activation value by the weight connecting it to $o_i$. This product represents the actual contribution from the hidden unit
-			\item Record the indices for the ``useful" hidden units (as per the definition of ``useful" above
+			\item Record the indices for the ``useful" hidden units (as per the definition of ``useful" above)
 		\end{enumerate}
 	
 		\item Repeat the previous step for all images of the actor
@@ -1093,21 +1093,21 @@ Initial Weights & Default Values\\
 \begin{homeworkProblem}
 	\noindent \textit{Implementing a Fully Connected Neural Network on Top of MyAlexNet}	
 	
-	To increase the accuracy of classification, the images were put into MyAlexNet and outputs from its features layers were taken and connected to a fully connected network with 1 hidden layer. \newline
+	To increase the accuracy of classification, the images were put into MyAlexNet and outputs from its feature layers were taken and connected to a fully connected network with $1$ hidden layer. \newline
 	
 	\noindent \textit{Modifying MyAlexNet}	
 	
-	To access the Top feature layer of MyAlexNet, the classifier in the forward function was commented out and the output was reshaped into a 1D vector. To access deeper layers, they are commented out in the $self.features$ section of the class. For every convolutional layer that's commented out, we also comment out an in dex in the $features\_weight\_i$ array to prevent the program from trying to load weights into a non-existent layer.\newline
+	To access the Top feature layer of MyAlexNet, the classifier in the forward function was commented out and the output was reshaped into a 1D vector. To access deeper layers, they were commented out in the {\tt self.features} section of the class. For every convolutional layer that was commented out, we also commented out an index in the {\tt features\_weight\_i} array to prevent the program from trying to load weights into a non-existent layer.\newline
 	
 	\noindent \textit{Computing the Input Matrix for the Fully Connected Layers}	
 	
-	After MyAlexNet is modified to provide the desired output, we take each image in a set and put it into MyAlexNet using the sample code given, obtain its corresponding 1D vector and compile it into a set matrix. In the resulting matrix, each row represents an image in that set while each column represents an output of MyAlexNet corresponding to that image. The label matrices are created in the same way as in part 8.
+	After MyAlexNet was modified to provide the desired output, we took each image in a set and put it into MyAlexNet using the sample code given, and subsequently obtained its corresponding 1D vector and compiled it into a set matrix. In the resulting matrix, each row represented an image in that set while each column represented an output of MyAlexNet corresponding to that image. The label matrices were created in the same way as in part 8.
 		
-	Since only the fully connected layers are trained, the training set matrix from MyAlexNet will always stay the same. Therefore, we can use the output of MyAlexNet as the new inputs to the the fully connected layers without having to recalculate them every time. The input layer of the fully connected layers also has to be resized to match the number of outputs from MyAlexNet.\newline
+	Since only the fully connected layers were trained, the training set matrix from MyAlexNet always stayed the same. Therefore, we could use the output of MyAlexNet as the new inputs to the fully connected layers without having to recalculate them every time. The input layer of the fully connected layers also had to be resized to match the number of outputs from MyAlexNet.\newline
 	
 	\noindent \textit{Final Results}	
 	
-	The properties of the optimal configuration are shown in Table~\ref{tab:part10_properties}. The outputs from conv4 after the MaxPool layer and from conv2 after the ReLU layer were found to provide the best results but the latter, while having more outputs, gave slightly better performance. The final performance on the validation set was 96.6\% while the final performance on the test set was 98.33\%. This represents approximately a 70\% drop in the error rate from part 8. The learning curves of the test and validation sets are disaplayed in Figure~\ref{fig:part10curves}\newline
+	The properties of the optimal configuration are shown in Table~\ref{tab:part10_properties}. The outputs from conv4 after the MaxPool layer and from conv2 after the ReLU layer were found to provide the best results but the latter, while having more outputs, gave slightly better performance. The final performance on the validation set was $96.6 \%$ while the final performance on the test set was $98.33 \%$. This represents approximately a $70 \%$ drop in the error rate from part 8. The learning curves of the test and validation sets are disaplayed in Figure~\ref{fig:part10curves}\newline
 	
 	\begin{table}[!ht]
 \begin{center}
