@@ -341,7 +341,7 @@ $x = \begin{bmatrix}
 	$C = - \sum_{l = 1}^{k} y_llog(p_l)$
 	By the chain rule, the partial derivative with respect to $w_{ij}$ is:
 	$$\frac{\partial C(W)}{\partial w_{ij}} = - \sum_{l = 1}^{k} \frac{\partial C}{\partial p_l}\frac{\partial p_l}{\partial o_j}\frac{\partial o_j}{\partial w_{ij}}$$
-	The first term is straight forward: $\frac{\partial C}{\partial p_l} = \frac{y_l}{p_l}$.\newline
+	The first term is straightforward: $\frac{\partial C}{\partial p_l} = \frac{y_l}{p_l}$.\newline
 	
 	For the second term, we have $\frac{\partial p_l}{\partial o_j} = 
 	\begin{cases}\frac{-e^{o_l}e^{o_j}}{(\sum_{c = 1}^{k} e^{o_c})^2} = -p_lp_j, \text{if } l \ne j\\
@@ -393,7 +393,7 @@ P =  \begin{bmatrix}
     \hdotsfor{5} \\
     p_{k}^{(1)}       & p_{k}^{(2)} & p_{k}^{(3)} & \dots & p_{k}^{(m)}
 \end{bmatrix}$$
-Where the superscript of each element represents the index of the training samples. The code used to compute the gradient is shown in Figure~\ref{fig:part3_gradient}.
+Where the superscript of each element represents the index of the training example it belongs to. The code used to compute the gradient is shown in Figure~\ref{fig:part3_gradient}.
 \newline
 \begin{figure}[!ht]
 	\begin{lstlisting}
@@ -420,7 +420,7 @@ def negLogLossGrad(X, Y, W):
 
 \noindent \textit{Finite Difference Approximation (3b)}
 \newline
-To check that the gradient was computed correctly, the gradient with respect to weight $w_{ij}$ was approximated using finite differences, for all coordinates in the weight matrix. $10$ values for the differential quantity, $h$, were tested, for which the maximum total error was $2.698$ for $h = 1$ and the minimum total error was $3.054 \times 10^{-7}$ for $h = 1 \times 10^{-7}$. Thus, for sufficiently small $h$, the finite difference approximation and vectorized computation converge to the same quantity, suggesting the vectorized computation is correct. The test case used to obtain this result is shown in Figure~\ref{fig:part3_test}. The complete results are summarized in Table~\ref{tab:part3_grad}, below.
+To check that the gradient was computed correctly, the gradient with respect to weight $w_{ij}$ was approximated using finite differences for all coordinates in the weight matrix. $10$ values for the differential quantity, $h$, were tested, for which the maximum total error was $2.698$ for $h = 1$ and the minimum total error was $3.054 \times 10^{-7}$ for $h = 1 \times 10^{-7}$. Thus, for sufficiently small $h$, the finite difference approximation and vectorized computation converged to the same quantity, suggesting the vectorized computation was correct. The code used to obtain these results is shown in Figure~\ref{fig:part3_test}, and the complete results are summarized in Table~\ref{tab:part3_grad}, below.
 \begin{table}[!ht]
 \begin{center}
 \begin{tabular}{ | m{12em} | m{2cm} | }
