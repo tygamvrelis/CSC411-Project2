@@ -61,4 +61,5 @@ print "Classification Val performance: ", perf                  #96.67%
 (loss, perf) = p8.classify(testX_feat, testY, model, loss_fn)
 print "Classification Test performance: ", perf                 #98.33%
 
-p8.draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter)
+imagePath = "../Report/images/"
+p8.draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, imagePath, "p10_")

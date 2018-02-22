@@ -2,41 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d221de6d-77d2-4f6a-83f9-79cb2c892033" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CSC411-Project2.iml" afterPath="$PROJECT_DIR$/.idea/CSC411-Project2.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Code/deepfaces.py" afterPath="$PROJECT_DIR$/Code/deepfaces.py" />
       <change beforePath="$PROJECT_DIR$/Code/digits.py" afterPath="$PROJECT_DIR$/Code/digits.py" />
       <change beforePath="$PROJECT_DIR$/Code/faces.py" afterPath="$PROJECT_DIR$/Code/faces.py" />
       <change beforePath="$PROJECT_DIR$/Code/part4.py" afterPath="$PROJECT_DIR$/Code/part4.py" />
       <change beforePath="$PROJECT_DIR$/Code/part6.py" afterPath="$PROJECT_DIR$/Code/part6.py" />
       <change beforePath="$PROJECT_DIR$/Code/part8.py" afterPath="$PROJECT_DIR$/Code/part8.py" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_0.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_0.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_1.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_1.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_2.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_2.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_3.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_3.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_4.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_4.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_5.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_5.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_6.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_6.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_7.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_7.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_8.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_8.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_9.jpg" afterPath="$PROJECT_DIR$/Report/images/p4_9.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_training_set_acc.jpeg" afterPath="$PROJECT_DIR$/Report/images/p4_training_set_acc.jpeg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_training_set_cost.jpeg" afterPath="$PROJECT_DIR$/Report/images/p4_training_set_cost.jpeg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_valid_set_acc.jpeg" afterPath="$PROJECT_DIR$/Report/images/p4_valid_set_acc.jpeg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p4_valid_set_cost.jpeg" afterPath="$PROJECT_DIR$/Report/images/p4_valid_set_cost.jpeg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_0.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_0.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_1.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_1.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_2.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_2.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_3.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_3.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_4.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_4.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_5.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_5.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_6.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_6.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_7.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_7.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_8.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_8.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/p5_9.jpg" afterPath="$PROJECT_DIR$/Report/images/p5_9.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/part8gilpininhibitor.jpg" afterPath="$PROJECT_DIR$/Report/images/part8gilpininhibitor.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/part8gilpinpromoter.jpg" afterPath="$PROJECT_DIR$/Report/images/part8gilpinpromoter.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/part8harmoninhibitor.jpg" afterPath="$PROJECT_DIR$/Report/images/part8harmoninhibitor.jpg" />
-      <change beforePath="$PROJECT_DIR$/Report/images/part8harmonpromoter.jpg" afterPath="$PROJECT_DIR$/Report/images/part8harmonpromoter.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="digits.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="digits.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/digits.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="31" />
               <folding>
                 <element signature="e#164#183#0" expanded="true" />
               </folding>
@@ -74,8 +46,8 @@
       <file leaf-file-name="part4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/part4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="261" column="66" lean-forward="false" selection-start-line="261" selection-start-column="66" selection-end-line="261" selection-end-column="66" />
+            <state relative-caret-position="283">
+              <caret line="263" column="0" lean-forward="true" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
               <folding>
                 <element signature="e#173#192#0" expanded="true" />
               </folding>
@@ -86,7 +58,7 @@
       <file leaf-file-name="part5.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/part5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
+            <state relative-caret-position="1008">
               <caret line="73" column="12" lean-forward="false" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
               <folding />
             </state>
@@ -96,7 +68,7 @@
       <file leaf-file-name="part6.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/part6.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
+            <state relative-caret-position="-399">
               <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="36" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -105,21 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_processing.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Code/image_processing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="part8.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/part8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="267" column="47" lean-forward="false" selection-start-line="267" selection-start-column="47" selection-end-line="267" selection-end-column="47" />
+            <state relative-caret-position="447">
+              <caret line="157" column="50" lean-forward="true" selection-start-line="157" selection-start-column="50" selection-end-line="157" selection-end-column="50" />
               <folding>
                 <element signature="e#163#181#0" expanded="true" />
               </folding>
@@ -127,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faces.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="faces.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/faces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="88" column="93" lean-forward="false" selection-start-line="88" selection-start-column="93" selection-end-line="88" selection-end-column="93" />
+            <state relative-caret-position="1383">
+              <caret line="89" column="90" lean-forward="true" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
               <folding>
                 <element signature="e#280#299#0" expanded="true" />
               </folding>
@@ -139,11 +101,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="part10.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/part10.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="deepfaces.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+            <state relative-caret-position="645">
+              <caret line="64" column="89" lean-forward="false" selection-start-line="64" selection-start-column="89" selection-end-line="64" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -192,14 +164,14 @@
         <option value="$PROJECT_DIR$/Data/Faces/actors.txt" />
         <option value="$PROJECT_DIR$/Code/image_processing.py" />
         <option value="$PROJECT_DIR$/Code/part10.py" />
-        <option value="$PROJECT_DIR$/Code/deepfaces.py" />
         <option value="$PROJECT_DIR$/Code/myalexnet.py" />
         <option value="$PROJECT_DIR$/Code/image_download.py" />
-        <option value="$PROJECT_DIR$/Code/faces.py" />
-        <option value="$PROJECT_DIR$/Code/part8.py" />
         <option value="$PROJECT_DIR$/Code/part6.py" />
         <option value="$PROJECT_DIR$/Code/digits.py" />
         <option value="$PROJECT_DIR$/Code/part4.py" />
+        <option value="$PROJECT_DIR$/Code/part8.py" />
+        <option value="$PROJECT_DIR$/Code/faces.py" />
+        <option value="$PROJECT_DIR$/Code/deepfaces.py" />
       </list>
     </option>
   </component>
@@ -549,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519264488220</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Changed digits.py:&#10;- max_iter set to 500 (what was used in the report)&#10;- removed plt.gcf().clear() lines&#10;- removed unused functions at the bottom&#10;&#10;Changed part4.py:&#10;- removed cast for iter to float&#10;- removed plt.gcf().clear() lines&#10;- added lines that make the figures automatically index themselves&#10;- Made the learning curves save to the images folder for the report&#10;&#10;Changed part5.py:&#10;- added lines that make the figures automatically index themselves&#10;&#10;Report:&#10;- Added updated images">
+      <created>1519280362745</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1519280362745</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -563,13 +542,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="143" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18921833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32617587" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32617587" sideWeight="0.49811321" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19529653" sideWeight="0.49649596" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19529653" sideWeight="0.50781673" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32617587" sideWeight="0.49811321" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19529653" sideWeight="0.4921833" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329843" sideWeight="0.49739245" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981523" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -644,7 +624,8 @@
     <MESSAGE value="Images commit" />
     <MESSAGE value="Download code added" />
     <MESSAGE value="latex slightly changed to work with me" />
-    <option name="LAST_COMMIT_MESSAGE" value="latex slightly changed to work with me" />
+    <MESSAGE value="Changed digits.py:&#10;- max_iter set to 500 (what was used in the report)&#10;- removed plt.gcf().clear() lines&#10;- removed unused functions at the bottom&#10;&#10;Changed part4.py:&#10;- removed cast for iter to float&#10;- removed plt.gcf().clear() lines&#10;- added lines that make the figures automatically index themselves&#10;- Made the learning curves save to the images folder for the report&#10;&#10;Changed part5.py:&#10;- added lines that make the figures automatically index themselves&#10;&#10;Report:&#10;- Added updated images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed digits.py:&#10;- max_iter set to 500 (what was used in the report)&#10;- removed plt.gcf().clear() lines&#10;- removed unused functions at the bottom&#10;&#10;Changed part4.py:&#10;- removed cast for iter to float&#10;- removed plt.gcf().clear() lines&#10;- added lines that make the figures automatically index themselves&#10;- Made the learning curves save to the images folder for the report&#10;&#10;Changed part5.py:&#10;- added lines that make the figures automatically index themselves&#10;&#10;Report:&#10;- Added updated images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -827,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/part10.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="13" column="80" lean-forward="false" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/myalexnet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -849,14 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/part5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="73" column="12" lean-forward="false" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/part3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -867,9 +833,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Code/part5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="73" column="12" lean-forward="false" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Code/part6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
+        <state relative-caret-position="-399">
           <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -877,38 +851,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/part8.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="267" column="47" lean-forward="false" selection-start-line="267" selection-start-column="47" selection-end-line="267" selection-end-column="47" />
-          <folding>
-            <element signature="e#163#181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/faces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="88" column="93" lean-forward="false" selection-start-line="88" selection-start-column="93" selection-end-line="88" selection-end-column="93" />
-          <folding>
-            <element signature="e#280#299#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/part4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="261" column="66" lean-forward="false" selection-start-line="261" selection-start-column="66" selection-end-line="261" selection-end-column="66" />
+        <state relative-caret-position="283">
+          <caret line="263" column="0" lean-forward="true" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
           <folding>
             <element signature="e#173#192#0" expanded="true" />
           </folding>
@@ -917,10 +863,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/digits.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="31" />
           <folding>
             <element signature="e#164#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/deepfaces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="64" column="89" lean-forward="false" selection-start-line="64" selection-start-column="89" selection-end-line="64" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/part10.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/part8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="157" column="50" lean-forward="true" selection-start-line="157" selection-start-column="50" selection-end-line="157" selection-end-column="50" />
+          <folding>
+            <element signature="e#163#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/faces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1383">
+          <caret line="89" column="90" lean-forward="true" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
+          <folding>
+            <element signature="e#280#299#0" expanded="true" />
           </folding>
         </state>
       </provider>

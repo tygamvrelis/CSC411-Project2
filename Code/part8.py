@@ -123,36 +123,41 @@ def classify(X, Y, model, loss_fn):
 
     return (loss, perf)
 
-def draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter):
+def draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, imagePath, part):
     '''This function takes in 5 arrays of equal length and plot the first
     4 arrays on the Y-axis against num_iter on the X-axis.
     '''
-    plt.figure(1)
+    plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, tloss_hist)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Training Set Cost Learning Curve')
+    plt.savefig(imagePath + part + "training_set_acc" + ".jpeg")
+    plt.show
 
-    plt.figure(2)
+    plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, tperf_hist)
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
     plt.title('Training Set Accuracy Learning Curve')
+    plt.savefig(imagePath + part + "training_set_cost" + ".jpeg")
+    plt.show
 
-    plt.figure(3)
+    plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, vloss_hist)
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Validation Set Cost Learning Curve')
+    plt.savefig(imagePath + part + "valid_set_acc" + ".jpeg")
+    plt.show
 
-    plt.figure(4)
+    plt.figure(plt.gcf().number + 1)
     plt.plot(num_iter, vperf_hist)
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
     plt.title('Validation Set Accuracy Learning Curve')
-    plt.show()
-
-    plt.gcf().clear()
+    plt.savefig(imagePath + part + "valid_set_cost" + ".jpeg")
+    plt.show
 
 def viewOutputLayer(X, model):
     '''
@@ -243,14 +248,13 @@ def findUsefulNeurons(valX, valY, model, dim_x, dim_h, indActor):
 
     return (maxNeuron, minNeuron)
 
-def viewWeights(figIndex, hiddenUnitIndex, model, res, imagePath, actorName, neuronType, showch = 0):
+def viewWeights(hiddenUnitIndex, model, res, imagePath, actorName, neuronType, showch = 0):
     '''
     viewWeights provides a visualization of the weights going into the specified
     hidden neuron. The positive and negative weights are displayed separately since
     the plot function cannot interpret negative pixel values for images.
 
     Arguments:
-        figIndex -- indexes the figures
         hiddenUnitIndex -- the hidden unit whose input weights are to be examined
         model -- the trained model
         res -- the resolution of the images
@@ -289,7 +293,7 @@ def viewWeights(figIndex, hiddenUnitIndex, model, res, imagePath, actorName, neu
             plt.show()
             #plt.savefig(imagePath + "part8" + actorName + ".jpg")
     else:
-        plt.figure(figIndex, figsize=(12, 6))
+        plt.figure(plt.gcf().number + 1, figsize=(12, 6))
         plt.subplot(1, 2, 1)
         plt.imshow(Wpos, interpolation = 'gaussian')
         plt.title('Useful weights for ' + actorName + " (positive values; " + neuronType + ")")

@@ -259,7 +259,7 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history, imag
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Training Set Cost Learning Curve')
-    plt.savefig(imagePath + part + "_training_set_cost" + ".jpeg")
+    plt.savefig(imagePath + part + "training_set_cost" + ".jpeg")
     plt.show()
 
     plt.figure(plt.gcf().number + 1)
@@ -267,7 +267,7 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history, imag
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
     plt.title('Training Set Accuracy Learning Curve')
-    plt.savefig(imagePath + part + "_training_set_acc" + ".jpeg")
+    plt.savefig(imagePath + part + "training_set_acc" + ".jpeg")
     plt.show()
 
     plt.figure(plt.gcf().number + 1)
@@ -275,7 +275,7 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history, imag
     plt.ylabel('Cost')
     plt.xlabel('Iterations')
     plt.title('Validation Set Cost Learning Curve')
-    plt.savefig(imagePath + part + "_valid_set_cost" + ".jpeg")
+    plt.savefig(imagePath + part + "valid_set_cost" + ".jpeg")
     plt.show()
 
     plt.figure(plt.gcf().number + 1)
@@ -283,7 +283,7 @@ def part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history, imag
     plt.ylabel('Accuracy')
     plt.xlabel('Iterations')
     plt.title('Validation Set Accuracy Learning Curve')
-    plt.savefig(imagePath + part + "_valid_set_acc" + ".jpeg")
+    plt.savefig(imagePath + part + "valid_set_acc" + ".jpeg")
     plt.show()
     
 def part4_plotWeights(W, indices, imagePath, str_part):

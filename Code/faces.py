@@ -57,9 +57,10 @@ batch_size = 60
 print "Classification Val performance: ", perf
 (loss, perf) = p8.classify(testX, testY, model, loss_fn)
 print "Classification Test performance: ", perf
-#82.5% on both sets
+#82.25% on validation set, 80.5% on test set
 
-p8.draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter)
+imagePath = "../Report/images/"
+p8.draw_curves(tloss_hist,tperf_hist, vloss_hist, vperf_hist, num_iter, imagePath, "p8_")
 
 
 ## Part 9: Visualize the weights of the hidden units that are useful for classifying each actor

@@ -118,7 +118,7 @@ max_iter = 500
 
 # Plot learning curves
 imagePath = "../Report/images/"
-p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history, imagePath, "p4")
+p4.part4_plotLearningCurves(XTrain, YTrain, XVal, YVal, Whistory, history, imagePath, "p4_")
 
 
 #Plot weight visualizations

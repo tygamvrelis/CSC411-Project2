@@ -48,7 +48,7 @@ def plot_contour(W, X, Y, i1, j1, i2, j2, w1_vanil, w2_vanil, w1_mom, w2_mom):
             Z[j , i] = p3.NLL(p2.SimpleNetwork(Wchanged, X), Y)/int(X.shape[1])
 
 
-    plt.figure(5)
+    plt.figure(plt.gcf().number + 1)
     plt.subplot()
     plt.contour(W1, W2, Z, cmap = plt.cm.coolwarm)
 
