@@ -613,7 +613,10 @@ $$
 $$
 W \leftarrow W - \nu
 $$
-	
+Comparing Figure~\ref{fig:part4curves} and Figure~\ref{fig:part5curves}, it is clear that compared to vanilla gradient descent, gradient descent with momentum results in better performance (in terms of both accuracy and cost) in fewer iterations. One might say that gradient descent with momentum produces ``sharper" or more ``rapid" learning curves. Indeed, vanilla gradient descent took nearly $200$ iterations to reach $80 \%$ accuracy on the validation set, while gradient descent with momentum took approximately $25$ iterations to reach this performance. As was mentioned before, the reason for this is that the update rule tends to steer the gradient towards the most consistently travelled direction, which (more often than not) results in accelerated convergence when properly tuned.
+
+\clearpage
+
 \begin{figure}[!ht]
 	\begin{subfigure}[b]{0.5\textwidth}
     	\includegraphics[width=\textwidth]{images/p5_training_set_acc.jpeg}
@@ -669,7 +672,7 @@ def part5_gradient_descent(X, Y, init_W, alpha, eps, max_iter, init_v, momentum)
 	previous_W = 0
 	current_W = init_W.copy()
 	previous_v = 0
-	current_v = init_v # Initial momentum...
+	current_v = init_v # Initial momentum...(not strictly necessary)
 	firstPass = True
 	history = list()
 	Whistory = list()
