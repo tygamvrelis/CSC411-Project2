@@ -335,7 +335,7 @@ $x = \begin{bmatrix}
     x_{2} \\
     \hdotsfor{1} \\
     x_{n} 
-\end{bmatrix}$ and $n$ is equal to the number of pixels with an extra $1$ to multiply into the bias. That is, $x_1 ^q$ is always taken to be $1$ while $x_2 ^q,...,x_n ^q$ are the inputs to the network corresponding to the $q^{th}$ training example. \newline
+\end{bmatrix}$ and $n$ is equal to the number of pixels with an extra $1$ to multiply into the bias. That is, $x_1 ^{(q)}$ is always taken to be $1$ while $x_2 ^{(q)},...,x_n ^{(q)}$ are the inputs to the network corresponding to the $q^{th}$ training example. \newline
 
 	To calculate the partial derivative of C, we will consider only \textbf{a single training sample}: 
 	$C = - \sum_{l = 1}^{k} y_llog(p_l)$
